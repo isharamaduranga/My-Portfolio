@@ -22,7 +22,7 @@
 🌱 InfinitiFree-WebHost-URL----> [Click Me!](http://isharamaduranga.epizy.com)
 
 ## Basic Background of PortFolio
-<img src="assets/Readme/My_PortFilo_Mock-up-1.png">
+<img src="assets/Readme/My_PortFilo_Mock-up.png">
 
 ## Technology /framework used
 * HTML
