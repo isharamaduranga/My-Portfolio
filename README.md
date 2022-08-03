@@ -30,5 +30,5 @@
 * Java Script
 
 ## License
-**Copyright @ 2022 My Profile All Right Reserved By Ishara Maduranga**
+**Copyright @ 2022 My PortFoliyo All Right Reserved By Ishara Maduranga**
 
