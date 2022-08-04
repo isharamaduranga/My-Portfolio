@@ -13,7 +13,7 @@
     position: fixed;
     width: 100%;
     padding: 10px 0;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     font-family: 'Ubuntu',sans-serif;
 }
 
@@ -42,7 +42,7 @@
     color: #fff;
     font-size:18px ;
     font-weight: 500;
-    margin-left: 40px;
+    margin-left: 25px;
     transition: color 0.3s ease;
 }
 
@@ -56,7 +56,7 @@
     display: flex;
 
     background-image: url("/assets/newbg.png");
-   /* background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("/assets/newbg.png") no-repeat;*/
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     height:100vh ;
     color:#fff;
@@ -70,16 +70,16 @@
 margin: auto 0 auto 100px;
 }
 .home .home-content .text-1{
-    font-size: 50px;
+    font-size: 55px;
 }
 .home .home-content .text-2{
     font-size: 65px;
     font-weight: 600;
-    margin-left: -5px;
+    margin-left: -3px;
 }
 .home .home-content .text-3{
     font-size: 50px;
-    margin: 8px 0;
+    margin: 5px 0;
 }
 .home .home-content .text-3 span{
     font-size:45px ;
