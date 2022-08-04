@@ -55,8 +55,8 @@
 .home{
     display: flex;
 
-  /*  background-image: url("/assets/newbg.png");*/
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("/assets/newbg.png") no-repeat;
+    background-image: url("/assets/newbg.png");
+   /* background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("/assets/newbg.png") no-repeat;*/
     background-size: 100% 100%;
     height:100vh ;
     color:#fff;
