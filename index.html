@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>My_Portfolio-Ishara Maduranga</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <meta name="keywords"
           content="Ishara,Maduranga,Portfolio, Ishara Maduranga,Software Engineer,Web Designer,Modern,Personal Website">
     <meta name="description" content="Ishara Maduranga - My Portfolio">
@@ -12,7 +11,8 @@
     <meta name="Owner" content="Ishara Maduranga">
     <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=2 minimum-scale=1">
     <meta name="theme-color" content="#804BD9">
-
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
 </head>
 <body><!-- Sectioning root-->
 
@@ -29,7 +29,7 @@
     <nav class="navbar"> <!--for the main Navigation-->
         <div class="max-width">
             
-            <div class="logo"><a href="#"> <img src="assets/logo.png" width="40" align="left" ></a> </div>
+            <div class="logo"><a href="#"> <img src="assets/logo.png" width="40"  ></a> </div>
             <ul class="menu">
                 <li><a href="#Home Page">HOME</a></li>
                 <li><a href="#About me-section">ABOUT</a></li>
@@ -57,13 +57,24 @@
     <!--site Home Page-->
     <section class="home" id="home">
 
-        <!--<img src="assets/newbg.png">-->
-
-        <dfn id="Home Page"></dfn>
-
-        <aside><!--for the Home image-->
-            <img src="assets/bg.png">
+       <!-- <dfn id="Home Page"></dfn>-->
+        <aside > <!--for the Home image-->
+            <img class="side_img" src="assets/bg.png"width="531" height="657">
         </aside>
+
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1"> Hello ,I’M</div>
+                <div class="text-2"> ISHARA  MADURANGA</div>
+                <div class="text-3">And I'm a <span>FULL STACK DEVELOPER</span>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
 
 
         <article><!--for the Home Details-->
