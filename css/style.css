@@ -8,39 +8,90 @@
     text-decoration: none;
 
 }
+
 /** navbar styling */
-.navbar{
+.navbar {
     position: fixed;
     width: 100%;
-    padding: 15px 0;
-    background:crimson;
-    font-family: 'Ubuntu',sans-serif;
+    padding: 30px 0;
+    /*background: crimson;*/
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.max-width{
-    max-width: 1300px;
-    padding: 0 80px;
+.max-width {
+    max-width: 1350px;
+    padding: 0 10px;
     margin: auto;
 }
 
-.navbar .max-width{
+.navbar .max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar .logo a{
+.navbar .logo a {
     color: #fff;
-    alignment: left;
-    image-resolution: from-image;
+    font-size: 35px;
+    font-weight: 600;
 }
+
+.navbar .logo a span{
+    color: crimson;
+
+}
+
 .navbar .menu li {
-    list-style: none ;
+    list-style: none;
     display: inline-block;
 }
+
 .navbar .menu li a {
     color: #fff;
-    font-size:18px ;
+    font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
+    transition: color 0.3s ease ;
+}
+
+.navbar .menu li a:hover {
+    color: crimson;
+
+}
+
+/** home section styling */
+.home {
+    display: flex;
+    background: url("/assets/home_banner.png") no-repeat center;
+    background-size: 100% 100%;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: Ubuntu, sans-serif;
+}
+
+/*.my_img{
+   padding: revert;
+}*/
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 37px;
+}
+
+.home .home-content .text-2 {
+    font-size: 70px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 52px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+   color: #B4F32E;
+    font-weight: 500;
 }
