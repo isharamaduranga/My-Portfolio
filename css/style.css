@@ -22,7 +22,7 @@
 .navbar.sticky {
 
     padding: 15px 0;
-    background-color: #000000;
+    background: linear-gradient(109.6deg, rgb(80, 35, 217) 11.2%, rgb(217, 35, 189) 91.1%);
   /*  background-color: rgba(0, 0, 0, .3);*/
 }
 
@@ -73,7 +73,7 @@
 }
 
 .navbar .menu li a:hover {
-    color: crimson;
+    color: #ffff00;
 
 }
 
@@ -122,6 +122,9 @@
         padding-top: 80px;
         transition: all 0.3s ease;
     }
+
+
+
 
     .navbar .menu.active {
         left: 0;
