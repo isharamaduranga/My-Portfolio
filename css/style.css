@@ -14,15 +14,16 @@
     position: fixed;
     width: 100%;
     padding: 30px 0;
-    /*background: crimson;*/
+   /* background: crimson;*/
     font-family: 'Ubuntu', sans-serif;
-    transition: all 0.3s ease ;
+    transition: all 0.3s ease;
 }
-.navbar.sticky{
+
+.navbar.sticky {
 
     padding: 15px 0;
-    background-color: #b2b2b2;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: #000000;
+  /*  background-color: rgba(0, 0, 0, .3);*/
 }
 
 
@@ -39,23 +40,22 @@
 }
 
 .navbar .logo a {
-    color: #ffff00;
+    color: #fff;
     font-size: 35px;
     font-weight: 600;
 }
 
-.navbar .logo a span{
-    background-color: #b2b2b2;
-    background-color: rgba(0, 0, 0, .1);
-    transition: all 0.3s ease ;
+.navbar .logo a span {
+    color: #ffff00;
+    transition: all 0.3s ease;
 }
 
 
-.navbar.sticky .logo a span{
-    color: #fff;
+.navbar.sticky .logo a {
+    color: #ffff00;
 }
 
-.navbar.sticky .logo a span{
+.navbar.sticky .logo a span {
     color: #fff;
 }
 
@@ -69,7 +69,7 @@
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
-    transition: color 0.3s ease ;
+    transition: color 0.3s ease;
 }
 
 .navbar .menu li a:hover {
@@ -77,10 +77,80 @@
 
 }
 
+.my_logo {
+    width: 40px;
+    height: 60px;
+    left: 0;
+}
+
+.my_img {
+
+
+}
+
+/* menu btn styling */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* responsive media query start */
+@media (max-width: 1328px) {
+
+    .max-width {;
+        padding: 0 50px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content:"\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 50px;
+
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+}
+
+
 /** home section styling */
 .home {
     display: flex;
-   /* background: url("../assets/home_banner.png") no-repeat center;*/
+    /* background: url("../assets/home_banner.png") no-repeat center;*/
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/home_banner.png");
     background-size: 100% 100%;
     height: 100vh;
@@ -89,28 +159,38 @@
     font-family: Ubuntu, sans-serif;
 }
 
-.my_img{
-   position: center;
+.my_img {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 65px;
+    position: center;
 }
+
 .home .max-width {
     margin: auto 0 auto 40px;
 }
 
 .home .home-content .text-1 {
     font-size: 37px;
+    text-align: center;
 }
 
 .home .home-content .text-2 {
     font-size: 70px;
     font-weight: 600;
     margin-left: -3px;
+    text-align: center;
 }
 
 .home .home-content .text-3 {
     font-size: 52px;
     margin: 5px 0;
+    text-align: center;
 }
-.home .home-content .text-3 span{
-   color: #B4F32E;
+
+.home .home-content .text-3 span {
+    color: #B4F32E;
     font-weight: 500;
+    text-align: center;
 }
