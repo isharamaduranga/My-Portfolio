@@ -80,7 +80,7 @@
 .my_logo {
     width: 40px;
     height: 60px;
-    left: 0;
+    text-align: left;
 }
 
 .my_img {
@@ -168,7 +168,7 @@
 }
 
 .home .max-width {
-    margin: auto 0 auto 40px;
+    margin: auto 0 auto 10px;
 }
 
 .home .home-content .text-1 {
@@ -179,12 +179,12 @@
 .home .home-content .text-2 {
     font-size: 70px;
     font-weight: 600;
-    margin-left: -3px;
+    margin-left: -8px;
     text-align: center;
 }
 
 .home .home-content .text-3 {
-    font-size: 52px;
+    font-size: 40px;
     margin: 5px 0;
     text-align: center;
 }
@@ -193,4 +193,36 @@
     color: #B4F32E;
     font-weight: 500;
     text-align: center;
+}
+.home .home-content a{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background: darkgoldenrod;
+    font-size: 25px;
+    padding: 4px 40px;
+    margin-top: 30px;
+    border-radius: 6px;
+    border: 2px solid darkgoldenrod;
+    transition: all 0.3s ease;
+
+
+}
+.home .home-content a:hover{
+    color: #fff;
+    background: none;
+}
+.social_link{
+
+    padding: 6px 30px;
+    margin-top: 60px;
+    text-align: center;
+
+}
+.icons {
+    width: 35px;
+    height: 35px;
+
 }
