@@ -68,7 +68,7 @@
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 25px;
+    margin-left: 35px;
     transition: color 0.3s ease;
 }
 
@@ -188,7 +188,7 @@
 
 .home .home-content .text-3 {
     font-size: 40px;
-    margin: 5px 0;
+    margin:40px 0;
     text-align: center;
 }
 
@@ -208,7 +208,7 @@
     padding: 4px 40px;
     margin-top: 30px;
     border-radius: 6px;
-    border: 2px solid darkgoldenrod;
+    border: 3px solid darkgoldenrod;
     transition: all 0.3s ease;
 
 
