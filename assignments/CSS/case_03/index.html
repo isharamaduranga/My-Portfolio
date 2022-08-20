@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href=../../../css/normalize.css>
+
+    <style>
+
+        body > main > section {
+            height: 100vh;
+            position: relative;
+        }
+
+        main > section > div {
+
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+        }
+
+        main > :nth-child(1) > div{
+            background: purple;
+        }
+
+        main > :nth-child(2) > div {
+            background: dodgerblue;
+        }
+
+        main > :nth-child(3) > div {
+            background: tomato;
+
+        }
+
+        main > div:nth-child(4){
+            position: fixed;
+            width: 290px;
+            height: 290px;
+            border-radius: 100%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border: 20px solid #d57f41;
+        }
+
+        main > div:nth-child(5){
+            position: fixed;
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            border: 20px solid red;
+        }
+        main > section >:nth-child(3) > h1 {
+            position: absolute;
+            left: 35%;
+            top: 35%;
+            text-align: center;
+            color: white;
+        }
+        main > section >div> h1 {
+            position: absolute;
+            left: 35%;
+            top: 35%;
+            text-align: center;
+            color: white;
+        }
+        main >:nth-child(2) >div> h1 {
+            position: absolute;
+            left: 25%;
+            top: 35%;
+            text-align: center;
+            color: white;
+        }
+        main >:nth-child(3) >div> h1 {
+            position: absolute;
+            left: 2%;
+            top: 20%;
+            text-align: center;
+            color: white;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<main>
+
+    <section>
+
+        <!--First Circle-->
+        <div>
+            <h1>Hello</h1>
+        </div>
+    </section>
+
+    <section>
+        <!--Second Circle-->
+        <div>
+            <h1>Welcome</h1>
+        </div>
+    </section>
+
+    <section>
+        <!--Third Circle-->
+        <div>
+            <h1>Institute of Software Engineering</h1>
+        </div>
+    </section>
+
+    <!--Fixed Circle Boarder-->
+    <div></div>
+    <div></div>
+
+</main>
+
+</body>
+</html>
