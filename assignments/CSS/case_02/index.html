@@ -2,62 +2,174 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS - Assignment Case-02</title>
+    <title>Basic Web Layout</title>
+    <link href="normalize.css" rel="stylesheet">
+    <meta content="width=device-width initial-scale=1" name="viewport">
 
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
 
+        header {
+            background: white;
+            box-shadow: 0px -1px 8px 2px #1c1717e8;
+            position: relative;
+            height: 73px;
+        }
+
+        header > img {
+            width: 190px;
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+
+        header > nav {
+            position: absolute;
+            right: 40px;
+            top: 0;
+        }
+
+        header > nav > ul > li {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px;
+            color: rgba(46, 41, 41, 0.96);
+        }
+
+        main > aside {
+            height: 100vh;
+            width: 20%;
+            background-color: purple;
+        }
+
+        body > main > section > :first-child {
+            position: relative;
+        }
+
+        body > main > section > :first-child > div {
+            position: absolute;
+            display: inline-block;
+            background-color: coral;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
 </head>
 <body>
 <header>
-
-    <nav class="navbar"> <!--for the main Navigation-->
-        <div class="max-width">
-
-            <div><img class="my_logo" src="assets/logo.png"></div>
-            <ul class="menu">
-                <li><a href="#Home Page">Home</a></li>
-                <li><a href="#My Services-section"> Services </a></li>
-                <li><a href="#My Contact-section"> Contacts </a></li>
-                <li><a href="#About-section"> About Us </a></li>
-
-            </ul>
-
-            <div class="menu-btn">
-                <i class="fas fa-bars"> </i>
-            </div>
-
-        </div>
-
-
+    <img alt="Logo" src="assets/ijse.png">
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>About Us</li>
+        </ul>
     </nav>
-
 </header>
+
 <main>
-    <aside>
-        <nav>
 
-
-        </nav>
-
-    </aside>
+<aside>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Contact</li>
+            <li>About Us</li>
+        </ul>
+    </nav>
+</aside>
 
     <section>
 
         <!--for the 3 boxes & images-->
-        <section> </section>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </section>
 
         <!--for the paragraphs-->
-        <section> </section>
 
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
+        <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+            suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+            porro reprehenderit temporibus?</p>
+        <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad amet
+            asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+            quibusdam sed suscipit tempore!</p>
     </section>
-
-
-
 
 
 </main>
 <!--site footer-->
 <footer>
-    <p><small>Developed By IJSE.</small></p>
+    <p>Developed By IJSE.</p>
 </footer>
+
 </body>
 </html>
