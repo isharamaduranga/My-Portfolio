@@ -38,15 +38,6 @@
             color: rgba(46, 41, 41, 0.96);
         }
 
-        main > aside > nav {
-            height: 100vh;
-            width: 20%;
-            background-color: purple;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            color: white;
-        }
 
         body>footer{
             height: 50px;
@@ -60,7 +51,50 @@
             color: white;
             font-weight: bold;
         }
+        main > aside > nav {
+            height: 100vh;
+            width: 20%;
+            background-color: purple;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            color: white;
+        }
+        main>aside>nav>ul{
+            list-style: none;
+            font-size: 25px;
+            margin-top: 40px;
+        }
 
+        main > nav > ul > li {
+            padding-bottom: 40px;
+
+        }
+        main > section {
+            margin-left: 270px;
+            padding: 10px;
+            min-height: 587px;
+        }
+        main > section > section {
+            height: 300px;
+            position: relative;
+            display: flex;
+        }
+        main > section > section > div {
+            flex-grow: 1;
+        }
+        main > section > section > div:nth-child(1) {
+
+            background-size: cover;
+        }
+        main > section > section > div:nth-child(2) {
+
+            background-size: cover;
+        }
+        main > section > section > div:nth-child(3) {
+
+            background-size: cover;
+        }
 
 
         /*==========================================================*/
@@ -109,9 +143,16 @@
 
         <!--for the 3 boxes & images-->
         <section>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <img src="assets/loading.gif" alt="giphy">
+            </div>
+
+            <div>
+                <img src="assets/loading.gif" alt="giphy">
+            </div>
+            <div>
+                <img src="assets/loading.gif" alt="giphy">
+            </div>
 
         </section>
 
