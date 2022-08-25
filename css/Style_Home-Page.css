@@ -155,12 +155,95 @@ main>section:nth-child(1)>aside>div:first-child{
     margin: 20px 0;
     text-align: center;
 }
-
 .home .home-content .text-3 span {
     color: #B4F32E;
     font-weight: 500;
     text-align: center;
 }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container a{
+    position: relative;
+    display: inline-block;
+    border: 2px solid #0f0;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 30px;
+    text-decoration: none;
+    Letter-spacing:2px;
+    color: white;
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.container a:hover{
+    transition-delay: 0.5s;
+    color: #000;
+    box-shadow:  0 0  10px  #0f0,
+    0 0  20px  #0f0,
+    0 0  40px  #0f0,
+    0 0  80px  #0f0,
+    0 0  160px  #0f0;
+
+}
+
+.container a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:20px;
+    height: 2px;
+    background:#0f0;
+    box-shadow: 5px -8px 0 #0f0,
+                5px  8px 0 #0f0;
+    transition:width 0.5s,left 0.5s,height 0.5s,
+    box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.container a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0  #0f0,
+                5px 0 0  #0f0;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+.container a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:20px;
+    height: 2px;
+    background:#0f0;
+    box-shadow: -5px -8px 0 #0f0,
+                -5px  8px 0 #0f0;
+    transition:width 0.5s,left 0.5s,height 0.5s,
+    box-shadow 0.5s;
+    transition-delay:1s,0.5s,0s,0s ;
+}
+.container a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0  #0f0,
+                -5px 0 0  #0f0;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+.container a span{
+    position: relative;
+    z-index: 100;
+}
+
+/*
 .home .home-content a{
     display: inline-block;
     position: relative;
@@ -174,13 +257,11 @@ main>section:nth-child(1)>aside>div:first-child{
     border-radius: 6px;
     border: 3px solid darkgoldenrod;
     transition: all 0.3s ease;
-
-
 }
 .home .home-content a:hover{
     color: #fff;
     background: none;
-}
+}*/
 .social_link{
 
     padding: 6px 30px;
