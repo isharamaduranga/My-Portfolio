@@ -6,6 +6,8 @@
     <link href="normalize.css" rel="stylesheet">
     <meta content="width=device-width initial-scale=1" name="viewport">
     <link rel="stylesheet" href="/assignments/CSS/case_02/fonts/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
     <style>
         * {
             font-family: 'Poppins', sans-serif;
@@ -14,98 +16,158 @@
         header {
             background: white;
             box-shadow: 0px -1px 8px 2px #1c1717e8;
-            position: relative;
+            position: fixed;
             height: 73px;
+            z-index: 2;
+            width:100% ;
+            top: 0;
         }
 
         header > img {
             width: 190px;
             position: relative;
-            top: 20px;
-            left: 10px;
+            top: 10px;
+            left: 35px;
         }
 
         header > nav {
             position: absolute;
             right: 40px;
             top: 0;
+            padding-bottom: 27px;
         }
 
         header > nav > ul > li {
             display: inline-block;
             cursor: pointer;
+            font-size: 20px;
             padding: 10px;
             color: rgba(46, 41, 41, 0.96);
+            border-right: 2px solid crimson;
         }
+
+        header > nav > ul > li:first-child{
+            border-left: 2px solid crimson;
+        }
+
+        header > nav > ul >li> a{
+            color: rgba(46, 41, 41, 0.96);
+            text-decoration: none;
+        }
+
+        header > nav > ul > li>i{
+            color: #8213f5;
+            padding-right: 5px;
+        }
+/*========================================================= */
+        /* Applied Hover effects*/
+        main ul > li:hover a {
+            color: crimson;
+        }
+
+        main ul > li:hover i {
+            color: crimson;
+        }
+
+        header ul > li:hover a {
+            color: crimson;
+        }
+
+        header ul > li:hover i {
+            color: crimson;
+        }
+/*========================================================= */
 
         main {
             position: relative;
+            margin-top: 73px;
         }
 
+        /* handle height for main height */
         main > nav {
+            background-color: #8213f5;
             position: absolute;
-            background-color: purple;
-            color: white;
-            width: 250px;
             top: 0;
             bottom: 0;
+            width: 260px;
         }
-
-        main > section {
-            margin-left: 250px;
-            padding: 10px;
-        }
-
         main>nav>ul{
-            list-style: none;
-            font-size: 25px;
-            margin-top: 40px;
+            padding-right: 20px;
         }
-
-        main > nav > ul > li {
-            padding-bottom: 40px;
-        }
-
-        body > footer {
-            height: 50px;
-            background-color: grey;
-
-        }
-        body>footer>p{
-            margin-top: 0;
-            text-align: center;
-            padding: 10px;
+        main>nav>ul>li{
             color: white;
-            font-weight: bold;
+            font-size: 20px;
+            list-style: none;
+            padding-top: 30px;
+            cursor: pointer;
+
         }
+        main>nav>ul>li>i{
+            color: white;
+            padding-right: 5px;
+        }
+        main>nav>ul>li>a{
+            color: white;
+            padding-right: 5px;
+            text-decoration: none;
+        }
+
+
+        /* handle section for to move left side */
+        main > section  {
+            margin-left: 260px;
+            padding: 10px;
+        }
+
+        main>section>p{
+            color: crimson;
+        }
+
+
+        /* handle s3 Box Images in section */
 
 
 
         main>section>section:first-child{
-            position: relative;
-            border: 2px solid crimson;
-            height: 280px;
-        }
 
+            height: 250px;
+            position: relative;
+        }
         main>section>section:first-child>div{
-            position: absolute;
-            height: 280px;
+
+            height: 100%;
             width: calc(100%/3);
+            position: absolute;
+            border: 1px solid #1eb61e;
         }
         main>section>section:first-child>div:nth-child(1){
-           background: url("assets/loading.gif");
+
             left: 0;
         }
-
         main>section>section:first-child>div:nth-child(2){
-            background: url("assets/loading.gif");
-            left: calc(100%/3);
-        }
 
+            left: calc(100%/3);
+
+        }
         main>section>section:first-child>div:nth-child(3){
-            background: url("assets/loading.gif");
             right: 0;
         }
+
+
+
+        /* handle styles for footer */
+        body > footer {
+            background-color: grey;
+            height: 50px;
+        }
+
+        body > footer > p {
+            color: white;
+            text-align: center;
+            padding-top: 20px;
+            margin: 0;
+        }
+
 
     </style>
 </head>
@@ -114,10 +176,11 @@
     <img alt="Logo" src="assets/ijse.png">
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contact</li>
-            <li>About Us</li>
+            <li><i class="fa-solid fa-house"></i><a href="https://ijse.lk" target="_blank"> Home</a></li>
+            <li><i class="fa-solid fa-globe"></i><a href="#">Services</a></li>
+            <li><i class="fa-solid fa-headset"></i><a href="#">Contact</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="#">About Us</a></li>
+
         </ul>
     </nav>
 </header>
@@ -126,10 +189,10 @@
 
     <nav>
         <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contact</li>
-            <li>About Us</li>
+            <li><i class="fa-solid fa-house"></i><a href="https://ijse.lk" target="_blank"> Home</a></li>
+            <li><i class="fa-solid fa-globe"></i><a href="#">Services</a></li>
+            <li><i class="fa-solid fa-headset"></i><a href="#">Contact</a></li>
+            <li><i class="fa-solid fa-address-card"></i><a href="#">About Us</a></li>
         </ul>
     </nav>
 
@@ -139,14 +202,19 @@
         <!--for the 3 boxes & images-->
         <section>
 
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>
+                <img src="assets/loading.gif" width="420px" height="250px">
+            </div>
+            <div>
+                <img src="assets/loading.gif" width="420px" height="250px">
+            </div>
+            <div>
+                <img src="assets/loading.gif" width="420px" height="250px">
+            </div>
 
         </section>
 
         <!--for the paragraphs-->
-
         <section>
             <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
                 suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
@@ -207,17 +275,6 @@
                 amet
                 asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
                 quibusdam sed suscipit tempore!</p>
-            <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
-                suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
-                porro reprehenderit temporibus?</p>
-            <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad
-                amet
-                asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
-                quibusdam sed suscipit tempore!</p>
-            <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad
-                amet
-                asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
-                quibusdam sed suscipit tempore!</p>
             <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad
                 amet
                 asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
@@ -233,6 +290,27 @@
                 amet
                 asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
                 quibusdam sed suscipit tempore!</p>
+            <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad
+                amet
+                asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+                quibusdam sed suscipit tempore!</p>
+            <p>Ad amet consectetur, cupiditate, dignissimos ipsum, magni modi necessitatibus neque quae quam quia quod
+                suscipit tempore veniam voluptate! Accusamus adipisci aliquam consequuntur et ex, fugiat illo laudantium
+                porro reprehenderit temporibus?</p>
+            <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad
+                amet
+                asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+                quibusdam sed suscipit tempore!</p>
+            <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad
+                amet
+                asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+                quibusdam sed suscipit tempore!</p>
+            <p>Cum cupiditate fuga fugiat inventore laudantium officiis possimus recusandae similique ut, voluptate! Ad
+                amet
+                asperiores dicta doloribus ducimus exercitationem illo ipsum molestiae, nam nobis officiis provident
+                quibusdam sed suscipit tempore!</p>
+
+
         </section>
 
 
@@ -240,6 +318,7 @@
 
 
 </main>
+
 <!--site footer-->
 <footer>
     <p>Developed By IJSE.</p>
