@@ -14,16 +14,16 @@
     position: fixed;
     width: 100%;
     padding: 30px 0;
-   /* background: crimson;*/
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
+    z-index: 2;
 }
 
 .navbar.sticky {
 
     padding: 15px 0;
     background: linear-gradient(109.6deg, rgb(80, 35, 217) 11.2%, rgb(217, 35, 189) 91.1%);
-  /*  background-color: rgba(0, 0, 0, .3);*/
+    /*  background-color: rgba(0, 0, 0, .3);*/
 }
 
 
@@ -80,13 +80,9 @@
 .my_logo {
     width: 40px;
     height: 60px;
-    text-align: left;
+    left: 0;
 }
 
-.my_img {
-
-
-}
 
 /* menu btn styling */
 .menu-btn {
@@ -96,87 +92,55 @@
     display: none;
 }
 
-/* responsive media query start */
-@media (max-width: 1328px) {
-
-    .max-width {;
-        padding: 0 50px;
-    }
-
-    .menu-btn {
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before{
-        content:"\f00d";
-    }
-
-    .navbar .menu {
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #111;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-
-
-
-
-    .navbar .menu.active {
-        left: 0;
-    }
-
-    .navbar .menu li {
-        display: block;
-    }
-
-    .navbar .menu li a {
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
-    .home .home-content .text-2 {
-        font-size: 50px;
-
-    }
-
-    .home .home-content .text-3 {
-        font-size: 35px;
-    }
-}
 
 
 /** home section styling */
 .home {
     display: flex;
-    /* background: url("../assets/home_banner.png") no-repeat center;*/
+    background: url("../assets/home_banner.png") no-repeat center;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/home_banner.png");
     background-size: 100% 100%;
     height: 100vh;
     color: #fff;
-    min-height: 500px;
     font-family: Ubuntu, sans-serif;
 }
+.home-aside {
+     width: 40vw;
+     height: 100vh;
+     position: relative;
 
-.my_img {
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 65px;
-    position: center;
+
+ }
+
+main>section:nth-child(1)>aside>div:last-child>img{
+    width: 28vw;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    left: 70px;
+}
+main>section:nth-child(1)>aside>div:first-child{
+    width: 30vw;
+    height: 63vh;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    top: 122px;
+    left: 52px;
+    opacity: 0.8;
 }
 
 .home .max-width {
-    margin: auto 0 auto 10px;
+    margin: auto 0 auto 20px;
 }
 
 .home .home-content .text-1 {
     font-size: 37px;
     text-align: center;
+    margin: 40px 0px 40px 0px;
 }
 
 .home .home-content .text-2 {
@@ -230,3 +194,5 @@
     height: 35px;
 
 }
+
+/*========================================================================================*/

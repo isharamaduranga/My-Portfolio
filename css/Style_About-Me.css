@@ -1,0 +1,36 @@
+main>section:nth-child(3)>section:nth-child(3){
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+main>section:nth-child(3)>section:nth-child(3)>article{
+    position: absolute;
+    left: 0;
+    padding-left: 50px;
+    margin-top: 20px;
+}
+main>section:nth-child(3)>section:nth-child(3)>article>h1{
+    text-align: center;
+}
+
+main>section:nth-child(3)>section:nth-child(3)>aside{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+main>section:nth-child(3)>section:nth-child(2)>h1:first-child{
+    color: #004FC5;
+    font-size:  40px;
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+main>section:nth-child(3)>section:nth-child(2)>h2{
+    color: rgba(102, 102, 102, 0.2);
+    font-size:  50px;
+    margin: auto;
+    text-align: center;
+}
