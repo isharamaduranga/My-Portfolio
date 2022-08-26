@@ -21,14 +21,42 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     bottom: 0;
 }
 
-main>section:nth-child(3)>section:nth-child(2)>h1:first-child{
+
+
+#about_container {
+    width:800px;
     color: #004FC5;
     font-size:  40px;
-    margin: auto;
     padding-top: 20px;
-    text-align: center;
+    text-align:center;
+    margin:auto;
 }
-main>section:nth-child(3)>section:nth-child(2)>h2{
+
+ main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child{
+    position: relative;
+    font-size: 30px;
+    display: inline-block;
+    padding:0 15px;
+     margin: auto;
+}
+
+main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:before,
+main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 3px;
+    content: '';
+    background-color: #004FC5;
+    left:-150px;
+}
+
+main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
+    left: 100%;
+}
+
+
+main>section:nth-child(3)>section:nth-child(2)>div>h2{
     color: rgba(102, 102, 102, 0.2);
     font-size:  50px;
     margin: auto;

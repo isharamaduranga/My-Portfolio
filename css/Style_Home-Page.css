@@ -169,14 +169,14 @@ main>section:nth-child(1)>aside>div:first-child{
 .container a{
     position: relative;
     display: inline-block;
-    border: 2px solid #0f0;
+    border: 2px solid #2196f3;
     padding: 15px 40px;
     text-transform: uppercase;
     font-weight: 600;
     margin: 30px;
     text-decoration: none;
     Letter-spacing:2px;
-    color: white;
+    color: #0fc40f;
     -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
     transition: 0.5s;
     transition-delay: 0s;
@@ -184,11 +184,11 @@ main>section:nth-child(1)>aside>div:first-child{
 .container a:hover{
     transition-delay: 0.5s;
     color: #000;
-    box-shadow:  0 0  10px  #0f0,
-    0 0  20px  #0f0,
-    0 0  40px  #0f0,
-    0 0  80px  #0f0,
-    0 0  160px  #0f0;
+    box-shadow:  0 0  10px #2196f3,
+    0 0  20px #2196f3,
+    0 0  40px #2196f3,
+    0 0  80px #2196f3,
+    0 0  160px #2196f3;
 
 }
 
@@ -200,9 +200,9 @@ main>section:nth-child(1)>aside>div:first-child{
     transform: translateY(-50%);
     width:20px;
     height: 2px;
-    background:#0f0;
-    box-shadow: 5px -8px 0 #0f0,
-                5px  8px 0 #0f0;
+    background:#2196F3;
+    box-shadow: 5px -8px 0 #2196f3,
+                5px  8px 0 #2196f3;
     transition:width 0.5s,left 0.5s,height 0.5s,
     box-shadow 0.5s;
     transition-delay: 1s,0.5s,0s,0s;
@@ -211,8 +211,8 @@ main>section:nth-child(1)>aside>div:first-child{
     width: 60%;
     height: 100%;
     left: -2px;
-    box-shadow: 5px 0 0  #0f0,
-                5px 0 0  #0f0;
+    box-shadow: 5px 0 0 #2196f3,
+                5px 0 0 #2196f3;
     transition-delay: 0s,0.5s,1s,1s;
 }
 .container a::after{
@@ -223,9 +223,9 @@ main>section:nth-child(1)>aside>div:first-child{
     transform: translateY(-50%);
     width:20px;
     height: 2px;
-    background:#0f0;
-    box-shadow: -5px -8px 0 #0f0,
-                -5px  8px 0 #0f0;
+    background: #2196f3;
+    box-shadow: -5px -8px 0 #2196f3,
+                -5px  8px 0 #2196f3;
     transition:width 0.5s,left 0.5s,height 0.5s,
     box-shadow 0.5s;
     transition-delay:1s,0.5s,0s,0s ;
@@ -234,8 +234,8 @@ main>section:nth-child(1)>aside>div:first-child{
     width: 60%;
     height: 100%;
     right: -2px;
-    box-shadow: -5px 0 0  #0f0,
-                -5px 0 0  #0f0;
+    box-shadow: -5px 0 0 #2196f3,
+                -5px 0 0 #2196f3;
     transition-delay: 0s,0.5s,1s,1s;
 }
 .container a span{
@@ -264,11 +264,16 @@ main>section:nth-child(1)>aside>div:first-child{
 }*/
 .social_link{
 
-    padding: 6px 30px;
-    margin-top: 60px;
-
+    padding: 10px;
+    margin-top: 30px;
     text-align: center;
 
+}
+.social_link a{
+    padding: 5px;
+}
+.social_link img:hover{
+    transform: scale(1.2);
 }
 .icons {
     width: 35px;
