@@ -9,7 +9,7 @@ main>section:nth-child(3)>section:nth-child(3){
 main>section:nth-child(3)>section:nth-child(3)>article{
     border: 2px solid chocolate;
     position: absolute;
-    width: 60%;
+    width: 55%;
     left: 0;
     top: 0;
     bottom: 0;
@@ -80,8 +80,23 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     text-align: center;
 }
 
-main>section:nth-child(3)>section:nth-child(3)>div:first-child{
-   background-color: darkblue;
+#rectangle{
+    border: 2px solid red;
+    display: flex;
+    height: 150px;
+    align-items: center;
+    gap: 90px;
+    justify-content: center;
+   /* margin-top: 50px;*/
+}
+.rectangle_1,.rectangle_2,.rectangle_3{
+    background-color: darkblue;
+    border: 2px solid yellow;
+    border-radius: 20%;
     width: 100px;
     height: 100px;
+
+
+
 }
+
