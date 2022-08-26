@@ -1,14 +1,31 @@
+
+
 main>section:nth-child(3)>section:nth-child(3){
+    border: 2px solid crimson;
     position: relative;
     width: 100vw;
     height: 100vh;
 }
 main>section:nth-child(3)>section:nth-child(3)>article{
+    border: 2px solid chocolate;
     position: absolute;
+    width: 60%;
     left: 0;
-    padding-left: 50px;
-    margin-top: 20px;
+    top: 0;
+    bottom: 0;
+    font-family: 'Ubuntu', sans-serif;
+   /* padding-left: 50px;*/
+    margin: 20px;
 }
+main>section:nth-child(3)>section:nth-child(3)>article>p{
+
+    padding-top: 20px;
+    padding-left:90px;
+    padding-right:90px;
+}
+
+
+
 main>section:nth-child(3)>section:nth-child(3)>article>h1{
     text-align: center;
 }
@@ -61,4 +78,10 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     font-size:  50px;
     margin: auto;
     text-align: center;
+}
+
+main>section:nth-child(3)>section:nth-child(3)>div:first-child{
+   background-color: darkblue;
+    width: 100px;
+    height: 100px;
 }
