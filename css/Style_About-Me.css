@@ -1,13 +1,15 @@
-
-
-main>section:nth-child(3)>section:nth-child(3){
-    border: 2px solid crimson;
-    position: relative;
+main>section:nth-child(3){
     width: 100vw;
     height: 100vh;
+    border: 2px solid crimson;
+}
+
+main>section:nth-child(3)>section:nth-child(3){
+    position: relative;
+    width: 100vw;
+    height: 80vh;
 }
 main>section:nth-child(3)>section:nth-child(3)>article{
-    border: 2px solid chocolate;
     position: absolute;
     width: 55%;
     left: 0;
@@ -15,19 +17,26 @@ main>section:nth-child(3)>section:nth-child(3)>article{
     bottom: 0;
     font-family: 'Ubuntu', sans-serif;
    /* padding-left: 50px;*/
-    margin: 20px;
+    margin: 10px;
 }
 main>section:nth-child(3)>section:nth-child(3)>article>p{
 
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left:90px;
-    padding-right:90px;
+    padding-right:85px;
 }
-
-
 
 main>section:nth-child(3)>section:nth-child(3)>article>h1{
     text-align: center;
+    color: #403D4E;
+    margin: 0;
+
+}
+main>section:nth-child(3)>section:nth-child(3)>article>h2{
+    text-align: center;
+    color: #6C6C78;
+    padding-bottom: 10px;
+    margin-top: 8px;
 }
 
 main>section:nth-child(3)>section:nth-child(3)>aside{
@@ -37,8 +46,6 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     top: 0;
     bottom: 0;
 }
-
-
 
 #about_container {
     width:800px;
@@ -75,28 +82,115 @@ main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
 
 main>section:nth-child(3)>section:nth-child(2)>div>h2{
     color: rgba(102, 102, 102, 0.2);
-    font-size:  50px;
+    font-size:  60px;
     margin: auto;
     text-align: center;
 }
 
 #rectangle{
-    border: 2px solid red;
+
     display: flex;
-    height: 150px;
+    height: 120px;
     align-items: center;
-    gap: 90px;
+    gap: 80px;
     justify-content: center;
    /* margin-top: 50px;*/
 }
 .rectangle_1,.rectangle_2,.rectangle_3{
-    background-color: darkblue;
-    border: 2px solid yellow;
-    border-radius: 20%;
-    width: 100px;
-    height: 100px;
+    background-color: #5133CD;
+    border-radius: 25%;
+    width: 90px;
+    height: 80px;
+
+}
+#count1,#count2,#count3{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 25px;
+}
 
 
+
+.container_about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container_about a{
+    position: relative;
+    display: inline-block;
+    border: 2px solid #0fc40f;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 30px;
+    text-decoration: none;
+    Letter-spacing:2px;
+    color: #5000a2;
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.container_about a:hover{
+    transition-delay: 0.5s;
+    color: #000;
+    box-shadow:  0 0  10px #0fc40f,
+    0 0  20px #0fc40f,
+    0 0  40px #0fc40f,
+    0 0  80px #0fc40f,
+    0 0  160px #0fc40f;
 
 }
 
+.container_about a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:20px;
+    height: 2px;
+    background: #0fc40f;
+    box-shadow: 5px -8px 0 #0fc40f,
+    5px  8px 0 #0fc40f;
+    transition:width 0.5s,left 0.5s,height 0.5s,
+    box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.container_about a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #0fc40f,
+    5px 0 0 #0fc40f;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+.container_about a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:20px;
+    height: 2px;
+    background: #0fc40f;
+    box-shadow: -5px -8px 0 #0fc40f,
+    -5px  8px 0 #0fc40f;
+    transition:width 0.5s,left 0.5s,height 0.5s,
+    box-shadow 0.5s;
+    transition-delay:1s,0.5s,0s,0s ;
+}
+.container_about a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 #0fc40f,
+    -5px 0 0 #0fc40f;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+.container_about a span{
+    position: relative;
+    z-index: 100;
+}
