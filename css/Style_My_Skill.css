@@ -1,0 +1,48 @@
+.My_Skill{
+
+
+}
+/*=========================================================================*/
+/* Define a Title Styles with About Me Section*/
+#skill_container {
+    width:800px;
+    color: #004FC5;
+    font-size:  40px;
+    padding-top: 20px;
+    text-align:center;
+    margin:auto;
+}
+/* Define a Title Styles with About Me Section*/
+main>section:nth-child(4)>section:nth-child(2)>div>h1:first-child{
+    position: relative;
+    font-size: 30px;
+    display: inline-block;
+    padding:0 15px;
+    margin: auto;
+}
+/* Define a Title Styles with About Me Section*/
+main>section:nth-child(4)>section:nth-child(2)>div>h1:first-child:before,
+main>section:nth-child(4)>section:nth-child(2)>div>h1:first-child:after {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 3px;
+    content: '';
+    background-color: #004FC5;
+    left:-150px;
+}
+
+/* Define a Title Styles with About Me Section*/
+main>section:nth-child(4)>section:nth-child(2)>div>h1:first-child:after {
+    left: 100%;
+}
+
+/* About section h2 styles*/
+main>section:nth-child(4)>section:nth-child(2)>div>h2{
+    color: rgba(102, 102, 102, 0.2);
+    font-size:  60px;
+    margin: auto;
+    text-align: center;
+}
+
+/*=========================================================================*/
