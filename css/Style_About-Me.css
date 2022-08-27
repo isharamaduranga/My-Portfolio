@@ -224,7 +224,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     position: absolute;
     background-size: contain;
     background-position: center;
-    background-image: url("/assets/about_my_pic.png");
+    background-image: url("../assets/about_my_pic.png");
     width: 380px;
     height: 380px;
     right: 10%;
