@@ -60,15 +60,39 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
     grid-template-rows: repeat(2,1fr);
     grid-template-columns:  repeat(4,1fr) ;
     column-gap: 70px;
-    row-gap: 80px;
+    row-gap: 70px;
 
 }
 #set_of_skill .skill-div1{
-
+   position: relative;
     padding-top: 50px;
     border: 2px solid #e70042;
     background-color: ghostwhite;
 }
-#set_of_skill .skill-div1{
 
+.skills-img{
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+}
+.skills-h1{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.skill-div1 .skills-p1{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.skill-div1 .skills-p2{
+    position: absolute;
+    margin: auto;
+
+    top: 0;
+    bottom: 0;
 }
