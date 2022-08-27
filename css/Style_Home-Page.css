@@ -177,7 +177,7 @@ main>section:nth-child(1)>aside>div:first-child{
     text-decoration: none;
     Letter-spacing:2px;
     color: #0fc40f;
-    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(255, 255, 255, 0.25));
     transition: 0.5s;
     transition-delay: 0s;
 }
@@ -199,7 +199,7 @@ main>section:nth-child(1)>aside>div:first-child{
     top: 50%;
     transform: translateY(-50%);
     width:20px;
-    height: 2px;
+    height: 3px;
     background:#2196F3;
     box-shadow: 5px -8px 0 #2196f3,
                 5px  8px 0 #2196f3;
@@ -222,7 +222,7 @@ main>section:nth-child(1)>aside>div:first-child{
     top: 50%;
     transform: translateY(-50%);
     width:20px;
-    height: 2px;
+    height: 3px;
     background: #2196f3;
     box-shadow: -5px -8px 0 #2196f3,
                 -5px  8px 0 #2196f3;

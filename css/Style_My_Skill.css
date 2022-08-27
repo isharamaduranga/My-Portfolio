@@ -1,5 +1,6 @@
 .My_Skill{
-
+ /*width: 100vw;*/
+ height: 100vh;
 
 }
 /*=========================================================================*/
@@ -8,7 +9,7 @@
     width:800px;
     color: #004FC5;
     font-size:  40px;
-    padding-top: 20px;
+    padding-top: 90px;
     text-align:center;
     margin:auto;
 }
@@ -46,3 +47,25 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
 }
 
 /*=========================================================================*/
+#set_of_skill{
+    position: absolute;
+    padding-top: 40px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 65vh;
+    width: 80vw;
+    border: 2px solid #e70042;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns:  repeat(4,1fr) ;
+    column-gap: 70px;
+    row-gap: 80px;
+
+}
+#set_of_skill div{
+
+    padding-top: 50px;
+    border: 2px solid #e70042;
+    background-color: ghostwhite;
+}

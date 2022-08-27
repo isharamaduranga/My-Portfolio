@@ -1,14 +1,10 @@
 
-/* About me Page Main Section*/
 main>section:nth-child(3){
-
     height: 100vh;
-    border: 2px solid crimson;
 }
 /* About me Page Second Section*/
 main>section:nth-child(3)>section:nth-child(3){
     position: relative;
-    width: 100vw;
     height: 80vh;
 }
 /* Article styles of About Me Page*/
@@ -19,7 +15,7 @@ main>section:nth-child(3)>section:nth-child(3)>article{
     top: 0;
     bottom: 0;
     font-family: 'Ubuntu', sans-serif;
-   /* padding-left: 50px;*/
+    padding-left: 50px;
     margin: 10px;
 }
 /* Paragraph styles of Article in About Me Page*/
@@ -56,7 +52,7 @@ main>section:nth-child(3)>section:nth-child(3)>article>h2 span {
     width:800px;
     color: #004FC5;
     font-size:  40px;
-    padding-top: 20px;
+    padding-top: 85px;
     text-align:center;
     margin:auto;
 }
@@ -141,7 +137,8 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     text-decoration: none;
     Letter-spacing:2px;
     color: #5000a2;
-    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+   /* -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);*/
+    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.25));
     transition: 0.5s;
     transition-delay: 0s;
 }
@@ -163,7 +160,7 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     top: 50%;
     transform: translateY(-50%);
     width:20px;
-    height: 2px;
+    height: 3px;
     background: #0fc40f;
     box-shadow: 5px -8px 0 #0fc40f,
     5px  8px 0 #0fc40f;
@@ -186,7 +183,7 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     top: 50%;
     transform: translateY(-50%);
     width:20px;
-    height: 2px;
+    height: 3px;
     background: #0fc40f;
     box-shadow: -5px -8px 0 #0fc40f,
     -5px  8px 0 #0fc40f;
@@ -251,7 +248,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 }
 .about_sec_circle2 h3{
     color: #2C2929;
-   text-align: center;
+    text-align: center;
     font-size: 15px;
     font-family: 'Ubuntu', sans-serif;
 }
