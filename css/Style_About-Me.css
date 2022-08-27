@@ -218,9 +218,12 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 }
 #about_image{
     position: absolute;
+    width:350px;
+    height:380px;
     margin: auto;
     top: 0;
     right: 0;
     top: 0;
     bottom: 0;
+
 }
