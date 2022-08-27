@@ -63,9 +63,12 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
     row-gap: 80px;
 
 }
-#set_of_skill div{
+#set_of_skill .skill-div1{
 
     padding-top: 50px;
     border: 2px solid #e70042;
     background-color: ghostwhite;
+}
+#set_of_skill .skill-div1{
+
 }
