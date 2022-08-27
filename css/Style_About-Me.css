@@ -1,15 +1,19 @@
+
+/* About me Page Main Section*/
 main>section:nth-child(3){
     width: 100vw;
     height: 100vh;
     border: 2px solid crimson;
 }
-
+/* About me Page Second Section*/
 main>section:nth-child(3)>section:nth-child(3){
     position: relative;
     width: 100vw;
     height: 80vh;
 }
+/* Article styles of About Me Page*/
 main>section:nth-child(3)>section:nth-child(3)>article{
+    border: 2px solid crimson;
     position: absolute;
     width: 55%;
     left: 0;
@@ -19,34 +23,36 @@ main>section:nth-child(3)>section:nth-child(3)>article{
    /* padding-left: 50px;*/
     margin: 10px;
 }
+/* Paragraph styles of Article in About Me Page*/
 main>section:nth-child(3)>section:nth-child(3)>article>p{
 
     padding-top: 10px;
     padding-left:90px;
     padding-right:85px;
 }
-
+/* h1 styles of Article in About Me Page*/
 main>section:nth-child(3)>section:nth-child(3)>article>h1{
     text-align: center;
     color: #403D4E;
     margin: 0;
 
 }
+/* h2 styles of Article in About Me Page*/
 main>section:nth-child(3)>section:nth-child(3)>article>h2{
     text-align: center;
     color: #6C6C78;
     padding-bottom: 10px;
     margin-top: 8px;
 }
-
-main>section:nth-child(3)>section:nth-child(3)>aside{
-    position: absolute;
-    margin: auto;
-    right: 0;
-    top: 0;
-    bottom: 0;
+/* h2 Typing Text styles of Article in About Me Page*/
+main>section:nth-child(3)>section:nth-child(3)>article>h2 span {
+    color: #e5114d;
+    font-weight: 500;
+  text-align: center;
 }
 
+/*=========================================================================*/
+/* Define a Title Styles with About Me Section*/
 #about_container {
     width:800px;
     color: #004FC5;
@@ -55,7 +61,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     text-align:center;
     margin:auto;
 }
-
+/* Define a Title Styles with About Me Section*/
  main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child{
     position: relative;
     font-size: 30px;
@@ -63,7 +69,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     padding:0 15px;
      margin: auto;
 }
-
+/* Define a Title Styles with About Me Section*/
 main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:before,
 main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
     position: absolute;
@@ -75,11 +81,14 @@ main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
     left:-150px;
 }
 
+/*=========================================================================*/
+
+/* Define a Title Styles with About Me Section*/
 main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
     left: 100%;
 }
 
-
+/* About section h2 styles*/
 main>section:nth-child(3)>section:nth-child(2)>div>h2{
     color: rgba(102, 102, 102, 0.2);
     font-size:  60px;
@@ -87,6 +96,7 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     text-align: center;
 }
 
+/* 3 Rectangle of about page Styles */
 #rectangle{
 
     display: flex;
@@ -96,22 +106,23 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     justify-content: center;
    /* margin-top: 50px;*/
 }
+/* 3 Rectangle of about page Styles */
 .rectangle_1,.rectangle_2,.rectangle_3{
     background-color: #5133CD;
     border-radius: 25%;
-    width: 90px;
+    width: 80px;
     height: 80px;
 
 }
+/* 3 Rectangle of about page Styles */
 #count1,#count2,#count3{
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
     padding-top: 25px;
 }
 
-
-
+/*===================About Me Section Button Animation Styles====================*/
 .container_about{
     display: flex;
     justify-content: center;
@@ -122,7 +133,7 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     position: relative;
     display: inline-block;
     border: 2px solid #0fc40f;
-    padding: 15px 40px;
+    padding: 10px 20px;
     text-transform: uppercase;
     font-weight: 600;
     margin: 30px;
@@ -193,4 +204,23 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
 .container_about a span{
     position: relative;
     z-index: 100;
+}
+/*==========================================================================*/
+
+main>section:nth-child(3)>section:nth-child(3)>aside{
+    position: absolute;
+    border: 2px solid brown;
+    width: 45%;
+    margin: 10px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#about_image{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
