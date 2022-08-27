@@ -16,7 +16,7 @@
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
-    z-index: 2;
+    z-index: 10;
 }
 
 .navbar.sticky {
