@@ -17,6 +17,7 @@ main>section:nth-child(3)>section:nth-child(3)>article{
     font-family: 'Ubuntu', sans-serif;
     padding-left: 50px;
     margin: 10px;
+    font-size: 10px;
 }
 /* Paragraph styles of Article in About Me Page*/
 main>section:nth-child(3)>section:nth-child(3)>article>p{
@@ -24,12 +25,14 @@ main>section:nth-child(3)>section:nth-child(3)>article>p{
     padding-top: 10px;
     padding-left:90px;
     padding-right:85px;
+    font-size: 1.5em;
 }
 /* h1 styles of Article in About Me Page*/
 main>section:nth-child(3)>section:nth-child(3)>article>h1{
     text-align: center;
     color: #403D4E;
     margin: 0;
+    font-size: 3.5em;
 
 }
 /* h2 styles of Article in About Me Page*/
@@ -38,12 +41,13 @@ main>section:nth-child(3)>section:nth-child(3)>article>h2{
     color: #6C6C78;
     padding-bottom: 10px;
     margin-top: 8px;
+    font-size: 3em;
 }
 /* h2 Typing Text styles of Article in About Me Page*/
 main>section:nth-child(3)>section:nth-child(3)>article>h2 span {
     color: #e5114d;
     font-weight: 500;
-  text-align: center;
+   text-align: center;
 }
 
 /*=========================================================================*/
@@ -113,7 +117,7 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
 #count1,#count2,#count3{
     color: white;
     text-align: center;
-    font-size: 22px;
+    font-size: 3em;
     padding-top: 25px;
 }
 
@@ -137,7 +141,7 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
     text-decoration: none;
     Letter-spacing:2px;
     color: #5000a2;
-   /* -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);*/
+    font-size: 1.5em;
     -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.25));
     transition: 0.5s;
     transition-delay: 0s;
