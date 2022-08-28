@@ -65,20 +65,34 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
 
  .skill-div1{
      position: relative;
-   /* border: 2px solid #e70042;*/
     background-color: ghostwhite;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
+     box-shadow: 10px 13px 8px -5px rgba(94, 59, 238, 0.5);
+    /* box-shadow: 10px 13px 8px -5px #282626;*/
+     transition-delay: 0s;
+     transition-property: all;
+     transition-duration: 1s;
 }
+.skill-div1:hover{
+    background-image: linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(156, 138, 203) 100%);
+    cursor: pointer;
+    box-shadow: 0px 0px 0 0px rgba(94, 59, 238, 0.4);
+    transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 1s;
+}
+/* background-image: linear-gradient(90deg, rgba(50,48,64,1) 0%, rgba(50,53,66,1) 100%);*/
  .skill-div2{
      position: relative;
+
  }
 
 .skills-img{
     position: relative;
     width: 40%;
     height: 40%;
-    top: 45px;
+    top: 35px;
     left: 10px;
 
 }
@@ -91,6 +105,8 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
 }
 .skill-div1 .skills-p1{
     position: absolute;
+    color: #4E4747;
+    font-weight: bold;
     margin: auto;
     right: 70px;
     top: 70px;
@@ -98,8 +114,15 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
 }
 .skill-div1 .skills-p2{
     position: absolute;
+    color: #4E4747;
+    font-weight: bold;
     margin: auto;
     right: 50px;
     top: 100px;
     bottom: 0;
+}
+.skills-p1>span , .skills-p2>span{
+    color: red;
+    padding-right: 5px;
+    font-weight: bold;
 }
