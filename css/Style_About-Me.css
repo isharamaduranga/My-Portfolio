@@ -1,16 +1,18 @@
 
 main>section:nth-child(3){
     height: 100vh;
+
 }
 /* About me Page Second Section*/
 main>section:nth-child(3)>section:nth-child(3){
     position: relative;
     height: 80vh;
+
 }
 /* Article styles of About Me Page*/
 main>section:nth-child(3)>section:nth-child(3)>article{
     position: absolute;
-    width: 60%;
+    width: 60vw;
     left: 0;
     top: 0;
     bottom: 0;
@@ -117,7 +119,7 @@ main>section:nth-child(3)>section:nth-child(2)>div>h2{
 #count1,#count2,#count3{
     color: white;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     padding-top: 25px;
 }
 
