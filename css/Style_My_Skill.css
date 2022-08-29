@@ -49,7 +49,7 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
 
 /*=========================================================================*/
 #set_of_skill{
-    position: absolute;
+    position: relative;
     margin: auto;
     left: 0;
     right: 0;
@@ -99,7 +99,7 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
 .skills-h1{
     position: absolute;
     text-align: center;
-    top: 10px;
+    top: 10%;
     right: 0;
     left: 0;
 }
@@ -108,7 +108,7 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
     color: #4E4747;
     font-weight: bold;
     margin: auto;
-    right: 70px;
+    right: 25%;
     top: 70px;
     bottom: 0;
 }
@@ -117,7 +117,7 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
     color: #4E4747;
     font-weight: bold;
     margin: auto;
-    right: 50px;
+    right: 17%;
     top: 100px;
     bottom: 0;
 }
@@ -125,4 +125,54 @@ main>section:nth-child(4)>section:nth-child(2)>div>h2{
     color: red;
     padding-right: 5px;
     font-weight: bold;
+}
+
+#Tools_container{
+    width:800px;
+    color: crimson;
+    font-size:  40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align:center;
+    margin:auto;
+}
+/* Define a Title Styles with About Me Section*/
+.tool_list{
+    position: relative;
+    font-size: 30px;
+    display: inline-block;
+    padding:0 15px;
+    margin: auto;
+}
+/* Define a Title Styles with About Me Section*/
+.tool_list:before,
+.tool_list:after {
+    position: absolute;
+    top: 50%;
+    width: 500px;
+    height: 3px;
+    content: '';
+    background-color: #004FC5;
+    left:-500px;
+}
+
+/* Define a Title Styles with About Me Section*/
+.tool_list:after {
+    left: 100%;
+}
+
+#set_of_tools{
+ /*   border: 1px solid blueviolet;*/
+    height: 100px;
+    width: 98vw;
+    display: flex;
+    align-items: center;     /* Maintain Cross Axis */
+    justify-content: space-evenly;
+
+
+}
+.tool{
+    width: 100px;
+    height: 100px;
+    border: 1px solid green;
 }
