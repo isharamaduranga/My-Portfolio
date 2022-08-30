@@ -6,6 +6,7 @@
 #projects_container{
     width:800px;
     color: #004FC5;
+    font-family: 'DM Mono', monospace;
     font-size:  40px;
     padding-top: 85px;
     text-align:center;
@@ -39,4 +40,35 @@
     font-size:  60px;
     margin: auto;
     text-align: center;
+}
+
+.Project_description .P-1,.P-2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.Project_description .P-2{
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.Btn_Github a{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    /*background-image: url("../assets/git.png");*/
+    background: #5E3BEE;
+    font-size: 25px;
+    padding: 4px 40px;
+    margin-top: 30px;
+    border-radius: 20px;
+    border: 3px solid #5E3BEE;
+    transition: all 0.3s ease;
+}
+.Btn_Github a:hover{
+    color: #e5114d;
+    background: none;
 }
