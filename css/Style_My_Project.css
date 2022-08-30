@@ -1,4 +1,5 @@
-#My_Project{
+.My_Projects{
     width: 100vw;
-    height: 100vh;
+    height: 1000px;
+    border: 2px solid mediumvioletred;
 }
