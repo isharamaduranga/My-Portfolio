@@ -1,5 +1,42 @@
 .My_Projects{
     width: 100vw;
-    height: 1000px;
+    height: 100vh;
     border: 2px solid mediumvioletred;
+}
+#projects_container{
+    width:800px;
+    color: #004FC5;
+    font-size:  40px;
+    padding-top: 85px;
+    text-align:center;
+    margin:auto;
+}
+.project_h1{
+    position: relative;
+    font-size: 30px;
+    display: inline-block;
+    padding:0 15px;
+    margin: auto;
+}
+.project_h1:before,
+.project_h1:after{
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 3px;
+    content: '';
+    background-color: #004FC5;
+    left:-150px;
+}
+/* Define a Title Styles with About Me Section*/
+.project_h1:after{
+    left: 100%;
+}
+
+/* About section h2 styles*/
+.project_h2{
+    color: rgba(102, 102, 102, 0.2);
+    font-size:  60px;
+    margin: auto;
+    text-align: center;
 }
