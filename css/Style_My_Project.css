@@ -69,6 +69,13 @@
     transition: all 0.3s ease;
 }
 .Btn_Github a:hover{
-    color: #e5114d;
+    color: crimson;
     background: none;
+}
+
+.Btn_Github a i{
+    color: #ffffff;
+}
+.Btn_Github  a:hover i{
+    color: crimson;
 }
