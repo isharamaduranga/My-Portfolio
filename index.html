@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/Style_Home-Page.css">
     <link rel="stylesheet" href="css/Style_About-Me.css">
     <link rel="stylesheet" href="css/Style_My_Skill.css">
+    <link rel="stylesheet" href="css/Style_My_Service.css">
+
     <link href="favIcon.png" rel="icon">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -24,7 +26,7 @@
 
 
     <style>
-        ::-webkit-scrollbar-track-piece{
+        ::-webkit-scrollbar-track-piece {
             display: none;
         }
 
@@ -137,7 +139,7 @@
 
             <div id="about_container">
                 <h1>ABOUT ME</h1>
-                <h2> WHO I  AM</h2>
+                <h2> WHO I AM</h2>
             </div>
 
         </section> <!--for the Title of about page-->
@@ -148,7 +150,7 @@
             <article>
                 <h1>Hii. I am Ishara Maduranga From Sri lanka.</h1>
 
-                <h2>I AM, <span class="typing_about">  </span> </h2>
+                <h2>I AM, <span class="typing_about">  </span></h2>
 
                 <p>I’m Ishara Maduranga. I’m Currently Learninng Web Development ,Software Development and Internet
                     Technologies at <abbr title="Institute Of Software Engineering"> IJSE </abbr>in Panadura.I’ve mostly
@@ -159,10 +161,11 @@
                 <p> I am dedicated to quest of developing solutions that leverage on best practise technologies to
                     deliver over the top user experience. Also Contact me to get the service you need in these areas
                     creatively, efficiently and cleanly.<br><br>
-                    Also,  <b><br> if you want to receive services in a very friendly manner, please </b>
+                    Also, <b><br> if you want to receive services in a very friendly manner, please </b>
                     <!--for the linked WhatsApp & G-Mail-->
                     <a href="http://wa.me/+94776127572?text=Hello,Ishara" target="_blank">Contact Me</a>
-                    <b>or</b> <a href="mailto:isharamaduranga500@gmail.com" target="_blank">Send an E-mail </a> <b>for me.</b>
+                    <b>or</b> <a href="mailto:isharamaduranga500@gmail.com" target="_blank">Send an E-mail </a> <b>for
+                        me.</b>
 
                 </p>
 
@@ -191,13 +194,13 @@
             </article>
 
             <aside> <!--for the picture and my basic details of about page-->
-                <div class="about_sec_circle1"> </div>
+                <div class="about_sec_circle1"></div>
                 <div class="about_sec_circle2">
-                   <h3>Name      : H.A.I Maduranga</h3><br>
-                   <h3>Dob        : 1997-02-06</h3><br>
-                   <h3>Address   : Nittambuwa</h3><br>
-                   <h3>Contact   : +94-776127572</h3>
-                   <h3> </h3>
+                    <h3>Name : H.A.I Maduranga</h3><br>
+                    <h3>Dob : 1997-02-06</h3><br>
+                    <h3>Address : Nittambuwa</h3><br>
+                    <h3>Contact : +94-776127572</h3>
+                    <h3></h3>
                 </div>
                 <article></article>
             </aside>
@@ -210,20 +213,19 @@
 
     <!--site My Skills Page-->
     <section class="My_Skill">
-        <dfn id="My Skills-section"></dfn>
+        <dfn id="My Services-section"></dfn>
         <!--for the Title of Skills page-->
         <section>
 
             <div id="skill_container">
-                <h1>MY SKILLS</h1>
-                <h2>WHAT  I  TOP SKILLS</h2>
+                <h1 class="skill_title_h1">MY SKILLS</h1>
+                <h2 class="skill_title_h2">WHAT I TOP SKILLS</h2>
             </div>
 
         </section>
 
 
         <section id="set_of_skill">  <!--for the Display Type of Skills-->
-
 
 
             <div class="skill-div1">
@@ -386,14 +388,13 @@
             </div>
 
 
-
         </section>
 
 
         <!--for the Display Title of Tools-->
-            <div id="Tools_container">
-                <h1 class="tool_list">TOOLS</h1>
-            </div>
+        <div id="Tools_container">
+            <h1 class="tool_list">TOOLS</h1>
+        </div>
 
         <section id="set_of_tools"><!--for the Display Type of Tools-->
             <div class="tool" style="background-image: url(assets/Tools/inteleji.png)"></div>
@@ -413,69 +414,73 @@
     <!--******************************************************************-->
 
     <!--site My Services Page-->
-    <section>
-    <!--    <img src="assets/My_Service/service-bg.png">-->
-        <section></section><!--for the Title of Services page-->
+    <section id="My_Service">
+        <dfn id="My Skills-section"></dfn>
+        <section>
+            <div id="service_container">
+                <h1 class="service_h1">MY SERVICES</h1>
+                <h2 class="service_h2">WHAT I PROVIDE</h2>
+            </div>
+        </section><!--for the Title of Services page-->
 
 
-        <section> <!--for the Display Types of Services-->
-            <section>
-                <!--img & paragraph-->
-                <article>
-                    <h2>Software Development </h2>
-                    <img src="assets/software_development.png">
+        <section id="service_List"> <!--for the Display Types of Services-->
 
-                    <p>Various Type of standalone software development with Java, JavaFx,MySQL, SpringBoot and
-                        Hibernate
-                    </p>
-                    <p>
-                        Implementation process is as smooth as possible
-                    </p>
-                    <p>Executing both a great visual design and code</p>
-                    <p>Experience with Representational State Transfer Services and APIs</p>
+            <div class="service-01">
+
+                <h2 class="service_title">Software Development </h2>
+                <img class="one_image"  src="assets/software_development.png">
+
+                <ul>
+                    <li>Various Type of standalone software development with Java, JavaFx,MySQL, SpringBoot and Hibernate</li>
+                    <li>Implementation process is as smooth as possible</li>
+                    <li>Executing both a great visual design and code</li>
+                    <li>Experience with Representational State Transfer Services and APIs</li>
+
+                </ul>
+
+            </div>
+
+            <div class="service-02">
 
 
-                </article>
-            </section>
+                <h2 class="service_title">Mobile App Development </h2>
+                <img class="two_image" src="assets/mobile_development.png">
 
-            <section>
-                <!--img & paragraph-->
-                <article>
-                    <h2>Mobile App Development </h2>
-                    <img src="assets/mobile_development.png">
-                    <p> Application Development with Industrial Standards</p>
+                <ul>
+                    <li> Application Development with Industrial Standards</li>
+                    <li>used to most populer mobile app development frameworks.</li>
+                    <li>Speed. Fast loading screens are vital.</li>
+                    <li> Flexibility.</li>
+                    <li>Security.</li>
+                </ul>
 
-                    <p>used to most populer mobile app development frameworks.</p>
+            </div>
 
-                    <p>Speed. Fast loading screens are vital.</p>
-                    <p> Flexibility.</p>
-                    <p>Security.</p>
+            <div class="service-03">
+                <h2 class="service_title">Web Development</h2>
+                <img class="third_image" src="assets/web_development.png">
 
-                </article>
-            </section>
-            <section>
-                <!--img & paragraph-->
-                <article>
-                    <h2>Web Development</h2>
-                    <img src="assets/web_development.png">
-                    <p>Blogs,E-commerce websites development with JavaScript,CSS and HTML</p>
-                    <p>Use latest Technolgies to develop the designs.</p>
-                    <p>An understanding of the latest trends and their role within a commercial environment</p>
+                <ul>
+                    <li>Blogs,E-commerce websites development with JavaScript,CSS and HTML</li>
+                    <li>Use latest Technolgies to develop the designs.</li>
+                    <li>An understanding of the latest trends and their role within a commercial environment</li>
+                </ul>
 
-                </article>
-            </section>
-            <section>
-                <!--img & paragraph-->
-                <article>
-                    <h2>UI / UX Design </h2>
-                    <img src="assets/ui-ux_design.png">
-                    <p>Design and build interfaces in software or other computerized devices</p>
-                    <p>create products have meaningful and satisfy user experiences</p>
-                    <p>product from branding to design to usability</p>
-                    <p>Produce products that are useful, usable, and desirable </p>
+            </div>
 
-                </article>
-            </section>
+            <div class="service-04">
+                    <h2 class="service_title">UI / UX Design </h2>
+                    <img class="fourth_image" src="assets/ui-ux_design.png">
+                <ul>
+                    <li>Design and build interfaces in software or other computerized devices</li>
+                    <li>create products have meaningful and satisfy user experiences</li>
+                    <li>product from branding to design to usability</li>
+                    <li>Produce products that are useful, usable, and desirable </li>
+                </ul>
+
+            </div>
+
         </section>
 
     </section>
@@ -484,13 +489,26 @@
     <!--******************************************************************-->
 
     <!--site My Projects Page-->
-    <section>
+    <section id="My_Project">
         <!--for the Title of My Project-->
-        <section></section>
+        <section>
+
+        </section>
 
         <!--for the Description of My Project and Display All Projects & Link to GitHub-->
         <section>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores corporis ex laborum
+                magni modi nostrum placeat praesentium qui, quis quisquam ratione repudiandae, sunt suscipit,
+                temporibus vero voluptatum? Iste, sit?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores corporis ex laborum
+                magni modi nostrum placeat praesentium qui, quis quisquam ratione repudiandae, sunt suscipit,
+                temporibus vero voluptatum? Iste, sit?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores corporis ex laborum
+                magni modi nostrum placeat praesentium qui, quis quisquam ratione repudiandae, sunt suscipit,
+                temporibus vero voluptatum? Iste, sit?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores corporis ex laborum
+                magni modi nostrum placeat praesentium qui, quis quisquam ratione repudiandae, sunt suscipit,
+                temporibus vero voluptatum? Iste, sit?</p>
             <nav></nav>
 
         </section>
@@ -503,7 +521,7 @@
 
     <!--site My Education Page-->
     <section>
-      <!--  <img src="assets/Education/education_bg.jpg">-->
+        <!--  <img src="assets/Education/education_bg.jpg">-->
 
         <!--for the Title of My Education-->
         <section></section>
@@ -518,7 +536,7 @@
 
 
     <section> <!--site Contact Page-->
-       <!-- <img src="assets/Contact/footer-bg.png">-->
+        <!-- <img src="assets/Contact/footer-bg.png">-->
         <section></section> <!--for the Title of Contact-->
 
 
@@ -548,8 +566,8 @@
 
 <!--site footer-->
 <footer>
-    <p><small>Copyright 2022 All Right Reserved .</small></p>
-    <p><small>Website Developed By Ishara Maduranga.</small></p>
+    <!--    <p><small>Copyright 2022 All Right Reserved .</small></p>
+        <p><small>Website Developed By Ishara Maduranga.</small></p>-->
 </footer>
 
 </body>

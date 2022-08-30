@@ -1,0 +1,104 @@
+
+#My_Service{
+    background: url("/assets/My_Service/service-bg.png") no-repeat center;
+    background-size: 100% 100%;
+    height: 140vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#service_container {
+    position: relative;
+    top: -50px;
+    width:800px;
+    color: #004FC5;
+    font-size:  40px;
+    padding-top: 10px;
+    text-align:center;
+    margin:auto;
+    padding-bottom: 50px;
+}
+/* Define a Title Styles with About Me Section*/
+.service_h1{
+    position: relative;
+    font-size: 30px;
+    display: inline-block;
+    padding:0 15px;
+    margin: auto;
+}
+/* Define a Title Styles with About Me Section*/
+.service_h1:before,
+.service_h1:after {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 3px;
+    content: '';
+    background-color: #004FC5;
+    left:-150px;
+}
+
+/* Define a Title Styles with About Me Section*/
+.service_h1:after {
+    left: 100%;
+}
+.service_h2{
+    color: rgba(102, 102, 102, 0.2);
+    font-size:  60px;
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+#service_List{
+    height:70vh;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+#service_List>div{
+    width: 315px;
+    height:65vh;
+    background-color: #E8E7EF;
+    border-radius: 30px;
+    /*box-shadow: 10px 13px 8px -5px rgba(255, 255, 255, 0.15);*/
+     box-shadow: 10px 13px 8px -5px #282626;
+     transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 1s;
+}
+#service_List>div:hover{
+   /* background-image: linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(15, 196, 15) 100%);*/
+    cursor: pointer;
+    box-shadow: 0px 0px 0 0px rgba(94, 59, 238, 0.4);
+    transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 1s;
+    transform: scale(1.05);
+}
+
+#service_List>div>ul{
+    padding-left: 25px;
+}
+#service_List>div>ul>li{
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    padding-top:15px;
+    letter-spacing: 0.04em;
+}
+.service_title{
+    padding-top: 20px;
+    text-align: center;
+    color: #403D4E;
+    font-family: 'Ubuntu', sans-serif;
+}
+.one_image,.two_image,.fourth_image{
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.third_image{
+    margin-left: 120px;
+    margin-top: 5px;
+
+}
