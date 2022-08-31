@@ -1,3 +1,5 @@
+
+
 .My_Projects{
     height: 150vh;
 
@@ -61,7 +63,7 @@
     background: #5E3BEE;
     font-size: 25px;
     padding: 4px 40px;
-    margin-top: 30px;
+    margin-top: 20px;
     border-radius: 20px;
     border: 3px solid #5E3BEE;
     transition: all 0.3s ease;
@@ -78,6 +80,8 @@
     color: crimson;
 }
 /*************************************************************************** */
+
+
 #project_view_container{
     margin: 0;
     padding: 0;
@@ -85,7 +89,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:#383838;
+    background:#fff;
     font-family: 'Poppins', sans-serif;
 }
 .card{
@@ -97,7 +101,7 @@
 }
 
 .card .content{
-    widows: 400px;
+    width: 400px;
     padding: 30px;
     box-sizing: border-box;
 }
@@ -112,8 +116,6 @@
     font-weight: 600;
 }
 
-
-
 .card .sliderText{
     position: relative;
     width: 100%;
@@ -126,4 +128,27 @@
 .card .sliderText h3{
     color: #fff ;
     font-size: 3em;
+}
+
+ .swiper-slide{
+   max-width: 400px;
+}
+.swiper-slide:nth-child(1) .sliderText{
+    background: #2196f3;
+}
+
+.swiper-slide:nth-child(2) .sliderText{
+    background: #e91e63;
+}
+
+.swiper-slide:nth-child(3) .sliderText{
+    background: #c3d41a;
+}
+
+.swiper-slide:nth-child(4) .sliderText{
+    background: #ff9800;
+}
+
+.swiper-slide:nth-child(5) .sliderText{
+    background: #c33ada;
 }
