@@ -59,9 +59,8 @@
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    /*background-image: url("../assets/git.png");*/
     background: #5E3BEE;
-    font-size: 25px;
+    font-size: 20px;
     padding: 4px 40px;
     margin-top: 20px;
     border-radius: 20px;
@@ -89,26 +88,29 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:#fff;
+    background: #fff;
     font-family: 'Poppins', sans-serif;
 }
 .card{
     position: relative;
-    background: #fff ;
+    background: ghostwhite ;
     width: 400px;
     height: 500px;
     margin: 0 auto;
+
 }
 
 .card .content{
     width: 400px;
     padding: 30px;
     box-sizing: border-box;
+    border: 2px solid red;
+    background-image: url("");
 }
 
 .card .content a{
     display: inline-block;
-    margin: 10px 0 0;
+    margin: 20px 0 0;
     padding: 10px 20px;
     text-decoration: none;
     border: 2px solid #262626;
@@ -116,18 +118,42 @@
     font-weight: 600;
 }
 
+.card .content a{
+    display: inline-block;
+    color: #fff;
+    background: #b69202;
+    font-size: 20px;
+    padding: 4px 40px;
+    border-radius: 20px;
+    border: 3px solid #b69202;
+    transition: all 0.3s ease;
+    margin-top: 95px;
+    margin-left: 65px;
+
+}
+.card .content a:hover{
+    color: crimson;
+    background: none;
+}
+
+.card .content .description{
+    color: rgb(0, 0, 0);
+    padding-top: 50px;
+}
+
 .card .sliderText{
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #000;
 }
 .card .sliderText h3{
-    color: #fff ;
-    font-size: 3em;
+    color: #000000;
+    font-size: 2em;
+    text-align: center;
 }
 
  .swiper-slide{
