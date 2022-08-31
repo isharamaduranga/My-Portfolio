@@ -1,5 +1,41 @@
 #Contact_Page {
-    width: 100vw;
     height: 100vh;
-    background-color: darkorchid;
+    border: 2px solid crimson;
+}
+#contact_container{
+    width:800px;
+    color: #004FC5;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+    text-align:center;
+    margin:auto;
+}
+.contact_h1{
+    position: relative;
+    font-size: 40px;
+    display: inline-block;
+    padding:0 15px;
+    margin: auto;
+}
+.contact_h1:before,
+.contact_h1:after{
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 3px;
+    content: '';
+    background-color: #004FC5;
+    left:-150px;
+}
+/* Define a Title Styles with About Me Section*/
+.contact_h1:after{
+    left: 100%;
+}
+
+/* About section h2 styles*/
+.contact_h2{
+    color: rgba(102, 102, 102, 0.2);
+    font-size:  70px;
+    margin: auto;
+    text-align: center;
 }

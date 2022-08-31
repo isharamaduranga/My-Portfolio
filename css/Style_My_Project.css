@@ -1,7 +1,6 @@
 .My_Projects{
-    width: 100vw;
     height: 150vh;
-    border: 2px solid mediumvioletred;
+
 }
 #projects_container{
     width:800px;
@@ -80,8 +79,7 @@
 }
 
 #project_view_container{
-    width: 100vw;
-    height: 100vh;
-    border: 2px solid #d7151f;
+    height: 90vh;
+    border: 2px solid #0fc40f;
     margin-top: 50px;
 }

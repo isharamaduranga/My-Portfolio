@@ -1,5 +1,43 @@
-#Education_Page {
-    width: 100vw;
-    height: 100vh;
-    background-color: coral;
+#My_Education {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Education/education_bg.jpg") no-repeat center;
+    background-size: 100% 100%;
+    height: 120vh;
+    font-family: 'Poppins', sans-serif
+}
+#education_container{
+    width:800px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
+    text-align:center;
+    margin:auto;
+}
+.education_h1{
+    position: relative;
+    font-size: 40px;
+    display: inline-block;
+    padding:0 15px;
+    margin: auto;
+}
+.education_h1:before,
+.education_h1:after{
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 3px;
+    content: '';
+    background-color: #FAFF04;
+    left:-150px;
+}
+/* Define a Title Styles with About Me Section*/
+.education_h1:after{
+    left: 100%;
+}
+
+/* About section h2 styles*/
+.education_h2{
+    color: rgba(102, 102, 102, 0.4);
+    font-size:  70px;
+    margin: auto;
+    text-align: center;
 }
