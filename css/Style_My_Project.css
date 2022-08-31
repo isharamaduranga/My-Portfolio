@@ -1,16 +1,16 @@
 
-
 .My_Projects{
-    height: 150vh;
+    height: 140vh;
 
 }
 #projects_container{
-    width:800px;
+    width:700px;
     color: #004FC5;
     font-family: 'Poppins', sans-serif;
-    padding-top: 100px;
+    padding-top: 90px;
     text-align:center;
     margin:auto;
+
 }
 .project_h1{
     position: relative;
@@ -62,10 +62,11 @@
     background: #5E3BEE;
     font-size: 20px;
     padding: 4px 40px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 20px;
     border: 3px solid #5E3BEE;
     transition: all 0.3s ease;
+
 }
 .Btn_Github a:hover{
     color: crimson;
@@ -87,7 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     background: #fff;
     font-family: 'Poppins', sans-serif;
 }
@@ -104,9 +105,40 @@
     width: 400px;
     padding: 30px;
     box-sizing: border-box;
-    border: 2px solid red;
-    background-image: url("");
+    background-size: 100% 100%;
 }
+
+.card  #Hostel_bg{
+    background-size: 100% 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../assets/Project/hostel.jpg") no-repeat center;
+}
+
+.card  #ChatApplication_bg{
+    background-size: 100% 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../assets/Project/friends-social-media.jpg") no-repeat center;
+}
+
+.card  #Vehicle_bg{
+    background-size: 100% 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../assets/Project/vehicle_service.jpg") no-repeat center;
+}
+
+.card  #Parking_bg{
+    background-size: 100% 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../assets/Project/car_parking.jpg") no-repeat center;
+}
+
+.card  #Pos_bg{
+    background-size: 100% 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../assets/Project/pos_system.jpg") no-repeat center;
+}
+
+
 
 .card .content a{
     display: inline-block;
@@ -115,30 +147,31 @@
     text-decoration: none;
     border: 2px solid #262626;
     color:#262626 ;
-    font-weight: 600;
+    /*font-weight: 600;*/
 }
 
 .card .content a{
     display: inline-block;
     color: #fff;
-    background: #b69202;
+    background: crimson;
     font-size: 20px;
     padding: 4px 40px;
     border-radius: 20px;
-    border: 3px solid #b69202;
+    border: 3px solid crimson;
     transition: all 0.3s ease;
     margin-top: 95px;
     margin-left: 65px;
 
 }
 .card .content a:hover{
-    color: crimson;
+    color: #ffffff;
     background: none;
 }
 
 .card .content .description{
-    color: rgb(0, 0, 0);
-    padding-top: 50px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+   /* padding-top: 50px;*/
 }
 
 .card .sliderText{
@@ -151,7 +184,7 @@
     background: #000;
 }
 .card .sliderText h3{
-    color: #000000;
+    color: #ffffff;
     font-size: 2em;
     text-align: center;
 }
@@ -177,4 +210,22 @@
 
 .swiper-slide:nth-child(5) .sliderText{
     background: #c33ada;
+}
+
+#viewMore_btn{
+    display: inline-block;
+    position: relative;
+    left: 43.5vw;
+    color: #fff;
+    background: #B22626;
+    font-size: 20px;
+    padding: 4px 40px;
+    border-radius: 20px;
+    border: 3px solid #B22626;
+    transition: all 0.3s ease;
+}
+
+#viewMore_btn:hover{
+    color: black;
+    background: none;
 }
