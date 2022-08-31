@@ -1,13 +1,13 @@
-#My_Education {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Education/education_bg.jpg") no-repeat center;
+#my_education {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/education/education_bg.jpg") no-repeat center;
     background-size: 100% 100%;
     height: 120vh;
-    font-family: 'Poppins', sans-serif
+    font-family: 'poppins', sans-serif
 }
 #education_container{
     width:800px;
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins', sans-serif;
     padding-top: 100px;
     text-align:center;
     margin:auto;
@@ -26,15 +26,15 @@
     width: 150px;
     height: 3px;
     content: '';
-    background-color: #FAFF04;
+    background-color: #faff04;
     left:-150px;
 }
-/* Define a Title Styles with About Me Section*/
+/* define a title styles with about me section*/
 .education_h1:after{
     left: 100%;
 }
 
-/* About section h2 styles*/
+/* about section h2 styles*/
 .education_h2{
     color: rgba(102, 102, 102, 0.4);
     font-size:  70px;
