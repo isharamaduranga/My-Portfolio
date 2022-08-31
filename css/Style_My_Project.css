@@ -1,20 +1,19 @@
 .My_Projects{
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     border: 2px solid mediumvioletred;
 }
 #projects_container{
     width:800px;
     color: #004FC5;
-    font-family: 'DM Mono', monospace;
-    font-size:  40px;
-    padding-top: 85px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 100px;
     text-align:center;
     margin:auto;
 }
 .project_h1{
     position: relative;
-    font-size: 30px;
+    font-size: 40px;
     display: inline-block;
     padding:0 15px;
     margin: auto;
@@ -37,7 +36,7 @@
 /* About section h2 styles*/
 .project_h2{
     color: rgba(102, 102, 102, 0.2);
-    font-size:  60px;
+    font-size:  70px;
     margin: auto;
     text-align: center;
 }
@@ -78,4 +77,11 @@
 }
 .Btn_Github  a:hover i{
     color: crimson;
+}
+
+#project_view_container{
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid #d7151f;
+    margin-top: 50px;
 }

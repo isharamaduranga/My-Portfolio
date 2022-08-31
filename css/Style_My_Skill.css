@@ -8,15 +8,15 @@
 #skill_container {
     width:800px;
     color: #004FC5;
-    font-size:  40px;
     padding-top: 100px;
     text-align:center;
     margin:auto;
+    font-family: 'Poppins', sans-serif;
 }
 /* Define a Title Styles with About Me Section*/
 .skill_title_h1{
     position: relative;
-    font-size: 30px;
+    font-size: 40px;
     display: inline-block;
     padding:0 15px;
     margin: auto;
@@ -41,7 +41,7 @@
 /* About section h2 styles*/
 .skill_title_h2{
     color: rgba(102, 102, 102, 0.2);
-    font-size:  60px;
+    font-size:  70px;
     margin: auto;
     padding-bottom: 50px;
     text-align: center;

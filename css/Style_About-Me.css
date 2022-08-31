@@ -1,16 +1,16 @@
 
-main>section:nth-child(3){
+#My_About{
     height: 100vh;
 
 }
 /* About me Page Second Section*/
-main>section:nth-child(3)>section:nth-child(3){
+.About_me_second_section{
     position: relative;
     height: 80vh;
 
 }
 /* Article styles of About Me Page*/
-main>section:nth-child(3)>section:nth-child(3)>article{
+.about_Article{
     position: absolute;
     width: 60vw;
     height: 80vh;
@@ -23,7 +23,7 @@ main>section:nth-child(3)>section:nth-child(3)>article{
     font-size: 10px;
 }
 /* Paragraph styles of Article in About Me Page*/
-main>section:nth-child(3)>section:nth-child(3)>article>p{
+.about_Article>p{
 
     padding-top: 10px;
     padding-left:90px;
@@ -31,7 +31,7 @@ main>section:nth-child(3)>section:nth-child(3)>article>p{
     font-size: 1.5em;
 }
 /* h1 styles of Article in About Me Page*/
-main>section:nth-child(3)>section:nth-child(3)>article>h1{
+.Description_h1{
     text-align: center;
     color: #403D4E;
     margin: 0;
@@ -39,7 +39,7 @@ main>section:nth-child(3)>section:nth-child(3)>article>h1{
 
 }
 /* h2 styles of Article in About Me Page*/
-main>section:nth-child(3)>section:nth-child(3)>article>h2{
+.Description_h2{
 
     text-align: center;
     color: #6C6C78;
@@ -50,7 +50,7 @@ main>section:nth-child(3)>section:nth-child(3)>article>h2{
     padding-left: 250px;
 }
 /* h2 Typing Text styles of Article in About Me Page*/
-main>section:nth-child(3)>section:nth-child(3)>article>h2 span {
+.Description_h2 span {
     color: #e5114d;
     font-weight: 500;
     text-align: center;
@@ -62,22 +62,22 @@ main>section:nth-child(3)>section:nth-child(3)>article>h2 span {
 #about_container {
     width:800px;
     color: #004FC5;
-    font-size:  40px;
-    padding-top: 85px;
+    padding-top: 100px;
     text-align:center;
+    font-family: 'Poppins', sans-serif;
     margin:auto;
 }
 /* Define a Title Styles with About Me Section*/
- main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child{
+.about_title_h1{
     position: relative;
-    font-size: 30px;
+    font-size: 40px;
     display: inline-block;
     padding:0 15px;
      margin: auto;
 }
 /* Define a Title Styles with About Me Section*/
-main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:before,
-main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
+.about_title_h1:before,
+.about_title_h1:after {
     position: absolute;
     top: 50%;
     width: 150px;
@@ -90,14 +90,14 @@ main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
 /*=========================================================================*/
 
 /* Define a Title Styles with About Me Section*/
-main>section:nth-child(3)>section:nth-child(2)>div>h1:first-child:after {
+.about_title_h1:after {
     left: 100%;
 }
 
 /* About section h2 styles*/
-main>section:nth-child(3)>section:nth-child(2)>div>h2{
+.about_title_h2{
     color: rgba(102, 102, 102, 0.2);
-    font-size:  60px;
+    font-size:  70px;
     margin: auto;
     text-align: center;
 }

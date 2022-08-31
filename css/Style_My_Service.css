@@ -3,7 +3,7 @@
     background: url("../assets/My_Service/service-bg.png") no-repeat center;
     background-size: 100% 100%;
     height: 140vh;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif
 }
 
 #service_container {
@@ -11,7 +11,6 @@
     top: -50px;
     width:800px;
     color: #004FC5;
-    font-size:  40px;
     text-align:center;
     margin:auto;
     padding-bottom: 50px;
@@ -19,7 +18,7 @@
 /* Define a Title Styles with About Me Section*/
 .service_h1{
     position: relative;
-    font-size: 30px;
+    font-size: 40px;
     display: inline-block;
     padding:0 15px;
     margin: auto;
@@ -42,7 +41,7 @@
 }
 .service_h2{
     color: rgba(102, 102, 102, 0.2);
-    font-size:  60px;
+    font-size:  70px;
     margin: auto;
     padding-bottom: 50px;
     text-align: center;
@@ -73,7 +72,7 @@
     transition-delay: 0s;
     transition-property: all;
     transition-duration: 1s;
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 #service_List>div>ul{
