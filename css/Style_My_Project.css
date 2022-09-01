@@ -90,7 +90,7 @@
     align-items: center;
     min-height: 80vh;
     background: #fff;
-    font-family: 'Poppins', sans-serif;
+    font-family:'poppins', sans-serif;
 }
 .card{
     position: relative;
@@ -103,12 +103,13 @@
 
 .card .content{
     width: 400px;
-    padding: 30px;
+    padding: 35px;
     box-sizing: border-box;
-    background-size: 100% 100%;
+
 }
 
 .card  #Hostel_bg{
+
     background-size: 100% 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
     url("../assets/Project/hostel.jpg") no-repeat center;
@@ -215,7 +216,7 @@
 #viewMore_btn{
     display: inline-block;
     position: relative;
-    left: 43.5vw;
+    left: 42vw;
     color: #fff;
     background: #B22626;
     font-size: 20px;
