@@ -1,7 +1,7 @@
 #my_education {
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("../assets/Education/education_bg.jpg") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../assets/Education/education_bg.jpg") no-repeat center;
     background-size: 100% 100%;
-    height: 120vh;
+    height: 125vh;
     font-family: 'poppins', sans-serif
 }
 #education_container{
@@ -46,14 +46,12 @@
 .education_aside{
     position: relative;
     height:90vh ;
-    border: 2px solid deeppink;
     top: 4vh;
 }
 
 #education_structure{
     height: 75vh;
-    width: 18vw ;
-    border: 2px solid green;
+    width: 16vw ;
     position: absolute;
     margin: auto;
     left: 0;
@@ -61,5 +59,56 @@
     top: 5vh;
     background: url("../assets/Education/education_display_chart.png") no-repeat center;
     background-size: 100% 100%;
+}
 
+.education_aside> .level-01 ,.level-02 ,.level-03,.level-04,.level-05{
+    font-family: 'Poppins', sans-serif;
+    width: 30vw;
+    height: 17vh;
+    position: absolute;
+    margin: auto;
+    padding: 10px;
+    color: #ffffff;
+    border: 0.02em solid white;
+}
+
+.education_aside>div>h2{
+    font-size: 20px;
+}
+.education_aside>div>h3{
+    font-size: 18px;
+}
+
+.education_aside>div>h4{
+    font-size: 15px;
+}
+
+.education_aside>div>h4>i{
+    color: #0fc40f;
+    padding-right: 10px;
+}
+
+.level-01{
+    top: 145px;
+    left: 145px;
+}
+
+.level-02{
+    bottom: 180px;
+    left: 145px;
+}
+
+.level-03{
+    right: 145px;
+    top: 40px;
+}
+
+.level-04{
+    right: 145px;
+    top: 240px;
+}
+
+.level-05{
+    right: 145px;
+    bottom: 90px;
 }
