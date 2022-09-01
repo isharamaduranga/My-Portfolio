@@ -1,8 +1,12 @@
 
 .My_Projects{
-    height: 140vh;
-
+    height: 220vh;
+  border: 5px solid #0fc40f; /*++++++ Main Border ++++++++++*/
 }
+.title_of_projects{
+    border: 2px solid #05afee; /*++++++ Main Border ++++++++++*/
+}
+/*------------------------------------------------------------*/
 #projects_container{
     width:700px;
     color: #004FC5;
@@ -10,7 +14,6 @@
     padding-top: 90px;
     text-align:center;
     margin:auto;
-
 }
 .project_h1{
     position: relative;
@@ -40,6 +43,12 @@
     font-size:  70px;
     margin: auto;
     text-align: center;
+}
+/*--------------------------------------------------------------*/
+.Project_description{
+    border: 2px solid blue; /*++++++++++++++++*/
+    height: 20vh;
+    margin-bottom: 10px;
 }
 
 .Project_description .P-1,.P-2{
@@ -79,8 +88,9 @@
 .Btn_Github  a:hover i{
     color: crimson;
 }
-/*************************************************************************** */
+/*-------------------------------------------------------------------------*/
 
+/*=============================PROJECT SLIDE SHOW STYLES============================================*/
 
 #project_view_container{
     margin: 0;
@@ -88,24 +98,87 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 70vh;
     background: #fff;
     font-family:'poppins', sans-serif;
+    border: 2px solid red;
 }
 .card{
     position: relative;
     background: ghostwhite ;
-    width: 400px;
-    height: 500px;
+    width: 350px;
+    height: 450px;
     margin: 0 auto;
-
 }
 
 .card .content{
-    width: 400px;
+    width: 350px;
     padding: 35px;
     box-sizing: border-box;
+}
 
+
+.card .content a{
+    display: inline-block;
+    color: #fff;
+    background: crimson;
+    font-size: 16px;
+    padding: 4px 40px;
+    border-radius: 20px;
+    border: 3px solid crimson;
+    transition: all 0.3s ease;
+    margin-top: 65px;
+    margin-left: 65px;
+
+}
+.card .content a:hover{
+    color: #ffffff;
+    background: none;
+}
+
+.card .content .description{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    /* padding-top: 50px;*/
+}
+
+.card .sliderText{
+    position: relative;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.card .sliderText h3{
+    color: #ffffff;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.swiper-slide{
+    max-width: 350px;
+}
+
+.swiper-slide:nth-child(1) .sliderText{
+    background: #2196f3;
+}
+
+.swiper-slide:nth-child(2) .sliderText{
+    background: #e91e63;
+}
+
+.swiper-slide:nth-child(3) .sliderText{
+    background: #1eb61e;
+}
+
+.swiper-slide:nth-child(4) .sliderText{
+    background: #ff9800;
+}
+
+.swiper-slide:nth-child(5) .sliderText{
+    background: #c33ada;
 }
 
 .card  #Hostel_bg{
@@ -139,80 +212,7 @@
     url("../assets/Project/pos_system.jpg") no-repeat center;
 }
 
-
-
-.card .content a{
-    display: inline-block;
-    margin: 20px 0 0;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: 2px solid #262626;
-    color:#262626 ;
-    /*font-weight: 600;*/
-}
-
-.card .content a{
-    display: inline-block;
-    color: #fff;
-    background: crimson;
-    font-size: 20px;
-    padding: 4px 40px;
-    border-radius: 20px;
-    border: 3px solid crimson;
-    transition: all 0.3s ease;
-    margin-top: 95px;
-    margin-left: 65px;
-
-}
-.card .content a:hover{
-    color: #ffffff;
-    background: none;
-}
-
-.card .content .description{
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-   /* padding-top: 50px;*/
-}
-
-.card .sliderText{
-    position: relative;
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-}
-.card .sliderText h3{
-    color: #ffffff;
-    font-size: 2em;
-    text-align: center;
-}
-
- .swiper-slide{
-   max-width: 400px;
-}
-.swiper-slide:nth-child(1) .sliderText{
-    background: #2196f3;
-}
-
-.swiper-slide:nth-child(2) .sliderText{
-    background: #e91e63;
-}
-
-.swiper-slide:nth-child(3) .sliderText{
-    background: #c3d41a;
-}
-
-.swiper-slide:nth-child(4) .sliderText{
-    background: #ff9800;
-}
-
-.swiper-slide:nth-child(5) .sliderText{
-    background: #c33ada;
-}
-
+/*================================================================================================*/
 #viewMore_btn{
     display: inline-block;
     position: relative;
@@ -230,3 +230,128 @@
     color: black;
     background: none;
 }
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////*/
+/*=============================ASSIGNMENT SLIDE SHOW STYLES============================================*/
+
+
+#assignment_view_container{
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background: #fff;
+    font-family:'poppins', sans-serif;
+    border: 2px solid red;
+}
+
+.card_below{
+    position: relative;
+    background: ghostwhite ;
+    width: 350px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.card_below .content{
+    width: 350px;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+.card_below .content a{
+    display: inline-block;
+    color: #fff;
+    background: crimson;
+    font-size: 16px;
+    padding: 4px 40px;
+    border-radius: 20px;
+    border: 3px solid crimson;
+    transition: all 0.3s ease;
+    margin-top: 65px;
+    margin-left: 65px;
+
+}
+.card_below .content a:hover{
+    color: #000000;
+    background: none;
+}
+.card_below .content .description{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    /* padding-top: 50px;*/
+}
+.card_below .sliderText{
+    position: relative;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.card_below .sliderText h3{
+    color: #ffffff;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/*Important slide decoration*/
+.assignment_view_container .swiper-container
+.swiper-wrapper .swiper-slide
+{
+    max-width: 350px;
+}
+
+#slide-1 .sliderText{
+    background: #004FC5;
+}
+
+#slide-2 .sliderText{
+    background: #004FC5;
+}
+
+#slide-3 .sliderText{
+    background: #004FC5;
+}
+
+#slide-4  .sliderText{
+    background: #004FC5;
+}
+
+#slide-5  .sliderText{
+    background: #004FC5;
+}
+
+#slide-6  .sliderText{
+    background: #004FC5;
+}
+
+#slide-7  .sliderText{
+    background: #004FC5;
+}
+
+#slide-8 .sliderText{
+    background: #004FC5;
+}
+
+#slide-9  .sliderText{
+    background: #004FC5;
+}
+
+#slide-10  .sliderText{
+    background: #004FC5;
+}
+
+#slide-11  .sliderText{
+    background: #004FC5;
+}
+
+#slide-12  .sliderText{
+    background: #004FC5;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////*/
