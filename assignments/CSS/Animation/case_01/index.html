@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation</title>
+    <link href="normalize.css" rel="stylesheet">
+
+    <meta content="width=device-width initial-scale=1" name="viewport">
+
+    <style>
+
+        section{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        section> div{
+            width: 180px;
+            height: 80px;
+            background: red;
+            border-radius: 50px;
+            animation-name: rotate_rectangle;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            position: relative;
+        }
+
+        @keyframes rotate_rectangle {
+            0% {
+                left: 0;
+                top: 0;
+                background: red;
+            }
+            25% {
+                left: 80vw;
+                top: 0;
+                transform: rotate(90deg);
+                background: green;
+            }
+            50% {
+                left: 80vw;
+                top: 600px;
+                transform: rotate(180deg);
+                background: #ffff00;
+            }
+            75% {
+                left: 0;
+                top: 600px;
+                transform: rotate(270deg);
+                background: deeppink;
+            }
+            100% {
+                left: 0;
+                top: 0;
+                transform: rotate(360deg);
+                background: #095fc0;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+<main>
+    <section>
+        <div>
+
+        </div>
+    </section>
+</main>
+</body>
+</html>

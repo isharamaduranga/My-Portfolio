@@ -3,10 +3,12 @@
 
 }
 .contact_bg{
-    height: 80vh;
+    height: 85vh;
     background: url("../assets/Contact/footer-bg.png") no-repeat center;
     background-size: 100% 100%;
-    font-family: 'Poppins', sans-serif
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid red;
+    position: relative;
 }
 #contact_container{
     width:800px;
@@ -44,4 +46,14 @@
     font-size:  70px;
     margin-bottom: 10vh;
     text-align: center;
+}
+
+.contact_box{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    height: 60vh;
+    width: 98vw;
+    border: 2px solid limegreen;
 }
