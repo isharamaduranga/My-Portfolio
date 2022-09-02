@@ -2,9 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Transition case 01</title>
+    <link href="/assignments/CSS/Transitions/case_01/normalize.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cba6695e4b.js" crossorigin="anonymous"></script>
+
+    <style>
+        section {
+            width: 228px;
+            height: 492px;
+            top: 91px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        section>div{
+            height: 40px;
+            width: 100%;
+            position: relative;
+            background: #1d33ab;
+            color: white;
+            box-shadow: 1px 2px 3px 2px #3a483b;
+            margin-left: -174px;
+            transition: all 2s;
+        }
+
+        section>div>h3{
+            margin: 0;
+            display: inline-block;
+            padding: 10px;
+        }
+        section>div>i{
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            font-size: 28px;
+        }
+
+        section>div:hover {
+            background: deeppink;
+            margin-left: 0px;
+            cursor: pointer;
+            transition: all 2s;
+        }
+    </style>
+
 </head>
 <body>
-
+<section>
+    <div>
+        <h3>Menu One</h3>
+        <i class="fas fa-address-book"></i>
+    </div>
+    <div>
+        <h3>Menu Two</h3>
+        <i class="fas fa-ambulance"></i>
+    </div>
+    <div>
+        <h3>Menu Three</h3>
+        <i class="fas fa-book-medical"></i>
+    </div>
+    <div>
+        <h3>Menu Four</h3>
+        <i class="fas fa-layer-group"></i>
+    </div>
+    <div>
+        <h3>Menu Five</h3>
+        <i class="fas fa-cart-plus"></i>
+    </div>
+</section>
 </body>
 </html>
