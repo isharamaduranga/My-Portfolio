@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition Case 02</title>
+    <link href="/assignments/CSS/Transitions/case_02/normalize.css" rel="stylesheet">
+
+    <style>
+        section{
+            width: 100vw;
+            height: 100vh;
+            background-color: dodgerblue;
+        }
+
+        section>div{
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 400px;
+            height: 400px;
+            border-radius: 100%;
+            background-color: limegreen;
+
+        }
+
+        section>div::after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border: 20px solid #4a5a74;
+            border-top: 20px solid #ff0000;
+            border-radius: 100%;
+        }
+        section>div:hover::after{
+            cursor: pointer;
+            transform: rotate(360deg);
+            transition: all 1s;
+        }
+
+        section>div>h1{
+            position: relative;
+            color: white;
+            text-align: center;
+            top: 160px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<section>
+
+    <div>
+        <h1>RWAD</h1>
+    </div>
+
+</section>
+
+
+</body>
+</html>
