@@ -273,6 +273,7 @@ main>section:nth-child(1)>aside>div:first-child{
     padding: 5px;
 }
 .social_link img:hover{
+
     transform: scale(1.3);
     transition: all 1s;
 }

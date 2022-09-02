@@ -64,7 +64,8 @@
 .contact_box>div{
     width: 28vw;
     height:70vh;
-    border: 2px solid #e70042;
+
+/*    border: 2px solid #e70042;*/
 }
 
 .contact-01{
@@ -127,24 +128,30 @@
     right: 0;
     left: 0;
     bottom: 15vh;
-
 }
 .social_link_for_contact{
     padding: 10px;
     margin-top: 30px;
     text-align: center;
-
-
-}
-.social_link_for_contact .icons{
-    width: 40px;
-    height: 40px;
-    transition: all 1s;
 }
 .social_link_for_contact a{
-    padding: 5px;
+    padding: 10px;
 }
-.social_link_for_contact img:hover{
+
+
+#whatsapp,#git,#linkedin,#fb,#insta,#twitter{
+    font-size: 35px;
+    color: white;
+    transition: all 1s;
+
+}
+#whatsapp:hover,#git:hover,#linkedin:hover,#fb:hover,#insta:hover,#twitter:hover{
+    color: #ffff00;
     transform: scale(1.25);
     transition: all 1s;
 }
+
+
+
+
+/* center div contact page  */
