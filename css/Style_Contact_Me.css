@@ -7,7 +7,7 @@
     background: url("../assets/Contact/footer-bg.png") no-repeat center;
     background-size: 100% 100%;
     font-family: 'Poppins', sans-serif;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: relative;
 }
 #contact_container{
@@ -49,11 +49,102 @@
 }
 
 .contact_box{
+    display: flex;
     position: absolute;
     margin: auto;
-    top: 0;
+    top: 30px;
     bottom: 0;
-    height: 60vh;
-    width: 98vw;
-    border: 2px solid limegreen;
+    left: 0;
+    right: 0;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+   /* border: 2px solid limegreen;*/
+}
+.contact_box>div{
+    width: 28vw;
+    height:70vh;
+    border: 2px solid #e70042;
+}
+
+.contact-01{
+    display: flex;
+    width:30vw ;
+    flex-direction:column;
+}
+
+.contact-01>div{
+    font-family: 'poppins', sans-serif;
+    color: whitesmoke;
+     position: relative;
+    margin-top:2.5vw;
+    width: 26vw;
+    height:12vh;
+}
+.contact-01 .title1>h3{
+
+    font-size: 20px;
+    position: absolute;
+    left: 57px;
+}
+.contact-01 .title1>h4{
+    font-size: 16px;
+    position: absolute;
+    left: 57px;
+}
+.contact-01 .title1>i{
+    font-size: 28px;
+    padding-left: 15px;
+    padding-right: 20px;
+    color: yellow;
+}
+.contact-03{
+    position: relative;
+}
+.contact-03>img{
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 9vw;
+    height: 9vw;
+}
+.contact-03>h3{
+    font-family:monospace;
+    font-size: 2em;
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+    top: 16vh;
+}
+.social_link_for_contact{
+
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 15vh;
+
+}
+.social_link_for_contact{
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+
+
+}
+.social_link_for_contact .icons{
+    width: 40px;
+    height: 40px;
+    transition: all 1s;
+}
+.social_link_for_contact a{
+    padding: 5px;
+}
+.social_link_for_contact img:hover{
+    transform: scale(1.25);
+    transition: all 1s;
 }

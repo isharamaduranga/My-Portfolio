@@ -269,14 +269,16 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     font-family: 'Poppins', sans-serif;
     display: inline-block;
     position: absolute;
-
 }
+
 .rectangle_box1_bottom_h3{
      right: 255px;
 }
+
 .rectangle_box2_bottom_h3{
     right: 418px;
 }
+
 .rectangle_box3_bottom_h3{
     left: 325px;
 }

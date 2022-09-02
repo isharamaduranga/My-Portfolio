@@ -15,6 +15,7 @@
     margin:auto;
     padding-bottom: 50px;
 }
+
 /* Define a Title Styles with About Me Section*/
 .service_h1{
     position: relative;
@@ -23,6 +24,7 @@
     padding:0 15px;
     margin: auto;
 }
+
 /* Define a Title Styles with About Me Section*/
 .service_h1:before,
 .service_h1:after {
@@ -39,6 +41,7 @@
 .service_h1:after {
     left: 100%;
 }
+
 .service_h2{
     color: rgba(102, 102, 102, 0.2);
     font-size:  70px;
@@ -54,17 +57,20 @@
     align-items: center;
     justify-content: space-around;
 }
+
 #service_List>div{
     width: 315px;
     height:65vh;
     background-color: #E8E7EF;
     border-radius: 30px;
     /*box-shadow: 10px 13px 8px -5px rgba(255, 255, 255, 0.15);*/
-     box-shadow: 10px 13px 8px -5px #282626;
-     transition-delay: 0s;
+    box-shadow: 10px 13px 8px -5px #282626;
+    transition-delay: 0s;
     transition-property: all;
     transition-duration: 1s;
 }
+
+
 #service_List>div:hover{
    /* background-image: linear-gradient(360deg, rgb(255, 255, 255) 0%, rgb(15, 196, 15) 100%);*/
     cursor: pointer;
@@ -75,28 +81,32 @@
     transform: scale(1.04);
 }
 
+
 #service_List>div>ul{
     padding-left: 25px;
 }
+
 #service_List>div>ul>li{
     font-family: 'Poppins', sans-serif;
     text-align: left;
     padding-top:15px;
     letter-spacing: 0.04em;
 }
+
 .service_title{
     padding-top: 20px;
     text-align: center;
     color: #403D4E;
     font-family: 'Ubuntu', sans-serif;
 }
+
 .one_image,.two_image,.fourth_image{
     margin-left: 120px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 .third_image{
     margin-left: 120px;
     margin-top: 5px;
-
 }
