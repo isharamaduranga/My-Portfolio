@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>My_Portfolio-Ishara Maduranga</title>
@@ -149,6 +149,10 @@
                 </a>
 
             </nav>
+
+            <div id="home_container">
+                <h3 class="home_title_h3">Follow Me</h3>
+            </div>
 
 
         </div>
@@ -642,7 +646,23 @@
 
                 </div>
             </div>
-
+            <div id="pagination-bullets_project" class="swiper-pagination1 swiper-pagination-bullets">
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+            </div>
             <script src="swiper.min.js"></script>
 
             <script>
@@ -660,7 +680,7 @@
                         slideShadows: true,
                     },
                     pagination: {
-                        el: '.swiper-pagination',
+                        el: '.swiper-pagination1',
                     },
                 });
             </script>
@@ -872,7 +892,23 @@
 
                 </div>
             </div>
-
+            <div id="pagination-bullets_assignment" class="swiper-pagination swiper-pagination-bullets">
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span id="h" class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+                <span class="swiper-pagination-bullet"></span>
+            </div>
             <script src="swiper.min.js"></script>
 
             <script>
@@ -1005,17 +1041,51 @@
                 </div>
                 <div class="contact-02">
 
+                    <div class="container_contact">
 
+                        <form onsubmit="sendEmail(); reset(); return false;">
+                            <h3> GET IN TOUCH</h3>
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="email" id="email" placeholder="Email id" required>
+                            <input type="text" id="phone" placeholder="Phone No." required>
+                            <textarea id="message" rows="4" placeholder= "How Can I Help You ?"> </textarea>
+                            <button type="submit"> Send </button>
 
+                        </form>
 
+                    </div>
+
+                    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+
+                    <script>
+                        function sendEmail(){
+                            Email.send({
+                                Host : "smtp.elasticemail.com",
+                                Username : "isha970206@gmail.com",
+                                Password : "DC38B9A5453C4C65029E4A9C2E54B17521D5",
+                                To : 'isharamaduranga500@gmail.com',
+                                From :document.getElementById("email").value,
+                                Subject : "New Contact Form Enquiry",
+                                Body : "Name: " + document.getElementById("name").value
+                                + "<br> Email: " + document.getElementById("email").value
+                                + "<br> Phone No: " + document.getElementById("phone").value
+                                + "<br> Message: " + document.getElementById("message").value
+                            }).then(
+                                message => alert("Message Sent Successfully")
+                            );
+                        }
+                    </script>
 
                 </div>
+
 
 
                 <div class="contact-03">
 
                     <img src="/assets/Contact/back__top.gif" alt="Back_to_top_gif">
                     <h3>BACK TO TOP</h3>
+
+                    <p>You can also contact me from these Platforms</p>
 
                     <nav class="social_link_for_contact">
 
@@ -1032,7 +1102,7 @@
                         </a>
 
                         <a href="https://www.facebook.com/ishara.maduranga.7106" target="_blank">
-                            <i id="fb"  class="fa-brands fa-facebook"></i>
+                            <i id="fb" class="fa-brands fa-facebook"></i>
                         </a>
 
                         <a href="https://twitter.com/ishara9726" target="_blank">
@@ -1043,6 +1113,7 @@
                         </a>
 
                     </nav>
+
 
                 </div>
 

@@ -111,6 +111,7 @@
     min-height: 70vh;
     background: #fff;
     font-family: 'poppins', sans-serif;
+    position: relative;
 }
 
 .card {
@@ -257,6 +258,7 @@
     min-height: 70vh;
     background: #fff;
     font-family: 'poppins', sans-serif;
+    position: relative;
 }
 
 .card_below {
@@ -393,3 +395,31 @@
     margin: auto;
     text-align: center;
 }
+
+#pagination-bullets_project{
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+}
+
+#pagination-bullets_assignment{
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+
+}
+
+.swiper-pagination-bullet{
+    border:none;
+    margin:5px;
+    padding:0;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+
+
+
+

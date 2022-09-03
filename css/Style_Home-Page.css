@@ -284,3 +284,33 @@ main>section:nth-child(1)>aside>div:first-child{
 }
 
 /*========================================================================================*/
+#home_container{
+    width:800px;
+    color:#0fc40f;
+    padding-top: 10px;
+    text-align:center;
+    font-family: 'Poppins', sans-serif;
+    margin:auto;
+}
+/* Define a Title Styles with About Me Section*/
+.home_title_h3{
+    position: relative;
+    font-size: 1.05em;
+    display: inline-block;
+    padding:0 15px;
+    margin: auto;
+}
+/* Define a Title Styles with About Me Section*/
+.home_title_h3:before,
+.home_title_h3:after {
+    position: absolute;
+    top: 50%;
+    width: 150px;
+    height: 3px;
+    content: '';
+    background-color: #0fc40f;
+    left:-150px;
+}
+.home_title_h3:after {
+    left: 100%;
+}

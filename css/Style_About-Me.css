@@ -86,21 +86,22 @@
     background-color: #004FC5;
     left:-150px;
 }
-
-/*=========================================================================*/
-
-/* Define a Title Styles with About Me Section*/
 .about_title_h1:after {
     left: 100%;
 }
-
 /* About section h2 styles*/
+
 .about_title_h2{
     color: rgba(102, 102, 102, 0.2);
     font-size:  70px;
     margin: auto;
     text-align: center;
 }
+
+/*=========================================================================*/
+
+
+
 
 /* 3 Rectangle of about page Styles */
 #rectangle{
