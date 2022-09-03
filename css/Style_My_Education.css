@@ -89,26 +89,26 @@
 }
 
 .level-01{
-    top: 145px;
+    top: 150px;
     left: 145px;
 }
 
 .level-02{
-    bottom: 180px;
+    bottom: 200px;
     left: 145px;
 }
 
 .level-03{
     right: 145px;
-    top: 40px;
+    top: 45px;
 }
 
 .level-04{
     right: 145px;
-    top: 240px;
+    top: 265px;
 }
 
 .level-05{
     right: 145px;
-    bottom: 90px;
+    bottom: 95px;
 }
