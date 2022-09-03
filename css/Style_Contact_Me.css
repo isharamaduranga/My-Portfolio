@@ -18,6 +18,8 @@
     text-align:center;
     margin:auto;
 }
+
+
 .contact_h1{
     position: relative;
     font-size: 40px;
@@ -25,6 +27,8 @@
     padding:0 15px;
     margin: auto;
 }
+
+
 .contact_h1:before,
 .contact_h1:after{
     position: absolute;
@@ -35,10 +39,13 @@
     background-color: #004FC5;
     left:-150px;
 }
+
+
 /* Define a Title Styles with About Me Section*/
 .contact_h1:after{
     left: 100%;
 }
+
 
 /* About section h2 styles*/
 .contact_h2{
@@ -47,6 +54,7 @@
     margin-bottom: 10vh;
     text-align: center;
 }
+
 
 .contact_box{
     display: flex;
@@ -184,6 +192,8 @@
 .contact-02{
     padding-top: 15vh;
 }
+
+
 .container_contact{
   /*  border: 2px solid deeppink;*/
     width: 100%;
@@ -192,6 +202,8 @@
     align-items: center;
     justify-content: center;
 }
+
+
 form{
     font-family: 'poppins', sans-serif;
     display: flex;
@@ -202,12 +214,15 @@ form{
     border-radius: 10px;
 }
 
+
 form h3{
     color: #ffff00;
     font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
 }
+
+
 form input, form textarea{
     border: 0;
     margin: 10px 0;
@@ -217,6 +232,8 @@ form input, form textarea{
     background:#f5f5f5 ;
     font-size: 16px;
 }
+
+
 form button{
     padding: 10px;
     background:#ff5361 ;
@@ -229,15 +246,6 @@ form button{
     margin: 15px auto 0;
     border-radius: 30px;
 }
-
-
-
-
-
-
-
-
-
 
 
 
