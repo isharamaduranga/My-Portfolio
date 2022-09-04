@@ -1,6 +1,14 @@
 #footer_of_site{
-    margin-top: 12.4vh;
+    margin-top: 13.3vh;
     height: 10vh;
-    background-color: deeppink;
+    background: linear-gradient(109.6deg, rgb(80, 35, 217) 11.2%, rgb(217, 35, 189) 91.1%);
     border-top: 3px solid #dcb41c;
+}
+#footer_of_site>p{
+    color: white;
+    font-family: 'poppins', sans-serif ;
+    font-size: 0.9em;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 5px;
 }

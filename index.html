@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
 
-  <!--  Title of the portfolio-->
+    <!--  Title of the portfolio-->
     <title>My_Portfolio-Ishara Maduranga</title>
 
     <!--Defined all meta details-->
-    <meta name="keywords" content="Ishara,Maduranga,Portfolio, Ishara Maduranga,Software Engineer,Web Designer,Modern,Personal Website">
+    <meta name="keywords"
+          content="Ishara,Maduranga,Portfolio, Ishara Maduranga,Software Engineer,Web Designer,Modern,Personal Website">
     <meta name="description" content="Ishara Maduranga - My Portfolio">
     <meta name="Author" content="Ishara Maduranga">
     <meta name="Owner" content="Ishara Maduranga">
@@ -188,7 +189,8 @@
                 <h2 class="Description_h2">I AM, <span class="typing_about">  </span></h2>
 
 
-                <br><p>I’m Ishara Maduranga. I’m Currently Learninng Web Development ,Software Development and Internet
+                <br>
+                <p>I’m Ishara Maduranga. I’m Currently Learninng Web Development ,Software Development and Internet
                     Technologies at <abbr title="Institute Of Software Engineering"> IJSE </abbr>in Panadura.I’ve mostly
                     worked professionally with Java, JavaScript and Python.<br><br>
                     I also have knowledge of web development, UI / UX designing, database management and frameworks.
@@ -998,8 +1000,32 @@
     <!--******************************************************************-->
 
     <section id="map_useful_links">
-        <div></div>
-        <div></div>
+        <div class="display_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d155439.71950344724!2d80.1011149054467!3d7.146150999999997!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fd58ce1afe45%3A0x593380ee3025df5e!2sNittambuwa!5e0!3m2!1sen!2slk!4v1662285793639!5m2!1sen!2slk" width="85%" height="85%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="details_findme">
+        <h1 CLASS="find_me_title"><i class="fa-solid fa-location-dot"></i>FIND ME ...</h1>
+           <h4> <i class="fa-solid fa-address-book"></i> Address</h4>
+            <p>C/195 Indurana , Waharaka ,Ruwanwella</p>
+
+            <br>
+
+            <h4> <i class="fa-solid fa-city"></i>City</h4>
+            <p> Nittambuwa </p>
+
+            <br>
+
+            <h4><i class="fa-solid fa-earth-americas"></i> Country</h4>
+            <p> Sri-Lanka </p>
+
+            <br>
+            <h4><i class="fa-solid fa-headset"></i> Phone</h4>
+            <p> +94 776127572 </p>
+
+
+        </div>
+
     </section>
 
     <!--******************************************************************-->
@@ -1058,28 +1084,28 @@
                             <input type="text" id="name" placeholder="Your Name" required>
                             <input type="email" id="email" placeholder="Email id" required>
                             <input type="text" id="phone" placeholder="Phone No." required>
-                            <textarea id="message" rows="4" placeholder= "How Can I Help You ?"> </textarea>
-                            <button class="btn" type="submit"> <i class="fa-solid fa-paper-plane"></i> Send </button>
+                            <textarea id="message" rows="4" placeholder="How Can I Help You ?"> </textarea>
+                            <button class="btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
 
                         </form>
 
                     </div>
 
-                    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
                     <script>
-                        function sendEmail(){
+                        function sendEmail() {
                             Email.send({
-                                Host : "smtp.elasticemail.com",
-                                Username : "isha970206@gmail.com",
-                                Password : "DC38B9A5453C4C65029E4A9C2E54B17521D5",
-                                To : 'isharamaduranga500@gmail.com',
-                                From :document.getElementById("email").value,
-                                Subject : "New Contact Form Enquiry",
-                                Body : "Name: " + document.getElementById("name").value
-                                + "<br> Email: " + document.getElementById("email").value
-                                + "<br> Phone No: " + document.getElementById("phone").value
-                                + "<br> Message: " + document.getElementById("message").value
+                                Host: "smtp.elasticemail.com",
+                                Username: "isha970206@gmail.com",
+                                Password: "DC38B9A5453C4C65029E4A9C2E54B17521D5",
+                                To: 'isharamaduranga500@gmail.com',
+                                From: document.getElementById("email").value,
+                                Subject: "New Contact Form Enquiry",
+                                Body: "Name: " + document.getElementById("name").value
+                                    + "<br> Email: " + document.getElementById("email").value
+                                    + "<br> Phone No: " + document.getElementById("phone").value
+                                    + "<br> Message: " + document.getElementById("message").value
                             }).then(
                                 message => alert("Message Sent Successfully")
                             );
@@ -1087,7 +1113,6 @@
                     </script>
 
                 </div>
-
 
 
                 <div class="contact-03">
@@ -1137,14 +1162,18 @@
     <!--#################################################################################################-->
 
 
-
 </main>
 
 <!--site footer-->
 <footer id="footer_of_site">
-        <p><small>Copyright 2022 All Right Reserved .</small></p>
-        <p><small>Website Developed By Ishara Maduranga.</small></p>
+    <p>Copyright © 2022 All Right Reserved ...</p>
+    <p>Website Developed By Ishara Maduranga.</p>
 </footer>
 
 </body>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </html>
