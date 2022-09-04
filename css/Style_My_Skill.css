@@ -181,8 +181,9 @@
     width: 75px;
     height: 75px;
     padding-bottom: 5px;
-
+    transition: all 1s;
 }
 .tool:hover{
-    transform: scale(1.1);
+    transform: scale(1.3);
+    transition: all 1s;
 }

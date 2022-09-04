@@ -64,7 +64,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 80vh;
+    height: 70vh;
     align-items: center;
     justify-content: space-around;
    /* border: 2px solid limegreen;*/
@@ -245,13 +245,25 @@ form button{
     width:180px;
     margin: 15px auto 0;
     border-radius: 30px;
+    transition: all 1s;
 }
 
+form button:hover{
+    background: #079b07;
+    transform: scale(1.05);
+    transition: all 1s;
+}
 
-
-
+.gif:hover >h3{
+    cursor: pointer;
+    color: crimson;
+}
 /*  secureToken: "c682276c-e363-4d3d-b924-e78ce706af53",*/
-
-
+.btn>i{
+    padding-right: 7px;
+}
+.btn:hover i{
+    color: #ffff00;
+}
 
 
