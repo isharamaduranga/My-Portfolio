@@ -1,6 +1,6 @@
 
 #My_About{
-    height: 110vh;
+    height: 120vh;
 
 }
 /* About me Page Second Section*/
@@ -26,8 +26,9 @@
 .about_Article>p{
 
     padding-top: 10px;
-    padding-left:90px;
+    padding-left:85px;
     padding-right:85px;
+  /*  text-align: center;*/
     font-size: 1.5em;
 }
 /* h1 styles of Article in About Me Page*/
@@ -59,6 +60,11 @@
 
 /*=========================================================================*/
 /* Define a Title Styles with About Me Section*/
+
+.about_sec{
+    padding-bottom: 50px;
+}
+
 #about_container {
     width:800px;
     color: #004FC5;
@@ -105,9 +111,9 @@
 
 /* 3 Rectangle of about page Styles */
 #rectangle{
-
+     padding-top: 50px;
     display: flex;
-    height: 120px;
+    height: 90px;
     align-items: center;
     gap: 80px;
     justify-content: center;
@@ -125,7 +131,7 @@
 #count1,#count2,#count3{
     color: white;
     text-align: center;
-    font-size: 2.3em;
+    font-size: 2.1em;
     padding-top: 25px;
 }
 
@@ -273,13 +279,16 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 }
 
 .rectangle_box1_bottom_h3{
-     right: 255px;
+    padding-top: 35px;
+    padding-left: 8px;
 }
 
 .rectangle_box2_bottom_h3{
-    right: 418px;
+    padding-top: 35px;
+    padding-left: 8px;
 }
 
 .rectangle_box3_bottom_h3{
-    left: 325px;
+    padding-top: 35px;
+    padding-left: 20px;
 }

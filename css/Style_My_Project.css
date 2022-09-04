@@ -75,18 +75,22 @@
     left: 50%;
     transform: translateX(-50%);
     color: #fff;
-    background: #5E3BEE;
-    font-size: 20px;
+    background: #fc00ff;
+    background: -webkit-linear-gradient(to left, #fc00ff, #00dbde);
+    background: linear-gradient(to left, #fc00ff, #00dbde);
+    font-size: 23px;
     padding: 4px 40px;
     margin-top: 30px;
     border-radius: 20px;
-    border: 3px solid #5E3BEE;
+    border: 2px solid #fc00ff;
+    border: -webkit-linear-gradient(to left, #fc00ff, #00dbde);
+    border: linear-gradient(to left, #fc00ff, #00dbde);
     transition: all 0.3s ease;
 
 }
 
 .Btn_Github a:hover {
-    color: crimson;
+    color: #0a980a;
     background: none;
 }
 
@@ -95,7 +99,7 @@
 }
 
 .Btn_Github a:hover i {
-    color: crimson;
+    color: #0a980a;
 }
 
 /*-------------------------------------------------------------------------*/
