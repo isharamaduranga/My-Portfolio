@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Case 03</title>
+
+    <style>
+
+        main {
+            width: 900px;
+            height: 480px;
+            position: absolute;
+            box-shadow: 1px 3px 5px 1px #736060;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            overflow-x: hidden;
+        }
+
+        main > section {
+            height: 100%;
+            width: 400%;
+            display: flex;
+            animation-name: slider-animation;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+
+        main > section > div {
+            height: 100%;
+            width: 100%;
+        }
+
+        .image_1 {
+            background: url("images/image1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image_2 {
+            background: url("images/image2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image_3 {
+            background: url("images/image5.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .image_4 {
+            background: url("images/image4.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        @keyframes slider-animation {
+            0%, 20% {
+                transform: translateX(0);
+            }
+
+            25%, 40% {
+                transform: translateX(-25%);
+            }
+
+            50%, 70% {
+                transform: translateX(-50%);
+            }
+
+            80%, 100% {
+                transform: translateX(-75%);
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<main>
+    <section>
+
+        <div class="image_1"></div>
+        <div class="image_2"></div>
+        <div class="image_3"></div>
+        <div class="image_4"></div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
