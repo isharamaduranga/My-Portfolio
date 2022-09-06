@@ -28,8 +28,8 @@
 
 
 .max-width {
-    max-width: 1350px;
-    padding: 0 10px;
+    max-width: 100%;
+    padding: 0 70px;
     margin: auto;
 }
 
@@ -87,11 +87,10 @@
 /* menu btn styling */
 .menu-btn {
     color: #fff;
-    font-size: 23px;
+    font-size: 28px;
     cursor: pointer;
     display: none;
 }
-
 
 
 /** home section styling */
@@ -105,22 +104,23 @@
     font-family: Ubuntu, sans-serif;
 }
 .home-aside {
-     width: 40vw;
+     width: 30vw;
      height: 100vh;
      position: relative;
 
 
  }
 
-main>section:nth-child(1)>aside>div:last-child>img{
-    width: 28vw;
+.home_img{
+    /*background: url("../assets/bg.png") no-repeat center;*/
+    width: 50%;
     position: absolute;
     margin: auto;
     bottom: 0;
-    top: 0;
-    left: 70px;
+    top: 12%;
+    left: 8%;
 }
-main>section:nth-child(1)>aside>div:first-child{
+/*.image_behind_circle{
     width: 30vw;
     height: 63vh;
     border-radius: 100%;
@@ -131,7 +131,7 @@ main>section:nth-child(1)>aside>div:first-child{
     top: 122px;
     left: 52px;
     opacity: 0.8;
-}
+}*/
 
 .home .max-width {
     margin: auto 0 auto 20px;
@@ -140,7 +140,7 @@ main>section:nth-child(1)>aside>div:first-child{
 .home .home-content .text-1 {
     font-size: 37px;
     text-align: center;
-    margin: 40px 0px 40px 0px;
+    margin: 100px 0px 30px 0px;
 }
 
 .home .home-content .text-2 {
@@ -160,6 +160,183 @@ main>section:nth-child(1)>aside>div:first-child{
     font-weight: 500;
     text-align: center;
 }
+
+
+/* responsive media  query  start */
+
+
+@media (max-width: 1306px ) {
+
+    .home_img{
+        display: none;
+    }
+
+    .home.home-aside{
+        display: none;
+    }
+
+    .home .max-width {
+        margin: auto 170px auto 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1150px ) {
+
+
+    .home_img{
+        display: none;
+    }
+
+    .home.home-aside{
+        display: none;
+    }
+
+
+    .max-width {
+        padding: 0 20px;
+    }
+
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+
+        content: "\f00d";
+
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100% ;
+        left: -100%;
+        top:0;
+        background: linear-gradient(109.6deg, rgb(80, 35, 217) 11.2%, rgb(217, 35, 189) 91.1%);
+        text-align: center;
+        padding-top: 100px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active{
+        left: 0;
+    }
+
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 60px;
+        font-weight: 600;
+        margin-left: -8px;
+        text-align: center;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 35px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .home .max-width {
+        margin: auto 150px auto 20px;
+    }
+
+
+    .container a{
+        margin: 5px;
+    }
+
+
+}
+
+@media (max-width: 320px) {
+    .my_logo {
+        width: 25px;
+        height: 40px;
+        left: 0;
+    }
+    .navbar .logo a {
+        font-size: 25px;
+        font-weight: 300;
+    }
+
+    .menu-btn {
+        font-size: 20px;
+    }
+
+    .home .max-width {
+        margin: auto 0 auto 5px;
+    }
+
+    .home .home-content .text-1 {
+        font-size: 15px;
+        margin: 50px 0px 30px 0px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 18px;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .home .home-content .text-3 span {
+        color: #B4F32E;
+        font-weight: 500;
+        text-align: center;
+    }
+
+
+
+}
+
+@media all and (min-width: 320px) and (max-width: 425px) {
+
+}
+
+@media all and (min-width: 426px) and (max-width: 768px) {}
+
+
+@media all and (min-width: 769px) and (max-width: 1024px) {}
+
+
+
+@media all and (min-width: 2344px) and (max-width: 2560px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .container{
     display: flex;
     justify-content: center;
@@ -314,3 +491,16 @@ main>section:nth-child(1)>aside>div:first-child{
 .home_title_h3:after {
     left: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
