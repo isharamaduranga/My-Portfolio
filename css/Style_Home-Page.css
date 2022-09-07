@@ -530,10 +530,15 @@
     .social_link img{
         width: 30px;
         height: 30px;
+        margin-top: 30px;
     }
 
     .menu-btn {
         font-size: 22px;
+    }
+
+    #btn_home{
+        margin-top: 50px;
     }
 
 }
@@ -606,6 +611,9 @@
         font-size: 22px;
     }
 
+    #btn_home{
+        margin-top: 50px;
+    }
 
 }
 
