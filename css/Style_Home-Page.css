@@ -543,6 +543,7 @@
 
     .home-content {
         margin-left: 1px;
+        margin-top: -60px;
     }
 
 
@@ -598,6 +599,7 @@
     .social_link img{
         width: 30px;
         height: 30px;
+        margin-top: 30px;
     }
 
     .menu-btn {
