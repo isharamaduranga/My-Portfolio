@@ -468,6 +468,13 @@
         font-size: 18px;
     }
 
+    .home {
+        background: #ea0ec5;
+        background: -webkit-linear-gradient(to right, #ea0ec5, #4300B1);
+        background: linear-gradient(to right, #ea0ec5, #4300B1);
+
+    }
+
 
 }
 
@@ -539,6 +546,13 @@
 
     #btn_home{
         margin-top: 50px;
+    }
+
+    .home {
+        background: #ea0ec5;
+        background: -webkit-linear-gradient(to right, #ea0ec5, #4300B1);
+        background: linear-gradient(to right, #ea0ec5, #4300B1);
+
     }
 
 }
@@ -613,6 +627,13 @@
 
     #btn_home{
         margin-top: 50px;
+    }
+
+    .home {
+        background: #ea0ec5;
+        background: -webkit-linear-gradient(to right, #ea0ec5, #4300B1);
+        background: linear-gradient(to right, #ea0ec5, #4300B1);
+
     }
 
 }
