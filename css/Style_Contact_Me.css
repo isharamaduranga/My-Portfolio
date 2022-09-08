@@ -1,9 +1,11 @@
 #Contact_Page {
-    height: 100vh;
+  /*  height: 100vh;*/
+    height: 754px;
 
 }
 .contact_bg{
-    height: 80vh;
+   /* height: 80vh;*/
+    height: 603.2px;
     background: url("../assets/Contact/footer-bg.png") no-repeat center;
     background-size: 100% 100%;
     font-family: 'Poppins', sans-serif;
@@ -51,7 +53,8 @@
 .contact_h2{
     color: rgba(102, 102, 102, 0.2);
     font-size:  70px;
-    margin-bottom: 10vh;
+    /*margin-bottom: 10vh;*/
+    margin-bottom: 75.4px;
     text-align: center;
 }
 
@@ -64,14 +67,16 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 70vh;
+   /* height: 70vh;*/
+    height: 527.8px;
     align-items: center;
     justify-content: space-around;
    /* border: 2px solid limegreen;*/
 }
 .contact_box>div{
     width: 28vw;
-    height:70vh;
+  /*  height:70vh;*/
+    height:527.8px;
 /*    border: 2px solid #e70042;*/
 }
 
@@ -87,7 +92,8 @@
      position: relative;
     margin-top:2.5vw;
     width: 26vw;
-    height:12vh;
+ /*   height:12vh;*/
+    height:90.48px;
 }
 .contact-01 .title1>h3{
 
@@ -126,7 +132,8 @@
     text-align: center;
     right: 0;
     left: 0;
-    top: 16vh;
+    /*top: 16vh;*/
+    top: 120.64px;
 }
 .social_link_for_contact{
 
@@ -134,7 +141,8 @@
     margin: auto;
     right: 0;
     left: 0;
-    bottom: 15vh;
+   /* bottom: 15vh;*/
+    bottom: 113.1px;
 }
 .social_link_for_contact{
     padding: 10px;
@@ -165,7 +173,8 @@
     position: absolute;
     margin: auto;
     text-align: center;
-    bottom: 25vh;
+    /*bottom: 25vh;*/
+    bottom: 188.5px;
     padding-left: 35px;
 }
 
@@ -190,7 +199,8 @@
 }*/
 
 .contact-02{
-    padding-top: 15vh;
+    /*padding-top: 15vh;*/
+    padding-top: 113.1px;
 }
 
 

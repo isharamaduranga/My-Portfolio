@@ -1,6 +1,7 @@
 
 .My_Projects {
-    height: 240vh;
+   /* height: 240vh;*/
+    height: 1809.6px;
 /*++++++ Main Border ++++++++++*/
 }
 
@@ -53,7 +54,8 @@
 /*--------------------------------------------------------------*/
 .Project_description {
 /*+++++++Project_description Border+++++++++*/
-    height: 20vh;
+    /*height: 20vh;*/
+    height: 150.8px;
     margin-bottom: 10px;
 }
 
@@ -112,7 +114,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
+   /* min-height: 70vh;*/
+    min-height: 527.8px;
     background: #fff;
     font-family: 'poppins', sans-serif;
     position: relative;
@@ -259,7 +262,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
+   /* min-height: 70vh;*/
+    min-height: 527.8px;
     background: #fff;
     font-family: 'poppins', sans-serif;
     position: relative;

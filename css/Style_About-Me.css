@@ -1,19 +1,21 @@
 
 #My_About{
-    height: 120vh;
-
+   /* height: 120vh;*/
+    height: 904.8px;
 }
 /* About me Page Second Section*/
 .About_me_second_section{
     position: relative;
-    height: 80vh;
+ /*   height: 80vh;*/
+    height: 603.2px;
 
 }
 /* Article styles of About Me Page*/
 .about_Article{
     position: absolute;
     width: 60vw;
-    height: 80vh;
+   /* height: 80vh;*/
+    height: 603.2px;
     left: 0;
     top: 0;
     bottom: 0;
@@ -252,8 +254,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     position: absolute;
     width: 280px;
     height: 280px;
-    left: 12%;
-    top: 48%;
+    left: 9%;
+    top: 52%;
     border-radius: 100%;
     background-color: rgba(94, 59, 238, 0.20);
     z-index: 3;
@@ -298,16 +300,17 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 /*================================== 320->Mobile -S ==================================*/
 @media all and (max-width: 320px){
     #My_About {
-        height: 138vh;
-        border: 2px solid red;
+      /*  height: 130vh;*/
+        height: 980.2px;
+
     }
 
     .about_sec {
-        padding-bottom: 34px;
+        padding-bottom: 20px;
     }
 
     #about_container {
-        width: 200px;
+        width: 175px;
         padding-top: 50px;
     }
 
@@ -318,10 +321,11 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     #about_divs {
         position: relative;
         display: flex;
-        /* border: 2px solid #ffff00;*/
+     /*   border: 2px solid #ffff00;*/
         flex-direction: column;
-        width: 374px;
-        height: 105vh;
+        width: 318px;
+       /* height: 105vh;*/
+        height: 791.7px;
         font-family: 'poppins', sans-serif;
     }
 
@@ -331,37 +335,35 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 
     .div1 {
         /*border: 2px solid #e5114d;*/
-        height: 315px;
+        height: 280px;
     }
 
     .div2 {
         /* border: 2px solid #5000a2;*/
-        height: 425px;
+        height: 530px;
         padding-left: 15px;
         padding-right: 15px;
 
     }
 
     .about_sec_circle1 {
-        width: 200px;
-        height: 200px;
+        width: 175px;
+        height: 175px;
         right: 11%;
-        top: 6px;
+        top: 3px;
         z-index: 5;
     }
 
     .about_sec_circle2 {
-
-        width: 150px;
-        height: 150px;
-        left: 11%;
-        top: 19%;
+        width: 135px;
+        height: 135px;
+        left: 9%;
+        top: 15%;
         z-index: 3;
     }
 
     .about_sec_circle2 h3 {
-
-        font-size: 7.3px;
+        font-size: 6px;
         font-family: 'poppins', sans-serif;
     }
     .about_sec_circle2 h3:first-child {
@@ -406,33 +408,32 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
         padding-top: 0px;
     }
     .about_title_h1 {
-        font-size: 20px;
-        padding: 0 10px;
+        font-size: 17px;
+        padding: 0 8px;
     }
 
     .about_title_h1:before, .about_title_h1:after {
         position: absolute;
         top: 50%;
-        width: 70px;
+        width: 60px;
         height: 3px;
         content: '';
         background-color: #004FC5;
-        left: -70px;
+        left: -60px;
     }
     .about_title_h1:after {
         left: 100%;
     }
 
     .about_title_h2 {
-
         font-size: 34px;
-
     }
 }
 /*================================== 375 ->Mobile -M ==================================*/
-@media all and (min-width: 321px) and (max-width: 375px){
+@media all and (min-width: 321px) and (max-width: 376px){
     #My_About {
-        height: 138vh;
+       /* height: 138vh;*/
+        height: 1040.52px;
          border: 2px solid red;
     }
 
@@ -455,7 +456,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
         /* border: 2px solid #ffff00;*/
         flex-direction: column;
         width: 374px;
-        height: 105vh;
+       /* height: 105vh;*/
+        height: 791.7px;
         font-family: 'poppins', sans-serif;
     }
 
@@ -568,8 +570,10 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 /*================================== 425->Mobile -L ================================== */
 @media all and (min-width: 376px) and (max-width: 426px) {
     #My_About {
-        height: 138vh;
-       /* border: 2px solid red;*/
+
+      /*  height: 138vh;*/
+        height: 1040.52px;
+
     }
 
     .about_sec {
@@ -591,7 +595,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
        /* border: 2px solid #ffff00;*/
         flex-direction: column;
         width: 424px;
-        height: 105vh;
+        /*height: 105vh;*/
+        height: 791.7px;
         font-family: 'poppins', sans-serif;
     }
 
@@ -706,7 +711,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 @media all and (min-width: 426px) and (max-width: 768px){
 
     #My_About {
-        height: 112vh;
+       /* height: 112vh;*/
+        height: 844.48px;
         border: 2px solid red;
     }
 
@@ -802,7 +808,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 @media all and (min-width: 769px) and (max-width: 1024px){
 
     #My_About {
-        height: 130vh;
+       /* height: 130vh;*/
+        height: 980.2px;
     }
 
     .about_title_h1{
