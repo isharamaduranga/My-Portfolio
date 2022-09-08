@@ -28,7 +28,7 @@
     padding-top: 10px;
     padding-left:85px;
     padding-right:85px;
-  /*  text-align: center;*/
+    text-align: justify;
     font-size: 1.5em;
 }
 /* h1 styles of Article in About Me Page*/
@@ -297,13 +297,9 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 
 /*================================== 320->Mobile -S ==================================*/
 @media all and (max-width: 320px){
-
-}
-/*================================== 375 ->Mobile -M ==================================*/
-@media all and (min-width: 321px) and (max-width: 375px){
     #My_About {
         height: 138vh;
-        /* border: 2px solid red;*/
+        border: 2px solid red;
     }
 
     .about_sec {
@@ -311,8 +307,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     }
 
     #about_container {
-        width: 400px;
-        padding-top: 100px;
+        width: 200px;
+        padding-top: 50px;
     }
 
     .About_me_second_section {
@@ -324,7 +320,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
         display: flex;
         /* border: 2px solid #ffff00;*/
         flex-direction: column;
-        width: 425px;
+        width: 374px;
         height: 105vh;
         font-family: 'poppins', sans-serif;
     }
@@ -341,33 +337,35 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     .div2 {
         /* border: 2px solid #5000a2;*/
         height: 425px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
 
     }
 
     .about_sec_circle1 {
-        width: 210px;
-        height: 210px;
-        right: 13%;
+        width: 200px;
+        height: 200px;
+        right: 11%;
         top: 6px;
         z-index: 5;
     }
 
     .about_sec_circle2 {
 
-        width: 160px;
-        height: 160px;
-        left: 14%;
+        width: 150px;
+        height: 150px;
+        left: 11%;
         top: 19%;
         z-index: 3;
     }
 
     .about_sec_circle2 h3 {
-        color: #2C2929;
-        text-align: center;
-        font-size: 8px;
+
+        font-size: 7.3px;
         font-family: 'poppins', sans-serif;
+    }
+    .about_sec_circle2 h3:first-child {
+        padding-top: 28%;
     }
 
     .Description_h1 {
@@ -379,7 +377,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
         margin-top: 8px;
         font-size: 1em;
         text-align: left;
-        padding-left: 79px;
+        padding-left: 60px;
     }
 
     .Description_h2 span {
@@ -390,6 +388,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 
     #about_divs .div2>p{
         font-size: 0.8em;
+        text-align: justify;
     }
 
     .container_about a {
@@ -407,8 +406,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
         padding-top: 0px;
     }
     .about_title_h1 {
-        font-size: 24px;
-        padding: 0 15px;
+        font-size: 20px;
+        padding: 0 10px;
     }
 
     .about_title_h1:before, .about_title_h1:after {
@@ -425,12 +424,146 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     }
 
     .about_title_h2 {
-        color: rgba(102, 102, 102, 0.2);
-        font-size: 40px;
-        margin: auto;
-        text-align: center;
+
+        font-size: 34px;
+
     }
 }
+/*================================== 375 ->Mobile -M ==================================*/
+@media all and (min-width: 321px) and (max-width: 375px){
+    #My_About {
+        height: 138vh;
+         border: 2px solid red;
+    }
+
+    .about_sec {
+        padding-bottom: 34px;
+    }
+
+    #about_container {
+        width: 200px;
+        padding-top: 50px;
+    }
+
+    .About_me_second_section {
+        display: none;
+    }
+
+    #about_divs {
+        position: relative;
+        display: flex;
+        /* border: 2px solid #ffff00;*/
+        flex-direction: column;
+        width: 374px;
+        height: 105vh;
+        font-family: 'poppins', sans-serif;
+    }
+
+    #about_divs > div {
+        /*     border: 2px solid #157700;*/
+    }
+
+    .div1 {
+        /*border: 2px solid #e5114d;*/
+        height: 315px;
+    }
+
+    .div2 {
+        /* border: 2px solid #5000a2;*/
+        height: 425px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .about_sec_circle1 {
+        width: 200px;
+        height: 200px;
+        right: 11%;
+        top: 6px;
+        z-index: 5;
+    }
+
+    .about_sec_circle2 {
+
+        width: 150px;
+        height: 150px;
+        left: 11%;
+        top: 19%;
+        z-index: 3;
+    }
+
+    .about_sec_circle2 h3 {
+
+        font-size: 7.3px;
+        font-family: 'poppins', sans-serif;
+    }
+    .about_sec_circle2 h3:first-child {
+        padding-top: 28%;
+    }
+
+    .Description_h1 {
+        font-size: 1.2em;
+    }
+
+    .Description_h2 {
+        padding-bottom: 10px;
+        margin-top: 8px;
+        font-size: 1em;
+        text-align: left;
+        padding-left: 60px;
+    }
+
+    .Description_h2 span {
+        color: #e5114d;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    #about_divs .div2>p{
+        font-size: 0.8em;
+        text-align: justify;
+    }
+
+    .container_about a {
+        padding: 6px 5px;
+        margin: 33px;
+        font-size: 0.8em;
+        Letter-spacing: 1px;
+    }
+
+    .container_about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 0px;
+    }
+    .about_title_h1 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .about_title_h1:before, .about_title_h1:after {
+        position: absolute;
+        top: 50%;
+        width: 70px;
+        height: 3px;
+        content: '';
+        background-color: #004FC5;
+        left: -70px;
+    }
+    .about_title_h1:after {
+        left: 100%;
+    }
+
+    .about_title_h2 {
+
+        font-size: 34px;
+
+    }
+}
+
 
 /*================================== 425->Mobile -L ================================== */
 @media all and (min-width: 376px) and (max-width: 426px) {
@@ -444,8 +577,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     }
 
     #about_container {
-        width: 400px;
-        padding-top: 100px;
+        width: 200px;
+        padding-top: 60px;
     }
 
     .About_me_second_section {
@@ -457,7 +590,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
         display: flex;
        /* border: 2px solid #ffff00;*/
         flex-direction: column;
-        width: 425px;
+        width: 424px;
         height: 105vh;
         font-family: 'poppins', sans-serif;
     }
@@ -474,8 +607,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     .div2 {
        /* border: 2px solid #5000a2;*/
         height: 425px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
 
     }
 
@@ -523,6 +656,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 
    #about_divs .div2>p{
        font-size: 0.8em;
+       text-align: justify;
     }
 
     .container_about a {
@@ -662,6 +796,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
         display: none;
     }
 }
+
 
 /*================================== 1024->Laptop ================================== */
 @media all and (min-width: 769px) and (max-width: 1024px){
