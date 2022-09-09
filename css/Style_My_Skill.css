@@ -9,7 +9,7 @@
 /*=========================================================================*/
 /* Define a Title Styles with About Me Section*/
 #skill_container {
-    width:800px;
+    width:650px;
     color: #004FC5;
     padding-top: 100px;
     text-align:center;
@@ -191,3 +191,481 @@
     transform: scale(1.3);
     transition: all 1s;
 }
+
+/*================================== 320->Mobile -S ==================================*/
+@media all and (max-width: 320px){
+
+    .My_Skill {
+        /*width: 100vw;*/
+        height: 1100px;
+    }
+
+    #skill_container {
+        /*overflow-x: hidden;*/
+        width: 200px;
+        padding-top: 80px;
+    }
+
+    .skill_title_h1 {
+        font-size: 17px;
+        padding: 0 8px;
+    }
+
+    .skill_title_h2 {
+        font-size: 34px;
+    }
+
+    .skill_title_h1:before, .skill_title_h1:after {
+        width: 70px;
+        left: -70px;
+    }
+
+    .skill_title_h1:after {
+        left: 100%;
+    }
+
+    #set_of_skill {
+
+        height: 578px;
+        width: 85vw;
+        /* border: 2px solid #e70042; */
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        column-gap: 17px;
+        row-gap: 18px;
+    }
+
+    .skills-h1 {
+        top: 13%;
+        font-size: 14px;
+    }
+
+
+    .skills-img {
+        width: 30%;
+        height: 30%;
+        top: 28px;
+        left: 42px;
+    }
+
+    .skill-div1 .skills-p1 {
+        right: 33%;
+        top: 79px;
+        bottom: 0;
+        font-size: 12.5px;
+    }
+
+    .skill-div1 .skills-p2 {
+        right: 20%;
+        top: 100px;
+        bottom: 0;
+        font-size: 12.5px;
+    }
+
+    .tool_list:before, .tool_list:after {
+        top: 50%;
+        width: 65px;
+        left: -65px;
+        height: 3px;
+    }
+
+    .tool_list:after {
+        left: 100%;
+    }
+
+    #set_of_tools {
+        width: 98vw;
+        column-gap: 8px;
+        height: 52px;
+    }
+
+    .tool_list {
+        font-size: 15px;
+    }
+
+    .tool {
+        width: 27px;
+        height: 27px;
+    }
+
+    #Tools_container {
+        width: 215px;
+    }
+
+}
+
+/*================================== 375 ->Mobile -M ==================================*/
+@media all and (min-width: 321px) and (max-width: 376px){
+
+    .My_Skill {
+        /*width: 100vw;*/
+        height: 1100px;
+    }
+
+    #skill_container {
+        /*overflow-x: hidden;*/
+        width: 400px;
+        padding-top: 80px;
+    }
+
+    .skill_title_h1 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .skill_title_h2 {
+        font-size: 34px;
+    }
+
+    .skill_title_h1:before, .skill_title_h1:after {
+        width: 70px;
+        left: -70px;
+    }
+
+    .skill_title_h1:after {
+        left: 100%;
+    }
+
+    #set_of_skill {
+
+        height: 600px;
+        width: 80vw;
+        /* border: 2px solid #e70042; */
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        column-gap: 17px;
+        row-gap: 18px;
+    }
+
+    .skills-h1 {
+        top: 13%;
+        font-size: 14px;
+    }
+
+    .skills-img {
+        width: 30%;
+        height: 30%;
+        top: 30px;
+        left: 51px;
+    }
+
+    .skill-div1 .skills-p1 {
+        right: 35%;
+        top: 85px;
+        bottom: 0;
+        font-size: 12.5px
+    }
+
+    .skill-div1 .skills-p2 {
+        right: 23%;
+        top: 107px;
+        bottom: 0;
+        font-size: 12.5px;
+    }
+
+    .tool_list:before, .tool_list:after {
+        top: 50%;
+        width: 90px;
+        left: -90px;
+        height: 3px;
+    }
+
+    .tool_list:after {
+        left: 100%;
+    }
+
+    #set_of_tools {
+        width: 99vw;
+        column-gap: 10px;
+        height: 90px;
+    }
+
+    .tool_list {
+        font-size: 20px;
+    }
+
+    .tool {
+        width: 33px;
+        height: 33px;
+    }
+
+    #Tools_container {
+        width: 215px;
+    }
+
+
+}
+
+/*================================== 425->Mobile -L ================================== */
+@media all and (min-width: 376px) and (max-width: 426px){
+
+    .My_Skill {
+        /*width: 100vw;*/
+        height: 1100px;
+    }
+
+    #skill_container {
+        /*overflow-x: hidden;*/
+        width: 400px;
+        padding-top: 80px;
+    }
+
+    .skill_title_h1 {
+        font-size: 24px;
+    }
+
+    .skill_title_h2 {
+        font-size: 40px;
+    }
+
+    .skill_title_h1:before, .skill_title_h1:after {
+        width: 70px;
+        left: -70px;
+    }
+
+    .skill_title_h1:after {
+        left: 100%;
+    }
+
+    #set_of_skill {
+
+        height: 600px;
+        width: 80vw;
+        /* border: 2px solid #e70042; */
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+        column-gap: 17px;
+        row-gap: 18px;
+    }
+
+    .skills-h1 {
+        top: 13%;
+        font-size: 15px;
+    }
+
+    .skills-img {
+        width: 30%;
+        height: 30%;
+        top: 30px;
+        left: 51px;
+    }
+
+    .skill-div1 .skills-p1 {
+        right: 35%;
+        top: 85px;
+        bottom: 0;
+        font-size: 13.5px
+    }
+
+    .skill-div1 .skills-p2 {
+        right: 23%;
+        top: 107px;
+        bottom: 0;
+        font-size: 13.5px;
+    }
+
+    .tool_list:before, .tool_list:after {
+        top: 50%;
+        width: 90px;
+        left: -90px;
+        height: 3px;
+    }
+
+    .tool_list:after {
+        left: 100%;
+    }
+
+    #set_of_tools {
+        width: 99vw;
+        column-gap: 10px;
+        height: 90px;
+    }
+
+    .tool_list {
+        font-size: 20px;
+    }
+
+    .tool {
+        width: 35px;
+        height: 35px;
+    }
+
+    #Tools_container {
+        width: 215px;
+    }
+
+}
+
+/*================================== 768->Tablet ================================== */
+@media all and (min-width: 426px) and (max-width: 768px) {
+    .My_Skill {
+        /*width: 100vw;*/
+        height: 1000px;
+    }
+
+    #skill_container {
+        width: 580px;
+        padding-top: 80px;
+    }
+
+    .skill_title_h1 {
+        font-size: 30px;
+    }
+
+    .skill_title_h2 {
+        font-size: 60px;
+    }
+
+    #set_of_skill {
+        height: 365px;
+        width: 90vw;
+        column-gap: 28px;
+        row-gap: 80px
+    }
+
+    .skills-h1 {
+        top: 13%;
+        font-size: 15px;
+    }
+
+    .skills-img {
+        width: 30%;
+        height: 30%;
+        top: 30px;
+        left: 51px;
+    }
+
+    .skill-div1 .skills-p1 {
+        right: 35%;
+        top: 85px;
+        bottom: 0;
+        font-size: 13.5px
+    }
+
+    .skill-div1 .skills-p2 {
+        right: 23%;
+        top: 107px;
+        bottom: 0;
+        font-size: 13.5px;
+    }
+
+    .tool_list:before, .tool_list:after {
+        top: 50%;
+        width: 240px;
+        left: -240px;
+    }
+
+    .tool_list:after {
+        left: 100%;
+    }
+
+    #set_of_tools {
+        width: 99vw;
+        column-gap: 27px;
+    }
+
+    .tool_list {
+        font-size: 23px;
+    }
+
+    .tool {
+        width: 60px;
+        height: 60px;
+    }
+
+    #Tools_container {
+        width: 500px;
+    }
+}
+
+/*================================== 1024->Laptop ================================== */
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+    .My_Skill{
+        /*width: 100vw;*/
+        height: 1050px;
+    }
+
+    .skill_title_h1 {
+        font-size: 35px;
+    }
+
+    .skill_title_h2 {
+        font-size: 65px;
+    }
+
+    #set_of_skill {
+        height: 400px;
+        width: 87vw;
+        column-gap: 45px;
+        row-gap: 80px;
+    }
+
+    .skills-h1 {
+        top: 13%;
+    }
+
+    .skills-img {
+        width: 35%;
+        height: 35%;
+        top: 52px;
+        left: 11px;
+    }
+
+    .skill-div1 .skills-p1 {
+        right: 18%;
+        top: 60px;
+        bottom: 0;
+    }
+
+    .skill-div1 .skills-p2 {
+        right: 7%;
+        top: 95px;
+        bottom: 0;
+    }
+
+    .tool_list:before, .tool_list:after {
+        top: 50%;
+        width: 300px;
+        left: -300px;
+    }
+
+    .tool_list:after {
+        left: 100%;
+    }
+
+    #set_of_tools {
+        width: 98vw;
+        column-gap: 40px;
+    }
+
+    .tool_list {
+        font-size: 26px;
+    }
+
+    .tool {
+        width: 60px;
+        height: 60px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================== 1440->Laptop large ================================== */
+@media all and (min-width: 1025px) and (max-width: 1440px){
+
+}
+
+

@@ -224,7 +224,7 @@
 }
 /*==========================================================================*/
 
-main>section:nth-child(3)>section:nth-child(3)>aside{
+#My_About>section:nth-child(3)>aside{
     position: absolute;
     width: 40%;
     margin: 10px;
@@ -300,8 +300,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 /*================================== 320->Mobile -S ==================================*/
 @media all and (max-width: 320px){
     #My_About {
-      /*  height: 130vh;*/
-        height: 980.2px;
+
+        height: 890.52px;
 
     }
 
@@ -379,7 +379,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
         margin-top: 8px;
         font-size: 1em;
         text-align: left;
-        padding-left: 60px;
+        padding-left: 36px;
     }
 
     .Description_h2 span {
@@ -433,8 +433,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 @media all and (min-width: 321px) and (max-width: 376px){
     #My_About {
        /* height: 138vh;*/
-        height: 1040.52px;
-         border: 2px solid red;
+        height: 890.52px;
+   /*      border: 2px solid red;*/
     }
 
     .about_sec {
@@ -572,7 +572,7 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
     #My_About {
 
       /*  height: 138vh;*/
-        height: 1040.52px;
+        height: 900px;
 
     }
 
@@ -918,6 +918,8 @@ main>section:nth-child(3)>section:nth-child(3)>aside{
 
 /* ================================== 4K ================================== */
 @media all and (min-width: 1441px) and (max-width: 2560px){
+
+
 
 
 }

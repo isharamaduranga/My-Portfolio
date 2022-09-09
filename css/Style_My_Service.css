@@ -4,7 +4,8 @@
     background-size: 100% 100%;
    /* height: 140vh;*/
     height: 1055.6px;
-    font-family: 'Poppins', sans-serif
+    font-family: 'Poppins', sans-serif;
+ /*   border: 2px solid green;*/
 }
 
 #service_container {
