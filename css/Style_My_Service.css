@@ -127,15 +127,96 @@
 }
 
 /*================================== 425->Mobile -L ================================== */
-@media all and (min-width: 376px) and (max-width: 425px){
+@media all and (min-width: 376px) and (max-width: 426px){
 
+    #My_Service{
+        background: #0D57C6;
+        background: -webkit-linear-gradient(to left, #0D57C6, #37CFFF);
+        background: linear-gradient(to left, #0D57C6, #37CFFF);
+        height: 1650px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #service_container {
+        top: 10px;
+        width: 400px;
+        padding-bottom: 50px;
+        color: #fff;
+    }
+
+    .service_h1 {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .service_h2 {
+        font-size: 37px;
+        padding-bottom: 0px;
+        color: rgba(102, 102, 102, 0.47);
+    }
+    .service_h1:before, .service_h1:after {
+
+        width: 70px;
+        height: 2px;
+        left: -70px;
+        background-color: #fbff00;
+    }
+
+
+    .service_h1:after {
+        left: 100%;
+    }
+
+    #service_List {
+        height: 1500px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #service_List>div {
+
+        width: 300px;
+        height: 340px;
+        box-shadow: 10px 13px 8px -10px #282626;
+    }
+
+
+    .service_title {
+        padding-top: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+    }
+
+    .one_image, .two_image, .fourth_image {
+        margin-left: 120px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    .third_image {
+        margin-left: 120px;
+        margin-top: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    #service_List>div>ul>li {
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        padding-top: 13px;
+        padding-right: 5px;
+        letter-spacing: 0.04em;
+        font-size: 12.5px;
+    }
 }
 
 /*================================== 768->Tablet ================================== */
 @media all and (min-width: 426px) and (max-width: 768px){
     #My_Service{
-        background: url("../assets/My_Service/service-bg.png") no-repeat center;
-        background-size: 100% 100%;
+
         height: 1180px;
         font-family: 'Poppins', sans-serif;
         /* border: 2px solid green;*/
@@ -216,8 +297,6 @@
 @media all and (min-width: 769px) and (max-width: 1024px){
 
     #My_Service{
-        background: url("../assets/My_Service/service-bg.png") no-repeat center;
-        background-size: 100% 100%;
         height: 1250px;
         font-family: 'Poppins', sans-serif;
        /* border: 2px solid green;*/
