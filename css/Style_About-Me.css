@@ -713,7 +713,7 @@
     #My_About {
        /* height: 112vh;*/
         height: 844.48px;
-        border: 2px solid red;
+       /* border: 2px solid red;*/
     }
 
     .about_sec {
@@ -891,36 +891,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ================================== 4K ================================== */
 @media all and (min-width: 1441px) and (max-width: 2560px){
-
-
-
 
 }
 

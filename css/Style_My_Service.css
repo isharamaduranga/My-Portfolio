@@ -102,7 +102,7 @@
     padding-top: 20px;
     text-align: center;
     color: #403D4E;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .one_image,.two_image,.fourth_image{
@@ -114,4 +114,223 @@
 .third_image{
     margin-left: 120px;
     margin-top: 5px;
+}
+
+
+/*================================== 320->Mobile -S ==================================*/
+@media all and (max-width: 320px){
+
+}
+/*================================== 375 ->Mobile -M ==================================*/
+@media all and (min-width: 321px) and (max-width: 375px){
+
+}
+
+/*================================== 425->Mobile -L ================================== */
+@media all and (min-width: 376px) and (max-width: 425px){
+
+}
+
+/*================================== 768->Tablet ================================== */
+@media all and (min-width: 426px) and (max-width: 768px){
+    #My_Service{
+        background: url("../assets/My_Service/service-bg.png") no-repeat center;
+        background-size: 100% 100%;
+        height: 1180px;
+        font-family: 'Poppins', sans-serif;
+        /* border: 2px solid green;*/
+    }
+
+    #service_container {
+        top: -65px;
+        width: 580px;
+        padding-bottom: 50px;
+    }
+
+    .service_h1 {
+        font-size: 30px;
+        padding: 0 15px;
+    }
+
+    .service_h2 {
+        font-size: 60px;
+        padding-bottom: 50px;
+    }
+
+    #service_List {
+        position: relative;
+        margin: auto;
+        top: 40px;
+        width: 80vw;
+        height: 750px;
+        /* border: 2px solid #e70042; */
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 38px;
+        row-gap: 38px;
+        justify-items: center;
+    }
+
+    #service_List>div {
+        width: 264px;
+        height: 355px;
+    }
+
+    .service_title {
+        padding-top: 15px;
+        text-align: center;
+        color: #403D4E;
+        font-size: 20px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .one_image, .two_image, .fourth_image {
+        margin-left: 106px;
+        margin-top: 17px;
+        margin-bottom: 9px;
+        width: 50px;
+        height: 50px;
+    }
+    .third_image {
+        margin-left: 106px;
+        margin-top: 27px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #service_List>div>ul {
+        padding-left: 25px;
+        font-size: 12px;
+        padding-right: 5px;
+    }
+    #service_List>div>ul>li {
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        padding-top: 8px;
+        letter-spacing: 0.04em;
+    }
+}
+
+/*================================== 1024->Laptop ================================== */
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+    #My_Service{
+        background: url("../assets/My_Service/service-bg.png") no-repeat center;
+        background-size: 100% 100%;
+        height: 1250px;
+        font-family: 'Poppins', sans-serif;
+       /* border: 2px solid green;*/
+    }
+
+    #service_container {
+        top: -65px;
+        width: 650px;
+        padding-bottom: 50px;
+    }
+
+    .service_h1 {
+        font-size: 35px;
+        padding: 0 15px;
+    }
+
+    .service_h2 {
+        font-size: 65px;
+        padding-bottom: 50px;
+    }
+
+    #service_List {
+        position: relative;
+        margin: auto;
+        top: 40px;
+        width: 80vw;
+        height: 855px;
+        /* border: 2px solid #e70042; */
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+        column-gap: -17px;
+        row-gap: 33px;
+        justify-items: center;
+    }
+
+    #service_List>div {
+        width: 315px;
+        height: 395px;
+    }
+
+    .service_title {
+        padding-top: 15px;
+        text-align: center;
+        color: #403D4E;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .one_image, .two_image, .fourth_image {
+        margin-left: 125px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 60px;
+        height: 60px;
+    }
+    .third_image {
+        margin-left: 119px;
+        margin-top: 15px;
+        width: 70px;
+        height: 70px;
+    }
+
+    #service_List>div>ul {
+        padding-left: 25px;
+        font-size: 14px;
+        padding-right: 5px;
+    }
+    #service_List>div>ul>li {
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        padding-top: 15px;
+        letter-spacing: 0.04em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================== 1440->Laptop large ================================== */
+@media all and (min-width: 1025px) and (max-width: 1440px){
+
+
+
+
+
+
+
+
 }
