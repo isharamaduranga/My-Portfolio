@@ -372,6 +372,7 @@
 
     .Description_h1 {
         font-size: 1.2em;
+        padding-top: 15px;
     }
 
     .Description_h2 {
@@ -391,6 +392,7 @@
     #about_divs .div2>p{
         font-size: 0.8em;
         text-align: justify;
+        padding-right: 10px;
     }
 
     .container_about a {
@@ -405,8 +407,10 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding-top: 0px;
+        padding-right: 13px;
+        padding-top: 15px;
     }
+
     .about_title_h1 {
         font-size: 17px;
         padding: 0 8px;
@@ -479,10 +483,10 @@
     }
 
     .about_sec_circle1 {
-        width: 200px;
-        height: 200px;
-        right: 11%;
-        top: 6px;
+        width: 210px;
+        height: 210px;
+        right: 13%;
+        top: 2px;
         z-index: 5;
     }
 
@@ -490,7 +494,7 @@
 
         width: 150px;
         height: 150px;
-        left: 11%;
+        left: 9%;
         top: 19%;
         z-index: 3;
     }
@@ -506,6 +510,7 @@
 
     .Description_h1 {
         font-size: 1.2em;
+        padding-top: 15px;
     }
 
     .Description_h2 {
@@ -525,6 +530,7 @@
     #about_divs .div2>p{
         font-size: 0.8em;
         text-align: justify;
+        padding-right: 10px;
     }
 
     .container_about a {
@@ -539,7 +545,8 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding-top: 0px;
+        padding-top: 15px;
+        padding-right: 10px;
     }
     .about_title_h1 {
         font-size: 20px;
@@ -618,9 +625,9 @@
     }
 
     .about_sec_circle1 {
-        width: 210px;
-        height: 210px;
-        right: 13%;
+        width: 220px;
+        height: 220px;
+        right: 14%;
         top: 6px;
         z-index: 5;
     }
@@ -629,7 +636,7 @@
 
         width: 160px;
         height: 160px;
-        left: 14%;
+        left: 11%;
         top: 19%;
         z-index: 3;
     }
@@ -643,6 +650,7 @@
 
     .Description_h1 {
         font-size: 1.2em;
+        padding-top: 18px;
     }
 
     .Description_h2 {
@@ -662,6 +670,7 @@
    #about_divs .div2>p{
        font-size: 0.8em;
        text-align: justify;
+       padding-right: 15px;
     }
 
     .container_about a {
@@ -676,7 +685,8 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        padding-top: 0px;
+        padding-top: 17px;
+        padding-right: 10px;
     }
     .about_title_h1 {
         font-size: 24px;
@@ -774,7 +784,7 @@
     }
 
     .container_about {
-        padding-top: 45px;
+        padding-top: 70px;
         margin-right: 105px;
     }
 
@@ -782,13 +792,13 @@
         width: 260px;
         height: 260px;
         right: 1%;
-        top: -6%;
+        top: 1%;
     }
     .about_sec_circle2 {
         width: 185px;
         height: 185px;
-        left: -11%;
-        top: 35%;
+        left: -6%;
+        top: 36%;
     }
     .about_sec_circle2 h3 {
         font-size: 10px;
@@ -878,8 +888,8 @@
     }
 
     .container_about {
-        padding-top: 50px;
         margin-right: 58px;
+        padding-top: 81px;
     }
 
     main>section:nth-child(3)>section:nth-child(3)>aside {

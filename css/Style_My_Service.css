@@ -119,10 +119,173 @@
 
 /*================================== 320->Mobile -S ==================================*/
 @media all and (max-width: 320px){
+    #My_Service{
+        background: #0D57C6;
+        background: -webkit-linear-gradient(to left, #0D57C6, #37CFFF);
+        background: linear-gradient(to left, #0D57C6, #37CFFF);
+        height: 1520px;
+        font-family: 'Poppins', sans-serif;
+    }
 
+    #service_container {
+        top: 10px;
+        width: 265px;
+        padding-bottom: 30px;
+        color: #fff;
+    }
+
+    .service_h1 {
+        font-size: 17px;
+        padding: 0 8px;
+    }
+
+    .service_h2 {
+        font-size: 30px;
+        padding-bottom: 0px;
+        color: rgba(102, 102, 102, 0.47);
+    }
+    .service_h1:before, .service_h1:after {
+
+        width: 70px;
+        height: 2px;
+        left: -70px;
+        background-color: #fbff00;
+    }
+
+
+    .service_h1:after {
+        left: 100%;
+    }
+
+    #service_List {
+        height: 1363px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #service_List>div {
+
+        width: 245px;
+        height: 306px;
+        box-shadow: 10px 13px 8px -10px #282626;
+    }
+
+
+    .service_title {
+        padding-top: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+    }
+
+    .one_image, .two_image, .fourth_image {
+        margin-left: 107px;
+        margin-top: 16px;
+        margin-bottom: 1px;
+        width: 45px;
+        height: 45px;
+    }
+    .third_image {
+        margin-left: 107px;
+        margin-top: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    #service_List>div>ul>li {
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        padding-top: 10px;
+        padding-right: 5px;
+        letter-spacing: 0.04em;
+        font-size: 12px;
+    }
 }
 /*================================== 375 ->Mobile -M ==================================*/
-@media all and (min-width: 321px) and (max-width: 375px){
+@media all and (min-width: 321px) and (max-width: 376px){
+    #My_Service{
+        background: #0D57C6;
+        background: -webkit-linear-gradient(to left, #0D57C6, #37CFFF);
+        background: linear-gradient(to left, #0D57C6, #37CFFF);
+        height: 1580px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #service_container {
+        top: 10px;
+        width: 354px;
+        padding-bottom: 30px;
+        color: #fff;
+    }
+
+    .service_h1 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .service_h2 {
+        font-size: 33px;
+        padding-bottom: 0px;
+        color: rgba(102, 102, 102, 0.47);
+    }
+    .service_h1:before, .service_h1:after {
+
+        width: 70px;
+        height: 2px;
+        left: -70px;
+        background-color: #fbff00;
+    }
+
+
+    .service_h1:after {
+        left: 100%;
+    }
+
+    #service_List {
+        height: 1425px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #service_List>div {
+
+        width: 260px;
+        height: 320px;
+        box-shadow: 10px 13px 8px -10px #282626;
+    }
+
+
+    .service_title {
+        padding-top: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+    }
+
+    .one_image, .two_image, .fourth_image {
+        margin-left: 107px;
+        margin-top: 16px;
+        margin-bottom: 1px;
+        width: 45px;
+        height: 45px;
+    }
+    .third_image {
+        margin-left: 107px;
+        margin-top: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    #service_List>div>ul>li {
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        padding-top: 10px;
+        padding-right: 5px;
+        letter-spacing: 0.04em;
+        font-size: 12px;
+    }
 
 }
 
