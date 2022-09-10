@@ -429,5 +429,83 @@
 }
 
 
+/*================================== 320->Mobile -S ==================================*/
+@media all and (max-width: 320px){
+
+}
+/*================================== 375 ->Mobile -M ==================================*/
+@media all and (min-width: 321px) and (max-width: 375px){
+
+}
+
+/*================================== 425->Mobile -L ================================== */
+@media all and (min-width: 376px) and (max-width: 425px){
+
+}
+
+/*================================== 768->Tablet ================================== */
+@media all and (min-width: 426px) and (max-width: 768px){
+
+}
+
+/*================================== 1024->Laptop ================================== */
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+    .My_Projects {
+        /* height: 240vh; */
+        height: 2200px;
+    }
+
+    .project_h1 {
+        font-size: 35px;
+        padding: 0 15px;
+    }
+
+    .project_h2 {
+        font-size: 65px;
+    }
+
+    .Project_description .P-1, .P-2 {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .Btn_Github a {
+        font-size: 23px;
+        padding: 4px 20px;
+        margin-top: 30px;
+    }
+
+    .Style_title-02 {
+        font-family: 'poppins', sans-serif;
+        color: rgba(102, 102, 102, 0.2);
+        font-size: 75px;
+        margin: 0;
+        text-align: center;
+    }
+
+    #project_view_container {
+      /* border: 2px solid red;*/
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================== 4K ================================== */
+@media all and (min-width: 1441px) and (max-width: 2560px){
+
+}
+
 
 

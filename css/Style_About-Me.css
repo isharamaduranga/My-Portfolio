@@ -869,13 +869,14 @@
 
         width: 310px;
         height: 310px;
-        right: 8%;
+        right: 5%;
+        top: 20px;
     }
     .about_sec_circle2 {
         width: 225px;
         height: 225px;
-        left: -7%;
-        top: 46%;
+        left: -2%;
+        top: 44%;
     }
     .about_sec_circle2 h3 {
         font-size: 12px;
