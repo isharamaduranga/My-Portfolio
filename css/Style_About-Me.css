@@ -298,6 +298,7 @@
 
 
 /*================================== 320->Mobile -S ==================================*/
+
 @media all and (max-width: 320px){
     #My_About {
 
@@ -433,7 +434,9 @@
         font-size: 34px;
     }
 }
+
 /*================================== 375 ->Mobile -M ==================================*/
+
 @media all and (min-width: 321px) and (max-width: 376px){
     #My_About {
        /* height: 138vh;*/
@@ -573,8 +576,8 @@
     }
 }
 
-
 /*================================== 425->Mobile -L ================================== */
+
 @media all and (min-width: 376px) and (max-width: 426px) {
     #My_About {
 
@@ -716,9 +719,18 @@
 
 }
 
-
 /*================================== 768->Tablet ================================== */
+
 @media all and (min-width: 426px) and (max-width: 768px){
+
+    #about_container {
+        width: 650px;
+        color: #004FC5;
+        padding-top: 100px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        margin: auto;
+    }
 
     #My_About {
        /* height: 112vh;*/
@@ -812,7 +824,6 @@
         display: none;
     }
 }
-
 
 /*================================== 1024->Laptop ================================== */
 @media all and (min-width: 769px) and (max-width: 1024px){

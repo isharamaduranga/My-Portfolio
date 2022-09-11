@@ -179,25 +179,6 @@
 }
 
 
-/* center div contact page  */
-
-/*
-.contact_form{
-    margin-top: 18vh;
-
-
-}
-
-.fieldset{
-
-      border: 2px solid yellowgreen;
-}
-
-.legend{
-    color: crimson;
-
-}*/
-
 .contact-02{
     /*padding-top: 15vh;*/
     padding-top: 113.1px;
@@ -274,6 +255,162 @@ form button:hover{
 }
 .btn:hover i{
     color: #ffff00;
+}
+
+/*================================== 320->Mobile -S ==================================*/
+@media all and (max-width: 320px){
+
+}
+/*================================== 375 ->Mobile -M ==================================*/
+@media all and (min-width: 321px) and (max-width: 375px){
+
+}
+
+/*================================== 425->Mobile -L ================================== */
+@media all and (min-width: 376px) and (max-width: 426px){
+
+    #Contact_Page {
+        height: 754px;
+        border: 2px solid crimson;
+    }
+
+    #contact_container {
+        width: 320px;
+        color: #004FC5;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 50px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .contact_h1 {
+        position: relative;
+        font-size: 24px;
+        display: inline-block;
+        padding: 0 10px;
+        margin: auto;
+    }
+
+    .contact_h2 {
+        color: rgba(102, 102, 102, 0.2);
+        font-size: 35px;
+        /* margin-bottom: 10vh; */
+        margin-bottom: 75.4px;
+        text-align: center;
+    }
+
+    .contact_h1:before, .contact_h1:after {
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 2px;
+        content: '';
+        background-color: #004FC5;
+        left: -60px;
+    }
+    .contact_h1:after {
+        left: 100%;
+    }
+
+}
+
+/*================================== 768->Tablet ================================== */
+@media all and (min-width: 426px) and (max-width: 768px){
+    #Contact_Page {
+        height: 754px;
+    }
+
+    #contact_container {
+        width: 600px;
+        color: #004FC5;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 50px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .contact_h1 {
+        position: relative;
+        font-size: 30px;
+        display: inline-block;
+        padding: 0 15px;
+        margin: auto;
+    }
+
+    .contact_h2 {
+        color: rgba(102, 102, 102, 0.2);
+        font-size: 52px;
+        /* margin-bottom: 10vh; */
+        margin-bottom: 75.4px;
+        text-align: center;
+    }
+
+    .contact_h1:before, .contact_h1:after {
+        position: absolute;
+        top: 50%;
+        width: 135px;
+        height: 3px;
+        content: '';
+        background-color: #004FC5;
+        left: -135px;
+    }
+    .contact_h1:after {
+        left: 100%;
+    }
+}
+
+/*================================== 1024->Laptop ================================== */
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+    #Contact_Page {
+        height: 754px;
+    }
+
+    #contact_container {
+        width: 650px;
+        color: #004FC5;
+        font-family: 'Poppins', sans-serif;
+        padding-top: 50px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .contact_h1 {
+        position: relative;
+        font-size: 35px;
+        display: inline-block;
+        padding: 0 15px;
+        margin: auto;
+    }
+
+    .contact_h2 {
+        color: rgba(102, 102, 102, 0.2);
+        font-size: 60px;
+        /* margin-bottom: 10vh; */
+        margin-bottom: 75.4px;
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================== 4K ================================== */
+@media all and (min-width: 1441px) and (max-width: 2560px){
+
 }
 
 

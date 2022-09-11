@@ -112,9 +112,8 @@
 }
 
 /*================================== 425->Mobile -L ================================== */
-@media all and (min-width: 376px) and (max-width: 425px){
+@media all and (min-width: 376px) and (max-width: 426px){
     #map_useful_links {
-
         margin-top: 75.4px;
         margin-bottom: 15px;
         height: 800px;
@@ -131,7 +130,9 @@
         margin: 10px;
     }
 
-
+    .find_me_title {
+        font-size: 3rem;
+    }
 
 }
 

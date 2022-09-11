@@ -568,6 +568,10 @@
 
 @media all and (min-width: 375px) and (max-width: 426px) {
 
+    #home_container {
+        width: 400px;
+    }
+
     .home-content {
         margin-left: 1px;
         margin-top: -60px;
