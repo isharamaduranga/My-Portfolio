@@ -211,8 +211,6 @@
     }
 }
 
-
-
 /*================================== 375 ->Mobile -M ================================== */
 @media all and (min-width: 321px) and (max-width: 376px){
     #my_education {
@@ -244,7 +242,7 @@
 
     #education_structure {
         height: 471px;
-        width: 4.5vw;
+        width: 4.7vw;
         position: absolute;
         margin: auto;
         left: 0;
@@ -278,24 +276,24 @@
 
     .level-01 {
         top: 99px;
-        left: 8px;
+        left: 5px;
     }
     .level-02 {
         bottom: 294px;
-        left: 8px;
+        left: 5px;
     }
     .level-03 {
-        right: 8px;
+        right: 5px;
         top: 13px;
     }
 
     .level-04 {
-        right: 8px;
+        right: 5px;
         top: 187px;
     }
 
     .level-05 {
-        right: 8px;
+        right: 5px;
         bottom: 211px;
     }
 }
@@ -387,8 +385,6 @@
     }
 
 }
-
-
 
 /*================================== 768->Tablet ================================== */
 @media all and (min-width: 426px) and (max-width: 768px){
@@ -482,7 +478,6 @@
 
 }
 
-
 /*================================== 1024->Laptop ================================== */
 @media all and (min-width: 769px) and (max-width: 1024px){
 
@@ -561,14 +556,6 @@
     }
 
 }
-
-
-
-
-
-
-
-
 
 
 

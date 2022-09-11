@@ -62,3 +62,109 @@
 .details_findme>p{
    margin-top:10px;
 }
+
+
+/*================================== 320->Mobile -S ==================================*/
+@media all and (max-width: 320px){
+    #map_useful_links {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        height: 775px;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #map_useful_links>div {
+        width: 85%;
+        height: 90%;
+        margin: 10px;
+    }
+    .find_me_title {
+        font-size: 2.5rem;
+    }
+}
+/*================================== 375 ->Mobile -M ==================================*/
+@media all and (min-width: 321px) and (max-width: 376px){
+    #map_useful_links {
+
+        margin-top: 30px;
+        margin-bottom: 15px;
+        height: 775px;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #map_useful_links>div {
+        width: 85%;
+        height: 90%;
+        margin: 10px;
+    }
+    .find_me_title {
+        font-size: 3rem;
+    }
+
+}
+
+/*================================== 425->Mobile -L ================================== */
+@media all and (min-width: 376px) and (max-width: 425px){
+    #map_useful_links {
+
+        margin-top: 75.4px;
+        margin-bottom: 15px;
+        height: 800px;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #map_useful_links>div {
+        width: 85%;
+        height: 90%;
+        margin: 10px;
+    }
+
+
+
+}
+
+/*================================== 768->Tablet ================================== */
+@media all and (min-width: 426px) and (max-width: 768px){
+    .find_me_title {
+        font-size: 3.4rem;
+    }
+
+}
+
+/*================================== 1024->Laptop ================================== */
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+    .find_me_title {
+        font-size: 4rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================== 4K ================================== */
+@media all and (min-width: 1441px) and (max-width: 2560px){
+
+}
