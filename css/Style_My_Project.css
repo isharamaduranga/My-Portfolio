@@ -431,53 +431,55 @@
 
 /*================================== 320->Mobile -S ==================================*/
 @media all and (max-width: 320px){
-
-}
-/*================================== 375 ->Mobile -M ==================================*/
-@media all and (min-width: 321px) and (max-width: 375px){
-
     .My_Projects {
-        /* height: 240vh; */
-        height: 1695px;
+        height: 1620px;
     }
 
     #projects_container {
-        width: 400px;
-        padding-top: 90px;
+        width: 265px;
+        padding-top: 70px;
         margin: auto;
     }
 
     .project_h1 {
-        font-size: 24px;
-        padding: 0 10px;
+        font-size: 17px;
+        padding: 0 8px;
     }
 
     .project_h1:before, .project_h1:after {
 
         width: 70px;
-        height: 3px;
+        height: 2px;
         left: -70px;
     }
     .project_h1:after {
         left: 100%;
     }
     .project_h2 {
-        font-size: 36px;
+        font-size: 27px;
+        padding-bottom: 10px;
     }
 
     .Project_description .P-1, .P-2 {
-        font-size: 14px;
+        font-size: 13px;
         padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .Project_description .P-2 {
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .Btn_Github a {
-        font-size: 18px;
-        padding: 3px 10px;
+        font-size: 15px;
+        padding: 3px 9px;
         margin-top: 30px;
+        /*margin-bottom: 10px;*/
     }
 
     .Style_title-02 {
-        font-size: 50px;
+        font-size: 38px;
         margin: 0;
     }
 
@@ -487,7 +489,125 @@
 
     .Style_title-03 {
 
-        font-size: 50px;
+        font-size: 38px;
+        margin: auto;
+    }
+
+    #assignment_view_container {
+        /* border: 2px solid red;*/
+    }
+
+
+    .swiper-slide {
+        max-width: 319px;
+    }
+
+    .card {
+        position: relative;
+        background: ghostwhite;
+        width: 319px;
+        height: 450px;
+        margin: 0 auto;
+    }
+    .card .content {
+        width: 319px;
+        padding: 35px;
+        box-sizing: border-box;
+    }
+
+    .card_below {
+       /* background: ghostwhite;*/
+        position: relative;
+        background: #b9b9d74d;
+        width: 320px;
+        height: 450px;
+        margin: 0 auto;
+    }
+
+    .card_below .content {
+        width: 319px;
+        padding: 35px;
+        box-sizing: border-box;
+    }
+
+    .card .content a {
+
+        font-size: 15px;
+        padding: 4px 40px;
+        margin-top: 65px;
+        margin-left: 39px;
+    }
+
+    .card_below .content a {
+        font-size: 15px;
+        padding: 4px 40px;
+        margin-top: 65px;
+        margin-left: 60px;
+    }
+
+}
+
+/*================================== 375 ->Mobile -M ==================================*/
+@media all and (min-width: 321px) and (max-width: 376px){
+
+    .My_Projects {
+        height: 1640px;
+    }
+
+    #projects_container {
+        width: 354px;
+        padding-top: 70px;
+        margin: auto;
+    }
+
+    .project_h1 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .project_h1:before, .project_h1:after {
+
+        width: 70px;
+        height: 2px;
+        left: -70px;
+    }
+    .project_h1:after {
+        left: 100%;
+    }
+    .project_h2 {
+        font-size: 32px;
+    }
+
+    .Project_description .P-1, .P-2 {
+        font-size: 13px;
+        padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .Project_description .P-2 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .Btn_Github a {
+        font-size: 16px;
+        padding: 3px 9px;
+        margin-top: 30px;
+        /*margin-bottom: 10px;*/
+    }
+
+    .Style_title-02 {
+        font-size: 43px;
+        margin: 0;
+    }
+
+    #project_view_container {
+        /* border: 2px solid red;*/
+    }
+
+    .Style_title-03 {
+
+        font-size: 42px;
         margin: auto;
     }
 
@@ -496,10 +616,6 @@
     }
 
 }
-
-
-
-
 
 /*================================== 425->Mobile -L ================================== */
 @media all and (min-width: 376px) and (max-width: 426px){
@@ -535,12 +651,21 @@
     .Project_description .P-1, .P-2 {
         font-size: 14px;
         padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
+
+    .Project_description .P-2 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
 
     .Btn_Github a {
         font-size: 18px;
         padding: 3px 10px;
         margin-top: 30px;
+      /*  margin-bottom: 10px;*/
     }
 
     .Style_title-02 {
@@ -587,6 +712,8 @@
     .Project_description .P-1, .P-2 {
         font-size: 15px;
         padding-top: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .Btn_Github a {

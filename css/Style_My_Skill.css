@@ -218,6 +218,7 @@
     .skill_title_h1:before, .skill_title_h1:after {
         width: 70px;
         left: -70px;
+        height: 2px;
     }
 
     .skill_title_h1:after {
@@ -320,6 +321,7 @@
     .skill_title_h1:before, .skill_title_h1:after {
         width: 70px;
         left: -70px;
+        height: 2px;
     }
 
     .skill_title_h1:after {

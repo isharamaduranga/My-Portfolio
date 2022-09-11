@@ -420,7 +420,7 @@
         position: absolute;
         top: 50%;
         width: 60px;
-        height: 3px;
+        height: 2px;
         content: '';
         background-color: #004FC5;
         left: -60px;
@@ -557,7 +557,7 @@
         position: absolute;
         top: 50%;
         width: 70px;
-        height: 3px;
+        height: 2px;
         content: '';
         background-color: #004FC5;
         left: -70px;
