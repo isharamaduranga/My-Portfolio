@@ -436,16 +436,183 @@
 /*================================== 375 ->Mobile -M ==================================*/
 @media all and (min-width: 321px) and (max-width: 375px){
 
+    .My_Projects {
+        /* height: 240vh; */
+        height: 1695px;
+    }
+
+    #projects_container {
+        width: 400px;
+        padding-top: 90px;
+        margin: auto;
+    }
+
+    .project_h1 {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .project_h1:before, .project_h1:after {
+
+        width: 70px;
+        height: 3px;
+        left: -70px;
+    }
+    .project_h1:after {
+        left: 100%;
+    }
+    .project_h2 {
+        font-size: 36px;
+    }
+
+    .Project_description .P-1, .P-2 {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .Btn_Github a {
+        font-size: 18px;
+        padding: 3px 10px;
+        margin-top: 30px;
+    }
+
+    .Style_title-02 {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    #project_view_container {
+        /* border: 2px solid red;*/
+    }
+
+    .Style_title-03 {
+
+        font-size: 50px;
+        margin: auto;
+    }
+
+    #assignment_view_container {
+        /* border: 2px solid red;*/
+    }
+
 }
 
-/*================================== 425->Mobile -L ================================== */
-@media all and (min-width: 376px) and (max-width: 425px){
 
+
+
+
+/*================================== 425->Mobile -L ================================== */
+@media all and (min-width: 376px) and (max-width: 426px){
+    .My_Projects {
+        /* height: 240vh; */
+        height: 1695px;
+    }
+
+    #projects_container {
+        width: 400px;
+        padding-top: 90px;
+        margin: auto;
+    }
+
+    .project_h1 {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .project_h1:before, .project_h1:after {
+
+        width: 70px;
+        height: 3px;
+        left: -70px;
+    }
+    .project_h1:after {
+        left: 100%;
+    }
+    .project_h2 {
+        font-size: 36px;
+    }
+
+    .Project_description .P-1, .P-2 {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .Btn_Github a {
+        font-size: 18px;
+        padding: 3px 10px;
+        margin-top: 30px;
+    }
+
+    .Style_title-02 {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    #project_view_container {
+        /* border: 2px solid red;*/
+    }
+
+    .Style_title-03 {
+
+        font-size: 50px;
+        margin: auto;
+    }
+
+    #assignment_view_container {
+        /* border: 2px solid red;*/
+    }
 }
 
 /*================================== 768->Tablet ================================== */
 @media all and (min-width: 426px) and (max-width: 768px){
+    .My_Projects {
+        /* height: 240vh; */
+        height: 1850px;
+    }
+    #projects_container {
+        width: 580px;
+        padding-top: 90px;
+        margin: auto;
+    }
 
+    .project_h1 {
+        font-size: 30px;
+        padding: 0 15px;
+    }
+
+    .project_h2 {
+        font-size: 60px;
+    }
+
+    .Project_description .P-1, .P-2 {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    .Btn_Github a {
+        font-size: 21px;
+        padding: 3px 14px;
+        margin-top: 30px;
+    }
+
+    .Style_title-02 {
+        font-size: 72px;
+        margin: 0;
+    }
+
+    #project_view_container {
+        /* border: 2px solid red;*/
+    }
+
+    .Style_title-03 {
+
+        font-size: 72px;
+        margin: auto;
+    }
+
+    #assignment_view_container {
+        /* border: 2px solid red;*/
+    }
 }
 
 /*================================== 1024->Laptop ================================== */
@@ -453,7 +620,13 @@
 
     .My_Projects {
         /* height: 240vh; */
-        height: 2200px;
+        height: 1850px;
+    }
+
+    #projects_container {
+        width: 650px;
+        padding-top: 90px;
+        margin: auto;
     }
 
     .project_h1 {
@@ -477,24 +650,24 @@
     }
 
     .Style_title-02 {
-        font-family: 'poppins', sans-serif;
-        color: rgba(102, 102, 102, 0.2);
         font-size: 75px;
         margin: 0;
-        text-align: center;
     }
 
     #project_view_container {
       /* border: 2px solid red;*/
     }
 
+    .Style_title-03 {
+        font-size: 75px;
+        margin: auto;
+    }
+
+    #assignment_view_container {
+        /* border: 2px solid red;*/
+    }
+
 }
-
-
-
-
-
-
 
 
 
