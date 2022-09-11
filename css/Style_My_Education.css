@@ -13,6 +13,7 @@
     text-align:center;
     margin:auto;
 }
+
 .education_h1{
     position: relative;
     font-size: 40px;
@@ -121,4 +122,484 @@
 .level-05{
     right: 145px;
     bottom: 95px;
+}
+
+/*================================== 320->Mobile -S ================================== */
+@media all and (max-width: 320px){
+    #my_education {
+        height: 640px;
+    }
+
+    #education_container {
+        width: 265px;
+        padding-top: 65px;
+    }
+
+    .education_h1 {
+        font-size: 17px;
+        padding: 0 8px;
+    }
+
+    .education_h1:before, .education_h1:after {
+        top: 50%;
+        width: 45px;
+        height: 2px;
+        left: -45px;
+    }
+    .education_h1:after {
+        left: 100%;
+    }
+    .education_h2 {
+        font-size: 26px;
+    }
+
+    #education_structure {
+        height: 398px;
+        width: 4.3vw;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 11px;
+        background: url(../assets/Education/small_less_320.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+
+
+    .education_aside> .level-01, .level-02, .level-03, .level-04, .level-05 {
+        width: 45vw;
+        height: 108px;
+        position: absolute;
+        margin: auto;
+        padding: 3px;
+        color: #ffffff;
+        border: 0.02em solid white;
+    }
+    .education_aside>div>h2 {
+        font-size: 10.5px;
+    }
+
+    .education_aside>div>h3 {
+        font-size: 10px;
+    }
+
+    .education_aside>div>h4 {
+        font-size: 10px;
+    }
+
+    .level-01 {
+        top: 76px;
+        left: 6px;
+    }
+    .level-02 {
+        bottom: 347px;
+        left: 6px;
+    }
+    .level-03 {
+        right: 6px;
+        top: 4px;
+    }
+
+    .level-04 {
+        right: 6px;
+        top: 150px;
+    }
+
+    .level-05 {
+        right: 6px;
+        bottom: 276px;
+    }
+}
+
+
+
+/*================================== 375 ->Mobile -M ================================== */
+@media all and (min-width: 321px) and (max-width: 376px){
+    #my_education {
+        height: 720px;
+    }
+
+    #education_container {
+        width: 354px;
+        padding-top: 65px;
+    }
+
+    .education_h1 {
+        font-size: 17px;
+        padding: 0 8px;
+    }
+
+    .education_h1:before, .education_h1:after {
+        top: 50%;
+        width: 50px;
+        height: 2px;
+        left: -50px;
+    }
+    .education_h1:after {
+        left: 100%;
+    }
+    .education_h2 {
+        font-size: 31px;
+    }
+
+    #education_structure {
+        height: 471px;
+        width: 4.5vw;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 11px;
+        background: url(../assets/Education/small_stucture1.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+
+
+    .education_aside> .level-01, .level-02, .level-03, .level-04, .level-05 {
+        width: 45vw;
+        height: 110px;
+        position: absolute;
+        margin: auto;
+        padding: 5px;
+        color: #ffffff;
+        border: 0.02em solid white;
+    }
+    .education_aside>div>h2 {
+        font-size: 12px;
+    }
+
+    .education_aside>div>h3 {
+        font-size: 10px;
+    }
+
+    .education_aside>div>h4 {
+        font-size: 10px;
+    }
+
+    .level-01 {
+        top: 99px;
+        left: 8px;
+    }
+    .level-02 {
+        bottom: 294px;
+        left: 8px;
+    }
+    .level-03 {
+        right: 8px;
+        top: 13px;
+    }
+
+    .level-04 {
+        right: 8px;
+        top: 187px;
+    }
+
+    .level-05 {
+        right: 8px;
+        bottom: 211px;
+    }
+}
+
+/*================================== 425->Mobile -L ================================== */
+@media all and (min-width: 376px) and (max-width: 426px){
+    #my_education {
+        height: 790px;
+    }
+
+    #education_container {
+        width: 400px;
+        padding-top: 80px;
+    }
+
+    .education_h1 {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+
+    .education_h1:before, .education_h1:after {
+        top: 50%;
+        width: 60px;
+        height: 2px;
+        left: -60px;
+    }
+    .education_h1:after {
+        left: 100%;
+    }
+    .education_h2 {
+        font-size: 34px;
+    }
+
+    #education_structure {
+        height: 471px;
+        width: 4.5vw;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 11px;
+        background: url(../assets/Education/small_stucture1.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+
+
+    .education_aside> .level-01, .level-02, .level-03, .level-04, .level-05 {
+        width: 43vw;
+        height: 110px;
+        position: absolute;
+        margin: auto;
+        padding: 5px;
+        color: #ffffff;
+        border: 0.02em solid white;
+    }
+    .education_aside>div>h2 {
+        font-size: 12px;
+    }
+
+    .education_aside>div>h3 {
+        font-size: 10px;
+    }
+
+    .education_aside>div>h4 {
+        font-size: 10px;
+    }
+
+    .level-01 {
+        top: 99px;
+        left: 18px;
+    }
+    .level-02 {
+        bottom: 294px;
+        left: 18px;
+    }
+    .level-03 {
+        right: 19px;
+        top: 13px;
+    }
+
+    .level-04 {
+        right: 19px;
+        top: 187px;
+    }
+
+    .level-05 {
+        right: 19px;
+        bottom: 211px;
+    }
+
+}
+
+
+
+/*================================== 768->Tablet ================================== */
+@media all and (min-width: 426px) and (max-width: 768px){
+
+    #my_education {
+        height: 790px;
+    }
+
+    #education_container {
+        width: 600px;
+        padding-top: 100px;
+    }
+
+    .education_h1 {
+        font-size: 30px;
+        padding: 0 15px;
+    }
+
+    .education_h1:before, .education_h1:after {
+        top: 50%;
+        width: 135px;
+        height: 3px;
+        left: -135px;
+    }
+    .education_h1:after {
+        left: 100%;
+    }
+    .education_h2 {
+        font-size: 48px;
+    }
+
+    #education_structure {
+        height: 423px;
+        width: 21vw;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 37.7px;
+        background: url(../assets/Education/structure3.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+
+
+    .education_aside> .level-01, .level-02, .level-03, .level-04, .level-05 {
+        width: 33vw;
+        height: 111px;
+        position: absolute;
+        margin: auto;
+        padding: 10px;
+        color: #ffffff;
+        border: 0.02em solid white;
+    }
+    .education_aside>div>h2 {
+        font-size: 13px;
+    }
+
+    .education_aside>div>h3 {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+
+    }
+
+    .education_aside>div>h4 {
+        font-size: 12px;
+    }
+
+    .level-01 {
+        top: 109px;
+        left: 44px;
+    }
+    .level-02 {
+        bottom: 300px;
+        left: 44px;
+    }
+    .level-03 {
+        right: 44px;
+        top: 32px;
+    }
+
+    .level-04 {
+        right: 44px;
+        top: 189px;
+    }
+
+    .level-05 {
+        right: 44px;
+        bottom: 225px;
+    }
+
+
+}
+
+
+/*================================== 1024->Laptop ================================== */
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+
+    #education_container {
+        width: 750px;
+        padding-top: 100px;
+    }
+
+    .education_h1 {
+        font-size: 35px;
+        padding: 0 15px;
+    }
+
+    .education_h2 {
+        font-size: 60px;
+    }
+
+    #education_structure {
+        height: 542.5px;
+        width: 22vw;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 37.7px;
+        background: url(../assets/Education/education_display_chart.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+
+
+    .education_aside> .level-01, .level-02, .level-03, .level-04, .level-05 {
+        font-family: 'Poppins', sans-serif;
+        width: 31vw;
+        /* height: 17vh; */
+        height: 120px;
+        position: absolute;
+        margin: auto;
+        padding: 10px;
+        color: #ffffff;
+        border: 0.02em solid white;
+    }
+    .education_aside>div>h2 {
+        font-size: 16px;
+    }
+
+    .education_aside>div>h3 {
+        font-size: 13px;
+    }
+
+    .education_aside>div>h4 {
+        font-size: 13px;
+    }
+
+    .level-01 {
+        top: 142px;
+        left: 76px;
+    }
+    .level-02 {
+        bottom: 214px;
+        left: 76px;
+    }
+    .level-03 {
+        right: 75px;
+        top: 45px;
+    }
+
+    .level-04 {
+        right: 75px;
+        top: 244px;
+    }
+
+    .level-05 {
+        right: 75px;
+        bottom: 120px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================== 1440->Laptop large ================================== */
+@media all and (min-width: 1025px) and (max-width: 1440px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================== 4K ================================== */
+@media all and (min-width: 1441px) and (max-width: 2560px){
+
 }
