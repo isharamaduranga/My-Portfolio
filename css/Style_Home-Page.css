@@ -408,14 +408,30 @@
 
 @media all and (max-width: 320px) {
 
+    #home_container {
+        width: 278px;
+    }
+
+
+    .home_title_h3:before, .home_title_h3:after {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 2px;
+        content: '';
+        background-color: #0fc40f;
+        left: -50px;
+    }
+
+    .home_title_h3:after {
+        left: 100%;
+    }
+
+
     .home-content {
         margin-left: 1px;
     }
 
-
-    .home_title_h3 {
-        display: none;
-    }
 
     .home .home-content .text-1 {
         font-size: 25px;
@@ -476,25 +492,46 @@
         font-size: 18px;
     }
 
-/*    .home {
+
+
+    .home {
         background: #ea0ec5;
         background: -webkit-linear-gradient(to right, #ea0ec5, #4300B1);
         background: linear-gradient(to right, #ea0ec5, #4300B1);
+        height: 600px;
+    }
 
-    }*/
+    .gif_scroll {
+        width: 60px;
+        height: 60px;
+    }
 
 
 }
 
 
-@media all and (min-width: 321px) and (max-width: 375px) {
-    .home-content {
-        margin-left: 1px;
+@media all and (min-width: 321px) and (max-width: 376px) {
+
+
+    #home_container {
+        width: 335px;
     }
 
+    .home_title_h3:before, .home_title_h3:after {
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 2px;
+        content: '';
+        background-color: #0fc40f;
+        left: -60px;
+    }
 
-    .home_title_h3 {
-        display: none;
+    .home_title_h3:after {
+        left: 100%;
+    }
+    .home-content {
+        margin-left: 1px;
     }
 
     .home .home-content .text-1 {
@@ -554,6 +591,10 @@
 
     #btn_home{
         margin-top: 50px;
+    }
+    .gif_scroll {
+        width: 70px;
+        height: 70px;
     }
 
   /*  .home {
@@ -566,20 +607,30 @@
 }
 
 
-@media all and (min-width: 375px) and (max-width: 426px) {
+@media all and (min-width: 376px) and (max-width: 426px) {
 
     #home_container {
-        width: 400px;
+        width: 381px;
+    }
+
+
+    .home_title_h3:before, .home_title_h3:after {
+        position: absolute;
+        top: 50%;
+        width: 70px;
+        height: 2px;
+        content: '';
+        background-color: #0fc40f;
+        left: -70px;
+    }
+
+    .home_title_h3:after {
+        left: 100%;
     }
 
     .home-content {
         margin-left: 1px;
         margin-top: -60px;
-    }
-
-
-    .home_title_h3 {
-        display: none;
     }
 
     .home .home-content .text-1 {
@@ -639,6 +690,11 @@
 
     #btn_home{
         margin-top: 50px;
+    }
+
+    .gif_scroll {
+        width: 80px;
+        height: 80px;
     }
 
   /*  .home {
@@ -740,12 +796,12 @@
         font-size: 30px;
         font-weight: 500;
     }
-
-
 }
 
 
+
 @media all and (min-width: 2344px) and (max-width: 2560px) {
+
 
 }
 
