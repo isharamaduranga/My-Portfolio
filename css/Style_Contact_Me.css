@@ -265,7 +265,7 @@ form button:hover{
 @media all and (min-width: 321px) and (max-width: 376px){
 
     #Contact_Page {
-        height: 1400px;
+        height: 1350px;
         background: #3378FF;
         background: -webkit-linear-gradient(to left, #3378FF, #9442FE);
         background: linear-gradient(to left, #3378FF, #9442FE);
@@ -279,17 +279,16 @@ form button:hover{
     }
 
     .contact_h1 {
-        position: relative;
-        font-size: 24px;
+
+        font-size: 18px;
         display: inline-block;
-        padding: 0 10px;
-        margin: auto;
+        padding: 0 8px;
         color: #ffffff;
     }
 
     .contact_h2 {
         color: rgba(102, 102, 102, 0.46);
-        font-size: 35px;
+        font-size: 31px;
         /* margin-bottom: 10vh; */
         margin-bottom: 50px;
         text-align: center;
@@ -298,11 +297,11 @@ form button:hover{
     .contact_h1:before, .contact_h1:after {
         position: absolute;
         top: 50%;
-        width: 60px;
+        width: 50px;
         height: 3px;
         content: '';
         background-color: #ffff00;
-        left: -60px;
+        left: -50px;
     }
 
     .contact_h1:after {
@@ -311,7 +310,7 @@ form button:hover{
 
 
     #contact_container {
-        width: 400px;
+        width: 300px;
         padding-top: 50px;
     }
 
@@ -427,7 +426,7 @@ form button:hover{
 @media all and (min-width: 376px) and (max-width: 426px){
 
     #Contact_Page {
-        height: 1400px;
+        height: 1350px;
         background: #3378FF;
         background: -webkit-linear-gradient(to left, #3378FF, #9442FE);
         background: linear-gradient(to left, #3378FF, #9442FE);
