@@ -514,17 +514,17 @@
 
 
     #home_container {
-        width: 332px;
+        width: 328px;
     }
 
     .home_title_h3:before, .home_title_h3:after {
         position: absolute;
         top: 50%;
-        width: 60px;
+        width: 50px;
         height: 2px;
         content: '';
         background-color: #0fc40f;
-        left: -60px;
+        left: -50px;
     }
 
     .home_title_h3:after {
