@@ -1,12 +1,12 @@
 
 .My_Projects {
-   /* height: 240vh;*/
+    /* height: 240vh;*/
     height: 1809.6px;
-/*++++++ Main Border ++++++++++*/
+    /*++++++ Main Border ++++++++++*/
 }
 
 .title_of_projects {
-/*++++++ Title Border ++++++++++*/
+    /*++++++ Title Border ++++++++++*/
 }
 
 /*------------------------------------------------------------*/
@@ -53,7 +53,7 @@
 
 /*--------------------------------------------------------------*/
 .Project_description {
-/*+++++++Project_description Border+++++++++*/
+    /*+++++++Project_description Border+++++++++*/
     /*height: 20vh;*/
     height: 150.8px;
     margin-bottom: 10px;
@@ -114,7 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   /* min-height: 70vh;*/
+    /* min-height: 70vh;*/
     min-height: 527.8px;
     background: #fff;
     font-family: 'poppins', sans-serif;
@@ -262,7 +262,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   /* min-height: 70vh;*/
+    /* min-height: 70vh;*/
     min-height: 527.8px;
     background: #fff;
     font-family: 'poppins', sans-serif;
@@ -296,6 +296,12 @@
     margin-left: 80px;
 }
 
+.card_below .content img {
+    width: 320px;
+    height: 220px
+}
+
+
 .card_below .content a:hover {
     color: #000000;
     background: none;
@@ -305,7 +311,7 @@
     color: rgb(0, 0, 0);
     font-size: 15px;
     text-align: justify;
-     padding: 10px;
+    padding: 10px;
 }
 
 .card_below .sliderText {
@@ -404,33 +410,33 @@
     text-align: center;
 }
 
-#pagination-bullets_project{
+#pagination-bullets_project {
     position: absolute;
     margin: auto;
     bottom: 0;
 }
 
-#pagination-bullets_assignment{
+#pagination-bullets_assignment {
     position: absolute;
     margin: auto;
     bottom: 0;
 
 }
 
-.swiper-pagination-bullet{
-    border:none;
-    margin:5px;
-    padding:0;
-    -webkit-box-shadow:none;
-    box-shadow:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
+.swiper-pagination-bullet {
+    border: none;
+    margin: 5px;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 
 /*================================== 320->Mobile -S ==================================*/
-@media all and (max-width: 320px){
+@media all and (max-width: 320px) {
     .My_Projects {
         height: 1620px;
     }
@@ -452,9 +458,11 @@
         height: 2px;
         left: -70px;
     }
+
     .project_h1:after {
         left: 100%;
     }
+
     .project_h2 {
         font-size: 27px;
         padding-bottom: 10px;
@@ -466,6 +474,7 @@
         padding-left: 5px;
         padding-right: 5px;
     }
+
     .Project_description .P-2 {
         padding-left: 5px;
         padding-right: 5px;
@@ -509,6 +518,7 @@
         height: 450px;
         margin: 0 auto;
     }
+
     .card .content {
         width: 319px;
         padding: 35px;
@@ -516,7 +526,7 @@
     }
 
     .card_below {
-       /* background: ghostwhite;*/
+        /* background: ghostwhite;*/
         position: relative;
         background: #b9b9d74d;
         width: 320px;
@@ -545,10 +555,24 @@
         margin-left: 60px;
     }
 
+
+    .card_below .content img {
+        width: 250px;
+        height: 180px
+    }
+
+    .card_below .content a {
+        font-size: 15px;
+        padding: 4px 30px;
+        border: 1px solid crimson;
+        margin-top: 15px;
+        margin-left: 68px;
+    }
+
 }
 
 /*================================== 375 ->Mobile -M ==================================*/
-@media all and (min-width: 321px) and (max-width: 376px){
+@media all and (min-width: 321px) and (max-width: 376px) {
 
     .My_Projects {
         height: 1640px;
@@ -571,9 +595,11 @@
         height: 2px;
         left: -70px;
     }
+
     .project_h1:after {
         left: 100%;
     }
+
     .project_h2 {
         font-size: 32px;
     }
@@ -584,6 +610,7 @@
         padding-left: 5px;
         padding-right: 5px;
     }
+
     .Project_description .P-2 {
         padding-left: 5px;
         padding-right: 5px;
@@ -615,10 +642,18 @@
         /* border: 2px solid red;*/
     }
 
+    .card_below .content a {
+        font-size: 15px;
+        padding: 4px 30px;
+        border: 2px solid crimson;
+        margin-top: 15px;
+        margin-left: 110px;
+    }
+
 }
 
 /*================================== 425->Mobile -L ================================== */
-@media all and (min-width: 376px) and (max-width: 426px){
+@media all and (min-width: 376px) and (max-width: 426px) {
     .My_Projects {
         /* height: 240vh; */
         height: 1695px;
@@ -641,9 +676,11 @@
         height: 3px;
         left: -70px;
     }
+
     .project_h1:after {
         left: 100%;
     }
+
     .project_h2 {
         font-size: 36px;
     }
@@ -665,7 +702,7 @@
         font-size: 18px;
         padding: 3px 10px;
         margin-top: 30px;
-      /*  margin-bottom: 10px;*/
+        /*  margin-bottom: 10px;*/
     }
 
     .Style_title-02 {
@@ -689,11 +726,12 @@
 }
 
 /*================================== 768->Tablet ================================== */
-@media all and (min-width: 426px) and (max-width: 768px){
+@media all and (min-width: 426px) and (max-width: 768px) {
     .My_Projects {
         /* height: 240vh; */
         height: 1850px;
     }
+
     #projects_container {
         width: 580px;
         padding-top: 90px;
@@ -743,7 +781,7 @@
 }
 
 /*================================== 1024->Laptop ================================== */
-@media all and (min-width: 769px) and (max-width: 1024px){
+@media all and (min-width: 769px) and (max-width: 1024px) {
 
     .My_Projects {
         /* height: 240vh; */
@@ -782,7 +820,7 @@
     }
 
     #project_view_container {
-      /* border: 2px solid red;*/
+        /* border: 2px solid red;*/
     }
 
     .Style_title-03 {
@@ -797,13 +835,8 @@
 }
 
 
-
-
-
-
-
 /* ================================== 4K ================================== */
-@media all and (min-width: 1441px) and (max-width: 2560px){
+@media all and (min-width: 1441px) and (max-width: 2560px) {
 
 }
 
