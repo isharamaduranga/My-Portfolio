@@ -279,7 +279,7 @@
 
 .card_below .content {
     width: 350px;
-    padding: 35px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -292,9 +292,8 @@
     border-radius: 20px;
     border: 3px solid crimson;
     transition: all 0.3s ease;
-    margin-top: 65px;
-    margin-left: 65px;
-
+    margin-top: 15px;
+    margin-left: 80px;
 }
 
 .card_below .content a:hover {
@@ -305,7 +304,8 @@
 .card_below .content .description {
     color: rgb(0, 0, 0);
     font-size: 15px;
-    /* padding-top: 50px;*/
+    text-align: justify;
+     padding: 10px;
 }
 
 .card_below .sliderText {
