@@ -66,6 +66,7 @@ html{
 }
 
 .navbar .menu li a {
+    display: block;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -367,7 +368,7 @@ html{
     .navbar .menu li a {
         display: inline-block;
         margin: 20px 0;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .home .home-content .text-2 {
