@@ -7,8 +7,12 @@
 
 
     /*background: linear-gradient(109.6deg, rgb(15, 196, 15) 11.2%, rgb(229, 17, 77) 91.1%);*/
-    background: rgba(0, 0, 0, 0.69);
+   /* background: rgba(0, 0, 0, 0.69);*/
     border-top: 3px solid #dcb41c;
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 #footer_of_site>p{
     color: white;

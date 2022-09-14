@@ -71,7 +71,7 @@
      position: relative;
     background-color: ghostwhite;
     background-size: cover;
-     border: 1px solid ghostwhite;
+    /* border: 1px solid ghostwhite;*/
     font-family: 'Poppins', sans-serif;
      box-shadow: 10px 13px 8px -5px rgba(94, 59, 238, 0.5);
     /* box-shadow: 10px 13px 8px -5px #282626;*/
