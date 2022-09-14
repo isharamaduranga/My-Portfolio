@@ -115,14 +115,14 @@
 .contact-03{
     position: relative;
 }
-.contact-03>img{
+.contact-03 .back_top>img{
     position: absolute;
     margin: auto;
     right: 0;
     left: 0;
     top: 0;
-    width: 9vw;
-    height: 9vw;
+    width: 8vw;
+    height: 8vw;
 }
 .contact-03>h3{
     font-family:monospace;
@@ -257,6 +257,10 @@ form button:hover{
     color: #ffff00;
 }
 
+.gif{
+
+}
+
 /*================================== 320->Mobile -S ==================================*/
 @media all and (max-width: 320px){
     #Contact_Page {
@@ -377,7 +381,7 @@ form button:hover{
 
 
     }
-    .contact-03>img {
+    .contact-03 .back_top>img {
         width: 23vw;
         height: 23vw;
         position: relative;
@@ -536,11 +540,11 @@ form button:hover{
 
 
     }
-    .contact-03>img {
+    .contact-03 .back_top>img {
         width: 20vw;
         height: 20vw;
         position: relative;
-        left: 127px;
+        left: 110px;
         top: 115px;
     }
 
@@ -698,11 +702,11 @@ form button:hover{
 
 
     }
-    .contact-03>img {
+    .contact-03 .back_top>img {
         width: 20vw;
         height: 20vw;
         position: relative;
-        left: 127px;
+        left: 125px;
         top: 115px;
     }
 
@@ -838,7 +842,7 @@ form button:hover{
 
 
     }
-    .contact-03>img {
+    .contact-03 .back_top>img {
         width: 12vw;
         height: 12vw;
     }
@@ -946,9 +950,9 @@ form button:hover{
 
 
     }
-    .contact-03>img {
-        width: 9vw;
-        height: 9vw;
+    .contact-03 .back_top>img {
+        width: 10vw;
+        height: 10vw;
     }
 
     .contact-03>p {

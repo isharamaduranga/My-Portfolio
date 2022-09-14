@@ -16,6 +16,13 @@ $(document).ready(function () {
 
     });
 
+    //side-up script
+
+    $('#scroll-up-btn').click(function() {
+        $('html').animate({scrollTop:0});
+    });
+
+
     /*typing animation script*/
     var typed = new Typed(".typing",{
         strings:["Full Stack Developer","WEB-DEVELOPER","BACK-END DEVELOPER","FRONT-END DEVELOPER","SOFTWARE DESIGNER","UI/UX DESIGNER"],
