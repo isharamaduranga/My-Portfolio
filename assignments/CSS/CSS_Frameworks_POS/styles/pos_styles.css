@@ -21,9 +21,20 @@ main{
 }
 
 #sec-1 > div {
-    border: 1px solid #e5114d;
+   /* border: 1px solid #e5114d;*/
+
+}
+#sec-1>div>div>p{
+    font-family: 'poppins', sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
 }
 
+#sec-1>div>div>h3{
+    color: #d7151f;
+    font-weight: 1600;
+}
 
 
 #sec-2 {
@@ -79,13 +90,3 @@ main{
     padding-top: 30px;
 }
 
-#sec-1>div>div>p{
-    font-family: 'poppins', sans-serif;
-    color: #ffffff;
-    font-size: 22px;
-}
-
-#sec-1>div>div>h3{
-    color: #d7151f;
-    font-weight: 1600;
-}
