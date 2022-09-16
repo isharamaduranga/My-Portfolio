@@ -3,35 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Bootstrap_Pos-System</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
+    <!--link Bootstrap Framework-->
     <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+
+    <style>
+
+        #ul-list > li > a {
+            padding-left: 50px;
+
+        }
+
+        #ul-list > li > a {
+            color: crimson;
+        }
+
+        #sec-1 {
+            height: 20vh;
+        }
+
+        #sec-1 > div {
+            border: 1px solid #e5114d;
+        }
+
+        /*   #sec-1 > div>div {
+               border: 1px solid yellow;
+               width: 20vh;
+               height: 20vh;
+           }*/
+
+        #sec-2 {
+            height: 70vh;
+        }
+
+
+
+    </style>
+
 </head>
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+
+    <nav class="navbar navbar-expand-lg bg-primary navColor">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand text-white fw-bold" href="#">
+                <img src="assests/images/logo.jpg" alt="Logo" width="40" height="40"
+                     class="d-inline-block align-text-center">
+                POS-SYSTEM
+            </a>
+            <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul id="ul-list" class="navbar-nav  me-auto mb-2 mb-lg-0 text-white">
+                    <li class="nav-item fs-5 ">
+                        <a aria-current="page" class="nav-link text-white" href="#" id="linkHome">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Customers</a>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white table-hover " href="#" id="linkCustomer">Customers</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Items</a>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkItem">Items</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Orders</a>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkOrder">Orders</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Order Details</a>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkPurchaseOrder">Order-Details</a>
                     </li>
                 </ul>
             </div>
@@ -41,16 +83,47 @@
 </header>
 
 
-
-<!--Nav Bar-->
-<section>
-
-</section>
-
 <!--Home Slide-->
-<section >
+<main class="container-fluid">
 
-</section>
+    <section id="sec-1" class="row bg-secondary border border-1 border-danger">
+
+        <div class="col">
+            <div></div>
+        </div>
+        <div class="col">
+            <div></div>
+        </div>
+        <div class="col">
+            <div></div>
+        </div>
+
+    </section>
+
+
+    <section id="sec-2" class="row ">
+
+        <div class="col-2"></div>
+
+        <div class="col-8 bg-warning">
+
+           <!-- <div class="row-6 border border-1 border-danger"> </div>
+            <div class="row-6 border border-1 border-danger"> </div>
+            <div class="col-6 border border-1 border-danger"> </div>
+            <div class="col-6 border border-1 border-danger"> </div>-->
+
+             <div class="col bg-info"></div>
+             <div class="col bg-info"></div>
+
+        </div>
+
+
+        <div class="col-2 "></div>
+
+
+    </section>
+</main>
+
 
 
 
