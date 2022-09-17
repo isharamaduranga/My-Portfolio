@@ -10,13 +10,7 @@ main{
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assests/images/supermarket.jpg");
     background-size: 100% 100%;
 }
-table th {
-    position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
-position: sticky;
-    top: 0;
-    z-index: 1; // any positive value, layer order is global
-background: #fff; // any bg-color to overlap
-}
+
 
 #ul-list > li > a {
     color: crimson;
@@ -55,6 +49,8 @@ background: #fff; // any bg-color to overlap
     height: 6.5vh;
 }
 
+
+
 .col-6{
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
@@ -70,7 +66,7 @@ background: #fff; // any bg-color to overlap
     color: #004FC5;
 }
 
-.col-6>p{
+.col-6>div>p{
     color: rgba(0, 0, 0, 0.64);
     font-family: 'poppins', sans-serif;
     text-align: center;
@@ -79,7 +75,7 @@ background: #fff; // any bg-color to overlap
     font-weight: bold;
 }
 
-.col-6>i{
+.col-6>div>i{
     font-size: 5vw;
     color: white;
     padding-top: 30px;
