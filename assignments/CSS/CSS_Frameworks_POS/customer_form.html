@@ -11,8 +11,141 @@
     <link href="../../../assets/icons/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-primary navColor">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="#">
+                <img src="assests/images/logo.jpg" alt="Logo" width="40" height="40"
+                     class="d-inline-block align-text-center">
+                POS-SYSTEM
+            </a>
+            <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul id="ul-list" class="navbar-nav  me-auto mb-2 mb-lg-0 text-white">
+                    <li class="nav-item fs-5 ">
+                        <a aria-current="page" class="nav-link text-white" href="#" id="linkHome">Home</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white table-hover " href="#" id="linkCustomer">Customers</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkItem">Items</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkOrder">Orders</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkPurchaseOrder">Order-Details</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+        <!-- ==================== Customer Manage Content Start =====================-->
 
 
+        <section class="container-fluid mt-5" id="customerContent">
+
+            <!-- Section of Customer Details Form -->
+            <section class="container-fluid mt-5">
+                <div class="row">
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtCusId">Customer ID</label>
+                        <input class="form-control" id="txtCusId" placeholder="C00-001" type="text">
+                        <p><small class="text-danger pl-1" id="lblCusId"></small></p>
+                    </div>
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtCusName">Customer Name</label>
+                        <input class="form-control" id="txtCusName" placeholder="Ishara Maduranga" type="text">
+                        <p><small class="text-danger pl-1" id="lblCusName"></small></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtCusAddress">Customer Address</label>
+                        <input class="form-control" id="txtCusAddress" placeholder="NO : C/195 Waharaka Ruwanwella" type="text">
+                        <p><small class="text-danger pl-1" id="lblCusAddress"></small></p>
+                    </div>
+                    <div class="mb-3 col">
+                        <label class="form-label" for="txtCusContact">Customer TP</label>
+                        <input class="form-control" id="txtCusContact" placeholder="077 6127572" type="text">
+                        <p><small class="text-danger pl-1" id="lblCusContact"></small></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section of Button Group -->
+            <section class="container-fluid mt-3 button">
+                <button class="btn btn-danger" id="btnDeleteCustomer" type="button">Delete Customer</button>
+                <button class="btn btn-success" id="btnUpdateCustomer" type="button">Update Customer</button>
+                <button class="btn btn-primary" id="btnCustomerSave" type="button">Add Customer</button>
+
+            </section>
+
+            <!-- Section of Search Bar -->
+            <section class="container-fluid mt-3">
+                <form class="d-flex">
+                    <input aria-label="Search" class="form-control me-2" id="txtSearchCustomer" placeholder="Search"
+                           type="search">
+                    <button class="btn btn-outline-success" id="btnSearchCustomer" type="submit">Search</button>
+                </form>
+            </section>
+
+            <!-- Section of Customer Table -->
+            <section class="row mt-4">
+                <div class="col">
+                    <table class="table table-hover">
+                        <thead class="bg-secondary text-white" id="tableHead">
+                        <tr class="head">
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Customer Address</th>
+                            <th scope="col">Customer TP.</th>
+                        </tr>
+                        </thead>
+                        <tbody id="customerTable" class="table-light border-info">
+                        <tr>
+                            <th scope="row">C00-001</th>
+                            <td>Ishara</td>
+                            <td>Ruwanwella</td>
+                            <td>0776127572</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">C00-002</th>
+                            <td>Dinuth</td>
+                            <td>Kaluthara</td>
+                            <td>0776667546</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">C00-003</th>
+                            <td>Hasitha</td>
+                            <td>Bandaragama</td>
+                            <td>0714561235</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">C00-004</th>
+                            <td>Damith</td>
+                            <td>Negombo</td>
+                            <td>0757894562</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">C00-005</th>
+                            <td>Dilsha</td>
+                            <td>Panadura</td>
+                            <td>0772265412</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
 
 <!--Import js for bootstrap-->
 <script src="assests/js/bootstrap.min.js"></script>
