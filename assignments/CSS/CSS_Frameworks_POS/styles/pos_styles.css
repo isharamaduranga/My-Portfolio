@@ -10,6 +10,13 @@ main{
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assests/images/supermarket.jpg");
     background-size: 100% 100%;
 }
+table th {
+    position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
+position: sticky;
+    top: 0;
+    z-index: 1; // any positive value, layer order is global
+background: #fff; // any bg-color to overlap
+}
 
 #ul-list > li > a {
     color: crimson;
@@ -35,6 +42,10 @@ main{
     font-weight: 1600;
 }
 
+.pre-scrollable {
+    max-height: 50px;
+    overflow-y: scroll;
+}
 
 #sec-2 {
     height: 65vh;
@@ -74,4 +85,8 @@ main{
     padding-top: 30px;
 }
 
+.button{
+    text-align: center;
+
+}
 /*================ Customer page CSS Styles ==================================*/

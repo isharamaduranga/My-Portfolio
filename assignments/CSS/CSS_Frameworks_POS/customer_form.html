@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assests/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/pos_styles.css">
     <link href="../../../assets/icons/css/all.min.css" rel="stylesheet">
+
 </head>
 <body>
 <header>
@@ -27,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul id="ul-list" class="navbar-nav  me-auto mb-2 mb-lg-0 text-white">
                     <li class="nav-item fs-5 ">
-                        <a aria-current="page" class="nav-link text-white" href="#" id="linkHome">Home</a>
+                        <a aria-current="page" class="nav-link text-white" href="index.html" id="linkHome">Home</a>
                     </li>
                     <li class="nav-item fs-5">
                         <a class="nav-link text-white table-hover " href="#" id="linkCustomer">Customers</a>
@@ -50,9 +51,17 @@
         <!-- ==================== Customer Manage Content Start =====================-->
 
 
-        <section class="container-fluid mt-5" id="customerContent">
+        <section class="container-fluid mt-3" id="customerContent">
 
             <!-- Section of Customer Details Form -->
+            <section class="container-fluid mt-1">
+                <div style="height: 10px; text-align: center">
+                  <h2  class="bg-secondary border border-2 border-secondary text-light"
+                       style="border-radius: 25px; font-family: 'poppins', sans-serif"> M A N A G E - C U S T O M E R S </h2>
+                </div>
+            </section>
+
+
             <section class="container-fluid mt-5">
                 <div class="row">
                     <div class="mb-3 col">
@@ -81,10 +90,10 @@
             </section>
 
             <!-- Section of Button Group -->
-            <section class="container-fluid mt-3 button">
-                <button class="btn btn-danger" id="btnDeleteCustomer" type="button">Delete Customer</button>
-                <button class="btn btn-success" id="btnUpdateCustomer" type="button">Update Customer</button>
+            <section class="container-fluid mt-1 button ">
                 <button class="btn btn-primary" id="btnCustomerSave" type="button">Add Customer</button>
+                <button class="btn btn-success" id="btnUpdateCustomer" type="button">Update Customer</button>
+                <button class="btn btn-danger" id="btnDeleteCustomer" type="button">Delete Customer</button>
 
             </section>
 
@@ -98,9 +107,9 @@
             </section>
 
             <!-- Section of Customer Table -->
-            <section class="row mt-4">
-                <div class="col">
-                    <table class="table table-hover">
+            <section  class="row mt-4" >
+                <div class="col" style="height: 320px; overflow-x: scroll">
+                    <table class="table table-bordered table-hover table-striped">
                         <thead class="bg-secondary text-white" id="tableHead">
                         <tr class="head">
                             <th scope="col">Customer ID</th>
@@ -109,7 +118,7 @@
                             <th scope="col">Customer TP.</th>
                         </tr>
                         </thead>
-                        <tbody id="customerTable" class="table-light border-info">
+                        <tbody id="customerTable" class="table-light  ">
                         <tr>
                             <th scope="row">C00-001</th>
                             <td>Ishara</td>
@@ -140,6 +149,26 @@
                             <td>Panadura</td>
                             <td>0772265412</td>
                         </tr>
+                        <tr>
+                            <th scope="row">C00-006</th>
+                            <td>Hasitha</td>
+                            <td>Bandaragama</td>
+                            <td>0714561235</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">C00-007</th>
+                            <td>Yasith</td>
+                            <td>Rathnapura</td>
+                            <td>0754563122</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">C00-008</th>
+                            <td>Pavani</td>
+                            <td>Gampaha</td>
+                            <td>0771234566</td>
+                        </tr>
+
+
 
                         </tbody>
                     </table>
