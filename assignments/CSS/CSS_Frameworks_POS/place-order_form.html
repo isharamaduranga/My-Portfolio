@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="styles/pos_styles.css">
     <link href="../../../assets/icons/css/all.min.css" rel="stylesheet">
 
+    <style>
+
+    </style>
+
+
 </head>
 <body>
 <header>
@@ -51,21 +56,23 @@
 
 </header>
 
-<section  id="order" style="height: 85vh">
+<section  id="order" style="height: 85vh" class="bg-white">
     <section class="container-fluid mt-2">
         <div style="height: 10px; text-align: center">
             <h2  class="bg-secondary border border-2 border-secondary text-light"
                  style="border-radius: 25px; font-family: 'poppins', sans-serif"> P L A C E - O R D E R S </h2>
         </div>
     </section>
-    <div class="container-fluid bg-light mt-5">
+    <div class="container-fluid bg-white mt-5">
 
         <div class="mt-5">
             <div class="row ">
-                <div class="col ">
+                <div class="col ms-2 " style="background-color: rgba(239,228,168,0.53); border-radius: 30px;">
                     <section class="container">
                         <div class="row">
-                            <div class="bg-dark text-white text-center mb-3 p-2"><h4>Invoice Details</h4></div>
+                            <div class="bg-warning text-white text-center mb-3 p-2"
+                                 style="border-radius: 25px;"><h5>Invoice Details</h5></div>
+
                             <div class="col">
                                 Order ID:
                                 <form>
@@ -117,10 +124,12 @@
 
                 </div>
 
-                <div class="col">
+                <div class="col ms-2 " style="background-color: rgba(152,227,152,0.28); border-radius: 30px;">
                     <section class="container">
                         <div class="row">
-                            <div class="bg-dark text-white text-center mb-3 p-2"><h4>Item Select</h4></div>
+                            <div class="bg-success text-white text-center mb-3 p-2"
+                                 style="border-radius: 25px;" ><h5>Item Select</h5></div>
+
                             <div class="col">
                                 Item:
                                 <select class="form-select" id="cmbItemIds">
@@ -162,18 +171,20 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
-                                <button class="btn btn-primary mt-4" id="btnAddToCart">Add Item</button>
+                            <div class="col button">
+                                <button class="btn btn-primary mt-4 text-center" id="btnAddToCart" >Add Item</button>
                             </div>
                         </div>
                     </section>
 
                 </div>
 
-                <div class="col">
-                    <div class="bg-dark text-white text-center mb-3 p-2"><h4>Payment Details</h4></div>
-                    <h4 class="text-dark p-2" id="total">Total : <span>0</span></h4>
-                    <h4 class="text-danger p-2" id="subtotal">Sub Total :<span id="subtot">0</span></h4>
+                <div class="col ms-2 me-2"  style="background-color: rgba(234,182,186,0.25); border-radius: 30px;">
+                    <div class="bg-danger text-white text-center mb-3 p-2"
+                         style="border-radius: 25px;"><h5>Payment Details</h5></div>
+
+                    <h4 class="text-dark p-2" id="total">Total : <span>0.00</span></h4>
+                    <h4 class="text-danger p-2" id="subtotal">Sub Total : <span id="subtot">0.00</span></h4>
                     <section class="container">
                         <div class="row">
                             <div class="col">
@@ -200,14 +211,14 @@
                         </div>
 
                         <div class="row">
-                            <div class="col">
-                                <button class="btn btn-outline-dark mt-4" id="btnPurchase" type="button">Purchase</button>
+                            <div class="col button">
+                                <button class="btn btn-outline-success mt-4" id="btnPurchase" type="button">Purchase-Order</button>
                             </div>
                         </div>
                     </section>
                 </div>
 
-                <div class="mt-4" style="height: 272px; overflow-x: scroll">
+                <div class="mt-4" style="height: 270px; overflow-x: scroll">
                     <table class="table table-bordered table-hover table-striped">
                         <thead class="bg-secondary text-white" id="tableHead">
                         <tr class="head">
