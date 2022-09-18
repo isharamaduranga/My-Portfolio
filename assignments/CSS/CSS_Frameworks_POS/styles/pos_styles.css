@@ -65,6 +65,9 @@ main{
 .col-6:hover  i{
     color: #004FC5;
 }
+.col-6:hover  p{
+    color: crimson;
+}
 
 .col-6>div>p{
     color: rgba(0, 0, 0, 0.64);
