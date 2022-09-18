@@ -3,9 +3,9 @@
 
 ## :link: Reference Links
 
-🌱 Moke-Up-URL ---> [Click Me!](https://www.figma.com/proto/4mJXjz2mPQsSg21Im2JLeV/My_PortFilo_Mock-up?page-id=0%3A1&node-id=14%3A3&scaling=min-zoom&starting-point-node-id=14%3A3)<br>
-🌱 Site-Map-URL----> [Click Me!](https://www.gloomaps.com/2KQ3vDp779)<br>
-🌱 Wire-Frame-URL----> [Click Me!](https://wireframe.cc/pQAVpH)<br>
+🌱 Moke-Up-URL ---> [Click Me!]()<br>
+🌱 Site-Map-URL----> [Click Me!]()<br>
+🌱 Wire-Frame-URL----> [Click Me!]()<br>
 
 ## Description
 #### This website designs for showing some information about my career.I categorize them into few sections...
