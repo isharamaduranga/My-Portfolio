@@ -52,14 +52,20 @@
 </header>
 
 <section  id="order" style="height: 85vh">
+    <section class="container-fluid mt-2">
+        <div style="height: 10px; text-align: center">
+            <h2  class="bg-secondary border border-2 border-secondary text-light"
+                 style="border-radius: 25px; font-family: 'poppins', sans-serif"> P L A C E - O R D E R S </h2>
+        </div>
+    </section>
     <div class="container-fluid bg-light mt-5">
+
         <div class="mt-5">
-            <h3 class="text-center">Place Order</h3>
             <div class="row ">
                 <div class="col ">
                     <section class="container">
                         <div class="row">
-                            <div class="bg-dark text-white  mb-3 p-2"><h4>Invoice Details</h4></div>
+                            <div class="bg-dark text-white text-center mb-3 p-2"><h4>Invoice Details</h4></div>
                             <div class="col">
                                 Order ID:
                                 <form>
@@ -114,7 +120,7 @@
                 <div class="col">
                     <section class="container">
                         <div class="row">
-                            <div class="bg-dark text-white mb-3 p-2"><h4>Item Select</h4></div>
+                            <div class="bg-dark text-white text-center mb-3 p-2"><h4>Item Select</h4></div>
                             <div class="col">
                                 Item:
                                 <select class="form-select" id="cmbItemIds">
@@ -165,7 +171,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="bg-dark text-white mb-3 p-2"><h4>Payment Details</h4></div>
+                    <div class="bg-dark text-white text-center mb-3 p-2"><h4>Payment Details</h4></div>
                     <h4 class="text-dark p-2" id="total">Total : <span>0</span></h4>
                     <h4 class="text-danger p-2" id="subtotal">Sub Total :<span id="subtot">0</span></h4>
                     <section class="container">
@@ -200,13 +206,55 @@
                         </div>
                     </section>
                 </div>
+                <div style="height: 280px; overflow-x: scroll">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead class="bg-secondary text-white" id="tableHead">
+                        <tr class="head">
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblCart" class="table-light">
+
+                        <tr>
+                            <th scope="row">OID-001</th>
+                            <td>I00-001</td>
+                            <td>Noodles</td>
+                            <td>650.00</td>
+                            <td>5</td>
+                            <td>3250.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">OID-002</th>
+                            <td>I00-002</td>
+                            <td>White-Rice</td>
+                            <td>1800.00</td>
+                            <td>2</td>
+                            <td>3600.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">OID-003</th>
+                            <td>I00-003</td>
+                            <td>Fresh-Milk</td>
+                            <td>825.00</td>
+                            <td>2</td>
+                            <td>1650.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
-        <h4 class="text-center py-1">Cart</h4>
-
-
-
     </div>
+
+
+
+
 </section>
 
 
