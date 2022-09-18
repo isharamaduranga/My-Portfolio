@@ -34,7 +34,7 @@
 
 
 ## Basic Background of Pos_System
-<img src="assests/images/supermarket.jpg">
+<img src="assests/images/">
 
 ## Technology /framework used
 * HTML
