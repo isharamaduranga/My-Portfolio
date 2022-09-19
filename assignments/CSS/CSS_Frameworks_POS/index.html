@@ -10,18 +10,11 @@
     <link rel="stylesheet" href="styles/pos_styles.css">
     <link href="../../../assets/icons/css/all.min.css" rel="stylesheet">
 
-    <style>
-
-
-
-
-    </style>
-
 </head>
 <body>
 
 <header>
-
+    <!--  define nav links -->
     <nav class="navbar navbar-expand-lg bg-primary navColor">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bold" href="index.html">
@@ -40,7 +33,7 @@
                         <a aria-current="page" class="nav-link text-white" href="index.html" id="linkHome">Home</a>
                     </li>
                     <li class="nav-item fs-5">
-                        <a id="#linkCustomer" class="nav-link text-white table-hover " href="customer_form.html" >Customers</a>
+                        <a id="#linkCustomer" class="nav-link text-white table-hover " href="customer_form.html">Customers</a>
                     </li>
                     <li class="nav-item fs-5">
                         <a class="nav-link text-white" href="item_form.html" id="linkItem">Items</a>
@@ -62,21 +55,27 @@
 
 <!--Home Slide-->
 <main class="container-fluid">
-   <!-- border border-1 border-danger-->
+
+    <!--  section-1 with total count of customer,items & orders -->
     <section id="sec-1" class="row p-4   text-center ">
 
+        <!--  Customer count  -->
         <div class="col">
             <div class="">
                 <p class="head_count"> Total Customers</p>
                 <h2>1000+</h2>
             </div>
         </div>
+
+        <!--  Items count  -->
         <div class="col">
             <div>
                 <p> Total Items</p>
                 <h2>1500+</h2>
             </div>
         </div>
+
+        <!--  Orders count  -->
         <div class="col">
             <div>
                 <p> Total Orders</p>
@@ -87,18 +86,20 @@
     </section>
 
 
-    <section id="sec-2"  class="row ">
-
+    <!-- Define Grid buttons pad with dashboard -->
+    <section id="sec-2" class="row ">
         <div class="container  text-center  w-50   ">
-            <div  class="row  row-cols-1  row-cols-sm-1 row-cols-md-2 row-cols-lg-2  row-cols-xl-2 row-cols-xxl-2   h-100">
+            <div class="row  row-cols-1  row-cols-sm-1 row-cols-md-2 row-cols-lg-2  row-cols-xl-2 row-cols-xxl-2   h-100">
 
-                <a href="customer_form.html" class="col-6" style="text-decoration: none;" >
+                <!-- Customer link pad -->
+                <a href="customer_form.html" class="col-6" style="text-decoration: none;">
                     <div>
                         <p>C U S T O M E R</p>
-                       <i class="fa-solid fa-users"></i>
+                        <i class="fa-solid fa-users"></i>
                     </div>
                 </a>
 
+                <!-- Items link pad -->
                 <a href="item_form.html" class="col-6" style="text-decoration: none;">
                     <div>
                         <p>I T E M S</p>
@@ -106,7 +107,7 @@
                     </div>
                 </a>
 
-
+                <!-- Orders link pad -->
                 <a href="place-order_form.html" class="col-6" style="text-decoration: none;">
                     <div>
                         <p>O R D E R</p>
@@ -114,7 +115,8 @@
                     </div>
                 </a>
 
-                <a href="#" class="col-6" style="text-decoration: none;">
+                <!-- Order Details link pad -->
+                <a href="order_details_form.html" class="col-6" style="text-decoration: none;">
                     <div>
                         <p>O R D E R - D E T A I L S</p>
                         <i class="fa-solid fa-list"></i>
@@ -123,51 +125,14 @@
 
             </div>
         </div>
-
-        <!--<div class="col-3"></div>
-
-                                <div id="gridBox" class="col-6">
-
-                                    <div class="button-div">
-                                        <p>CUSTOMER</p>
-                                        <i class="fa-solid fa-users"></i>
-
-                                    </div>
-
-                                    <div class="button-div">
-                                        <p>ITEMS</p>
-                                        <i class="fa-solid fa-cart-plus"></i>
-
-                                    </div>
-
-                                    <div class="button-div">
-                                        <p>ORDER</p>
-                                        <i class="fa-solid fa-truck-fast"></i>
-                                    </div>
-
-                                    <div class="button-div">
-                                        <p>ORDER-DETAILS</p>
-                                        <i class="fa-solid fa-list"></i>
-                                    </div>
-
-                                </div>
-
-
-        <div class="col-3 "></div>-->
-
-
     </section>
 
+    <!-- Defined copyRight information in bottom of dashboard -->
     <section id="sec-3" class="row text-center ">
-        <p><small>Website Developed By Ishara Maduranga.  Copyright © 2022 All Right Reserved ...</small></p>
+        <p><small>Website Developed By Ishara Maduranga. Copyright © 2022 All Right Reserved ...</small></p>
     </section>
-
-
 
 </main>
-
-
-
 
 <!--Import js for bootstrap-->
 <script src="assests/js/bootstrap.min.js"></script>
