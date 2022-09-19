@@ -12,7 +12,9 @@
 
 </head>
 <body>
+
 <header>
+    <!--  Defined nav links -->
     <nav class="navbar navbar-expand-lg bg-primary navColor">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bold" href="index.html">
@@ -53,7 +55,9 @@
 
 <section class="container-fluid mt-3" id="itemContent">
 
-    <!-- Section of Items Details Form -->
+                     <!-- ***** Section of Items Details Form ***** -->
+
+    <!-- Title of the Item Form -->
     <section class="container-fluid mt-1">
         <div style="height: 10px; text-align: center">
             <h2  class="bg-secondary border border-2 border-secondary text-light"
@@ -61,8 +65,10 @@
         </div>
     </section>
 
-
+    <!-- Item related data form -->
     <section class="container-fluid mt-5">
+
+        <!-- Define First Row-->
         <div class="row">
             <div class="mb-3 col">
                 <label class="form-label" for="txtItemCode">Item Code</label>
@@ -75,6 +81,8 @@
                 <p><small class="text-danger pl-1" id="lblItemName"></small></p>
             </div>
         </div>
+
+        <!-- Define Second Row-->
         <div class="row">
             <div class="mb-3 col">
                 <label class="form-label" for="txtItemPrice">Item Price</label>
@@ -94,7 +102,6 @@
         <button class="btn btn-primary" id="btnItemSave" type="button">Add Item</button>
         <button class="btn btn-success" id="btnUpdateItem" type="button">Update Item</button>
         <button class="btn btn-danger" id="btnDeleteItem" type="button">Delete Item</button>
-
     </section>
 
     <!-- Section of Search Bar -->
@@ -172,6 +179,7 @@
             </table>
         </div>
     </section>
+
 </section>
 
 <!--Import js for bootstrap-->
