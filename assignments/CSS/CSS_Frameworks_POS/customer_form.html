@@ -10,14 +10,12 @@
     <link rel="stylesheet" href="styles/pos_styles.css">
     <link href="../../../assets/icons/css/all.min.css" rel="stylesheet">
 
-    <style>
-
-    </style>
 
 </head>
 <body>
 
 <header>
+    <!--  Defined nav links -->
     <nav class="navbar navbar-expand-lg bg-primary navColor">
         <div class="container-fluid">
             <a class="navbar-brand text-white fw-bold" href="index.html">
@@ -51,6 +49,7 @@
             </div>
         </div>
     </nav>
+
 </header>
 
         <!-- ==================== Customer Manage Content Start =====================-->
@@ -58,16 +57,19 @@
 
         <section class="container-fluid mt-3" id="customerContent">
 
-            <!-- Section of Customer Details Form -->
+                     <!-- Section of Customer Details Form -->
             <section class="container-fluid mt-1">
+                <!-- Title of the Customer Form -->
                 <div style="height: 10px; text-align: center">
                   <h2  class="bg-secondary border border-2 border-secondary text-light"
                        style="border-radius: 25px; font-family: 'poppins', sans-serif"> M A N A G E - C U S T O M E R S </h2>
                 </div>
             </section>
 
-
+           <!-- customer related data form -->
             <section class="container-fluid mt-5">
+
+               <!-- Define First Row-->
                 <div class="row">
                     <div class="mb-3 col">
                         <label class="form-label" for="txtCusId">Customer ID</label>
@@ -80,6 +82,8 @@
                         <p><small class="text-danger pl-1" id="lblCusName"></small></p>
                     </div>
                 </div>
+
+                <!-- Define Second Row-->
                 <div class="row">
                     <div class="mb-3 col">
                         <label class="form-label" for="txtCusAddress">Customer Address</label>
@@ -99,7 +103,6 @@
                 <button class="btn btn-primary" id="btnCustomerSave" type="button">Add Customer</button>
                 <button class="btn btn-success" id="btnUpdateCustomer" type="button">Update Customer</button>
                 <button class="btn btn-danger" id="btnDeleteCustomer" type="button">Delete Customer</button>
-
             </section>
 
             <!-- Section of Search Bar -->
