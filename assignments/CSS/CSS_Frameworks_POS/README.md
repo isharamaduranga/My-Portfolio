@@ -7,6 +7,24 @@
 🌱 Site-Map-URL----> [Click Me!]()<br>
 🌱 Wire-Frame-URL----> [Click Me!]()<br>
 
+## Basic Background of Pos_System
+
+### 🌱 DashBoard Interface
+<img src="ReadMe/dashboard.png">
+
+### 🌱 Place Order Manage Interface
+<img src="ReadMe/ord.png">
+
+### 🌱 Customers Manage Interface
+<img src="ReadMe/cus.png">
+
+### 🌱 Items Manage Interface
+<img src="ReadMe/itm.png">
+
+### 🌱 Order-Details Interface
+<img src="ReadMe/od_detail.png">
+
+
 ## Description
 #### This website designs for showing some information about my career.I categorize them into few sections...
 ### Manage Customer
@@ -29,12 +47,6 @@
 * Update Customer Order
 * Delete Customer Order;
 * Get All Customers Order
-
-
-
-
-## Basic Background of Pos_System
-<img src="assests/images/">
 
 ## Technology /framework used
 * HTML
