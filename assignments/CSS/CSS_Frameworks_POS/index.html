@@ -51,6 +51,10 @@
 
 </header>
 
+<!--  **************************************************************************************  -->
+
+
+
 
 <!-- ======================= Home Slide Content Start =======================-->
 
@@ -269,6 +273,7 @@
 
 <!-- ====================== Item Manage Content Start ========================-->
 
+
 <section class="container-fluid mt-3" id="itemContent">
 
     <!-- ***** Section of Items Details Form ***** -->
@@ -400,8 +405,231 @@
 </section><br><br>
 
 
+<!-- ====================== Place Order Manage Content Start ========================-->
 
 
+<section  id="order" style="height: 85vh" class="bg-white">
+    <section class="container-fluid mt-2">
+        <div style="height: 8px; text-align: center">
+            <h2  class="bg-secondary border border-2 border-secondary text-light"
+                 style="border-radius: 25px; font-family: 'poppins', sans-serif"> P L A C E - O R D E R S </h2>
+        </div>
+    </section>
+    <div class="container-fluid bg-white mt-5">
+
+        <div class="mt-5">
+            <div class="row ">
+                <div class="col ms-2 " style="background-color: rgba(239,228,168,0.44); border-radius: 30px;">
+                    <section class="container">
+                        <div class="row">
+                            <div class="bg-warning text-white text-center mb-3 p-2"
+                                 style="border-radius: 25px;"><h5>Invoice Details</h5></div>
+
+                            <div class="col">
+                                Order ID:
+                                <form>
+                                    <input class="form-control " id="txtOrderId" type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                Order Date:
+                                <form>
+                                    <input class="form-control" id="txtOrderDate" type="date">
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Customer ID:
+                                <select class="form-select" id="cmbCustomerIDS">
+
+                                </select>
+                            </div>
+                            <div class="col">
+                                Salary:
+                                <form>
+                                    <input class="form-control" id="txtCusSalaryForOrder" type="text">
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Name:
+                                <form>
+                                    <input class="form-control " id="txtCusNameForOrder" type="text">
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Address:
+                                <form>
+                                    <input class="form-control " id="txtAddressForOrder" type="text">
+                                </form>
+                            </div>
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <div class="col ms-2 " style="background-color: rgba(152,227,152,0.34); border-radius: 30px;">
+                    <section class="container">
+                        <div class="row">
+                            <div class="bg-success text-white text-center mb-3 p-2"
+                                 style="border-radius: 25px;" ><h5>Item Select</h5></div>
+
+                            <div class="col">
+                                Item:
+                                <select class="form-select" id="cmbItemIds">
+                                </select>
+                            </div>
+                            <div class="col">
+                                Item Code:
+                                <form>
+                                    <input class="form-control " id="txtItemIDForOrder" type="text">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Item Name:
+                                <form>
+                                    <input class="form-control " id="txtItemNameForOrder" type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                Item Price:
+                                <form>
+                                    <input class="form-control " id="txtItemPriceForOrder" type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                QtyOnH:
+                                <form>
+                                    <input class="form-control " id="txtQTYONHand" type="text">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Order QTY:
+                                <form>
+                                    <input class="form-control " id="txtOrderQty" type="text">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col button">
+                                <button class="btn btn-primary mt-5 text-center" id="btnAddToCart" >Add To Cart</button>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="col ms-2 me-2"  style="background-color: rgba(234,182,186,0.25); border-radius: 30px;">
+                    <div class="bg-danger text-white text-center mb-3 p-2"
+                         style="border-radius: 25px;"><h5>Payment Details</h5></div>
+
+                    <h4 class="text-dark p-2" id="total">Total : <span>0.00</span></h4>
+                    <h4 class="text-danger p-2" id="subtotal">Sub Total : <span id="subtot">0.00</span></h4>
+                    <section class="container">
+                        <div class="row">
+                            <div class="col">
+                                Cash:
+                                <form>
+                                    <input class="form-control " id="txtCash" type="text">
+                                </form>
+                            </div>
+                            <div class="col">
+                                Discount:
+                                <form>
+                                    <input class="form-control " id="txtDiscount" type="text">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                Balance:
+                                <form>
+                                    <input class="form-control " id="txtBalance" type="text">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col button">
+                                <button class="btn btn-outline-success mt-4 mb-2" id="btnPurchase" type="button">Purchase-Order</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="mt-2" style="height: 265px; overflow-x: scroll">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead class="bg-secondary text-white" id="tableHead_order">
+                        <tr class="head">
+                            <th scope="col">Order ID</th>
+                            <th scope="col">Item Code</th>
+                            <th scope="col">Item Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblCart" class="table-light">
+
+                        <tr>
+                            <th scope="row">OID-001</th>
+                            <td>I00-001</td>
+                            <td>Noodles</td>
+                            <td>650.00</td>
+                            <td>5</td>
+                            <td>3250.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">OID-002</th>
+                            <td>I00-002</td>
+                            <td>White-Rice</td>
+                            <td>1800.00</td>
+                            <td>2</td>
+                            <td>3600.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">OID-003</th>
+                            <td>I00-003</td>
+                            <td>Fresh-Milk</td>
+                            <td>825.00</td>
+                            <td>2</td>
+                            <td>1650.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</section><br><br>
+
+
+<!-- ====================== Order-Details Manage Content Start ========================-->
+
+
+
+
+
+
+<!--  **************************************************************************************  -->
 <!--Import js for bootstrap-->
 <script src="assests/js/bootstrap.min.js"></script>
 
