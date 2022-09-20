@@ -78,4 +78,20 @@
 
   });
 
+  /* Displayed a Home form  When clicked "Home" link with navbar  */
+  $("#linkHome,#linkHome2").click(function (){
+      $("#dashboard_Slide").css("display", "block");
+      $("#customer_Slide").css("display", "none");
+      $("#item_Slide").css("display", "none");
+      $("#order_Slide").css("display", "none");
+      $("#orderDetailsSlide").css("display", "none");
+
+      $("#linkHome").css({'color':'deeppink','border-bottom':'2px solid gold'});
+      $("#linkCustomer").css({'color': 'white','border-bottom':'none' });
+      $("#linkItem").css({'color': 'white','border-bottom':'none' });
+      $("#linkOrder").css({'color': 'white','border-bottom':'none' });
+      $("#linkOrder_Details").css({'color': 'white','border-bottom':'none' });
+
+  });
+
 
