@@ -3,11 +3,11 @@
 
 ## :link: Reference Links
 
-🌱 Moke-Up-URL ---> [Click Me!]()<br>
-🌱 Site-Map-URL----> [Click Me!]()<br>
-🌱 Wire-Frame-URL----> [Click Me!]()<br>
+🌱 Moke-Up-URL ---> [Click Me!](https://www.figma.com/file/kJ5dbaCDIMbBH6S3eyZJwM/POS_System(Bootstrap)?node-id=0%3A1)<br>
+🌱 Site-Map-URL----> [Click Me!](https://www.gloomaps.com/3XQDYVDqdC)<br>
+🌱 Wire-Frame-URL----> [Click Me!](https://wireframe.cc/9oCnTI)<br>
 
-## Description
+## ✔ Description
 #### This website designs for showing some information about my career.I categorize them into few sections...
 ### Manage Customer
 * Register Customer
@@ -30,11 +30,23 @@
 * Delete Customer Order;
 * Get All Customers Order
 
-
-
-
 ## Basic Background of Pos_System
-<img src="assests/images/">
+
+### 🌱 DashBoard Interface
+<img src="ReadMe/dashboard.png">
+
+### 🌱 Place Order Manage Interface
+<img src="ReadMe/ord.png">
+
+### 🌱 Customers Manage Interface
+<img src="ReadMe/cus.png">
+
+### 🌱 Items Manage Interface
+<img src="ReadMe/itm.png">
+
+### 🌱 Order-Details Interface
+<img src="ReadMe/od_detail.png">
+
 
 ## Technology /framework used
 * HTML
