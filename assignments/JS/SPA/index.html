@@ -10,17 +10,125 @@
     <link rel="stylesheet" href="styles/pos_styles.css">
     <link href="../../../assets/icons/css/all.min.css" rel="stylesheet">
 
-
 </head>
-
 <body>
 
+<header>
+    <!--  Defined nav links -->
+    <nav class="navbar navbar-expand-lg bg-primary navColor">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="index.html">
+                <img src="assests/images/logo.jpg" alt="Logo" width="40" height="40"
+                     class="d-inline-block align-text-center">
+                POS-SYSTEM
+            </a>
+            <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarNavDropdown" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul id="ul-list" class="navbar-nav  me-auto mb-2 mb-lg-0 text-white">
+                    <li class="nav-item fs-5 ">
+                        <a aria-current="page" class="nav-link text-white" href="index.html" id="linkHome">Home</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a id="#linkCustomer" class="nav-link text-white table-hover " href="#">Customers</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkItem">Items</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkOrder">Orders</a>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a class="nav-link text-white" href="#" id="linkPurchaseOrder">Order-Details</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
 
+<!--Home Slide-->
+<main class="container-fluid">
+
+    <!--  section-1 with total count of customer,items & orders -->
+    <section id="sec-1" class="row p-4   text-center ">
+
+        <!--  Customer count  -->
+        <div class="col">
+            <div class="">
+                <p class="head_count"> Total Customers</p>
+                <h2>1000+</h2>
+            </div>
+        </div>
+
+        <!--  Items count  -->
+        <div class="col">
+            <div>
+                <p> Total Items</p>
+                <h2>1500+</h2>
+            </div>
+        </div>
+
+        <!--  Orders count  -->
+        <div class="col">
+            <div>
+                <p> Total Orders</p>
+                <h2>1230+</h2>
+            </div>
+        </div>
+
+    </section>
 
 
+    <!-- Define Grid buttons pad with dashboard -->
+    <section id="sec-2" class="row ">
+        <div class="container  text-center  w-50   ">
+            <div class="row  row-cols-1  row-cols-sm-1 row-cols-md-2 row-cols-lg-2  row-cols-xl-2 row-cols-xxl-2   h-100">
 
+                <!-- Customer link pad -->
+                <a href="#" class="col-6" style="text-decoration: none;">
+                    <div>
+                        <p>C U S T O M E R</p>
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                </a>
 
+                <!-- Items link pad -->
+                <a href="#" class="col-6" style="text-decoration: none;">
+                    <div>
+                        <p>I T E M S</p>
+                        <i class="fa-solid fa-cart-plus"></i>
+                    </div>
+                </a>
+
+                <!-- Orders link pad -->
+                <a href="#" class="col-6" style="text-decoration: none;">
+                    <div>
+                        <p>O R D E R</p>
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                </a>
+
+                <!-- Order Details link pad -->
+                <a href="#" class="col-6" style="text-decoration: none;">
+                    <div>
+                        <p>O R D E R - D E T A I L S</p>
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Defined copyRight information in bottom of dashboard -->
+    <section id="sec-3" class="row text-center"style="height: 6vh;">
+        <p><small>Website Developed By Ishara Maduranga. Copyright © 2022 All Right Reserved ...</small></p>
+    </section>
+</main>
 
 <!--Import js for bootstrap-->
 <script src="assests/js/bootstrap.min.js"></script>
