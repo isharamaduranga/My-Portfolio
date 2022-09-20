@@ -7,11 +7,11 @@
   $("#order_Slide").css("display", "none");
   $("#orderDetailsSlide").css("display", "none");
 
-  $("#linkHome").css('color', 'crimson');
+  $("#linkHome").css({'color':'deeppink','border-bottom':'2px solid gold'});
   $("#linkCustomer").css('color', 'white');
   $("#linkItem").css('color', 'white');
   $("#linkOrder").css('color', 'white');
-  $("#linkPurchaseOrder").css('color', 'white');
+  $("#linkOrder_Details").css('color', 'white');
 
 
   $("#linkCustomer").click(function () {
@@ -21,9 +21,9 @@
       $("#order_Slide").css("display", "none");
       $("#orderDetailsSlide").css("display", "none");
 
-      $("#linkHome").css('color', 'white');
-      $("#linkCustomer").css('color', 'crimson');
+      $("#linkHome").css({'color': 'white','border-bottom':'none' });
+      $("#linkCustomer").css({'color':'deeppink','border-bottom':'2px solid gold'});
       $("#linkItem").css('color', 'white');
       $("#linkOrder").css('color', 'white');
-      $("#linkPurchaseOrder").css('color', 'white');
+      $("#linkOrder_Details").css('color', 'white');
   });

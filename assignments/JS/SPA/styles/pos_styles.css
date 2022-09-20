@@ -2,7 +2,7 @@
 
 /*================ Homepage CSS Styles ==================================*/
 #ul-list > li > a {
-    padding-left: 50px;
+
 }
 main{
     /*background-color: rgb(255, 255, 255);*/
@@ -12,9 +12,7 @@ main{
 }
 
 
-#ul-list > li > a {
-    color: crimson;
-}
+
 
 #sec-1 {
     height: 20vh;
