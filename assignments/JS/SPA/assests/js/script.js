@@ -14,7 +14,7 @@
   $("#linkOrder").css({'color':'white','border-bottom':'none'});
   $("#linkOrder_Details").css({'color':'white','border-bottom':'none'});
 
-  /* Displayed a customer form  When clicked "customer" link with navbar  */
+  /* Displayed a customer form  When clicked "Customer" link with navbar  */
   $("#linkCustomer").click(function () {
       $("#dashboard_Slide").css("display", "none");
       $("#customer_Slide").css("display", "block");
@@ -29,6 +29,7 @@
       $("#linkOrder_Details").css({'color': 'white','border-bottom':'none' });
   });
 
+  /* Displayed a Item form  When clicked "Item" link with navbar  */
   $("#linkItem").click( function (){
 
       $("#dashboard_Slide").css("display", "none");
@@ -37,14 +38,11 @@
       $("#order_Slide").css("display", "none");
       $("#orderDetailsSlide").css("display", "none");
 
-      $("#linkHome").css();
-      $("#linkCustomer").css();
-      $("#linkItem").css();
-      $("#linkOrder").css();
-      $("#linkOrder_Details").css();
-
-
-
+      $("#linkHome").css({'color': 'white','border-bottom':'none' });
+      $("#linkCustomer").css({'color': 'white','border-bottom':'none' });
+      $("#linkItem").css({'color':'deeppink','border-bottom':'2px solid gold'});
+      $("#linkOrder").css({'color': 'white','border-bottom':'none' });
+      $("#linkOrder_Details").css({'color': 'white','border-bottom':'none' });
 
   });
 
