@@ -267,7 +267,137 @@
 </section><br><br>
 
 
+<!-- ====================== Item Manage Content Start ========================-->
 
+<section class="container-fluid mt-3" id="itemContent">
+
+    <!-- ***** Section of Items Details Form ***** -->
+
+    <!-- Title of the Item Form -->
+    <section class="container-fluid mt-1">
+        <div style="height: 10px; text-align: center">
+            <h2 class="bg-secondary border border-2 border-secondary text-light"
+                style="border-radius: 25px; font-family: 'poppins', sans-serif"> M A N A G E - I T E M S </h2>
+        </div>
+    </section>
+
+    <!-- Item related data form -->
+    <section class="container-fluid mt-5">
+
+        <!-- Define First Row-->
+        <div class="row">
+            <div class="mb-3 col">
+                <label class="form-label" for="txtItemCode">Item Code</label>
+                <input class="form-control" id="txtItemCode" placeholder="I00-001" type="text">
+                <p><small class="text-danger pl-1" id="lblItemCode"></small></p>
+            </div>
+            <div class="mb-3 col">
+                <label class="form-label" for="txtItemName">Item Name</label>
+                <input class="form-control" id="txtItemName" placeholder="White Rice" type="text">
+                <p><small class="text-danger pl-1" id="lblItemName"></small></p>
+            </div>
+        </div>
+
+        <!-- Define Second Row-->
+        <div class="row">
+            <div class="mb-3 col">
+                <label class="form-label" for="txtItemPrice">Item Price</label>
+                <input class="form-control" id="txtItemPrice" placeholder="1500.00" type="number">
+                <p><small class="text-danger pl-1" id="lblItemPrice"></small></p>
+            </div>
+            <div class="mb-3 col">
+                <label class="form-label" for="txtItemQty">Item Qty</label>
+                <input class="form-control" id="txtItemQty" placeholder="500" type="number">
+                <p><small class="text-danger pl-1" id="lblItemQty"></small></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section of Button Group -->
+    <section class="container-fluid mt-1 button ">
+        <button class="btn btn-primary" id="btnItemSave" type="button">Add Item</button>
+        <button class="btn btn-success" id="btnUpdateItem" type="button">Update Item</button>
+        <button class="btn btn-danger" id="btnDeleteItem" type="button">Delete Item</button>
+    </section>
+
+
+    <!-- Section of Search Bar -->
+    <section class="container-fluid mt-3">
+        <form class="d-flex">
+            <input aria-label="Search" class="form-control me-2" id="txtSearchItem" placeholder="Search Item..."
+                   type="search">
+            <button class="btn btn-outline-success" id="btnSearchItem" type="submit">Search</button>
+        </form>
+    </section>
+
+
+    <!-- Section of Item Table -->
+    <section class="row mt-3">
+        <div class="col" style="height: 297px; overflow-x: scroll">
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="bg-secondary text-white" id="tableHead_Item">
+                <tr class="head">
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Item Price</th>
+                    <th scope="col">Item QTY.</th>
+                </tr>
+                </thead>
+                <tbody id="itemTable" class="table-light  ">
+                <tr>
+                    <th scope="row">I00-001</th>
+                    <td>Noodles</td>
+                    <td>650.00</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <th scope="row">I00-002</th>
+                    <td>Pasta</td>
+                    <td>450.00</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <th scope="row">I00-003</th>
+                    <td>Suger</td>
+                    <td>350.00</td>
+                    <td>800</td>
+                </tr>
+                <tr>
+                    <th scope="row">I00-004</th>
+                    <td>Red-Rice</td>
+                    <td>1800.00</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <th scope="row">I00-005</th>
+                    <td>Fresh-Milk</td>
+                    <td>825.00</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <th scope="row">I00-006</th>
+                    <td>Soap</td>
+                    <td>180.00</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <th scope="row">I00-007</th>
+                    <td>Chicken</td>
+                    <td>1450.00</td>
+                    <td>250</td>
+                </tr>
+                <tr>
+                    <th scope="row">I00-008</th>
+                    <td>Biscuits</td>
+                    <td>480.00</td>
+                    <td>500</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section><br><br>
 
 
 
