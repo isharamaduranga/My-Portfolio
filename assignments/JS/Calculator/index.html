@@ -15,9 +15,16 @@
 
 <body>
 
-<section>
+<div class="container">
+    <form class="calculator" name="calc">
 
-</section>
+        <input type="text" readonly class="value" name="txt"/>
+        <span class="num" onclick="calc.txt.value=''"> C </span>
+        <span class="num" onclick="document.calc.txt.value+='/'">/</span>
+
+    </form>
+
+</div>
 
 </body>
 
