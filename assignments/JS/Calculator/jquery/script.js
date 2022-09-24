@@ -109,7 +109,27 @@ $('#btn5').click(function () {
     }
 });
 
+/** Button (6) function */
+$('#btn6').click(function () {
+    let display_output = $('#display_output').val();
 
+    if (display_output === '0') {
+        $('#display_output').val('6');
+    } else {
+        $('#display_output').val(display_output+'6');
+    }
+});
+
+/** Button (7) function */
+$('#btn7').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('7');
+    } else {
+        $('#display_output').val(display_output+'7');
+    }
+});
 
 
 /** Equal Button functionalities */
