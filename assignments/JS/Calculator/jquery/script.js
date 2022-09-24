@@ -65,6 +65,28 @@ $('#btn1').click(function () {
     }
 });
 
+/** Button (2) function */
+$('#btn2').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('2');
+    } else {
+        $('#display_output').val(display_output+'2');
+    }
+});
+
+/** Button (3) function */
+$('#btn3').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('3');
+    } else {
+        $('#display_output').val(display_output+'3');
+    }
+});
+
 /** Equal Button functionalities */
 $("#btnEqual").click(function () {
     let display_output = $('#display_output').val();
@@ -74,3 +96,4 @@ $("#btnEqual").click(function () {
     // passed the user select first number to below method..
     findLastCount();
 });
+
