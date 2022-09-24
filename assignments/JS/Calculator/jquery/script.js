@@ -24,6 +24,14 @@ function findLastCount() {
         $('#display_output').val(lastCount);
     }
 
+    // proceed of Subtraction function...
+    if(calculator.operator === '-'){
+        var num1 = parseFloat(calculator.first_num);
+        var num2 = parseFloat(calculator.second_num);
+        lastCount= num1 - num2;
+        $('#display_output').val(lastCount);
+    }
+
 
 }
 
