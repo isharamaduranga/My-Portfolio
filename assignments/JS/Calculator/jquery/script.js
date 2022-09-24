@@ -12,3 +12,13 @@ $('#btnClear').click(function () {
     $('#display_output').val('0');
 
 });
+
+$('#btnDivision').click(function () {
+    let display_output = $('#display_output').val();
+
+    calculator.first_num = display_output;
+    calculator.operator = "/"
+
+    $('#display_output').val('0');
+
+});
