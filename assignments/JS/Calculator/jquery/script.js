@@ -1,4 +1,7 @@
-$('.num1').click( function () {
 
-    console.log($('.num1').text())
-});
+/** create calculator object */
+var calculator = {
+    "first_num": "",
+    "operator": "",
+    "second_num": ""
+}

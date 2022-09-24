@@ -18,77 +18,29 @@
 <div class="container">
     <form class="calculator" name="calc">
 
-        <input type="text" id="display_output" readonly class="value" placeholder="0" name="txt"/>
+        <input type="text" id="display_output" readonly class="value" placeholder="0" name="txt">
         <span id="btnClear" class="num clear"> C </span>
-        <span id="btnDivision" class="num">/</span>
+        <span id="btnDivision">/</span>
         <span id="btnMultiplication" class="num">*</span>
-        <span id="btn7" class="num">7</span>
-        <span id="btn8" class="num">8</span>
-        <span id="btn9" class="num">9</span>
-        <span id="btnSubtraction" class="num">-</span>
-        <span id="btn4" class="num">4</span>
-        <span id="btn5" class="num">5</span>
-        <span id="btn6" class="num">6</span>
-        <span id="btnAddition" class="num plus">+</span>
-        <span id="btn1" class="num">1</span>
-        <span id="btn2" class="num">2</span>
-        <span id="btn3" class="num">3</span>
-        <span id="btn0" class="num">0</span>
-        <span id="btn00" class="num">00</span>
-        <span id="btnDot" class="num">.</span>
-        <span id="btnEqual" class="num equal">=</span>
+        <span id="btn7" >7</span>
+        <span id="btn8" >8</span>
+        <span id="btn9" >9</span>
+        <span id="btnSubtraction">-</span>
+        <span id="btn4" >4</span>
+        <span id="btn5" >5</span>
+        <span id="btn6" >6</span>
+        <span id="btnAddition" class="plus">+</span>
+        <span id="btn1" >1</span>
+        <span id="btn2" >2</span>
+        <span id="btn3" >3</span>
+        <span id="btn0" >0</span>
+        <span id="btn00" >00</span>
+        <span id="btnDot">.</span>
+        <span id="btnEqual" class="equal">=</span>
 
     </form>
 </div>
 </body>
 <script src="jquery/jquery-3.6.1.min.js"></script>
-<script>
-
-    /** create calculator object */
-    var calculator = {
-        "first_num": "",
-        "operator": "",
-        "second_num": ""
-    }
-
-
-
-
-
-    /** Clear Button function */
-    $('#btnClear').click(function () {
-        /*alert("clear");*/
-        $('#display_output').val('0');
-
-    });
-
-    $('#btnDivision').click(function () {
-        $('#display_output').val('')
-    });
-
-    $('#btnMultiplication').click(function () {
-        $('#display_output').val('')
-    });
-
-    $('#btn7').click(function () {
-        let display_output = $('#display_output').val();
-
-        if (display_output === '0') {
-            $('#display_output').val('7');
-        } else {
-            $('#display_output').val(display_output+'7');
-        }
-    });
-
-    $("#btnEqual").click(function () {
-        let display_output = $('#display_output').text();
-
-        calculator.second_num = display_output;
-
-
-    });
-
-
-</script>
 <script src="jquery/script.js"></script>
 </html>
