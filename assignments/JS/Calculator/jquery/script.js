@@ -87,6 +87,31 @@ $('#btn3').click(function () {
     }
 });
 
+/** Button (4) function */
+$('#btn4').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('4');
+    } else {
+        $('#display_output').val(display_output+'4');
+    }
+});
+
+/** Button (5) function */
+$('#btn5').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('5');
+    } else {
+        $('#display_output').val(display_output+'5');
+    }
+});
+
+
+
+
 /** Equal Button functionalities */
 $("#btnEqual").click(function () {
     let display_output = $('#display_output').val();
