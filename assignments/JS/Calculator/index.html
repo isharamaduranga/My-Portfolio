@@ -18,7 +18,7 @@
 <div class="container">
     <form class="calculator" name="calc">
 
-        <input type="text" id="display_output" readonly class="value" placeholder="123" name="txt"/>
+        <input type="text" id="display_output" readonly class="value" placeholder="0" name="txt"/>
         <span id="btnClear"  class="num clear"> C </span>
         <span id="btnDivision" class="num" >/</span>
         <span id="btnMultiplication" class="num" >*</span>
@@ -44,8 +44,11 @@
 <script src="jquery/jquery-3.6.1.min.js"></script>
 <script>
 
-
-
+     /** Clear Button function */
+$('#btnClear').click(function () {
+   /*alert("clear");*/
+    $('#display_output').val('0');
+});
 
 
 
