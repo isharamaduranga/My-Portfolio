@@ -69,10 +69,10 @@ body{
 }
 
 .container .calculator span:active{
-    background: lime;
-    color: black;
-    font-size: 24px;
-    font-weight: 500;
+    background: deeppink;
+    color: #26030d;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 .container .calculator .clear{

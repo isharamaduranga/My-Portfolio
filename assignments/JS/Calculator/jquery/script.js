@@ -44,7 +44,7 @@ function findLastCount() {
 /** Clear Button function */
 $('#btnClear').click(function () {
     /*alert("clear");*/
-    $('#display_output').val('0');
+    $('#display_output').val('');
 
 });
 
@@ -55,7 +55,7 @@ $('#btnDivision').click(function () {
     calculator.first_num = display_output;
     calculator.operator = "/"
 
-    $('#display_output').val('0');
+    $('#display_output').val('');
 
 });
 
@@ -66,7 +66,7 @@ $('#btnMultiplication').click(function () {
     calculator.first_num = display_output;
     calculator.operator = "*"
 
-    $('#display_output').val('0');
+    $('#display_output').val('');
 });
 
 /** Subtraction Button function */
@@ -76,7 +76,7 @@ $('#btnSubtraction').click(function () {
     calculator.first_num = display_output;
     calculator.operator = "-"
 
-    $('#display_output').val('0');
+    $('#display_output').val('');
 });
 
 /** Addition Button function */
@@ -86,14 +86,14 @@ $('#btnAddition').click(function () {
     calculator.first_num = display_output;
     calculator.operator = "+"
 
-    $('#display_output').val('0');
+    $('#display_output').val('');
 });
 
 /** Button (1) function */
 $('#btn1').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('1');
     } else {
         $('#display_output').val(display_output + '1');
@@ -104,7 +104,7 @@ $('#btn1').click(function () {
 $('#btn2').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('2');
     } else {
         $('#display_output').val(display_output + '2');
@@ -115,7 +115,7 @@ $('#btn2').click(function () {
 $('#btn3').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('3');
     } else {
         $('#display_output').val(display_output + '3');
@@ -126,7 +126,7 @@ $('#btn3').click(function () {
 $('#btn4').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('4');
     } else {
         $('#display_output').val(display_output + '4');
@@ -137,7 +137,7 @@ $('#btn4').click(function () {
 $('#btn5').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('5');
     } else {
         $('#display_output').val(display_output + '5');
@@ -148,7 +148,7 @@ $('#btn5').click(function () {
 $('#btn6').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('6');
     } else {
         $('#display_output').val(display_output + '6');
@@ -159,7 +159,7 @@ $('#btn6').click(function () {
 $('#btn7').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('7');
     } else {
         $('#display_output').val(display_output + '7');
@@ -170,7 +170,7 @@ $('#btn7').click(function () {
 $('#btn8').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('8');
     } else {
         $('#display_output').val(display_output + '8');
@@ -181,7 +181,7 @@ $('#btn8').click(function () {
 $('#btn9').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('9');
     } else {
         $('#display_output').val(display_output + '9');
@@ -192,7 +192,7 @@ $('#btn9').click(function () {
 $('#btn00').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
         $('#display_output').val('00');
     } else {
         $('#display_output').val(display_output + '00');
@@ -203,7 +203,7 @@ $('#btn00').click(function () {
 $('#btn0').click(function () {
     let display_output = $('#display_output').val();
 
-    if (display_output === '0') {
+    if (display_output === '') {
 
     } else {
         $('#display_output').val(display_output + '0');
