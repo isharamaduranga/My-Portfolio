@@ -13,6 +13,7 @@ $('#btnClear').click(function () {
 
 });
 
+/** Division Button function */
 $('#btnDivision').click(function () {
     let display_output = $('#display_output').val();
 
@@ -21,4 +22,14 @@ $('#btnDivision').click(function () {
 
     $('#display_output').val('0');
 
+});
+
+/** Multi Button function */
+$('#btnMultiplication').click(function () {
+    let display_output = $('#display_output').val();
+
+    calculator.first_num=display_output;
+    calculator.operator="*"
+
+    $('#display_output').val('0');
 });
