@@ -153,6 +153,34 @@ $('#btn9').click(function () {
     }
 });
 
+/** Button (00) function */
+$('#btn00').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('00');
+    } else {
+        $('#display_output').val(display_output+'00');
+    }
+});
+
+/** Button (0) function */
+$('#btn0').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+
+    } else {
+        $('#display_output').val(display_output+'0');
+    }
+});
+
+/** Button (. Dot) function */
+$('#btnDot').click(function () {
+    let display_output = $('#display_output').val();
+
+    $('#display_output').val(display_output+'.');
+});
 
 /** Equal Button functionalities */
 $("#btnEqual").click(function () {
