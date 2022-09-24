@@ -5,3 +5,10 @@ var calculator = {
     "operator": "",
     "second_num": ""
 }
+
+/** Clear Button function */
+$('#btnClear').click(function () {
+    /*alert("clear");*/
+    $('#display_output').val('0');
+
+});
