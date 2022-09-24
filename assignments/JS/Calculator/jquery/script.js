@@ -1,17 +1,26 @@
-
 /** create calculator object */
 var calculator = {
     "first_num": "",
     "operator": "",
     "second_num": ""
 }
+
 function findLastCount() {
     let lastCount = null;
 
-    if(calculator.operator === '/'){
+    // proceed of Division function...
+    if (calculator.operator === '/') {
         var num1 = parseFloat(calculator.first_num);
         var num2 = parseFloat(calculator.second_num);
-        lastCount=num1 / num2;
+        lastCount = num1 / num2;
+        $('#display_output').val(lastCount);
+    }
+
+    // proceed of Multiplication function...
+    if (calculator.operator === '*') {
+        var num1 = parseFloat(calculator.first_num);
+        var num2 = parseFloat(calculator.second_num);
+        lastCount = num1 * num2;
         $('#display_output').val(lastCount);
     }
 
@@ -40,8 +49,8 @@ $('#btnDivision').click(function () {
 $('#btnMultiplication').click(function () {
     let display_output = $('#display_output').val();
 
-    calculator.first_num=display_output;
-    calculator.operator="*"
+    calculator.first_num = display_output;
+    calculator.operator = "*"
 
     $('#display_output').val('0');
 });
@@ -50,8 +59,8 @@ $('#btnMultiplication').click(function () {
 $('#btnSubtraction').click(function () {
     let display_output = $('#display_output').val();
 
-    calculator.first_num=display_output;
-    calculator.operator="-"
+    calculator.first_num = display_output;
+    calculator.operator = "-"
 
     $('#display_output').val('0');
 });
@@ -60,8 +69,8 @@ $('#btnSubtraction').click(function () {
 $('#btnAddition').click(function () {
     let display_output = $('#display_output').val();
 
-    calculator.first_num=display_output;
-    calculator.operator="+"
+    calculator.first_num = display_output;
+    calculator.operator = "+"
 
     $('#display_output').val('0');
 });
@@ -73,7 +82,7 @@ $('#btn1').click(function () {
     if (display_output === '0') {
         $('#display_output').val('1');
     } else {
-        $('#display_output').val(display_output+'1');
+        $('#display_output').val(display_output + '1');
     }
 });
 
@@ -84,7 +93,7 @@ $('#btn2').click(function () {
     if (display_output === '0') {
         $('#display_output').val('2');
     } else {
-        $('#display_output').val(display_output+'2');
+        $('#display_output').val(display_output + '2');
     }
 });
 
@@ -95,7 +104,7 @@ $('#btn3').click(function () {
     if (display_output === '0') {
         $('#display_output').val('3');
     } else {
-        $('#display_output').val(display_output+'3');
+        $('#display_output').val(display_output + '3');
     }
 });
 
@@ -106,7 +115,7 @@ $('#btn4').click(function () {
     if (display_output === '0') {
         $('#display_output').val('4');
     } else {
-        $('#display_output').val(display_output+'4');
+        $('#display_output').val(display_output + '4');
     }
 });
 
@@ -117,7 +126,7 @@ $('#btn5').click(function () {
     if (display_output === '0') {
         $('#display_output').val('5');
     } else {
-        $('#display_output').val(display_output+'5');
+        $('#display_output').val(display_output + '5');
     }
 });
 
@@ -128,7 +137,7 @@ $('#btn6').click(function () {
     if (display_output === '0') {
         $('#display_output').val('6');
     } else {
-        $('#display_output').val(display_output+'6');
+        $('#display_output').val(display_output + '6');
     }
 });
 
@@ -139,7 +148,7 @@ $('#btn7').click(function () {
     if (display_output === '0') {
         $('#display_output').val('7');
     } else {
-        $('#display_output').val(display_output+'7');
+        $('#display_output').val(display_output + '7');
     }
 });
 
@@ -150,7 +159,7 @@ $('#btn8').click(function () {
     if (display_output === '0') {
         $('#display_output').val('8');
     } else {
-        $('#display_output').val(display_output+'8');
+        $('#display_output').val(display_output + '8');
     }
 });
 
@@ -161,7 +170,7 @@ $('#btn9').click(function () {
     if (display_output === '0') {
         $('#display_output').val('9');
     } else {
-        $('#display_output').val(display_output+'9');
+        $('#display_output').val(display_output + '9');
     }
 });
 
@@ -172,7 +181,7 @@ $('#btn00').click(function () {
     if (display_output === '0') {
         $('#display_output').val('00');
     } else {
-        $('#display_output').val(display_output+'00');
+        $('#display_output').val(display_output + '00');
     }
 });
 
@@ -183,7 +192,7 @@ $('#btn0').click(function () {
     if (display_output === '0') {
 
     } else {
-        $('#display_output').val(display_output+'0');
+        $('#display_output').val(display_output + '0');
     }
 });
 
@@ -191,7 +200,7 @@ $('#btn0').click(function () {
 $('#btnDot').click(function () {
     let display_output = $('#display_output').val();
 
-    $('#display_output').val(display_output+'.');
+    $('#display_output').val(display_output + '.');
 });
 
 /** Equal Button functionalities */
