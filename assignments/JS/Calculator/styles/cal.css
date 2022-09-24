@@ -19,7 +19,7 @@ body{
 
 .container{
     position: relative;
-    background:rgba(255,255,255,0.07);
+    background: rgba(255, 255, 255, 0.10);
     border-radius: 6px;
     overflow: hidden;
     z-index: 10;
@@ -37,7 +37,7 @@ body{
 .container .calculator .value{
     grid-column: span 4;
     height: 140px;
-    width: 300px;
+    width: 340px;
     text-align: right;
     border: none;
     outline: none;
@@ -48,14 +48,45 @@ body{
     border-bottom: 1px solid rgba(255,255,255,0.05);
     border-right: 1px solid rgba(255,255,255,0.05);
 }
+.container .calculator span{
+    display: grid;
+    place-items: center;
+    height: 75px;
+    width: 85px;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-right: 1px solid rgba(255,255,255,0.05);
+    transition: 0.5s;
+}
 
+.container .calculator span:hover{
+    transition: 0s;
+    background: rgba(255, 255, 255, 0.07);
+}
 
+.container .calculator span:active{
+    background: lime;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+}
 
-
-
-
-
-
+.container .calculator .clear{
+    grid-column: span 2;
+    width: 170px;
+    background: rgba(255,255,255,0.05);
+}
+.container .calculator .plus{
+    grid-row: span 2;
+    height: 150px;
+}
+.equal{
+    background: rgba(255,255,255,0.05);
+}
 
 
 
