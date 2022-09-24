@@ -24,12 +24,22 @@ $('#btnDivision').click(function () {
 
 });
 
-/** Multi Button function */
+/** Multiplication Button function */
 $('#btnMultiplication').click(function () {
     let display_output = $('#display_output').val();
 
     calculator.first_num=display_output;
     calculator.operator="*"
+
+    $('#display_output').val('0');
+});
+
+/** Subtraction Button function */
+$('#btnSubtraction').click(function () {
+    let display_output = $('#display_output').val();
+
+    calculator.first_num=display_output;
+    calculator.operator="-"
 
     $('#display_output').val('0');
 });
