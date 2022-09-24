@@ -53,3 +53,24 @@ $('#btnAddition').click(function () {
 
     $('#display_output').val('0');
 });
+
+/** Button (1) function */
+$('#btn1').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('1');
+    } else {
+        $('#display_output').val(display_output+'1');
+    }
+});
+
+/** Equal Button functionalities */
+$("#btnEqual").click(function () {
+    let display_output = $('#display_output').val();
+
+    calculator.second_num = display_output;
+
+    // passed the user select first number to below method..
+    findLastCount();
+});
