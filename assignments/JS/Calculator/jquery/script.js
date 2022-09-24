@@ -131,6 +131,28 @@ $('#btn7').click(function () {
     }
 });
 
+/** Button (8) function */
+$('#btn8').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('8');
+    } else {
+        $('#display_output').val(display_output+'8');
+    }
+});
+
+/** Button (9) function */
+$('#btn9').click(function () {
+    let display_output = $('#display_output').val();
+
+    if (display_output === '0') {
+        $('#display_output').val('9');
+    } else {
+        $('#display_output').val(display_output+'9');
+    }
+});
+
 
 /** Equal Button functionalities */
 $("#btnEqual").click(function () {
