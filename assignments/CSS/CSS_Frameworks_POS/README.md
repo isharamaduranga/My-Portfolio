@@ -8,7 +8,7 @@
 🌱 Wire-Frame-URL----> [Click Me!](https://wireframe.cc/9oCnTI)<br>
 
 ## ✔ Description
-#### This website designs for showing some information about my career.I categorize them into few sections...
+#### This website designs for showing some proceed of web pos system.I categorize them into few Functionlities ...
 ### Manage Customer
 * Register Customer
 * Unregister Customer
@@ -21,7 +21,7 @@
 * Remove Items
 * Search Items
 * Update Items
-* My contact details
+* Get All Items
 
 ### Place Order
 * Save a Customer Order
