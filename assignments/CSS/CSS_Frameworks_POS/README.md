@@ -21,7 +21,7 @@
 * Remove Items
 * Search Items
 * Update Items
-* My contact details
+* Get All Items
 
 ### Place Order
 * Save a Customer Order
