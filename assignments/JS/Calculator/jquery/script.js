@@ -8,36 +8,36 @@ var calculator = {
 function findLastCount() {
     let lastCount = null;
 
-    // proceed of Division function...
-    if (calculator.operator === '/') {
-        var num1 = parseFloat(calculator.first_num);
-        var num2 = parseFloat(calculator.second_num);
-        lastCount = num1 / num2;
-        $('#display_output').val(lastCount);
-    }
+    switch (calculator.operator) {
 
-    // proceed of Multiplication function...
-    if (calculator.operator === '*') {
-        var num1 = parseFloat(calculator.first_num);
-        var num2 = parseFloat(calculator.second_num);
-        lastCount = num1 * num2;
-        $('#display_output').val(lastCount);
-    }
-
-    // proceed of Subtraction function...
-    if(calculator.operator === '-'){
-        var num1 = parseFloat(calculator.first_num);
-        var num2 = parseFloat(calculator.second_num);
-        lastCount= num1 - num2;
-        $('#display_output').val(lastCount);
-    }
-
-    // proceed of Addition function...
-    if(calculator.operator === '+'){
-        var num1 = parseFloat(calculator.first_num);
-        var num2 = parseFloat(calculator.second_num);
-        lastCount = num1 + num2;
-        $('#display_output').val(lastCount);
+        // proceed of Division function...
+        case "/":
+            var num1 = parseFloat(calculator.first_num);
+            var num2 = parseFloat(calculator.second_num);
+            lastCount = num1 / num2;
+            $('#display_output').val(lastCount);
+            break;
+        // proceed of Multiplication function...
+        case "*":
+            var num1 = parseFloat(calculator.first_num);
+            var num2 = parseFloat(calculator.second_num);
+            lastCount = num1 * num2;
+            $('#display_output').val(lastCount);
+            break;
+        // proceed of Subtraction function...
+        case "-":
+            var num1 = parseFloat(calculator.first_num);
+            var num2 = parseFloat(calculator.second_num);
+            lastCount = num1 - num2;
+            $('#display_output').val(lastCount);
+            break;
+        // proceed of Addition function...
+        case "+":
+            var num1 = parseFloat(calculator.first_num);
+            var num2 = parseFloat(calculator.second_num);
+            lastCount = num1 + num2;
+            $('#display_output').val(lastCount);
+            break;
     }
 }
 
