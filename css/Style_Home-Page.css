@@ -27,6 +27,9 @@ html{
     padding: 15px 0;
     background: linear-gradient(109.6deg, rgb(80, 35, 217) 11.2%, rgb(217, 35, 189) 91.1%);
     /*  background-color: rgba(0, 0, 0, .3);*/
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+
 }
 
 .max-width {

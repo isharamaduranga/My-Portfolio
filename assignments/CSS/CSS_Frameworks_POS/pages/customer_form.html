@@ -101,6 +101,7 @@
             <!-- Section of Button Group -->
             <section class="container-fluid mt-1 button ">
                 <button class="btn btn-primary" id="btnCustomerSave" type="button">Add Customer</button>
+                <button class="btn btn-warning " id="btnGetAllCustomer" type="button">Get All Customer</button>
                 <button class="btn btn-success" id="btnUpdateCustomer" type="button">Update Customer</button>
                 <button class="btn btn-danger" id="btnDeleteCustomer" type="button">Delete Customer</button>
             </section>
@@ -117,7 +118,7 @@
             <!-- Section of Customer Table -->
             <section  class="row mt-3">
                 <div class="col" style="height: 297px; overflow-x: scroll">
-                    <table class="table table-bordered table-hover table-striped">
+                    <table id="tbl" class="table table-bordered table-hover table-striped">
                         <thead class="bg-secondary text-white" id="tableHead">
                         <tr class="head">
                             <th scope="col">Customer ID</th>
@@ -127,54 +128,9 @@
                         </tr>
                         </thead>
                         <tbody id="customerTable" class="table-light  ">
-                        <tr>
-                            <th scope="row">C00-001</th>
-                            <td>Ishara</td>
-                            <td>Ruwanwella</td>
-                            <td>125000.00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C00-002</th>
-                            <td>Dinuth</td>
-                            <td>Kaluthara</td>
-                            <td>45000.00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C00-003</th>
-                            <td>Hasitha</td>
-                            <td>Bandaragama</td>
-                            <td>99000.00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C00-004</th>
-                            <td>Damith</td>
-                            <td>Negombo</td>
-                            <td>45000.00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C00-005</th>
-                            <td>Dilsha</td>
-                            <td>Panadura</td>
-                            <td>15000.00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C00-006</th>
-                            <td>Hasitha</td>
-                            <td>Bandaragama</td>
-                            <td>25000.00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C00-007</th>
-                            <td>Yasith</td>
-                            <td>Rathnapura</td>
-                            <td>55000.00</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C00-008</th>
-                            <td>Pavani</td>
-                            <td>Gampaha</td>
-                            <td>45000.00</td>
-                        </tr>
+
+
+
 
                         </tbody>
                     </table>

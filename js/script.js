@@ -45,7 +45,83 @@ $(document).ready(function () {
         backSpeed:50,
         loop:true
     });
+});
 
+/* Displayed  default Home scripts..  */
+$("#home_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});
+$("#about_nav").css('border-bottom','none');
+$("#skill_nav").css('border-bottom','none');
+$("#service_nav").css('border-bottom','none');
+$("#project_nav").css('border-bottom','none');
+$("#education_nav").css('border-bottom','none');
+$("#contact_nav").css('border-bottom','none');
 
+$("#home_nav").click(function () {
+    $("#home_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});
+    $("#about_nav").css('border-bottom','none');
+    $("#skill_nav").css('border-bottom','none');
+    $("#service_nav").css('border-bottom','none');
+    $("#project_nav").css('border-bottom','none');
+    $("#education_nav").css('border-bottom','none');
+    $("#contact_nav").css('border-bottom','none');
+});
 
+$("#about_nav").click(function () {
+    $("#about_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});
+    $("#home_nav").css('border-bottom','none');
+    $("#skill_nav").css('border-bottom','none');
+    $("#service_nav").css('border-bottom','none');
+    $("#project_nav").css('border-bottom','none');
+    $("#education_nav").css('border-bottom','none');
+    $("#contact_nav").css('border-bottom','none');
+});
+
+$("#skill_nav").click(function () {
+    $("#skill_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});
+    $("#home_nav").css('border-bottom','none');
+    $("#about_nav").css('border-bottom','none');
+    $("#service_nav").css('border-bottom','none');
+    $("#project_nav").css('border-bottom','none');
+    $("#education_nav").css('border-bottom','none');
+    $("#contact_nav").css('border-bottom','none');
+});
+
+$("#service_nav").click(function () {
+    $("#service_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});
+    $("#home_nav").css('border-bottom','none');
+    $("#about_nav").css('border-bottom','none');
+    $("#skill_nav").css('border-bottom','none');
+    $("#project_nav").css('border-bottom','none');
+    $("#education_nav").css('border-bottom','none');
+    $("#contact_nav").css('border-bottom','none');
+});
+
+$("#project_nav").click(function () {
+    $("#project_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});
+    $("#home_nav").css('border-bottom','none');
+    $("#skill_nav").css('border-bottom','none');
+    $("#service_nav").css('border-bottom','none');
+    $("#about_nav").css('border-bottom','none');
+    $("#education_nav").css('border-bottom','none');
+    $("#contact_nav").css('border-bottom','none');
+});
+
+$("#education_nav").click(function () {
+    $("#education_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});
+    $("#home_nav").css('border-bottom','none');
+    $("#skill_nav").css('border-bottom','none');
+    $("#service_nav").css('border-bottom','none');
+    $("#project_nav").css('border-bottom','none');
+    $("#about_nav").css('border-bottom','none');
+    $("#contact_nav").css('border-bottom','none');
+});
+
+$("#contact_nav").click(function () {
+    $("#contact_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});
+    $("#home_nav").css('border-bottom','none');
+    $("#skill_nav").css('border-bottom','none');
+    $("#service_nav").css('border-bottom','none');
+    $("#project_nav").css('border-bottom','none');
+    $("#education_nav").css('border-bottom','none');
+    $("#about_nav").css('border-bottom','none');
 });
