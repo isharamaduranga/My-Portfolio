@@ -1,130 +1,62 @@
+/** global scope (Store all the customer records) */
+var customers = [];
 
-var customers=[];
-
+/** Save  Customer Click Event Function */
 $('#btnCustomerSave').click(function () {
+    //local scope // function scope
 
+    /** select all the four text fields and then get their typed values */
     let customerID = $('#txtCusId').val();
     let customerName = $('#txtCusName').val();
     let customerAddress = $('#txtCusAddress').val();
     let customerSalary = $('#txtCusSalary').val();
 
 
-    /*  put all of these values   */
+    /**  put all of these values inside a named container  */
     var customer = {
         id: customerID,
         name: customerName,
         address: customerAddress,
         salary: customerSalary,
     }
+    /** Add the customer object to the array  */
     customers.push(customer);
     console.log(customers);
 
-    $('#customerTable').empty();
-    for (var customer of customers) {
-        console.log(customer);
-        var row ="<tr><td>"+customer.id+"</td><td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>" ;
-
-        $('#customerTable').append(row);
-    }
-
-
+    // Calling loadAllCustomers function...
+    loadAllCustomers();
 
 });
 
+/** Get All Customer Click Event Function */
 $('#btnGetAllCustomer').click(function () {
 
-    $('#customerTable').empty();
-    for (var customer of customers) {
-        console.log(customer);
-        var row ="<tr><td>"+customer.id+"</td><td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>" ;
+    // Calling loadAllCustomers function...
+    loadAllCustomers();
+});
 
+/** load all customers */
+function loadAllCustomers() {
+
+    /** remove all the table body content before adding data */
+    $('#customerTable').empty();
+
+    /** get all customers records from the array */
+    for (var customer of customers) {
+
+        /** add those data to the table row */
+        // var row ="<tr><td>"+customer.id+"</td><td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>" ;
+
+        /** Using String Literals to do the same thing as above  */
+        var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+
+        /** then add it to the table body of customer table */
         $('#customerTable').append(row);
     }
+}
 
-});
 
 $('#tbl>td>tr').click(function () {
-    alert("helooo");
+    alert("hii");
 });
 
-/*
-// Arrays
-var myName = ['amal', 'kamlal', 'sugath', 'vimal'];
-console.log(myName[0]);
-console.log(myName[1]);
-console.log(myName[2]);
-console.log(myName[3]);
-
-
-var ages = [10, 20, 30, 40];
-console.log(ages[0]);
-console.log(ages[1]);
-console.log(ages[2]);
-console.log(ages[3]);
-
-var customers = [];
-customers.push("A");
-customers.push("B");
-customers.push("C");
-customers.push("D");
-console.log(customers);
-
-//(remove the last indexed value of Array)
-customers.pop();
-console.log(customers);
-
-customers.pop();
-console.log(customers);*/
-
-/*
-
-console.log('--------------- FOR LOOP ---------------------------');
-
-for (var i = 0; i < 10; i++) {
-    console.log(i);
-}
-
-console.log('--------------- WHILE ---------------------------');
-
-var i=0;
-while (i<10){
-    i++;
-    console.log(i);
-}
-
-console.log('-----------------DO WHILE-------------------------');
-
-var i=0;
-
-do {
-    console.log(i);
-    i++
-}while (i<10);
-
-
-*/
-
-/*
-console.log('-----------------------------------------------------------------');
-var arrays=[10,20,30,40,50,60,70,80,90];
-
-/!*
-for (var j = 0; j < arrays.length; j++) {
-    console.log(arrays[j]);
-}
-*!/
-/!*
-for (var i of arrays){
-    console.log(i);
-}
-*!/
-
-for (var i in arrays){
-    console.log(i);
-}
-
-console.log('==================================');
-
-for (var i in arrays){
-    console.log(i,arrays[i]);
-}*/
