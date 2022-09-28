@@ -1,4 +1,5 @@
 
+var items=[];
 /** Save  Item Click Event Function */
 $('#btnItemSave').click(function () {
     /** select all the four text fields and then get their typed values */
@@ -14,6 +15,9 @@ $('#btnItemSave').click(function () {
         price:ItemPrice,
         qty:ItemQty
     }
-    console.log(item);
+    /** Add the Item object to the array  */
+    items.push(item);
+    console.log(items);
 
 });
+
