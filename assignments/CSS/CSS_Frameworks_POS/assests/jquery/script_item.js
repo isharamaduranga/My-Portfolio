@@ -1,5 +1,6 @@
-
+/** Store all the customer records */
 var items=[];
+
 /** Save  Item Click Event Function */
 $('#btnItemSave').click(function () {
     /** select all the four text fields and then get their typed values */
@@ -19,12 +20,28 @@ $('#btnItemSave').click(function () {
     items.push(item);
     console.log(items);
 
+    // Calling loadAllItem function...
+    loadAllItem();
+
+
 });
 /** Get All Customer Click Event Function */
 $('#btnGetAllItem').click(function () {
-    $('#itemTable').empty();
-    for (let item of items) {
-    var row =` <tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
-    $('#itemTable').append(row);
-    }
+    // Calling loadAllItem function...
+    loadAllItem();
 });
+
+/** Load All Items */
+function loadAllItem() {
+    /** remove all the table body content before adding data */
+    $('#itemTable').empty();
+
+    /** get all ITEMS records from the array */
+    for (let item of items) {
+        /** Using String Literals to do the define row  */
+        var row =` <tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
+
+        /** then add it to the table body of Item table */
+        $('#itemTable').append(row);
+    }
+}
