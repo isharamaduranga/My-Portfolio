@@ -28,6 +28,11 @@ $('#btnCustomerSave').click(function () {
 
 });
 
+$("#customerTable>tr").click(function () {
+    alert("heloo");
+});
+
+
 /** Get All Customer Click Event Function */
 $('#btnGetAllCustomer').click(function () {
 
@@ -56,7 +61,5 @@ function loadAllCustomers() {
 }
 
 
-$('#tbl>td>tr').click(function () {
-    alert("hii");
-});
+
 
