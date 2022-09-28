@@ -15,9 +15,16 @@ $('#btnItemSave').click(function () {
         price:ItemPrice,
         qty:ItemQty
     }
-    /** Add the Item object to the array  */
+    /** Add the Item object to the array */
     items.push(item);
     console.log(items);
 
 });
-
+/** Get All Customer Click Event Function */
+$('#btnGetAllItem').click(function () {
+    $('#itemTable').empty();
+    for (let item of items) {
+    var row =` <tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
+    $('#itemTable').append(row);
+    }
+});
