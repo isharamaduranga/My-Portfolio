@@ -21,15 +21,12 @@ $('#btnCustomerSave').click(function () {
     }
     /** Add the customer object to the array  */
     customers.push(customer);
-    console.log(customers);
 
     // Calling loadAllCustomers function...
     loadAllCustomers();
 
-});
+    setData_Bind_Row_Events()
 
-$("#customerTable>tr").click(function () {
-    alert("heloo");
 });
 
 
@@ -60,6 +57,25 @@ function loadAllCustomers() {
     }
 }
 
+
+function setData_Bind_Row_Events(){
+    $('#customerTable>tr').click(function () {
+        let id = $(this).children(":eq(0)").text();console.log(id);
+
+        let name = $(this).children(":eq(1)").text();console.log(name);
+
+        let address = $(this).children(":eq(2)").text();console.log(address);
+
+        let salary = $(this).children(":eq(3)").text();console.log(salary);
+
+        /** setting table details values to text fields */
+        $('#txtCusId').val(id);
+        $('#txtCusName').val(name);
+        $('#txtCusAddress').val(address);
+        $('#txtCusSalary').val(salary);
+
+    });
+}
 
 
 
