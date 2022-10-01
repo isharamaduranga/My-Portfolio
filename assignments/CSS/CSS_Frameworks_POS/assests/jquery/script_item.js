@@ -51,10 +51,12 @@ function loadAllItem() {
 
 function setData_Bind_Row_Events() {
     $('#itemTable>tr').click(function () {
+
         let code=$(this).children(':eq(0)').text();
         let name=$(this).children(':eq(1)').text();
         let price=$(this).children(':eq(2)').text();
         let qty=$(this).children(':eq(3)').text();
+
         /** setting table details values to text fields */
         $('#txtItemCode').val(code);
         $('#txtItemName').val(name);

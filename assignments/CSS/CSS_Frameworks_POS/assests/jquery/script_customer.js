@@ -78,5 +78,25 @@ function setData_Bind_Row_Events(){
     });
 }
 
+var allFields = $('.customer_form');
 
+console.log(allFields.length);
+
+ for (var i = 0; i < allFields.length; i++) {
+    allFields[i].addEventListener('keyup',function (event) {
+
+        console.log(event.target.value);
+
+        if(event.keyCode===13){
+            console.log("clicked enter button...");
+            event.preventDefault();
+
+            if(this.parentElement.nextElementSibling.querySelector('input')){
+                console.log(this.parentElement.nextElementSibling)
+                this.parentElement.nextElementSibling.querySelector('input').focus();
+            }
+        }
+
+    });
+ }
 
