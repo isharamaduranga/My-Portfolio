@@ -25,6 +25,7 @@ $('#btnCustomerSave').click(function () {
     // Calling loadAllCustomers function...
     loadAllCustomers();
 
+    // Calling setData_Bind_Row_Events function after the customer added...
     setData_Bind_Row_Events()
 
 });

@@ -23,6 +23,8 @@ $('#btnItemSave').click(function () {
     // Calling loadAllItem function...
     loadAllItem();
 
+    // Calling setData_Bind_Row_Events function after the Item added...
+    setData_Bind_Row_Events();
 
 });
 /** Get All Customer Click Event Function */
@@ -46,18 +48,17 @@ function loadAllItem() {
     }
 }
 
-$('#itemTable>tr').click(function () {
-    let code=$(this).children(':eq(0)').text();
-    console.log(code);
 
-    let name=$(this).children(':eq(1)').text();
-    console.log(name);
-
-    let price=$(this).children(':eq(2)').text();
-    console.log(price);
-
-    let qty=$(this).children(':eq(3)').text();
-    console.log(qty);
-
-
-});
+function setData_Bind_Row_Events() {
+    $('#itemTable>tr').click(function () {
+        let code=$(this).children(':eq(0)').text();
+        let name=$(this).children(':eq(1)').text();
+        let price=$(this).children(':eq(2)').text();
+        let qty=$(this).children(':eq(3)').text();
+        /** setting table details values to text fields */
+        $('#txtItemCode').val(code);
+        $('#txtItemName').val(name);
+        $('#txtItemPrice').val(price);
+        $('#txtItemQty').val(qty);
+    });
+}
