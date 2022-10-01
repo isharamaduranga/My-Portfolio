@@ -45,3 +45,19 @@ function loadAllItem() {
         $('#itemTable').append(row);
     }
 }
+
+$('#itemTable>tr').click(function () {
+    let code=$(this).children(':eq(0)').text();
+    console.log(code);
+
+    let name=$(this).children(':eq(1)').text();
+    console.log(name);
+
+    let price=$(this).children(':eq(2)').text();
+    console.log(price);
+
+    let qty=$(this).children(':eq(3)').text();
+    console.log(qty);
+
+
+});

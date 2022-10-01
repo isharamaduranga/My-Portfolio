@@ -60,13 +60,13 @@ function loadAllCustomers() {
 
 function setData_Bind_Row_Events(){
     $('#customerTable>tr').click(function () {
-        let id = $(this).children(":eq(0)").text();console.log(id);
+        let id = $(this).children(":eq(0)").text();
 
-        let name = $(this).children(":eq(1)").text();console.log(name);
+        let name = $(this).children(":eq(1)").text();
 
-        let address = $(this).children(":eq(2)").text();console.log(address);
+        let address = $(this).children(":eq(2)").text();
 
-        let salary = $(this).children(":eq(3)").text();console.log(salary);
+        let salary = $(this).children(":eq(3)").text();
 
         /** setting table details values to text fields */
         $('#txtCusId').val(id);
