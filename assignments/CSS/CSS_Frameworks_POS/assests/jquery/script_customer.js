@@ -78,8 +78,9 @@ function setData_Bind_Row_Events(){
     });
 }
 
-var allFields = $('.customer_form');
 
+/** Get all input fields...*/
+var allFields = $('.customer_form');
 console.log(allFields.length);
 
  for (var i = 0; i < allFields.length; i++) {
@@ -87,16 +88,21 @@ console.log(allFields.length);
 
         console.log(event.target.value);
 
+        /** if clicked enter Button..(enter btn keycode=13) */
         if(event.keyCode===13){
             console.log("clicked enter button...");
             event.preventDefault();
 
+            /** get the text field form group ---> next form */
             if(this.parentElement.nextElementSibling.querySelector('input')){
                 console.log(this.parentElement.nextElementSibling)
                 this.parentElement.nextElementSibling.querySelector('input').focus();
-            }
-        }
 
+            }
+
+        }
     });
  }
+
+
 
