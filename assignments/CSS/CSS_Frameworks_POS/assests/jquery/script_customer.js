@@ -13,6 +13,30 @@ $('#btnGetAllCustomer').click(function () {
     loadAllCustomers();
 });
 
+
+$('#txtSearchCustomer').keypress(function (event) {
+    if(event.key=="Enter"){
+
+        for (let customer of customers) {
+            if(customer.id === $('#txtSearchCustomer').val()||
+                customer.name===$('#txtSearchCustomer').val()){
+                /* Clear Table */
+                $('#customerTable').empty();
+
+                /** search result add it to the table body of customer table */
+                var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+                $('#customerTable').append(row);
+            }
+            else{
+                event.preventDefault();
+            }
+        }
+    }
+});
+
+
+
+
 /** Text Fields Key down to focus functionalities... */
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown',function (event) {
     if(event.key=="Tab"){
@@ -46,6 +70,7 @@ $("#txtCusSalary").on('keydown',function (event) {
         $("#txtCusId").focus()
     }
 });
+
 
 /* ************************** F U N C T I O N S ************************** */
 /** SAVE CUSTOMERS FUNCTION ... */
