@@ -13,27 +13,15 @@ $('#btnGetAllCustomer').click(function () {
     loadAllCustomers();
 });
 
-
+/** Search Customer Key Press Function */
 $('#txtSearchCustomer').keypress(function (event) {
     if(event.key=="Enter"){
 
-        for (let customer of customers) {
-            if(customer.id === $('#txtSearchCustomer').val()||
-                customer.name===$('#txtSearchCustomer').val()){
-                /* Clear Table */
-                $('#customerTable').empty();
+        //pass the parameter of event to search customer function
+     searchCustomer(event);
 
-                /** search result add it to the table body of customer table */
-                var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
-                $('#customerTable').append(row);
-            }
-            else{
-                event.preventDefault();
-            }
-        }
     }
 });
-
 
 
 
@@ -47,34 +35,34 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown',function (e
 $("#txtCusId").on('keydown',function (event) {
 
     if(event.key=="Enter"){
-        $("#txtCusName").focus()
+        $("#txtCusName").focus();
     }
 });
 
 $("#txtCusName").on('keydown',function (event) {
     if(event.key=="Enter"){
-        $("#txtCusAddress").focus()
+        $("#txtCusAddress").focus();
     }
 });
 
 $("#txtCusAddress").on('keydown',function (event) {
     if(event.key=="Enter"){
-        $("#txtCusSalary").focus()
+        $("#txtCusSalary").focus();
     }
 });
 
 $("#txtCusSalary").on('keydown',function (event) {
     if(event.key=="Enter"){
         saveCustomer();
-        confirm("Do you  Want To Save Customer ?")
-        $("#txtCusId").focus()
+        confirm("Do you  Want To Save Customer ?");
+        $("#txtCusId").focus();
     }
 });
 
 
 /* ************************** F U N C T I O N S ************************** */
-/** SAVE CUSTOMERS FUNCTION ... */
 
+/** SAVE CUSTOMERS FUNCTION ... */
 function saveCustomer() {
     /** select all the four text fields and then get their typed values */
     let customerID = $('#txtCusId').val();
@@ -87,7 +75,7 @@ function saveCustomer() {
         id: customerID,
         name: customerName,
         address: customerAddress,
-        salary: customerSalary,
+        salary: customerSalary
     }
     /** Add the customer object to the array  */
     customers.push(customer);
@@ -121,6 +109,25 @@ function loadAllCustomers() {
 }
 
 
+/** SEARCH CUSTOMERS FUNCTION ... */
+function searchCustomer(event) {
+    for (let customer of customers) {
+        if(customer.id === $('#txtSearchCustomer').val()||
+            customer.name===$('#txtSearchCustomer').val()){
+            /* Clear Table */
+            $('#customerTable').empty();
+
+            /** search result add it to the table body of customer table */
+            let row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+            $('#customerTable').append(row);
+        }
+        else{
+            event.preventDefault();
+        }
+    }
+}
+
+
 /** BIND ROW CLICK EVENT FUNCTION ... */
 function setData_Bind_Row_Events(){
     $('#customerTable>tr').click(function () {
@@ -140,6 +147,9 @@ function setData_Bind_Row_Events(){
         $(this).remove();
     });
 }
+
+
+
 
 /* *********************************************************************** */
 
