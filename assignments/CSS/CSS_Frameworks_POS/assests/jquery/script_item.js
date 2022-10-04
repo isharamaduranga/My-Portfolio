@@ -3,30 +3,10 @@ var items=[];
 
 /** Save  Item Click Event Function */
 $('#btnItemSave').click(function () {
-    /** select all the four text fields and then get their typed values */
-    let ItemCode = $('#txtItemCode').val();
-    let ItemName = $('#txtItemName').val();
-    let ItemPrice = $('#txtItemPrice').val();
-    let ItemQty = $('#txtItemQty').val();
-
-    /**  put all of these values inside a named container  */
-    var item={
-        code:ItemCode,
-        name:ItemName,
-        price:ItemPrice,
-        qty:ItemQty
-    }
-    /** Add the Item object to the array */
-    items.push(item);
-    console.log(items);
-
-    // Calling loadAllItem function...
-    loadAllItem();
-
-    // Calling setData_Bind_Row_Events function after the Item added...
-    setData_Bind_Row_Events();
-
+    // Calling SaveItem function...
+    saveItem();
 });
+
 /** Get All Customer Click Event Function */
 $('#btnGetAllItem').click(function () {
     // Calling loadAllItem function...
@@ -46,6 +26,33 @@ function loadAllItem() {
         /** then add it to the table body of Item table */
         $('#itemTable').append(row);
     }
+}
+
+/* ************************** F U N C T I O N S ************************** */
+/** SAVE ITEMS FUNCTION ... */
+
+function saveItem() {
+    /** select all the four text fields and then get their typed values */
+    let ItemCode = $('#txtItemCode').val();
+    let ItemName = $('#txtItemName').val();
+    let ItemPrice = $('#txtItemPrice').val();
+    let ItemQty = $('#txtItemQty').val();
+
+    /**  put all of these values inside a named container  */
+    var item={
+        code:ItemCode,
+        name:ItemName,
+        price:ItemPrice,
+        qty:ItemQty
+    }
+    /** Add the Item object to the array */
+    items.push(item);
+
+    // Calling loadAllItem function...
+    loadAllItem();
+
+    // Calling setData_Bind_Row_Events function after the Item added...
+    setData_Bind_Row_Events();
 }
 
 

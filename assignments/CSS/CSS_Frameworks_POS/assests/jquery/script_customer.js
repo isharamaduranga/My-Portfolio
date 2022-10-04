@@ -47,8 +47,9 @@ $("#txtCusSalary").on('keydown',function (event) {
     }
 });
 
-/* ************************************************************************************** */
+/* ************************** F U N C T I O N S ************************** */
 /** SAVE CUSTOMERS FUNCTION ... */
+
 function saveCustomer() {
     /** select all the four text fields and then get their typed values */
     let customerID = $('#txtCusId').val();
@@ -115,7 +116,7 @@ function setData_Bind_Row_Events(){
     });
 }
 
-
+/* *********************************************************************** */
 
 
 
