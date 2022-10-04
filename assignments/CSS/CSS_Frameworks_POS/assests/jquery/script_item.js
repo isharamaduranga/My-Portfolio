@@ -13,24 +13,13 @@ $('#btnGetAllItem').click(function () {
     loadAllItem();
 });
 
-/** Load All Items */
-function loadAllItem() {
-    /** remove all the table body content before adding data */
-    $('#itemTable').empty();
+/** Text Fields Key down to focus functionalities... */
 
-    /** get all ITEMS records from the array */
-    for (let item of items) {
-        /** Using String Literals to do the define row  */
-        var row =` <tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
 
-        /** then add it to the table body of Item table */
-        $('#itemTable').append(row);
-    }
-}
 
 /* ************************** F U N C T I O N S ************************** */
-/** SAVE ITEMS FUNCTION ... */
 
+/** SAVE ITEMS FUNCTION ... */
 function saveItem() {
     /** select all the four text fields and then get their typed values */
     let ItemCode = $('#txtItemCode').val();
@@ -55,7 +44,22 @@ function saveItem() {
     setData_Bind_Row_Events();
 }
 
+/** LOAD ALL ITEMS FUNCTION ... */
+function loadAllItem() {
+    /** remove all the table body content before adding data */
+    $('#itemTable').empty();
 
+    /** get all ITEMS records from the array */
+    for (let item of items) {
+        /** Using String Literals to do the define row  */
+        var row =` <tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
+
+        /** then add it to the table body of Item table */
+        $('#itemTable').append(row);
+    }
+}
+
+/** BIND ROW CLICK EVENT FUNCTION ... */
 function setData_Bind_Row_Events() {
     $('#itemTable>tr').click(function () {
 
@@ -71,3 +75,5 @@ function setData_Bind_Row_Events() {
         $('#txtItemQty').val(qty);
     });
 }
+
+/* *********************************************************************** */
