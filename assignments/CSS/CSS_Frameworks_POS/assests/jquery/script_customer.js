@@ -2,15 +2,59 @@
 var customers = [];
 
 /** Save  Customer Click Event Function */
-$('#btnCustomerSave').click(function () {
-    //local scope // function scope
+$('#btnCustomerSave').click(function () {//local scope // function scope
 
+    saveCustomer();
+});
+
+/** Get All Customer Click Event Function */
+$('#btnGetAllCustomer').click(function () {
+
+    loadAllCustomers();
+});
+
+/** Text Fields Key down to focus functionalities... */
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown',function (event) {
+    if(event.key=="Tab"){
+        event.preventDefault();
+    }
+});
+
+$("#txtCusId").on('keydown',function (event) {
+
+    if(event.key=="Enter"){
+        $("#txtCusName").focus()
+    }
+});
+
+$("#txtCusName").on('keydown',function (event) {
+    if(event.key=="Enter"){
+        $("#txtCusAddress").focus()
+    }
+});
+
+$("#txtCusAddress").on('keydown',function (event) {
+    if(event.key=="Enter"){
+        $("#txtCusSalary").focus()
+    }
+});
+
+$("#txtCusSalary").on('keydown',function (event) {
+    if(event.key=="Enter"){
+        saveCustomer();
+        confirm("Do you  Want To Save Customer ?")
+        $("#txtCusId").focus()
+    }
+});
+
+/* ************************************************************************************** */
+/** SAVE CUSTOMERS FUNCTION ... */
+function saveCustomer() {
     /** select all the four text fields and then get their typed values */
     let customerID = $('#txtCusId').val();
     let customerName = $('#txtCusName').val();
     let customerAddress = $('#txtCusAddress').val();
     let customerSalary = $('#txtCusSalary').val();
-
 
     /**  put all of these values inside a named container  */
     var customer = {
@@ -27,18 +71,10 @@ $('#btnCustomerSave').click(function () {
 
     // Calling setData_Bind_Row_Events function after the customer added...
     setData_Bind_Row_Events()
+}
 
-});
 
-
-/** Get All Customer Click Event Function */
-$('#btnGetAllCustomer').click(function () {
-
-    // Calling loadAllCustomers function...
-    loadAllCustomers();
-});
-
-/** load all customers */
+/** LOAD ALL CUSTOMERS FUNCTION ... */
 function loadAllCustomers() {
 
     /** remove all the table body content before adding data */
@@ -59,14 +95,12 @@ function loadAllCustomers() {
 }
 
 
+/** BIND ROW CLICK EVENT FUNCTION ... */
 function setData_Bind_Row_Events(){
     $('#customerTable>tr').click(function () {
         let id = $(this).children(":eq(0)").text();
-
         let name = $(this).children(":eq(1)").text();
-
         let address = $(this).children(":eq(2)").text();
-
         let salary = $(this).children(":eq(3)").text();
 
         /** setting table details values to text fields */
@@ -74,35 +108,17 @@ function setData_Bind_Row_Events(){
         $('#txtCusName').val(name);
         $('#txtCusAddress').val(address);
         $('#txtCusSalary').val(salary);
-
+    });
+        /** Remove Selected Row when double clicked */
+    $("#customerTable>tr").on('dblclick',function () {
+        $(this).remove();
     });
 }
 
 
-/** Get all input fields...*/
-var allFields = $('.customer_form');
-console.log(allFields.length);
 
- for (var i = 0; i < allFields.length; i++) {
-    allFields[i].addEventListener('keyup',function (event) {
 
-        console.log(event.target.value);
 
-        /** if clicked enter Button..(enter btn keycode=13) */
-        if(event.keyCode===13){
-            console.log("clicked enter button...");
-            event.preventDefault();
-
-            /** get the text field form group ---> next form */
-            if(this.parentElement.nextElementSibling.querySelector('input')){
-                console.log(this.parentElement.nextElementSibling)
-                this.parentElement.nextElementSibling.querySelector('input').focus();
-
-            }
-
-        }
-    });
- }
 
 
 
