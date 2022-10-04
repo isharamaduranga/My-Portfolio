@@ -1,11 +1,13 @@
 /** global scope (Store all the customer records) */
 var customers = [];
 
+
 /** Save  Customer Click Event Function */
 $('#btnCustomerSave').click(function () {//local scope // function scope
 
     saveCustomer();
 });
+
 
 /** Get All Customer Click Event Function */
 $('#btnGetAllCustomer').click(function () {
@@ -13,16 +15,21 @@ $('#btnGetAllCustomer').click(function () {
     loadAllCustomers();
 });
 
+
 /** Search Customer Key Press Function */
 $('#txtSearchCustomer').keypress(function (event) {
     if(event.key=="Enter"){
-
         //pass the parameter of event to search customer function
      searchCustomer(event);
-
     }
 });
 
+
+/** Search Button Clicked Function */
+$('#btnSearchCustomer').click(function (event) {
+    //pass the parameter of event to search customer function
+     searchCustomer(event);
+});
 
 
 /** Text Fields Key down to focus functionalities... */
