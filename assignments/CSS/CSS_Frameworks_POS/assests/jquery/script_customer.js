@@ -4,15 +4,16 @@ var customers = [];
 
 /** Save  Customer Click Event Function */
 $('#btnCustomerSave').click(function () {//local scope // function scope
-
     saveCustomer();
+
 });
 
 
 /** Get All Customer Click Event Function */
 $('#btnGetAllCustomer').click(function () {
-
     loadAllCustomers();
+    setData_Bind_Row_Events();
+    clearTextFields();
 });
 
 
@@ -90,8 +91,9 @@ function saveCustomer() {
     // Calling loadAllCustomers function...
     loadAllCustomers();
 
+    clearTextFields();
     // Calling setData_Bind_Row_Events function after the customer added...
-    setData_Bind_Row_Events()
+    setData_Bind_Row_Events();
 }
 
 
@@ -153,6 +155,15 @@ function setData_Bind_Row_Events(){
     $("#customerTable>tr").on('dblclick',function () {
         $(this).remove();
     });
+}
+
+
+/** CLEAR TEXT FIELDS FUNCTION ... */
+function clearTextFields() {
+    $('#txtCusId').val("");
+    $('#txtCusName').val("");
+    $('#txtCusAddress').val("");
+    $('#txtCusSalary').val("");
 }
 
 
