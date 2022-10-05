@@ -47,6 +47,23 @@ $('#txtItemQty').keydown(function (event){
     }
 });
 
+$('#txtSearchItem').keypress(function (event) {
+    if (event.which==13) {
+        for (let item of items) {
+
+            if(item.code==$('#txtSearchItem').val()||
+            item.name==$('#txtSearchItem').val()){
+
+                $('#itemTable').empty();
+                /** search result add it to the table body of customer table */
+                let row =`<tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
+                $('#itemTable').append(row);
+            }else{
+                event.preventDefault();
+            }
+        }
+    }
+})
 
 
 
