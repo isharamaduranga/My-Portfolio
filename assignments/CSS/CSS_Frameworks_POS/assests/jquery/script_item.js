@@ -15,6 +15,39 @@ $('#btnGetAllItem').click(function () {
 
 /** Text Fields Key down to focus functionalities... */
 
+$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").keydown(function (event) {
+    if (event.key=="Tab") {
+        event.preventDefault();
+    }
+});
+
+$('#txtItemCode').keydown(function (event){
+    if (event.which==13){
+        $('#txtItemName').focus();
+    }
+});
+
+$('#txtItemName').keydown(function (event){
+    if (event.which==13){
+        $('#txtItemPrice').focus();
+    }
+});
+
+$('#txtItemPrice').keydown(function (event){
+    if (event.which==13){
+        $('#txtItemQty').focus();
+    }
+});
+
+$('#txtItemQty').keydown(function (event){
+    if (event.which==13){
+       saveItem();
+       confirm("Do you  Want To Save Item ?");
+        $('#txtItemCode').focus();
+    }
+});
+
+
 
 
 /* ************************** F U N C T I O N S ************************** */
@@ -77,3 +110,4 @@ function setData_Bind_Row_Events() {
 }
 
 /* *********************************************************************** */
+
