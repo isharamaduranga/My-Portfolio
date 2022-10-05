@@ -19,9 +19,9 @@ $('#btnGetAllCustomer').click(function () {
 
 /** Search Customer Key Press Function */
 $('#txtSearchCustomer').keypress(function (event) {
-    if(event.key=="Enter"){
+    if (event.key == "Enter") {
         //pass the parameter of event to search customer function
-     searchCustomer(event);
+        searchCustomer(event);
     }
 });
 
@@ -29,38 +29,38 @@ $('#txtSearchCustomer').keypress(function (event) {
 /** Search Button Clicked Function */
 $('#btnSearchCustomer').click(function (event) {
     //pass the parameter of event to search customer function
-     searchCustomer(event);
+    searchCustomer(event);
 });
 
 
 /** Text Fields Key down to focus functionalities... */
-$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown',function (event) {
-    if(event.key=="Tab"){
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
+    if (event.key == "Tab") {
         event.preventDefault();
     }
 });
 
-$("#txtCusId").on('keydown',function (event) {
+$("#txtCusId").on('keydown', function (event) {
 
-    if(event.key=="Enter"){
+    if (event.key == "Enter") {
         $("#txtCusName").focus();
     }
 });
 
-$("#txtCusName").on('keydown',function (event) {
-    if(event.key=="Enter"){
+$("#txtCusName").on('keydown', function (event) {
+    if (event.key == "Enter") {
         $("#txtCusAddress").focus();
     }
 });
 
-$("#txtCusAddress").on('keydown',function (event) {
-    if(event.key=="Enter"){
+$("#txtCusAddress").on('keydown', function (event) {
+    if (event.key == "Enter") {
         $("#txtCusSalary").focus();
     }
 });
 
-$("#txtCusSalary").on('keydown',function (event) {
-    if(event.key=="Enter"){
+$("#txtCusSalary").on('keydown', function (event) {
+    if (event.key == "Enter") {
         saveCustomer();
         confirm("Do you  Want To Save Customer ?");
         $("#txtCusId").focus();
@@ -121,16 +121,15 @@ function loadAllCustomers() {
 /** SEARCH CUSTOMERS FUNCTION ... */
 function searchCustomer(event) {
     for (let customer of customers) {
-        if(customer.id === $('#txtSearchCustomer').val()||
-            customer.name===$('#txtSearchCustomer').val()){
+        if (customer.id === $('#txtSearchCustomer').val() ||
+            customer.name === $('#txtSearchCustomer').val()) {
             /* Clear Table */
             $('#customerTable').empty();
 
             /** search result add it to the table body of customer table */
             let row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
             $('#customerTable').append(row);
-        }
-        else{
+        } else {
             event.preventDefault();
         }
     }
@@ -138,7 +137,7 @@ function searchCustomer(event) {
 
 
 /** BIND ROW CLICK EVENT FUNCTION ... */
-function setData_Bind_Row_Events(){
+function setData_Bind_Row_Events() {
     $('#customerTable>tr').click(function () {
         let id = $(this).children(":eq(0)").text();
         let name = $(this).children(":eq(1)").text();
@@ -151,8 +150,8 @@ function setData_Bind_Row_Events(){
         $('#txtCusAddress').val(address);
         $('#txtCusSalary').val(salary);
     });
-        /** Remove Selected Row when double clicked */
-    $("#customerTable>tr").on('dblclick',function () {
+    /** Remove Selected Row when double clicked */
+    $("#customerTable>tr").on('dblclick', function () {
         $(this).remove();
     });
 }
@@ -165,8 +164,6 @@ function clearTextFields() {
     $('#txtCusAddress').val("");
     $('#txtCusSalary').val("");
 }
-
-
 
 
 /* *********************************************************************** */
