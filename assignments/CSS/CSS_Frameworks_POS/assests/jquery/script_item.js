@@ -11,7 +11,23 @@ $('#btnItemSave').click(function () {
 $('#btnGetAllItem').click(function () {
     // Calling loadAllItem function...
     loadAllItem();
+    setData_Bind_Row_Events();
 });
+
+/** Search Item Key Press Function */
+$('#txtSearchItem').keypress(function (event) {
+    if (event.which==13) {
+        //pass the parameter of event to search item function
+        searchItem(event);
+    }
+});
+
+/** Search Button Clicked Function */
+$('#btnSearchItem').click(function (event) {
+    //pass the parameter of event to search item function
+    searchItem(event);
+});
+
 
 /** Text Fields Key down to focus functionalities... */
 
@@ -46,14 +62,6 @@ $('#txtItemQty').keydown(function (event){
         $('#txtItemCode').focus();
     }
 });
-
-$('#txtSearchItem').keypress(function (event) {
-    if (event.which==13) {
-    //pass the parameter of event to search item function
-     searchItem(event);
-    }
-});
-
 
 
 /* ************************** F U N C T I O N S ************************** */
@@ -103,14 +111,15 @@ function loadAllItem() {
 function searchItem(event) {
     for (let item of items) {
 
-        if(item.code==$('#txtSearchItem').val()||
-            item.name==$('#txtSearchItem').val()){
-
+        if(item.code===$('#txtSearchItem').val()||
+            item.name===$('#txtSearchItem').val()){
+            /* Clear Table */
             $('#itemTable').empty();
             /** search result add it to the table body of customer table */
             let row =`<tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
             $('#itemTable').append(row);
-        }else{
+        }
+        else{
             event.preventDefault();
         }
     }
