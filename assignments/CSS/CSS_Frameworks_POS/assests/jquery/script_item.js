@@ -32,6 +32,7 @@ $('#btnSearchItem').click(function (event) {
 
 /** Text Fields Key down to focus functionalities... */
 
+//disable tab key of all input fields using grouping selector
 $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").keydown(function (event) {
     if (event.key == "Tab") {
         event.preventDefault();
