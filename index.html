@@ -73,7 +73,7 @@
     </style>
 
 </head>
-<body><!-- Sectioning root-->
+<body onload="loadFunction()"><!-- Sectioning root-->
 
 <div id="loading_page">
 
@@ -1286,6 +1286,16 @@
     <p>Website Developed By Ishara Maduranga.</p>
 </footer>
 
+
+<script>
+
+var preloader = document.getElementById('loading_page');
+
+function myFunction(){
+    preloader.style.display='none'
+}
+
+</script>
 
 </body>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
