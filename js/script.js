@@ -126,10 +126,3 @@ $("#contact_nav").click(function () {
     $("#about_nav").css('border-bottom','none');
 });
 
-$(document).ready(function () {
-    console.log('document on ready');
-});
-
-$(window).on('load',function () {
-    console.log('window on ready');
-});
