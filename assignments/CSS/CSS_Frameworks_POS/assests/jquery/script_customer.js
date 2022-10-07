@@ -17,13 +17,60 @@ $('#btnGetAllCustomer').click(function () {
 });
 
 
-/** Search Customer Key Press Function */
+/** Search Customer txtCustomer id input field Key Press Function */
+$('#txtCusId').keydown(function (event) {
+    if (event.key == "Enter") {
+
+        let inputId = $('#txtCusId').val();
+        //pass the parameter of event to search customer function
+        let customer = searchCustomerForInputField(inputId);
+
+        if (customer != null) {
+            $('#txtCusId').val(customer.id);
+            $('#txtCusName').val(customer.name);
+            $('#txtCusAddress').val(customer.address);
+            $('#txtCusSalary').val(customer.salary);
+        }
+        else{
+            alert("There is no customer available for that"+inputId);
+        }
+    }
+});
+
+
+/** Delete Customer Click Event Function */
+$('#btnDeleteCustomer').click(function () {
+    let deleteID = $("#txtCusId").val();
+
+    let option = confirm("Do you really want to delete " + deleteID);
+
+    if (option) {
+        if (deleteCustomer(deleteID)){
+            alert("Customer Successfully Deleted..");
+            clearTextFields();
+        }else{
+            alert("No such customer to delete. please check the id");
+        }
+    }
+});
+
+
+/** Update Customer Click Event Function */
+function updateCustomer(cusId){
+
+
+}
+
+
+
+/** Search text field bar Key Press Function */
 $('#txtSearchCustomer').keypress(function (event) {
     if (event.key == "Enter") {
         //pass the parameter of event to search customer function
         searchCustomer(event);
     }
 });
+
 
 
 /** Search Button Clicked Function */
@@ -61,8 +108,13 @@ $("#txtCusAddress").on('keydown', function (event) {
 
 $("#txtCusSalary").on('keydown', function (event) {
     if (event.key == "Enter") {
-        saveCustomer();
-        confirm("Do you  Want To Save Customer ?");
+
+        let option = confirm("Do you  Want To Save Customer ?");
+
+        if (option) {
+            saveCustomer();
+        }
+
         $("#txtCusId").focus();
     }
 });
@@ -133,6 +185,36 @@ function searchCustomer(event) {
             event.preventDefault();
         }
     }
+}
+
+
+/** SEARCH CUSTOMERS WITH INPUT TIME FUNCTION ... */
+function searchCustomerForInputField(cusId){
+
+    for (let customer of customers) {
+        if(customer.id==cusId){
+            return customer;
+        }
+    }
+    return null;
+}
+
+
+/** DELETE CUSTOMERS FUNCTION ... */
+function deleteCustomer(cusId){
+    let customer = searchCustomerForInputField(cusId);
+
+    if (customer!= null) {
+        let IndexNumber = customers.indexOf(customer);
+        customers.splice(IndexNumber,1);
+        loadAllCustomers();
+        setData_Bind_Row_Events();
+        return true;
+
+    }else{
+        return false;
+    }
+
 }
 
 
