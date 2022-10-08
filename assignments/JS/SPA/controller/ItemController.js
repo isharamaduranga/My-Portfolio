@@ -30,19 +30,6 @@ $('#txtItemCode').keydown(function (event) {
     }
 });
 
-/** Search Item Key Press Function */
-$('#txtSearchItem').keypress(function (event) {
-    if (event.which == 13) {
-        //pass the parameter of event to search item function
-        searchItem(event);
-    }
-});
-
-/** Search Button Clicked Function */
-$('#btnSearchItem').click(function (event) {
-    //pass the parameter of event to search item function
-    searchItem(event);
-});
 
 /** Delete Item Click Event Function */
 $('#btnDeleteItem').click(function () {
@@ -58,14 +45,25 @@ $('#btnDeleteItem').click(function () {
         }else{
             alert("No such customer to delete. please check the id");
         }
-
     }
 });
 
 
+/** Search text field bar  Key Press Function */
+$('#txtSearchItem').keypress(function (event) {
+    if (event.which == 13) {
+        //pass the parameter of event to search item function
+        searchItem(event);
+    }
+});
+
+/** Search Button Clicked Function */
+$('#btnSearchItem').click(function (event) {
+    //pass the parameter of event to search item function
+    searchItem(event);
+});
 
 /** Text Fields Key down to focus functionalities... */
-
 //disable tab key of all input fields using grouping selector
 $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").keydown(function (event) {
     if (event.key == "Tab") {
