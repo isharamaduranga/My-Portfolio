@@ -1,4 +1,17 @@
 
+
+
+/** customer regular expressions */
+
+    const cusIdRegEx=/^(C00-)[0-9]{1,3}$/;
+    const cusNameRegEx= /^[A-z ]{5,20}$/;
+    const cusAddressRegEx= /^[0-9/A-z. ,]{7,}$/;
+    const cusSalaryRegEx= /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+
+
+
+
+
 /** Save  Customer Click Event Function */
 $('#btnCustomerSave').click(function () {//local scope // function scope
     saveCustomer();
@@ -239,10 +252,9 @@ function setData_Bind_Row_Events() {
 
 /** CLEAR TEXT FIELDS FUNCTION ... */
 function clearTextFields() {
-    $('#txtCusId').val("");
-    $('#txtCusName').val("");
-    $('#txtCusAddress').val("");
-    $('#txtCusSalary').val("");
+    $("#txtCusId").focus();
+    $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").val("");
+
 }
 
 

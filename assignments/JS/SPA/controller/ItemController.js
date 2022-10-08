@@ -210,10 +210,9 @@ function setData_Bind_Row_Events_Item() {
 
 /** CLEAR TEXT FIELDS FUNCTION ... */
 function clearTextFieldsItem() {
-    $('#txtItemCode').val("");
-    $('#txtItemName').val("");
-    $('#txtItemPrice').val("");
-    $('#txtItemQty').val("");
+    $("#txtItemCode").focus();
+    $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").val("");
+
 }
 
 /*************************************************************************/
