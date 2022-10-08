@@ -1,5 +1,3 @@
-
-
 /** Save  Item Click Event Function */
 $('#btnItemSave').click(function () {
     // Calling SaveItem function...
@@ -13,6 +11,28 @@ $('#btnGetAllItem').click(function () {
     setData_Bind_Row_Events_Item();
     clearTextFieldsItem();
 });
+
+/** Search Item txtItemCode id input field Key Press Function */
+$('#txtItemCode').keydown(function (event) {
+
+    if (event.key == 'Enter') {
+        let inputCode = $('#txtItemCode').val();
+        let item = searchItemForInputField(inputCode);
+
+        if (item != null) {
+            $('#txtItemCode').val(item.code);
+            $('#txtItemName').val(item.name);
+            $('#txtItemPrice').val(item.price);
+            $('#txtItemQty').val(item.qty);
+        }else{
+            alert("There is no Item available for that "+inputCode);
+        }
+    }
+});
+
+
+
+
 
 /** Search Item Key Press Function */
 $('#txtSearchItem').keypress(function (event) {
@@ -123,6 +143,16 @@ function searchItem(event) {
             event.preventDefault();
         }
     }
+}
+
+/** SEARCH ITEM WITH INPUT TIME FUNCTION ... */
+function searchItemForInputField(code) {
+    for (let item of items) {
+        if (item.code == code) {
+            return item;
+        }
+    }
+    return null;
 }
 
 /** BIND ROW CLICK EVENT FUNCTION ... */

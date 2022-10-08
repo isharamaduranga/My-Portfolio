@@ -1,5 +1,4 @@
 
-
 /** Save  Customer Click Event Function */
 $('#btnCustomerSave').click(function () {//local scope // function scope
     saveCustomer();
@@ -15,7 +14,7 @@ $('#btnGetAllCustomer').click(function () {
 });
 
 
-/** Search Customer txtCustomer id input field Key Press Function */
+/** Search Customer txtCustomer id input field Key Down Function */
 $('#txtCusId').keydown(function (event) {
     if (event.key == "Enter") {
 
@@ -30,7 +29,7 @@ $('#txtCusId').keydown(function (event) {
             $('#txtCusSalary').val(customer.salary);
         }
         else{
-            alert("There is no customer available for that"+inputId);
+            alert("There is no customer available for that "+inputId);
         }
     }
 });
