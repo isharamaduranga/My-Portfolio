@@ -62,22 +62,7 @@ $('#btnDeleteItem').click(function () {
     }
 });
 
-/** DELETE ITEM FUNCTION ... */
-function deleteItem(deleteCode) {
-    let item = searchItemForInputField(deleteCode);
 
-    if (item != null) {
-        //find index number for delete related item
-        let indexNumber = items.indexOf(item);
-        //remove that Item for matching that index(param1:startIndex/param2:deleteCount)
-        items.splice(indexNumber,1);
-        loadAllItem();
-        setData_Bind_Row_Events_Item();
-        return true;
-    }else{
-        return false;
-    }
-}
 
 /** Text Fields Key down to focus functionalities... */
 
@@ -143,6 +128,7 @@ function saveItem() {
     setData_Bind_Row_Events_Item();
 }
 
+
 /** LOAD ALL ITEMS FUNCTION ... */
 function loadAllItem() {
     /** remove all the table body content before adding data */
@@ -157,6 +143,7 @@ function loadAllItem() {
         $('#itemTable').append(row);
     }
 }
+
 
 /** SEARCH ITEMS FUNCTION ... */
 function searchItem(event) {
@@ -175,6 +162,7 @@ function searchItem(event) {
     }
 }
 
+
 /** SEARCH ITEM WITH INPUT TIME FUNCTION ... */
 function searchItemForInputField(code) {
     for (let item of items) {
@@ -184,6 +172,25 @@ function searchItemForInputField(code) {
     }
     return null;
 }
+
+
+/** DELETE ITEM FUNCTION ... */
+function deleteItem(deleteCode) {
+    let item = searchItemForInputField(deleteCode);
+
+    if (item != null) {
+        //find index number for delete related item
+        let indexNumber = items.indexOf(item);
+        //remove that Item for matching that index(param1:startIndex/param2:deleteCount)
+        items.splice(indexNumber,1);
+        loadAllItem();
+        setData_Bind_Row_Events_Item();
+        return true;
+    }else{
+        return false;
+    }
+}
+
 
 /** BIND ROW CLICK EVENT FUNCTION ... */
 function setData_Bind_Row_Events_Item() {
@@ -201,6 +208,7 @@ function setData_Bind_Row_Events_Item() {
         $('#txtItemQty').val(qty);
     });
 }
+
 
 /** CLEAR TEXT FIELDS FUNCTION ... */
 function clearTextFieldsItem() {
