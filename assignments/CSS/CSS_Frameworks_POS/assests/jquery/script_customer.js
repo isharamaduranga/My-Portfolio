@@ -62,7 +62,6 @@ function updateCustomer(cusId){
 }
 
 
-
 /** Search text field bar Key Press Function */
 $('#txtSearchCustomer').keypress(function (event) {
     if (event.key == "Enter") {
@@ -72,12 +71,12 @@ $('#txtSearchCustomer').keypress(function (event) {
 });
 
 
-
 /** Search Button Clicked Function */
 $('#btnSearchCustomer').click(function (event) {
     //pass the parameter of event to search customer function
     searchCustomer(event);
 });
+
 
 
 /** Text Fields Key down to focus functionalities... */
@@ -120,7 +119,7 @@ $("#txtCusSalary").on('keydown', function (event) {
 });
 
 
-/* ************************** F U N C T I O N S ************************** */
+/*************************** F U N C T I O N S ***************************/
 
 /** SAVE CUSTOMERS FUNCTION ... */
 function saveCustomer() {
@@ -248,7 +247,7 @@ function clearTextFields() {
 }
 
 
-/* *********************************************************************** */
+/*************************************************************************/
 
 
 
