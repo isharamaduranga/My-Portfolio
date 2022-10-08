@@ -51,7 +51,13 @@ $('#btnDeleteItem').click(function () {
 
     let option = confirm("Do you really want to delete " + deleteCode);
 
-
+    if (option) {
+        if (deleteItem(deleteCode)) {
+            alert("Customer Successfully Deleted..");
+            clearTextFieldsItem();
+        }else{
+            alert("No such customer to delete. please check the id");
+        }
 
     }
 });
