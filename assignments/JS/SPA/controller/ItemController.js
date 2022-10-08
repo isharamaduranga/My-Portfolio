@@ -1,5 +1,4 @@
-/** Store all the customer records */
-var items = [];
+
 
 /** Save  Item Click Event Function */
 $('#btnItemSave').click(function () {
@@ -11,7 +10,7 @@ $('#btnItemSave').click(function () {
 $('#btnGetAllItem').click(function () {
     // Calling loadAllItem function...
     loadAllItem();
-    setData_Bind_Row_Events();
+    setData_Bind_Row_Events_Item();
     clearTextFieldsItem();
 });
 
@@ -90,8 +89,8 @@ function saveItem() {
     loadAllItem();
 
     clearTextFieldsItem();
-    // Calling setData_Bind_Row_Events function after the Item added...
-    setData_Bind_Row_Events();
+    // Calling setData_Bind_Row_Events_Item function after the Item added...
+    setData_Bind_Row_Events_Item();
 }
 
 /** LOAD ALL ITEMS FUNCTION ... */
@@ -127,7 +126,7 @@ function searchItem(event) {
 }
 
 /** BIND ROW CLICK EVENT FUNCTION ... */
-function setData_Bind_Row_Events() {
+function setData_Bind_Row_Events_Item() {
     $('#itemTable>tr').click(function () {
 
         let code = $(this).children(':eq(0)').text();

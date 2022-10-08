@@ -1,5 +1,3 @@
-/** global scope (Store all the customer records) */
-var customers = [];
 
 
 /** Save  Customer Click Event Function */
