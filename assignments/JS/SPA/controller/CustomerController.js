@@ -201,7 +201,9 @@ function deleteCustomer(cusId){
     let customer = searchCustomerForInputField(cusId);
 
     if (customer!= null) {
+        //find index number for delete related customer
         let IndexNumber = customers.indexOf(customer);
+        //remove that Customer for matching that index(param1:startIndex/param2:deleteCount)
         customers.splice(IndexNumber,1);
         loadAllCustomers();
         setData_Bind_Row_Events();

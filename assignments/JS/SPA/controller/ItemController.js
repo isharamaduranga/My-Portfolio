@@ -30,10 +30,6 @@ $('#txtItemCode').keydown(function (event) {
     }
 });
 
-
-
-
-
 /** Search Item Key Press Function */
 $('#txtSearchItem').keypress(function (event) {
     if (event.which == 13) {
@@ -48,6 +44,34 @@ $('#btnSearchItem').click(function (event) {
     searchItem(event);
 });
 
+/** Delete Item Click Event Function */
+$('#btnDeleteItem').click(function () {
+
+    let deleteCode = $('#txtItemCode').val();
+
+    let option = confirm("Do you really want to delete " + deleteCode);
+
+
+
+    }
+});
+
+/** DELETE ITEM FUNCTION ... */
+function deleteItem(deleteCode) {
+    let item = searchItemForInputField(deleteCode);
+
+    if (item != null) {
+        //find index number for delete related item
+        let indexNumber = items.indexOf(item);
+        //remove that Item for matching that index(param1:startIndex/param2:deleteCount)
+        items.splice(indexNumber,1);
+        loadAllItem();
+        setData_Bind_Row_Events_Item();
+        return true;
+    }else{
+        return false;
+    }
+}
 
 /** Text Fields Key down to focus functionalities... */
 
