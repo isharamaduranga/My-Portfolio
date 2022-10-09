@@ -191,10 +191,18 @@ $('#btnDeleteCustomer').click(function () {
 
 
 /** Update Customer Click Event Function */
-function updateCustomer(cusId){
+$('#btnUpdateCustomer').click(function () {
+
+    let cusID= $('#txtCusId').val();
+    let option = updateCustomer(cusID);
+    if (option) {
+        alert("Customer Updated Successfully");
+    }else{
+        alert("Update Failed..! Something went wrong..");
+    }
 
 
-}
+});
 
 
 /** Search text field bar Key Press Function */
@@ -295,6 +303,15 @@ function searchCustomerForInputField(cusId){
 }
 
 
+/** UPDATE CUSTOMERS FUNCTION ... */
+function updateCustomer(cusId){
+let customer = searchCustomerForInputField(cusId);
+
+    if (customer != null) {
+        customer.id=$('#txtCusId')
+    }
+
+}
 /** DELETE CUSTOMERS FUNCTION ... */
 function deleteCustomer(cusId){
     let customer = searchCustomerForInputField(cusId);
