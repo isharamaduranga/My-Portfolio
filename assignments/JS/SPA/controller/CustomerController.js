@@ -80,14 +80,14 @@ function checkCustomerValidation() {
     for (let validate of customerValidationArray) {
         if(check(validate.reg,validate.field)){
             // to write success event
-            /*successEvent(validate.field,"");*/
+            successEvent(validate.field,"");
 
-            console.log('success event..');
+           /* console.log('success event..');*/
 
         }else{
             // to write error event
-           /* errorEvent(validate.field,validate.error)*/
-            console.log('Error event..');
+            errorEvent(validate.field,validate.error)
+            /*console.log('Error event..');*/
         }
     }
 }
@@ -96,6 +96,26 @@ function check(regPattern, textField) {
         return true;
     }else{
         return false;
+    }
+}
+
+function successEvent(textField,massage) {
+    if(textField.val().length<=0){
+        textField.css('border','2px solid gray');
+        textField.parent().children('span').text("");
+    }else{
+        textField.css("border","2px solid green");
+        textField.parent().children('span').text(massage);
+    }
+}
+
+function errorEvent(textField,error) {
+    if(textField.val().length<=0){
+        textField.css('border','2px solid gray');
+        textField.parent().children('span').text("");
+    }else{
+        textField.css('border','2px solid red');
+        textField.parent().children('span').text(error);
     }
 }
 
