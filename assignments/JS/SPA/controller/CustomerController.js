@@ -1,6 +1,6 @@
 
 
-
+/** ==================================== D E F I N E D   V A L I D A T I O N S ===================================*/
 /** customer regular expressions */
   /*  Focused customerID input field When Firstly open that page..*/
     $('#txtCusId').focus();
@@ -76,20 +76,22 @@ $("#txtCusSalary").on('keydown', function (event) {
 });
 
 function checkCustomerValidation() {
-
+    let errorCount=0;
     for (let validate of customerValidationArray) {
         if(check(validate.reg,validate.field)){
             // to write success event
             successEvent(validate.field,"");
 
-           /* console.log('success event..');*/
+
 
         }else{
+           /* Increase error count when find a error*/
+            errorCount=errorCount+1;
             // to write error event
             errorEvent(validate.field,validate.error)
-            /*console.log('Error event..');*/
         }
     }
+    setButtonState(errorCount);
 }
 function check(regPattern, textField) {
     if(regPattern.test(textField.val())){
@@ -101,23 +103,37 @@ function check(regPattern, textField) {
 
 function successEvent(textField,massage) {
     if(textField.val().length<=0){
-        textField.css('border','2px solid gray');
-        textField.parent().children('span').text("");
+        //calling default text function...
+        defaultText(textField,"");
     }else{
-        textField.css("border","2px solid green");
+        textField.css("border","2px solid #049104FF");
         textField.parent().children('span').text(massage);
     }
 }
 
 function errorEvent(textField,error) {
     if(textField.val().length<=0){
-        textField.css('border','2px solid gray');
-        textField.parent().children('span').text("");
+        //calling default text function...
+        defaultText(textField,"");
     }else{
         textField.css('border','2px solid red');
         textField.parent().children('span').text(error);
     }
 }
+
+function defaultText(txtField,massage) {
+    txtField.css("border", "1px solid #ced4da");
+    txtField.parent().children('span').text(massage);
+}
+
+function setButtonState(count){
+    if (count>0){
+        $("#btnCustomerSave").attr('disabled',true);
+    }else{
+        $("#btnCustomerSave").attr('disabled',false);
+    }
+}
+/** ================================================================================================================ */
 
 
 
@@ -199,7 +215,7 @@ $('#btnSearchCustomer').click(function (event) {
 
 
 
-/*************************** F U N C T I O N S ***************************/
+/****************************** F U N C T I O N S   A L L   C R U D   O P E R A T I O N S ***************************/
 
 /** SAVE CUSTOMERS FUNCTION ... */
 function saveCustomer() {
@@ -328,4 +344,4 @@ function clearTextFields() {
 }
 
 
-/*************************************************************************/
+/*************************************************************************************************************************/
