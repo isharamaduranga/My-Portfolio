@@ -82,8 +82,15 @@ function checkCustomerValidation() {
             // to write error event
         }
     }
-
 }
+function check(regPattern, textField) {
+    if(regPattern.test(textField.val())){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 
 
 /** Save  Customer Click Event Function */
