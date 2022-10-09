@@ -308,11 +308,21 @@ function updateCustomer(cusId){
 let customer = searchCustomerForInputField(cusId);
 
     if (customer != null) {
-        customer.id=$('#txtCusId')
+        customer.id=$('#txtCusId').val();
+        customer.name=$('#txtCusName').val();
+        customer.address=$('#txtCusAddress').val();
+        customer.salary=$('#txtCusSalary').val();
+        loadAllCustomers();
+
+        return true;
+    }else{
+        return false;
     }
 
 }
-/** DELETE CUSTOMERS FUNCTION ... */
+
+
+/** DELETE CUSTOMERS FUNCTION ..*/
 function deleteCustomer(cusId){
     let customer = searchCustomerForInputField(cusId);
 
