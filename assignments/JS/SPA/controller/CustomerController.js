@@ -1,25 +1,37 @@
-
-
 /** ==================================== D E F I N E D   V A L I D A T I O N S ===================================*/
 /** customer regular expressions */
-  /*  Focused customerID input field When Firstly open that page..*/
-    $('#txtCusId').focus();
+/*  Focused customerID input field When Firstly open that page..*/
+$('#txtCusId').focus();
 
-    const cusIdRegEx=/^(C00-)[0-9]{1,3}$/;
-    const cusNameRegEx= /^[A-z ]{5,20}$/;
-    const cusAddressRegEx= /^[0-9/A-z. ,]{7,}$/;
-    const cusSalaryRegEx= /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+const cusIdRegEx = /^(C00-)[0-9]{1,3}$/;
+const cusNameRegEx = /^[A-z ]{5,20}$/;
+const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
-    /* Defined Validation Array */
-    let customerValidationArray= [];
+/* Defined Validation Array */
+let customerValidationArray = [];
 
-   /* Pushed regex pattern , related Input field Object & error massage to the Array */
-    customerValidationArray.push({reg:cusIdRegEx, field:$('#txtCusId'),error:'Customer ID Pattern is Wrong Format: C00-001'});
-    customerValidationArray.push({reg:cusNameRegEx, field:$('#txtCusName'),error:'Customer Name Pattern is Wrong Format: A-z 5-20'});
-    customerValidationArray.push({reg:cusAddressRegEx, field:$('#txtCusAddress'),error:'Customer Address Pattern is Wrong Format: A-z 0-9 ,/'});
-    customerValidationArray.push({reg:cusSalaryRegEx, field:$('#txtCusSalary'),error:'Customer Salary Pattern is Wrong Format: 1000 or 1000.00'});
-
-
+/* Pushed regex pattern , related Input field Object & error massage to the Array */
+customerValidationArray.push({
+    reg: cusIdRegEx,
+    field: $('#txtCusId'),
+    error: 'Customer ID Pattern is Wrong Format: C00-001'
+});
+customerValidationArray.push({
+    reg: cusNameRegEx,
+    field: $('#txtCusName'),
+    error: 'Customer Name Pattern is Wrong Format: A-z 5-20'
+});
+customerValidationArray.push({
+    reg: cusAddressRegEx,
+    field: $('#txtCusAddress'),
+    error: 'Customer Address Pattern is Wrong Format: A-z 0-9 ,/'
+});
+customerValidationArray.push({
+    reg: cusSalaryRegEx,
+    field: $('#txtCusSalary'),
+    error: 'Customer Salary Pattern is Wrong Format: 1000 or 1000.00'
+});
 
 
 /** Text Fields Key down to focus functionalities... */
@@ -40,30 +52,29 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (eve
 });
 
 
-
 $("#txtCusId").on('keydown', function (event) {
 
-    if (event.key == "Enter" && check(cusIdRegEx,$("#txtCusId"))) {
+    if (event.key == "Enter" && check(cusIdRegEx, $("#txtCusId"))) {
         $("#txtCusName").focus();
-    }else{
+    } else {
         $("#txtCusId").focus();
     }
 });
 
 $("#txtCusName").on('keydown', function (event) {
-    if (event.key == "Enter"  && check(cusNameRegEx,$("#txtCusName"))) {
+    if (event.key == "Enter" && check(cusNameRegEx, $("#txtCusName"))) {
         $("#txtCusAddress").focus();
     }
 });
 
 $("#txtCusAddress").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusAddressRegEx,$("#txtCusAddress"))) {
+    if (event.key == "Enter" && check(cusAddressRegEx, $("#txtCusAddress"))) {
         $("#txtCusSalary").focus();
     }
 });
 
 $("#txtCusSalary").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusSalaryRegEx,$('#txtCusSalary'))) {
+    if (event.key == "Enter" && check(cusSalaryRegEx, $('#txtCusSalary'))) {
 
         let option = confirm("Do you  Want To Save Customer ?");
 
@@ -76,65 +87,65 @@ $("#txtCusSalary").on('keydown', function (event) {
 });
 
 function checkCustomerValidation() {
-    let errorCount=0;
+    let errorCount = 0;
     for (let validate of customerValidationArray) {
-        if(check(validate.reg,validate.field)){
+        if (check(validate.reg, validate.field)) {
             // to write success event
-            successEvent(validate.field,"");
+            successEvent(validate.field, "");
 
 
-
-        }else{
-           /* Increase error count when find a error*/
-            errorCount=errorCount+1;
+        } else {
+            /* Increase error count when find a error*/
+            errorCount = errorCount + 1;
             // to write error event
-            errorEvent(validate.field,validate.error)
+            errorEvent(validate.field, validate.error)
         }
     }
     setButtonState(errorCount);
 }
+
 function check(regPattern, textField) {
-    if(regPattern.test(textField.val())){
+    if (regPattern.test(textField.val())) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
-function successEvent(textField,massage) {
-    if(textField.val().length<=0){
+function successEvent(textField, massage) {
+    if (textField.val().length <= 0) {
         //calling default text function...
-        defaultText(textField,"");
-    }else{
-        textField.css("border","2px solid #049104FF");
+        defaultText(textField, "");
+    } else {
+        textField.css("border", "2px solid #049104FF");
         textField.parent().children('span').text(massage);
     }
 }
 
-function errorEvent(textField,error) {
-    if(textField.val().length<=0){
+function errorEvent(textField, error) {
+    if (textField.val().length <= 0) {
         //calling default text function...
-        defaultText(textField,"");
-    }else{
-        textField.css('border','2px solid red');
+        defaultText(textField, "");
+    } else {
+        textField.css('border', '2px solid red');
         textField.parent().children('span').text(error);
     }
 }
 
-function defaultText(txtField,massage) {
+function defaultText(txtField, massage) {
     txtField.css("border", "1px solid #ced4da");
     txtField.parent().children('span').text(massage);
 }
 
-function setButtonState(count){
-    if (count>0){
-        $("#btnCustomerSave").attr('disabled',true);
-    }else{
-        $("#btnCustomerSave").attr('disabled',false);
+function setButtonState(count) {
+    if (count > 0) {
+        $("#btnCustomerSave").attr('disabled', true);
+    } else {
+        $("#btnCustomerSave").attr('disabled', false);
     }
 }
-/** ================================================================================================================ */
 
+/** ================================================================================================================ */
 
 
 /** Save  Customer Click Event Function */
@@ -165,9 +176,8 @@ $('#txtCusId').keydown(function (event) {
             $('#txtCusName').val(customer.name);
             $('#txtCusAddress').val(customer.address);
             $('#txtCusSalary').val(customer.salary);
-        }
-        else{
-            alert("There is no customer available for that "+inputId);
+        } else {
+            alert("There is no customer available for that " + inputId);
         }
     }
 });
@@ -180,10 +190,10 @@ $('#btnDeleteCustomer').click(function () {
     let option = confirm("Do you really want to delete " + deleteID);
 
     if (option) {
-        if (deleteCustomer(deleteID)){
+        if (deleteCustomer(deleteID)) {
             alert("Customer Successfully Deleted..");
             clearTextFields();
-        }else{
+        } else {
             alert("No such customer to delete. please check the id");
         }
     }
@@ -193,11 +203,11 @@ $('#btnDeleteCustomer').click(function () {
 /** Update Customer Click Event Function */
 $('#btnUpdateCustomer').click(function () {
 
-    let cusID= $('#txtCusId').val();
+    let cusID = $('#txtCusId').val();
     let option = updateCustomer(cusID);
     if (option) {
         alert("Customer Updated Successfully");
-    }else{
+    } else {
         alert("Update Failed..! Something went wrong..");
     }
 
@@ -219,8 +229,6 @@ $('#btnSearchCustomer').click(function (event) {
     //pass the parameter of event to search customer function
     searchCustomer(event);
 });
-
-
 
 
 /****************************** F U N C T I O N S   A L L   C R U D   O P E R A T I O N S ***************************/
@@ -292,10 +300,10 @@ function searchCustomer(event) {
 
 
 /** SEARCH CUSTOMERS WITH INPUT TIME FUNCTION ... */
-function searchCustomerForInputField(cusId){
+function searchCustomerForInputField(cusId) {
 
     for (let customer of customers) {
-        if(customer.id==cusId){
+        if (customer.id == cusId) {
             return customer;
         }
     }
@@ -304,18 +312,20 @@ function searchCustomerForInputField(cusId){
 
 
 /** UPDATE CUSTOMERS FUNCTION ... */
-function updateCustomer(cusId){
-let customer = searchCustomerForInputField(cusId);
+function updateCustomer(cusId) {
+    let customer = searchCustomerForInputField(cusId);
 
     if (customer != null) {
-        customer.id=$('#txtCusId').val();
-        customer.name=$('#txtCusName').val();
-        customer.address=$('#txtCusAddress').val();
-        customer.salary=$('#txtCusSalary').val();
+        customer.id = $('#txtCusId').val();
+        customer.name = $('#txtCusName').val();
+        customer.address = $('#txtCusAddress').val();
+        customer.salary = $('#txtCusSalary').val();
         loadAllCustomers();
+        setData_Bind_Row_Events();
+        clearTextFields();
 
         return true;
-    }else{
+    } else {
         return false;
     }
 
@@ -323,19 +333,19 @@ let customer = searchCustomerForInputField(cusId);
 
 
 /** DELETE CUSTOMERS FUNCTION ..*/
-function deleteCustomer(cusId){
+function deleteCustomer(cusId) {
     let customer = searchCustomerForInputField(cusId);
 
-    if (customer!= null) {
+    if (customer != null) {
         //find index number for delete related customer
         let IndexNumber = customers.indexOf(customer);
         //remove that Customer for matching that index(param1:startIndex/param2:deleteCount)
-        customers.splice(IndexNumber,1);
+        customers.splice(IndexNumber, 1);
         loadAllCustomers();
         setData_Bind_Row_Events();
         return true;
 
-    }else{
+    } else {
         return false;
     }
 
