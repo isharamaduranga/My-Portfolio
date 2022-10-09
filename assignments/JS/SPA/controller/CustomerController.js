@@ -78,8 +78,14 @@ function checkCustomerValidation() {
     for (let validate of customerValidationArray) {
         if(check(validate.reg,validate.field)){
             // to write success event
+            /*successEvent(validate.field,"");*/
+
+            console.log('success event..');
+
         }else{
             // to write error event
+           /* errorEvent(validate.field,validate.error)*/
+            console.log('Error event..');
         }
     }
 }
