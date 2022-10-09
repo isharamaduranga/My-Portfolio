@@ -29,6 +29,18 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (
     }
 });
 
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keyup', function (event) {
+    checkCustomerValidation();
+    console.log("key up bro..");
+});
+
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (event) {
+    checkCustomerValidation();
+    console.log("Blur effect bro..");
+});
+
+
+
 $("#txtCusId").on('keydown', function (event) {
 
     if (event.key == "Enter") {
@@ -61,6 +73,17 @@ $("#txtCusSalary").on('keydown', function (event) {
     }
 });
 
+function checkCustomerValidation() {
+
+    for (let validate of customerValidationArray) {
+        if(check(validate.reg,validate.field)){
+            // to write success event
+        }else{
+            // to write error event
+        }
+    }
+
+}
 
 
 /** Save  Customer Click Event Function */
