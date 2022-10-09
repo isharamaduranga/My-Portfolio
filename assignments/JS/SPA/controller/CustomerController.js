@@ -2,11 +2,25 @@
 
 
 /** customer regular expressions */
+  /*  Focused customerID input field When Firstly open that page..*/
+    $('#txtCusId').focus();
 
     const cusIdRegEx=/^(C00-)[0-9]{1,3}$/;
     const cusNameRegEx= /^[A-z ]{5,20}$/;
     const cusAddressRegEx= /^[0-9/A-z. ,]{7,}$/;
     const cusSalaryRegEx= /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+
+    /* Defined Validation Array */
+    let customerValidationArray= [];
+
+   /* Pushed regex pattern , related Input field Object & error massage to the Array */
+    customerValidationArray.push({reg:cusIdRegEx, field:$('#txtCusId'),error:'Customer ID Pattern is Wrong Format: C00-001'});
+    customerValidationArray.push({reg:cusNameRegEx, field:$('#txtCusName'),error:'Customer Name Pattern is Wrong Format: A-z 5-20'});
+    customerValidationArray.push({reg:cusAddressRegEx, field:$('#txtCusAddress'),error:'Customer Address Pattern is Wrong Format: A-z 0-9 ,/'});
+    customerValidationArray.push({reg:cusSalaryRegEx, field:$('#txtCusSalary'),error:'Customer Salary Pattern is Wrong Format: 1000 or 1000.00'});
+
+
+
 
 /** Text Fields Key down to focus functionalities... */
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
