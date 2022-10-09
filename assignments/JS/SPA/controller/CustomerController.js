@@ -43,25 +43,27 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (eve
 
 $("#txtCusId").on('keydown', function (event) {
 
-    if (event.key == "Enter") {
+    if (event.key == "Enter" && check(cusIdRegEx,$("#txtCusId"))) {
         $("#txtCusName").focus();
+    }else{
+        $("#txtCusId").focus();
     }
 });
 
 $("#txtCusName").on('keydown', function (event) {
-    if (event.key == "Enter") {
+    if (event.key == "Enter"  && check(cusNameRegEx,$("#txtCusName"))) {
         $("#txtCusAddress").focus();
     }
 });
 
 $("#txtCusAddress").on('keydown', function (event) {
-    if (event.key == "Enter") {
+    if (event.key == "Enter" && check(cusAddressRegEx,$("#txtCusAddress"))) {
         $("#txtCusSalary").focus();
     }
 });
 
 $("#txtCusSalary").on('keydown', function (event) {
-    if (event.key == "Enter") {
+    if (event.key == "Enter" && check(cusSalaryRegEx,$('#txtCusSalary'))) {
 
         let option = confirm("Do you  Want To Save Customer ?");
 
