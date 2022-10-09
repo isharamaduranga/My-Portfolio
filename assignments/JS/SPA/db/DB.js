@@ -3,3 +3,4 @@ var customers = [];
 
 /** Store all the customer records */
 var items = [];
+

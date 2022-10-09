@@ -8,7 +8,44 @@
     const cusAddressRegEx= /^[0-9/A-z. ,]{7,}$/;
     const cusSalaryRegEx= /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
+/** Text Fields Key down to focus functionalities... */
+$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
+    if (event.key == "Tab") {
+        event.preventDefault();
+    }
+});
 
+$("#txtCusId").on('keydown', function (event) {
+
+    if (event.key == "Enter") {
+        $("#txtCusName").focus();
+    }
+});
+
+$("#txtCusName").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtCusAddress").focus();
+    }
+});
+
+$("#txtCusAddress").on('keydown', function (event) {
+    if (event.key == "Enter") {
+        $("#txtCusSalary").focus();
+    }
+});
+
+$("#txtCusSalary").on('keydown', function (event) {
+    if (event.key == "Enter") {
+
+        let option = confirm("Do you  Want To Save Customer ?");
+
+        if (option) {
+            saveCustomer();
+        }
+
+        $("#txtCusId").focus();
+    }
+});
 
 
 
@@ -88,45 +125,6 @@ $('#btnSearchCustomer').click(function (event) {
 });
 
 
-
-/** Text Fields Key down to focus functionalities... */
-$("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (event) {
-    if (event.key == "Tab") {
-        event.preventDefault();
-    }
-});
-
-$("#txtCusId").on('keydown', function (event) {
-
-    if (event.key == "Enter") {
-        $("#txtCusName").focus();
-    }
-});
-
-$("#txtCusName").on('keydown', function (event) {
-    if (event.key == "Enter") {
-        $("#txtCusAddress").focus();
-    }
-});
-
-$("#txtCusAddress").on('keydown', function (event) {
-    if (event.key == "Enter") {
-        $("#txtCusSalary").focus();
-    }
-});
-
-$("#txtCusSalary").on('keydown', function (event) {
-    if (event.key == "Enter") {
-
-        let option = confirm("Do you  Want To Save Customer ?");
-
-        if (option) {
-            saveCustomer();
-        }
-
-        $("#txtCusId").focus();
-    }
-});
 
 
 /*************************** F U N C T I O N S ***************************/
