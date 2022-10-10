@@ -270,6 +270,9 @@ function saveCustomer() {
     clearTextFields();
     // Calling setData_Bind_Row_Events function after the customer added...
     setData_Bind_Row_Events();
+
+    /** Load  All customer IDS with Order Form customer Id ComboBox */
+    loadAllCustomersForComboBox();
 }
 
 
