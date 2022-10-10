@@ -1,8 +1,8 @@
 
 /** ==================================== D E F I N E D   V A L I D A T I O N S ===================================*/
 /** customer regular expressions */
-
-
+/*  Focused Item Code input field When Firstly open that page..*/
+$('#txtItemCode').focus();
 
 const itemCodeRegEx= /^(I00-)[0-9]{1,3}$/;
 const itemNameRegEx= /^[A-z ]{5,20}$/;
