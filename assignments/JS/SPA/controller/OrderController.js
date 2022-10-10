@@ -26,6 +26,17 @@ $('#cmbCustomerIDS').change(function () {
     }
 });
 
+$('#cmbItemIds').change(function () {
+    let code=$('#cmbItemIds').val();
+    let item = searchItemForInputField(code);
 
+    if (item != null) {
+        $('#txtItemIDForOrder').val(item.code);
+        $('#txtItemNameForOrder').val(item.name);
+        $('#txtItemPriceForOrder').val(item.price);
+        $('#txtQTYONHand').val(item.qty);
+
+    }
+})
 
 
