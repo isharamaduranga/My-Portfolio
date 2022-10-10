@@ -86,4 +86,9 @@ main{
     color: red ;
     font-size: 0.9em;
 }
-/*================ Customer page CSS Styles ==================================*/
+
+.control-error_item{
+    color: red ;
+    font-size: 0.9em;
+}
+

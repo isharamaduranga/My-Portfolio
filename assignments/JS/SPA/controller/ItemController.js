@@ -1,35 +1,50 @@
-
 /** ==================================== D E F I N E D   V A L I D A T I O N S ===================================*/
 /** Item regular expressions */
 /*  Focused Item Code input field When Firstly open that page..*/
 $('#txtItemCode').focus();
 
-const itemCodeRegEx= /^(I00-)[0-9]{1,3}$/;
-const itemNameRegEx= /^[A-z ]{5,20}$/;
-const itemPriceRegEx= /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-const itemQtyRegEx= /^[0-9]{0,7}$/;
+const itemCodeRegEx = /^(I00-)[0-9]{1,3}$/;
+const itemNameRegEx = /^[A-z ]{5,20}$/;
+const itemPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+const itemQtyRegEx = /^[0-9]{0,7}$/;
 
-let itemValidationArray=[];
+let itemValidationArray = [];
 
-itemValidationArray.push({reg:itemCodeRegEx,field:$('#txtItemCode'),error:'Item Code Pattern is Wrong Format: I00-001'});
-itemValidationArray.push({reg:itemNameRegEx,field:$('#txtItemName'),error:'Item Name Pattern is Wrong Format: A-z 5-20'});
-itemValidationArray.push({reg:itemPriceRegEx,field:$('#txtItemPrice'),error:'Item Price Pattern is Wrong Format: 1000 or 1000.00'});
-itemValidationArray.push({reg:itemQtyRegEx,field:$('#txtItemQty'),error:'Item Qty Pattern is Wrong Format: 0-9 {0,7}'});
+itemValidationArray.push({
+    reg: itemCodeRegEx,
+    field: $('#txtItemCode'),
+    error: 'Item Code Pattern is Wrong Format: I00-001'
+});
+itemValidationArray.push({
+    reg: itemNameRegEx,
+    field: $('#txtItemName'),
+    error: 'Item Name Pattern is Wrong Format: A-z 5-20'
+});
+itemValidationArray.push({
+    reg: itemPriceRegEx,
+    field: $('#txtItemPrice'),
+    error: 'Item Price Pattern is Wrong Format: 1000 or 1000.00'
+});
+itemValidationArray.push({
+    reg: itemQtyRegEx,
+    field: $('#txtItemQty'),
+    error: 'Item Qty Pattern is Wrong Format: 0-9 {0,7}'
+});
 
 /** Text Fields Key down to Tab & prevent Default function.. */
-$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('keydown',function (event) {
-    if(event.key == "Tab"){
+$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('keydown', function (event) {
+    if (event.key == "Tab") {
         event.preventDefault();
     }
 });
 /** Text Fields Key Up to Check validation function.. */
-$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('keyup',function (event) {
+$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('keyup', function (event) {
 
     checkItemValidation();
 
 });
 /** Text Fields blur to Check validation function.. */
-$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('blur',function (event) {
+$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('blur', function (event) {
     checkItemValidation();
 });
 
@@ -37,27 +52,27 @@ $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('blur',function (eve
 /** Text Fields Key down to focus functionalities... */
 
 $('#txtItemCode').keydown(function (event) {
-    if (event.which == 13 && checkItem(itemCodeRegEx,$('#txtItemCode'))) {
+    if (event.which == 13 && checkItem(itemCodeRegEx, $('#txtItemCode'))) {
         $('#txtItemName').focus();
-    }else{
+    } else {
         $("#txtItemCode").focus();
     }
 });
 
 $('#txtItemName').keydown(function (event) {
-    if (event.which == 13 && checkItem(itemNameRegEx,$('#txtItemName'))) {
+    if (event.which == 13 && checkItem(itemNameRegEx, $('#txtItemName'))) {
         $('#txtItemPrice').focus();
     }
 });
 
 $('#txtItemPrice').keydown(function (event) {
-    if (event.which == 13 && checkItem(itemPriceRegEx,$('#txtItemPrice'))) {
+    if (event.which == 13 && checkItem(itemPriceRegEx, $('#txtItemPrice'))) {
         $('#txtItemQty').focus();
     }
 });
 
 $('#txtItemQty').keydown(function (event) {
-    if (event.which == 13 && checkItem(itemQtyRegEx,$('#txtItemQty'))) {
+    if (event.which == 13 && checkItem(itemQtyRegEx, $('#txtItemQty'))) {
 
         let option = confirm("Do you  Want To Save Item ?");
         if (option) {
@@ -70,28 +85,38 @@ $('#txtItemQty').keydown(function (event) {
 
 function checkItemValidation() {
     for (let validateItem of itemValidationArray) {
-        if (checkItem(validateItem.reg,validateItem.field)) {
+        if (checkItem(validateItem.reg, validateItem.field)) {
 
-            successEventItem(validateItem.field,"");
+            successEventItem(validateItem.field, "");
 
-        }else{
+        } else {
 
             // to write error event
-            errorEventItem(validateItem.field,validateItem.error);
+            errorEventItem(validateItem.field, validateItem.error);
         }
     }
 }
 
 function checkItem(regex, field) {
-    if (regex.test(field.val())){
+    if (regex.test(field.val())) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
+function successEventItem(textField, massage) {
+    if (textField.val().length <= 0) {
+        defaultTextItem(textField, "");
+    } else {
+    textField.css("border","2px solid #049104FF");
+    textField.parent.children()
+    }
+}
 
+function errorEventItem(textField, error) {
 
+}
 
 /** ================================================================================================================ */
 
@@ -122,18 +147,18 @@ $('#txtItemCode').keydown(function (event) {
             $('#txtItemName').val(item.name);
             $('#txtItemPrice').val(item.price);
             $('#txtItemQty').val(item.qty);
-        }else{
-            alert("There is no Item available for that "+inputCode);
+        } else {
+            alert("There is no Item available for that " + inputCode);
         }
     }
 });
 
 $('#btnUpdateItem').click(function () {
-    let code= $('#txtItemCode').val();
+    let code = $('#txtItemCode').val();
     let option = updateItem(code);
     if (option) {
         alert("Item Updated Successfully");
-    }else{
+    } else {
         alert("Update Failed..! Something went wrong..");
     }
 })
@@ -149,7 +174,7 @@ $('#btnDeleteItem').click(function () {
         if (deleteItem(deleteCode)) {
             alert("Customer Successfully Deleted..");
             clearTextFieldsItem();
-        }else{
+        } else {
             alert("No such customer to delete. please check the id");
         }
     }
@@ -249,15 +274,15 @@ function updateItem(itemCode) {
     let item = searchItemForInputField(itemCode);
     if (item != null) {
 
-        item.code=$('#txtItemCode').val();
-        item.name=$('#txtItemName').val();
-        item.price=$('#txtItemPrice').val();
-        item.qty=$('#txtItemQty').val();
+        item.code = $('#txtItemCode').val();
+        item.name = $('#txtItemName').val();
+        item.price = $('#txtItemPrice').val();
+        item.qty = $('#txtItemQty').val();
         loadAllItem();
         setData_Bind_Row_Events_Item();
         clearTextFieldsItem();
         return true;
-    }else{
+    } else {
         return false;
     }
 }
@@ -271,11 +296,11 @@ function deleteItem(deleteCode) {
         //find index number for delete related item
         let indexNumber = items.indexOf(item);
         //remove that Item for matching that index(param1:startIndex/param2:deleteCount)
-        items.splice(indexNumber,1);
+        items.splice(indexNumber, 1);
         loadAllItem();
         setData_Bind_Row_Events_Item();
         return true;
-    }else{
+    } else {
         return false;
     }
 }
