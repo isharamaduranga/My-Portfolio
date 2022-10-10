@@ -3,6 +3,23 @@
 /** customer regular expressions */
 
 
+
+const itemCodeRegEx= /^(I00-)[0-9]{1,3}$/;
+const itemNameRegEx= /^[A-z ]{5,20}$/;
+const itemPriceRegEx= /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+const itemQtyRegEx= /^[0-9]{0,7}$/;
+
+
+
+
+
+
+
+
+
+
+
+
 /** Text Fields Key down to focus functionalities... */
 //disable tab key of all input fields using grouping selector
 $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").keydown(function (event) {
