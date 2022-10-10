@@ -1,6 +1,6 @@
 
 /** ==================================== D E F I N E D   V A L I D A T I O N S ===================================*/
-/** customer regular expressions */
+/** Item regular expressions */
 /*  Focused Item Code input field When Firstly open that page..*/
 $('#txtItemCode').focus();
 
@@ -9,11 +9,12 @@ const itemNameRegEx= /^[A-z ]{5,20}$/;
 const itemPriceRegEx= /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 const itemQtyRegEx= /^[0-9]{0,7}$/;
 
+let itemValidationArray=[];
 
-
-
-
-
+itemValidationArray.push({reg:itemCodeRegEx,field:$('#txtItemCode'),error:'Item Code Pattern is Wrong Format: I00-001'});
+itemValidationArray.push({reg:itemNameRegEx,field:$('#txtItemName'),error:'Item Name Pattern is Wrong Format: A-z 5-20'});
+itemValidationArray.push({reg:itemPriceRegEx,field:$('#txtItemPrice'),error:'Item Price Pattern is Wrong Format: 1000 or 1000.00'});
+itemValidationArray.push({reg:itemQtyRegEx,field:$('#txtItemQty'),error:'Item Qty Pattern is Wrong Format: 0-9 {0,7}'});
 
 
 
