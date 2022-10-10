@@ -1,67 +1,7 @@
-/** Save  Item Click Event Function */
-$('#btnItemSave').click(function () {
-    // Calling SaveItem function...
-    saveItem();
-});
 
-/** Get All Customer Click Event Function */
-$('#btnGetAllItem').click(function () {
-    // Calling loadAllItem function...
-    loadAllItem();
-    setData_Bind_Row_Events_Item();
-    clearTextFieldsItem();
-});
+/** ==================================== D E F I N E D   V A L I D A T I O N S ===================================*/
+/** customer regular expressions */
 
-/** Search Item txtItemCode id input field Key Press Function */
-$('#txtItemCode').keydown(function (event) {
-
-    if (event.key == 'Enter') {
-        let inputCode = $('#txtItemCode').val();
-        let item = searchItemForInputField(inputCode);
-
-        if (item != null) {
-            $('#txtItemCode').val(item.code);
-            $('#txtItemName').val(item.name);
-            $('#txtItemPrice').val(item.price);
-            $('#txtItemQty').val(item.qty);
-        }else{
-            alert("There is no Item available for that "+inputCode);
-        }
-    }
-});
-
-
-/** Delete Item Click Event Function */
-$('#btnDeleteItem').click(function () {
-
-    let deleteCode = $('#txtItemCode').val();
-
-    let option = confirm("Do you really want to delete " + deleteCode);
-
-    if (option) {
-        if (deleteItem(deleteCode)) {
-            alert("Customer Successfully Deleted..");
-            clearTextFieldsItem();
-        }else{
-            alert("No such customer to delete. please check the id");
-        }
-    }
-});
-
-
-/** Search text field bar  Key Press Function */
-$('#txtSearchItem').keypress(function (event) {
-    if (event.which == 13) {
-        //pass the parameter of event to search item function
-        searchItem(event);
-    }
-});
-
-/** Search Button Clicked Function */
-$('#btnSearchItem').click(function (event) {
-    //pass the parameter of event to search item function
-    searchItem(event);
-});
 
 /** Text Fields Key down to focus functionalities... */
 //disable tab key of all input fields using grouping selector
@@ -97,8 +37,84 @@ $('#txtItemQty').keydown(function (event) {
     }
 });
 
+/** ================================================================================================================ */
 
-/*************************** F U N C T I O N S ***************************/
+
+/** Save  Item Click Event Function */
+$('#btnItemSave').click(function () {
+    // Calling SaveItem function...
+    saveItem();
+});
+
+/** Get All Customer Click Event Function */
+$('#btnGetAllItem').click(function () {
+    // Calling loadAllItem function...
+    loadAllItem();
+    setData_Bind_Row_Events_Item();
+    clearTextFieldsItem();
+});
+
+/** Search Item txtItemCode id input field Key Press Function */
+$('#txtItemCode').keydown(function (event) {
+
+    if (event.key == 'Enter') {
+        let inputCode = $('#txtItemCode').val();
+        let item = searchItemForInputField(inputCode);
+
+        if (item != null) {
+            $('#txtItemCode').val(item.code);
+            $('#txtItemName').val(item.name);
+            $('#txtItemPrice').val(item.price);
+            $('#txtItemQty').val(item.qty);
+        }else{
+            alert("There is no Item available for that "+inputCode);
+        }
+    }
+});
+
+$('#btnUpdateItem').click(function () {
+    let code= $('#txtItemCode').val();
+    let option = updateItem(code);
+    if (option) {
+        alert("Item Updated Successfully");
+    }else{
+        alert("Update Failed..! Something went wrong..");
+    }
+})
+
+/** Delete Item Click Event Function */
+$('#btnDeleteItem').click(function () {
+
+    let deleteCode = $('#txtItemCode').val();
+
+    let option = confirm("Do you really want to delete " + deleteCode);
+
+    if (option) {
+        if (deleteItem(deleteCode)) {
+            alert("Customer Successfully Deleted..");
+            clearTextFieldsItem();
+        }else{
+            alert("No such customer to delete. please check the id");
+        }
+    }
+});
+
+
+/** Search text field bar Key Pressed Function */
+$('#txtSearchItem').keypress(function (event) {
+    if (event.which == 13) {
+        //pass the parameter of event to search item function
+        searchItem(event);
+    }
+});
+
+/** Search Button Clicked Function */
+$('#btnSearchItem').click(function (event) {
+    //pass the parameter of event to search item function
+    searchItem(event);
+});
+
+/*************************** F U N C T I O N S  A L L   C R U D   O P E R A T I O N S ***************************/
 
 /** SAVE ITEMS FUNCTION ... */
 function saveItem() {
@@ -172,6 +188,25 @@ function searchItemForInputField(code) {
 }
 
 
+/** UPDATE ITEM FUNCTION ... */
+function updateItem(itemCode) {
+    let item = searchItemForInputField(itemCode);
+    if (item != null) {
+
+        item.code=$('#txtItemCode').val();
+        item.name=$('#txtItemName').val();
+        item.price=$('#txtItemPrice').val();
+        item.qty=$('#txtItemQty').val();
+        loadAllItem();
+        setData_Bind_Row_Events_Item();
+        clearTextFieldsItem();
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
 /** DELETE ITEM FUNCTION ... */
 function deleteItem(deleteCode) {
     let item = searchItemForInputField(deleteCode);
@@ -215,5 +250,5 @@ function clearTextFieldsItem() {
 
 }
 
-/*************************************************************************/
+/*************************************************************************************************************************/
 

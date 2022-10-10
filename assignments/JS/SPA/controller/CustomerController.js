@@ -323,7 +323,6 @@ function updateCustomer(cusId) {
         loadAllCustomers();
         setData_Bind_Row_Events();
         clearTextFields();
-
         return true;
     } else {
         return false;
