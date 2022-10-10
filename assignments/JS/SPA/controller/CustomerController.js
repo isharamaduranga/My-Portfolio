@@ -365,6 +365,7 @@ function deleteCustomer(cusId) {
         customers.splice(IndexNumber, 1);
         loadAllCustomers();
         setData_Bind_Row_Events();
+        loadAllCustomersForComboBox();
         return true;
 
     } else {

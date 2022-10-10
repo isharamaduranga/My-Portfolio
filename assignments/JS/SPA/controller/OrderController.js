@@ -13,3 +13,4 @@ function loadAllItemsForComboBox() {
         $('#cmbItemIds').append(`<option>${item.code}</option>`);
     }
 }
+

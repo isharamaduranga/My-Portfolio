@@ -342,6 +342,7 @@ function deleteItem(deleteCode) {
         items.splice(indexNumber, 1);
         loadAllItem();
         setData_Bind_Row_Events_Item();
+        loadAllItemsForComboBox();
         return true;
     } else {
         return false;
