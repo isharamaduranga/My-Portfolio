@@ -174,6 +174,7 @@ $('#txtItemCode').keydown(function (event) {
             $('#txtItemQty').val(item.qty);
         } else {
             alert("There is no Item available for that " + inputCode);
+            clearTextFieldsItem();
         }
     }
 });

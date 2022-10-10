@@ -186,6 +186,7 @@ $('#txtCusId').keydown(function (event) {
             $('#txtCusSalary').val(customer.salary);
         } else {
             alert("There is no customer available for that " + inputId);
+            clearTextFields();
         }
     }
 });
