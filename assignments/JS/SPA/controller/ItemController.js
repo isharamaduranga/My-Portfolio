@@ -16,10 +16,44 @@ itemValidationArray.push({reg:itemNameRegEx,field:$('#txtItemName'),error:'Item 
 itemValidationArray.push({reg:itemPriceRegEx,field:$('#txtItemPrice'),error:'Item Price Pattern is Wrong Format: 1000 or 1000.00'});
 itemValidationArray.push({reg:itemQtyRegEx,field:$('#txtItemQty'),error:'Item Qty Pattern is Wrong Format: 0-9 {0,7}'});
 
+/** Text Fields Key down to Tab & prevent Default function.. */
+$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('keydown',function (event) {
+    if(event.key == "Tab"){
+        event.preventDefault();
+    }
+});
+/** Text Fields Key Up to Check validation function.. */
+$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('keyup',function (event) {
 
+    checkItemValidation();
 
+});
+/** Text Fields blur to Check validation function.. */
+$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('blur',function (event) {
+    checkItemValidation();
+});
 
+function checkItemValidation() {
+    for (let validateItem of itemValidationArray) {
+        if (checkItem(validateItem.reg,validateItem.field)) {
 
+            successEventItem(validateItem.field,"");
+
+        }else{
+
+            // to write error event
+            errorEventItem(validateItem.field,validateItem.error);
+        }
+    }
+}
+
+function checkItem(regex, field) {
+    if (regex.test(field.val())){
+        return true;
+    }else{
+        return false;
+    }
+}
 
 /** Text Fields Key down to focus functionalities... */
 //disable tab key of all input fields using grouping selector
