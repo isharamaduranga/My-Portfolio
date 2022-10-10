@@ -254,6 +254,9 @@ function saveItem() {
     clearTextFieldsItem();
     // Calling setData_Bind_Row_Events_Item function after the Item added...
     setData_Bind_Row_Events_Item();
+
+    /** Load  All Item Codes with Order Form Item Id ComboBox */
+    loadAllItemsForComboBox();
 }
 
 

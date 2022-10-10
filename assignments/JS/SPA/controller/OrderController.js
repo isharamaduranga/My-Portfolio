@@ -7,3 +7,9 @@ function loadAllCustomersForComboBox() {
     }
 }
 
+function loadAllItemsForComboBox() {
+    $('#cmbItemIds').empty();
+    for (let item of items) {
+        $('#cmbItemIds').append(`<option>${item.code}</option>`);
+    }
+}
