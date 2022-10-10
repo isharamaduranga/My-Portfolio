@@ -55,6 +55,7 @@ function checkItem(regex, field) {
     }
 }
 
+
 /** Text Fields Key down to focus functionalities... */
 //disable tab key of all input fields using grouping selector
 $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").keydown(function (event) {
@@ -64,27 +65,32 @@ $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").keydown(function (event
 });
 
 $('#txtItemCode').keydown(function (event) {
-    if (event.which == 13) {
+    if (event.which == 13 && checkItem(itemCodeRegEx,$('#txtItemCode'))) {
         $('#txtItemName').focus();
+    }else{
+        $("#txtItemCode").focus();
     }
 });
 
 $('#txtItemName').keydown(function (event) {
-    if (event.which == 13) {
+    if (event.which == 13 && checkItem(itemNameRegEx,$('#txtItemName'))) {
         $('#txtItemPrice').focus();
     }
 });
 
 $('#txtItemPrice').keydown(function (event) {
-    if (event.which == 13) {
+    if (event.which == 13 && checkItem(itemPriceRegEx,$('#txtItemPrice'))) {
         $('#txtItemQty').focus();
     }
 });
 
 $('#txtItemQty').keydown(function (event) {
-    if (event.which == 13) {
-        saveItem();
-        confirm("Do you  Want To Save Item ?");
+    if (event.which == 13 && checkItem(itemQtyRegEx,$('#txtItemQty'))) {
+
+        let option = confirm("Do you  Want To Save Item ?");
+        if (option) {
+            saveItem();
+        }
         $('#txtItemCode').focus();
     }
 });
