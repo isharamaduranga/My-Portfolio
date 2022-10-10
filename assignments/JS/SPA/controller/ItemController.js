@@ -51,28 +51,28 @@ $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('blur', function (ev
 
 /** Text Fields Key down to focus functionalities... */
 
-$('#txtItemCode').keydown(function (event) {
-    if (event.which == 13 && checkItem(itemCodeRegEx, $('#txtItemCode'))) {
-        $('#txtItemName').focus();
+$('#txtItemCode').on('keydown',function (event) {
+    if (event.key == "Enter" && checkItem(itemCodeRegEx, $("#txtItemCode"))) {
+        $("#txtItemName").focus();
     } else {
         $("#txtItemCode").focus();
     }
 });
 
-$('#txtItemName').keydown(function (event) {
-    if (event.which == 13 && checkItem(itemNameRegEx, $('#txtItemName'))) {
+$('#txtItemName').on('keydown',function (event) {
+    if (event.key == "Enter"  && checkItem(itemNameRegEx, $("#txtItemName"))) {
         $('#txtItemPrice').focus();
     }
 });
 
-$('#txtItemPrice').keydown(function (event) {
-    if (event.which == 13 && checkItem(itemPriceRegEx, $('#txtItemPrice'))) {
+$('#txtItemPrice').on('keydown',function (event) {
+    if (event.key == "Enter"  && checkItem(itemPriceRegEx, $("#txtItemPrice"))) {
         $('#txtItemQty').focus();
     }
 });
 
-$('#txtItemQty').keydown(function (event) {
-    if (event.which == 13 && checkItem(itemQtyRegEx, $('#txtItemQty'))) {
+$('#txtItemQty').on('keydown',function (event) {
+    if (event.key == "Enter"  && checkItem(itemQtyRegEx, $("#txtItemQty"))) {
 
         let option = confirm("Do you  Want To Save Item ?");
         if (option) {
@@ -110,14 +110,23 @@ function successEventItem(textField, massage) {
         defaultTextItem(textField, "");
     } else {
     textField.css("border","2px solid #049104FF");
-    textField.parent.children()
+    textField.parent().children('span').text(massage);
     }
 }
 
 function errorEventItem(textField, error) {
-
+    if (textField.val().length <= 0) {
+        defaultTextItem(textField, "");
+    } else {
+        textField.css("border","2px solid red");
+        textField.parent().children('span').text(error);
+    }
 }
 
+function defaultTextItem(textField,text) {
+    textField.css("border", "1px solid #ced4da");
+    textField.parent().children('span').text(text);
+}
 /** ================================================================================================================ */
 
 
