@@ -33,36 +33,8 @@ $("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").on('blur',function (eve
     checkItemValidation();
 });
 
-function checkItemValidation() {
-    for (let validateItem of itemValidationArray) {
-        if (checkItem(validateItem.reg,validateItem.field)) {
-
-            successEventItem(validateItem.field,"");
-
-        }else{
-
-            // to write error event
-            errorEventItem(validateItem.field,validateItem.error);
-        }
-    }
-}
-
-function checkItem(regex, field) {
-    if (regex.test(field.val())){
-        return true;
-    }else{
-        return false;
-    }
-}
-
 
 /** Text Fields Key down to focus functionalities... */
-//disable tab key of all input fields using grouping selector
-$("#txtItemCode,#txtItemName,#txtItemPrice,#txtItemQty").keydown(function (event) {
-    if (event.key == "Tab") {
-        event.preventDefault();
-    }
-});
 
 $('#txtItemCode').keydown(function (event) {
     if (event.which == 13 && checkItem(itemCodeRegEx,$('#txtItemCode'))) {
@@ -94,6 +66,32 @@ $('#txtItemQty').keydown(function (event) {
         $('#txtItemCode').focus();
     }
 });
+
+
+function checkItemValidation() {
+    for (let validateItem of itemValidationArray) {
+        if (checkItem(validateItem.reg,validateItem.field)) {
+
+            successEventItem(validateItem.field,"");
+
+        }else{
+
+            // to write error event
+            errorEventItem(validateItem.field,validateItem.error);
+        }
+    }
+}
+
+function checkItem(regex, field) {
+    if (regex.test(field.val())){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+
+
 
 /** ================================================================================================================ */
 

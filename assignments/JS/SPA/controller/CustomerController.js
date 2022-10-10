@@ -44,13 +44,13 @@ $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keydown', function (
 /** Text Fields Key Up to Check validation function.. */
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('keyup', function (event) {
     checkCustomerValidation();
-    console.log("key up bro..");
+
 });
 
 /** Text Fields blur to Check validation function.. */
 $("#txtCusId,#txtCusName,#txtCusAddress,#txtCusSalary").on('blur', function (event) {
     checkCustomerValidation();
-    console.log("Blur effect bro..");
+
 });
 
 /** Text Fields Key down to focus and validate functionalities... */
