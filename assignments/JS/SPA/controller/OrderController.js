@@ -56,7 +56,10 @@ $('#cmbItemIds').change(function () {
     textFieldColorChange_Item();
 });
 
+$("#btnPlaceOrder").click(function (){
+    generateOrderID();
 
+});
 
 
 function textFieldColorChange_Item() {
@@ -71,5 +74,24 @@ function textFieldColorChange_Item() {
         $("#txtItemIDForOrder,#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand")
             .css("border","2px solid green");
 
+    }
+}
+
+
+function generateOrderID() {
+    $("#txtOrderId").val("OID-0001");
+    let orderId = order[order.length - 1].getOrderId();
+    let tempId = parseInt(orderId.split("-")[1]);
+
+           tempId = tempId+1;
+
+    if (tempId <= 9){
+        $("#txtOrderId").val("OID-000"+tempId);
+    }else if (tempId <= 99) {
+        $("#txtOrderId").val("OID-00" + tempId);
+    }else if (tempId <= 999){
+        $("#txtOrderId").val("OID-0" + tempId);
+    }else {
+        $("#txtOrderId").val("OID-"+tempId);
     }
 }

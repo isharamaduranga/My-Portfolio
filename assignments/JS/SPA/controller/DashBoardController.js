@@ -60,6 +60,7 @@ $("#linkOrder,#linkOrder2").click(function (){
     $("#linkOrder").css({'color':'deeppink','border-bottom':'2px solid gold'});
     $("#linkOrder_Details").css({'color': 'white','border-bottom':'none' });
 
+    generateOrderID();
 });
 
 /* Displayed a Order-Details form  When clicked "Order-Details" link with navbar  */
