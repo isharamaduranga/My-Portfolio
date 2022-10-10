@@ -239,6 +239,10 @@ $('#btnSearchCustomer').click(function (event) {
     searchCustomer(event);
 });
 
+/** Clear Button Clicked Function */
+$('#btnClearCustomer').click(function () {
+    clearTextFields();
+});
 
 /****************************** F U N C T I O N S   A L L   C R U D   O P E R A T I O N S ***************************/
 

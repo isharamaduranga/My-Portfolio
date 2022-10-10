@@ -221,6 +221,13 @@ $('#btnSearchItem').click(function (event) {
     searchItem(event);
 });
 
+
+/** Clear Button Clicked Function */
+$('#btnClearItem').click(function () {
+    clearTextFieldsItem();
+});
+
+
 /*************************** F U N C T I O N S  A L L   C R U D   O P E R A T I O N S ***************************/
 
 /** SAVE ITEMS FUNCTION ... */
