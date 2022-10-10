@@ -180,13 +180,13 @@ $('#txtCusId').keydown(function (event) {
         let customer = searchCustomerForInputField(inputId);
 
         if (customer != null) {
-            $('#txtCusId').val(customer.id);
-            $('#txtCusName').val(customer.name);
-            $('#txtCusAddress').val(customer.address);
-            $('#txtCusSalary').val(customer.salary);
+
+            //Calling setTextFieldValueFromCustomer function
+            setTextFieldValueFromCustomer(customer.id,customer.name,customer.address,customer.salary);
+            alert("This Item "+customer.id+" Already Exists...");
         } else {
             alert("There is no customer available for that " + inputId);
-            clearTextFields();
+
         }
     }
 });
@@ -289,6 +289,13 @@ function loadAllCustomers() {
     }
 }
 
+/** SET TEXT FIELD VALUES */
+function setTextFieldValueFromCustomer(id, name, address, salary) {
+    $('#txtCusId').val(id);
+    $('#txtCusName').val(name);
+    $('#txtCusAddress').val(address);
+    $('#txtCusSalary').val(salary);
+}
 
 /** SEARCH CUSTOMERS FUNCTION ... */
 function searchCustomer(event) {

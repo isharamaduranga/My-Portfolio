@@ -6,7 +6,7 @@ $('#txtItemCode').focus();
 const itemCodeRegEx = /^(I00-)[0-9]{1,3}$/;
 const itemNameRegEx = /^[A-z ]{5,20}$/;
 const itemPriceRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-const itemQtyRegEx = /^[0-9]{0,7}$/;
+const itemQtyRegEx = /^[0-9]{1,7}$/;
 
 let itemValidationArray = [];
 
@@ -168,13 +168,13 @@ $('#txtItemCode').keydown(function (event) {
         let item = searchItemForInputField(inputCode);
 
         if (item != null) {
-            $('#txtItemCode').val(item.code);
-            $('#txtItemName').val(item.name);
-            $('#txtItemPrice').val(item.price);
-            $('#txtItemQty').val(item.qty);
+          // Calling setTextFieldValueFromItem function
+            setTextFieldValueFromItem(item.code,item.name,item.price,item.qty);
+            alert("This customer "+item.code+" Already Exists...");
+
         } else {
             alert("There is no Item available for that " + inputCode);
-            clearTextFieldsItem();
+
         }
     }
 });
@@ -265,6 +265,13 @@ function loadAllItem() {
     }
 }
 
+/** SET TEXT FIELD VALUES */
+function setTextFieldValueFromItem(code, name, price, qty) {
+    $('#txtItemCode').val(code);
+    $('#txtItemName').val(name);
+    $('#txtItemPrice').val(price);
+    $('#txtItemQty').val(qty);
+}
 
 /** SEARCH ITEMS FUNCTION ... */
 function searchItem(event) {
