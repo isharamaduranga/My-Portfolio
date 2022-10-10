@@ -82,21 +82,25 @@ $('#txtItemQty').on('keydown',function (event) {
     }
 });
 
-
+/** function of CheckItem Validation Event  */
 function checkItemValidation() {
+    let errorCountItem = 0;
     for (let validateItem of itemValidationArray) {
         if (checkItem(validateItem.reg, validateItem.field)) {
 
             successEventItem(validateItem.field, "");
 
         } else {
-
+            /* Increase error count when find a error*/
+            errorCountItem=errorCountItem+1;
             // to write error event
             errorEventItem(validateItem.field, validateItem.error);
         }
     }
+    setButtonState_Item(errorCountItem);
 }
 
+/** function of Check item Event  */
 function checkItem(regex, field) {
     if (regex.test(field.val())) {
         return true;
@@ -105,6 +109,7 @@ function checkItem(regex, field) {
     }
 }
 
+/** function of Success Event  */
 function successEventItem(textField, massage) {
     if (textField.val().length <= 0) {
         defaultTextItem(textField, "");
@@ -114,6 +119,7 @@ function successEventItem(textField, massage) {
     }
 }
 
+/** function of Error Event  */
 function errorEventItem(textField, error) {
     if (textField.val().length <= 0) {
         defaultTextItem(textField, "");
@@ -123,9 +129,19 @@ function errorEventItem(textField, error) {
     }
 }
 
+/** function of Default text */
 function defaultTextItem(textField,text) {
     textField.css("border", "1px solid #ced4da");
     textField.parent().children('span').text(text);
+}
+
+/** function of Button State */
+function setButtonState_Item(count) {
+    if (count>0) {
+        $("#btnItemSave").attr('disabled', true);
+    }else {
+        $("#btnItemSave").attr('disabled', false);
+    }
 }
 /** ================================================================================================================ */
 

@@ -88,6 +88,7 @@ $("#txtCusSalary").on('keydown', function (event) {
     }
 });
 
+/** function of CheckCustomer Validation Event  */
 function checkCustomerValidation() {
     let errorCount = 0;
     for (let validate of customerValidationArray) {
@@ -106,6 +107,7 @@ function checkCustomerValidation() {
     setButtonState(errorCount);
 }
 
+/** function of Check Event  */
 function check(regPattern, textField) {
     if (regPattern.test(textField.val())) {
         return true;
@@ -114,6 +116,7 @@ function check(regPattern, textField) {
     }
 }
 
+/** function of Success Event  */
 function successEvent(textField, massage) {
     if (textField.val().length <= 0) {
         //calling default text function...
@@ -124,6 +127,7 @@ function successEvent(textField, massage) {
     }
 }
 
+/** function of Error Event  */
 function errorEvent(textField, error) {
     if (textField.val().length <= 0) {
         //calling default text function...
@@ -134,11 +138,13 @@ function errorEvent(textField, error) {
     }
 }
 
+/** function of Default text */
 function defaultText(txtField, massage) {
     txtField.css("border", "1px solid #ced4da");
     txtField.parent().children('span').text(massage);
 }
 
+/** function of Button State */
 function setButtonState(count) {
     if (count > 0) {
         $("#btnCustomerSave").attr('disabled', true);
