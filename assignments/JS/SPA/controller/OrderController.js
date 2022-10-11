@@ -56,12 +56,13 @@ $('#btnAddToCart').click(function () {
             addToCart();
             loadAllCart();
             calculateTotal();
-
         }
     } else {
         alert("please Enter Order Quantity..");
     }
+});
 
+$('#txtCash').on('keyup',function () {
 
 });
 
@@ -135,6 +136,7 @@ function calculateTotal() {
     tempTot = tot;
 
 }
+
 
 
 

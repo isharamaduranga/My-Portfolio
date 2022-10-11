@@ -382,7 +382,7 @@
                             <div class="col">
                                 Salary:
                                 <form>
-                                    <input class="form-control " id="txtCusSalaryForOrder" type="text">
+                                    <input class="form-control " id="txtCusSalaryForOrder" type="number">
                                 </form>
                             </div>
 
@@ -461,19 +461,21 @@
                          style="border-radius: 25px;"><h5>Payment Details</h5></div>
 
                     <h4 class="text-dark p-2" id="total">Total : <span>0.00</span></h4>
-                    <h4 class="text-danger p-2" id="subtotal">Sub Total : <span id="subtot">0.00</span></h4>
+                    <h4 class="text-danger p-2" id="subtotal">Sub Total : <span id="subTot">0.00</span></h4>
                     <section class="container">
                         <div class="row">
                             <div class="col">
                                 Cash:
                                 <form>
-                                    <input class="form-control " id="txtCash" type="text">
+                                    <input class="form-control " id="txtCash" type="number">
+                                    <span class="control-error_item" id="lblCheckCash"></span>
                                 </form>
+
                             </div>
                             <div class="col">
                                 Discount:
                                 <form>
-                                    <input class="form-control " id="txtDiscount" type="text">
+                                    <input class="form-control " id="txtDiscount" type="number">
                                 </form>
                             </div>
                         </div>
@@ -482,7 +484,7 @@
                             <div class="col">
                                 Balance:
                                 <form>
-                                    <input class="form-control " id="txtBalance" type="text">
+                                    <input class="form-control " id="txtBalance" type="number">
                                 </form>
                             </div>
                         </div>
