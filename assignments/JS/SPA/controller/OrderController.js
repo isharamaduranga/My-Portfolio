@@ -46,6 +46,33 @@ function textFieldColorChange_customer() {
     }
 }
 
+$('#btnAddToCart').click(function () {
+    let qtyOnHand = parseInt($("#txtQTYONHand").val());
+    let orderQty =  parseInt($("#txtOrderQty").val());
+    if ($("#txtOrderQty").val() != "") {
+
+        if(qtyOnHand<orderQty){
+            alert("This Item Not Available for this Quantity !!!")
+        }else{
+
+        }
+    }else{
+        alert("please Enter Order Quantity..");
+    }
+
+
+});
+
+function addToCart() {
+    let oid = $('#txtOrderId').val();
+    let itm_code = $('#txtItemIDForOrder').val();
+    let itm_name = $('#txtItemNameForOrder').val();
+    let itm_price = $('#txtItemPriceForOrder').val();
+    let order_qty = $('#txtOrderQty').val();
+    /*let total=*/
+}
+
+
 
 $('#cmbItemIds').change(function () {
     let code=$('#cmbItemIds').val();
@@ -87,6 +114,8 @@ function textFieldColorChange_Item() {
 function clearSetDetails(param1,param2,param3,param4) {
     param1.val("");param2.val("");param3.val("");param4.val("");
 }
+
+
 
 
 
