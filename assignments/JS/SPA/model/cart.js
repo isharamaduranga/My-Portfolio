@@ -1,4 +1,4 @@
-function customerModel
+function cartModel
 (cartOID,cartItemCode,cartItemName,cartItemPrice,orderQty,cartTotal) {
     return{
         CartOid: cartOID,
