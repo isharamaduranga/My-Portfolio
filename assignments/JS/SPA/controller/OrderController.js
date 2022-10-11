@@ -74,7 +74,8 @@ $('#txtCash').on('keyup',function () {
 
 
     }else {
-
+        $('#txtCash').css('border', '2px solid red');
+        $('#txtCash').parent().children('span').text("Insufficient Credit Balance");
     }
 });
 
