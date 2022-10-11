@@ -6,3 +6,7 @@ var items = [];
 
 
 var order=[];
+
+var orderDetails=[];
+
+var cart=[];
