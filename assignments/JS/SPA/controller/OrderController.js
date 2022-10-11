@@ -72,12 +72,13 @@ $('#txtCash').on('keyup',function () {
 
         $('#txtBalance').val(balance);
 
-
+        $('#txtCash').css("border", "1px solid #ced4da");
+        $('#txtCash').parent().children('span').text("");
     }else {
         $('#txtCash').css('border', '2px solid red');
         $('#txtCash').parent().children('span').text("Insufficient Credit Balance");
     }
-});
+})
 
 function addToCart() {
     let oid = $('#txtOrderId').val();
