@@ -96,12 +96,8 @@ function removeItemInCart() {
             $('#total>span').text(newVal).append('.00');
 
             if($("#txtDiscount").val()===""){
-
                 $('#subtotal>span').text(newVal);
             }
-
-        t
-
     });
 };
 
@@ -176,7 +172,20 @@ function calculateTotal() {
 
 }
 
+$('#txtDiscount').on('keyup', function () {
+    if ($("#txtDiscount").val() === "") {
+        $('#subtotal>span').text('0.00');
+    } else {
+        let tot = parseFloat(tempTot);
+        let dis = tot/100 * parseFloat($("#txtDiscount").val());
 
+        $('#subtotal>span').text(tot - dis);
+
+        let cash = parseInt($("#txtCash").val());
+        let subTot = parseInt($("#subTot").text());
+        $("#txtBalance").val(cash-subTot);
+    }
+});
 
 
 $('#cmbItemIds').change(function () {
