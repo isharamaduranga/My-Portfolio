@@ -55,6 +55,7 @@ $('#btnAddToCart').click(function () {
             updateQty();
             addToCart();
             loadAllCart();
+            calculateTotal();
 
         }
     } else {
@@ -108,7 +109,7 @@ function updateQty() {
     let qtyOnHand = $('#txtQTYONHand').val();
     let order_qty = $('#txtOrderQty').val();
     let newQty= qtyOnHand - order_qty;
-    let tempItem;
+
     for (let item of items) {
         if($("#cmbItemIds").val()===item.code){
             item.qty=newQty;
@@ -118,9 +119,23 @@ function updateQty() {
 
         }
     }
+}
 
+function calculateTotal() {
+    let tot = 0;
+    $('#tblCart>tr').each(function () {
+        tot = tot + parseFloat($($(this).children().get(5)).text());
+        $('#total>span').text(tot).append('.00');
+
+        if($("#txtDiscount").val()===""){
+
+            $('#subtotal>span').text(tot);
+        }
+    });
+    tempTot = tot;
 
 }
+
 
 
 $('#cmbItemIds').change(function () {
