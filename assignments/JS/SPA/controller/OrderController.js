@@ -36,9 +36,13 @@ function textFieldColorChange_customer() {
 
         $("#txtCusIdForOrder,#txtCusNameForOrder,#txtCusSalaryForOrder,#txtAddressForOrder")
             .css("border","1px solid #ced4da");
+
+        //clear fields
+        clearSetDetails($("#txtCusIdForOrder"),$("#txtCusNameForOrder"),$("#txtCusSalaryForOrder"),$("#txtAddressForOrder"));
+
     }else{
         $("#txtCusIdForOrder,#txtCusNameForOrder,#txtCusSalaryForOrder,#txtAddressForOrder")
-            .css("border","2px solid green");
+            .css("border","2px solid limegreen");
     }
 }
 
@@ -70,12 +74,20 @@ function textFieldColorChange_Item() {
         $("#txtItemIDForOrder,#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand")
             .css("border","1px solid #ced4da");
 
+        //clear fields
+        clearSetDetails($("#txtItemIDForOrder"),$("#txtItemNameForOrder"),$("#txtItemPriceForOrder"),$("#txtQTYONHand"));
+
     }else{
         $("#txtItemIDForOrder,#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand")
-            .css("border","2px solid green");
+            .css("border","2px solid limegreen");
 
     }
 }
+
+function clearSetDetails(param1,param2,param3,param4) {
+    param1.val("");param2.val("");param3.val("");param4.val("");
+}
+
 
 
 function generateOrderID() {
