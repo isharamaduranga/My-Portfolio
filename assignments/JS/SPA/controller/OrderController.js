@@ -63,6 +63,9 @@ $('#btnAddToCart').click(function () {
 });
 
 $('#txtCash').on('keyup',function () {
+    let cash= parseFloat($('#txtCash').val());
+    let tot = $('#total>span').text();
+
 
 });
 
