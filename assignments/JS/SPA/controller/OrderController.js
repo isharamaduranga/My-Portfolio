@@ -52,8 +52,10 @@ $('#btnAddToCart').click(function () {
         if (qtyOnHand < orderQty) {
             alert("This Item Not Available for this Quantity !!!")
         } else {
+            updateQty();
             addToCart();
             loadAllCart();
+
         }
     } else {
         alert("please Enter Order Quantity..");
@@ -81,7 +83,6 @@ function addToCart() {
         }
     }
 
-
     let cartOrder = cartModel(oid, itm_code, itm_name, itm_price, order_qty, total);
     cart.push(cartOrder);
 
@@ -99,6 +100,25 @@ function loadAllCart() {
 
         $("#tblCart").append(cartRow);
     }
+
+}
+
+
+function updateQty() {
+    let qtyOnHand = $('#txtQTYONHand').val();
+    let order_qty = $('#txtOrderQty').val();
+    let newQty= qtyOnHand - order_qty;
+    let tempItem;
+    for (let item of items) {
+        if($("#cmbItemIds").val()===item.code){
+            item.qty=newQty;
+            $('#txtQTYONHand').val(item.qty);
+
+            loadAllItem();
+
+        }
+    }
+
 
 }
 
