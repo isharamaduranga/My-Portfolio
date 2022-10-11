@@ -54,7 +54,7 @@ $('#btnAddToCart').click(function () {
         if(qtyOnHand<orderQty){
             alert("This Item Not Available for this Quantity !!!")
         }else{
-
+            addToCart();
         }
     }else{
         alert("please Enter Order Quantity..");
@@ -69,7 +69,13 @@ function addToCart() {
     let itm_name = $('#txtItemNameForOrder').val();
     let itm_price = $('#txtItemPriceForOrder').val();
     let order_qty = $('#txtOrderQty').val();
-    /*let total=*/
+    let total=itm_price*order_qty;
+    fulltotal=total+fulltotal;
+
+    let cartOrder = cartModel(oid,itm_code,itm_name,itm_price,order_qty,total);
+    cart.push(cartOrder);
+
+    $("#txtBalance,#txtCash,#txtDiscount").val("");
 }
 
 
