@@ -255,12 +255,8 @@ function saveCustomer() {
     let customerSalary = $('#txtCusSalary').val();
 
     /**  put all of these values inside a named container  */
-    var customer = {
-        id: customerID,
-        name: customerName,
-        address: customerAddress,
-        salary: customerSalary
-    }
+    var customer = customerModel(customerID,customerName,customerAddress,customerSalary);
+
     /** Add the customer object to the array  */
     customers.push(customer);
 
