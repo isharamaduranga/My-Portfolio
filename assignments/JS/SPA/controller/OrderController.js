@@ -66,7 +66,16 @@ $('#txtCash').on('keyup',function () {
     let cash= parseFloat($('#txtCash').val());
     let tot = $('#total>span').text();
 
+    if($(cash>tot)){
+        let total=parseFloat($('#subTot').text());
+        let balance= cash-total;
 
+        $('#txtBalance').val(balance);
+
+
+    }else {
+
+    }
 });
 
 function addToCart() {
