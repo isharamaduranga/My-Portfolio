@@ -71,6 +71,17 @@ function addToCart() {
     let total = itm_price * order_qty;
 
 
+    for (let cartElement of cart) {
+        if(cartElement.cartICode==itm_code){
+            var newQty =+ cartElement.cartOrderQty+ +order_qty;
+            let newTotal= itm_price*newQty;
+            cartElement.cartOrderQty=newQty;
+            cartElement.cartTotal=newTotal;
+            return;
+        }
+    }
+
+
     let cartOrder = cartModel(oid, itm_code, itm_name, itm_price, order_qty, total);
     cart.push(cartOrder);
 
