@@ -56,13 +56,19 @@ $('#btnAddToCart').click(function () {
             addToCart();
             loadAllCart();
             calculateTotal();
+
         }
     } else {
         alert("please Enter Order Quantity..");
     }
 });
 
-$('#txtCash').on('keyup',function () {
+$('#txtCash').on('keyup',function (event) {
+
+    if(event.key=="Enter"){
+        event.preventDefault();
+    }
+
     let cash= parseFloat($('#txtCash').val());
     let tot = $('#total>span').text();
 
@@ -78,7 +84,26 @@ $('#txtCash').on('keyup',function () {
         $('#txtCash').css('border', '2px solid red');
         $('#txtCash').parent().children('span').text("Insufficient Credit Balance");
     }
-})
+});
+
+
+function removeItemInCart() {
+    $("#tblCart>tr").on('dblclick', function () {
+        $(this).remove();
+        //select the row which runs the event at the moment and then delete it
+        let totAfterRemove= $('#total>span').text();
+        let newVal= totAfterRemove - parseFloat($($(this).children(this).get(5)).text());
+            $('#total>span').text(newVal).append('.00');
+
+            if($("#txtDiscount").val()===""){
+
+                $('#subtotal>span').text(newVal);
+            }
+
+        t
+
+    });
+};
 
 function addToCart() {
     let oid = $('#txtOrderId').val();
@@ -116,7 +141,7 @@ function loadAllCart() {
 
         $("#tblCart").append(cartRow);
     }
-
+    removeItemInCart();
 }
 
 
