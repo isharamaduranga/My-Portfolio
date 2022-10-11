@@ -239,12 +239,7 @@ function saveItem() {
     let ItemQty = $('#txtItemQty').val();
 
     /**  put all of these values inside a named container  */
-    var item = {
-        code: ItemCode,
-        name: ItemName,
-        price: ItemPrice,
-        qty: ItemQty
-    }
+    var item = ItemModel(ItemCode,ItemName,ItemPrice,ItemQty);
     /** Add the Item object to the array */
     items.push(item);
 
