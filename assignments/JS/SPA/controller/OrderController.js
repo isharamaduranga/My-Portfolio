@@ -1,5 +1,3 @@
-
-
 function loadAllCustomersForComboBox() {
     $('#cmbCustomerIDS').empty();
     $('#cmbCustomerIDS').prepend('<option>Select Customer</option>');
@@ -17,7 +15,7 @@ function loadAllItemsForComboBox() {
 }
 
 $('#cmbCustomerIDS').change(function () {
-    let cusID=$('#cmbCustomerIDS').val();
+    let cusID = $('#cmbCustomerIDS').val();
     let customer = searchCustomerForInputField(cusID);
     if (customer != null) {
 
@@ -31,32 +29,33 @@ $('#cmbCustomerIDS').change(function () {
 });
 
 function textFieldColorChange_customer() {
-    let cusId= $('#cmbCustomerIDS').val();
-    if(cusId ==='Select Customer'){
+    let cusId = $('#cmbCustomerIDS').val();
+    if (cusId === 'Select Customer') {
 
         $("#txtCusIdForOrder,#txtCusNameForOrder,#txtCusSalaryForOrder,#txtAddressForOrder")
-            .css("border","1px solid #ced4da");
+            .css("border", "1px solid #ced4da");
 
         //clear fields
-        clearSetDetails($("#txtCusIdForOrder"),$("#txtCusNameForOrder"),$("#txtCusSalaryForOrder"),$("#txtAddressForOrder"));
+        clearSetDetails($("#txtCusIdForOrder"), $("#txtCusNameForOrder"), $("#txtCusSalaryForOrder"), $("#txtAddressForOrder"));
 
-    }else{
+    } else {
         $("#txtCusIdForOrder,#txtCusNameForOrder,#txtCusSalaryForOrder,#txtAddressForOrder")
-            .css("border","2px solid limegreen");
+            .css("border", "2px solid limegreen");
     }
 }
 
 $('#btnAddToCart').click(function () {
     let qtyOnHand = parseInt($("#txtQTYONHand").val());
-    let orderQty =  parseInt($("#txtOrderQty").val());
+    let orderQty = parseInt($("#txtOrderQty").val());
     if ($("#txtOrderQty").val() != "") {
 
-        if(qtyOnHand<orderQty){
+        if (qtyOnHand < orderQty) {
             alert("This Item Not Available for this Quantity !!!")
-        }else{
+        } else {
             addToCart();
+            loadAllCart();
         }
-    }else{
+    } else {
         alert("please Enter Order Quantity..");
     }
 
@@ -69,19 +68,32 @@ function addToCart() {
     let itm_name = $('#txtItemNameForOrder').val();
     let itm_price = $('#txtItemPriceForOrder').val();
     let order_qty = $('#txtOrderQty').val();
-    let total=itm_price*order_qty;
-    fulltotal=total+fulltotal;
+    let total = itm_price * order_qty;
 
-    let cartOrder = cartModel(oid,itm_code,itm_name,itm_price,order_qty,total);
+
+    let cartOrder = cartModel(oid, itm_code, itm_name, itm_price, order_qty, total);
     cart.push(cartOrder);
 
     $("#txtBalance,#txtCash,#txtDiscount").val("");
+
+}
+
+function loadAllCart() {
+
+    $("#tblCart").empty();
+
+    for (let cartItem of cart) {
+        var cartRow = `<tr><td>${cartItem.CartOid}</td><td>${cartItem.cartICode}</td><td>${cartItem.cartIName}
+        </td><td>${cartItem.cartIPrice}</td><td>${cartItem.cartOrderQty}</td><td>${cartItem.cartTotal}</td></tr>`;
+
+        $("#tblCart").append(cartRow);
+    }
+
 }
 
 
-
 $('#cmbItemIds').change(function () {
-    let code=$('#cmbItemIds').val();
+    let code = $('#cmbItemIds').val();
     let item = searchItemForInputField(code);
 
     if (item != null) {
@@ -93,52 +105,52 @@ $('#cmbItemIds').change(function () {
     textFieldColorChange_Item();
 });
 
-$("#btnPlaceOrder").click(function (){
+$("#btnPlaceOrder").click(function () {
     generateOrderID();
 
 });
 
 
 function textFieldColorChange_Item() {
-    let itemCode=$('#cmbItemIds').val();
+    let itemCode = $('#cmbItemIds').val();
 
-    if (itemCode==="Select Item") {
+    if (itemCode === "Select Item") {
 
         $("#txtItemIDForOrder,#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand")
-            .css("border","1px solid #ced4da");
+            .css("border", "1px solid #ced4da");
 
         //clear fields
-        clearSetDetails($("#txtItemIDForOrder"),$("#txtItemNameForOrder"),$("#txtItemPriceForOrder"),$("#txtQTYONHand"));
+        clearSetDetails($("#txtItemIDForOrder"), $("#txtItemNameForOrder"), $("#txtItemPriceForOrder"), $("#txtQTYONHand"));
 
-    }else{
+    } else {
         $("#txtItemIDForOrder,#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand")
-            .css("border","2px solid limegreen");
+            .css("border", "2px solid limegreen");
 
     }
 }
 
-function clearSetDetails(param1,param2,param3,param4) {
-    param1.val("");param2.val("");param3.val("");param4.val("");
+function clearSetDetails(param1, param2, param3, param4) {
+    param1.val("");
+    param2.val("");
+    param3.val("");
+    param4.val("");
 }
-
-
-
 
 
 function generateOrderID() {
     $("#txtOrderId").val("OID-0001");
-    let orderId = order[order.length - 1].getOrderId();
+    let orderId = [order.length - 1].CartOid;
     let tempId = parseInt(orderId.split("-")[1]);
 
-           tempId = tempId+1;
+    tempId = tempId + 1;
 
-    if (tempId <= 9){
-        $("#txtOrderId").val("OID-000"+tempId);
-    }else if (tempId <= 99) {
+    if (tempId <= 9) {
+        $("#txtOrderId").val("OID-000" + tempId);
+    } else if (tempId <= 99) {
         $("#txtOrderId").val("OID-00" + tempId);
-    }else if (tempId <= 999){
+    } else if (tempId <= 999) {
         $("#txtOrderId").val("OID-0" + tempId);
-    }else {
-        $("#txtOrderId").val("OID-"+tempId);
+    } else {
+        $("#txtOrderId").val("OID-" + tempId);
     }
 }
