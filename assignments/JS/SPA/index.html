@@ -46,7 +46,7 @@
                         <a class="nav-link " href="#" id="linkOrder">Orders</a>
                     </li>
                     <li class="nav-item fs-5 pe-4">
-                        <a class="nav-link " href="#" id="linkOrder_Details">Order-Details</a>
+                        <a class="nav-link " href="#" id="linkOrder_Details" onclick="loadingOrder()" >Order-Details</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -544,7 +544,7 @@
     </section>
     <section class="row mt-4 ">
         <div class="col" style="height: 275px; overflow-x: scroll">
-            <table class="table table-hover table-bordered table-striped">
+            <table class="table table-hover table-bordered table-striped" id="orderTable_Main">
                 <thead class="text-bg-secondary text-white">
                 <tr class="head">
                     <th>Order ID</th>
@@ -562,30 +562,7 @@
                     <td>3250.00</td>
                 </tr>
 
-                <tr>
-                    <th scope="row">OID-002</th>
-                    <td>C00-001</td>
-                    <td>2022-07-05</td>
-                    <td>3250.00</td>
-                </tr>
-                <tr>
-                    <th scope="row">OID-003</th>
-                    <td>C00-001</td>
-                    <td>2022-07-05</td>
-                    <td>3250.00</td>
-                </tr>
-                <tr>
-                    <th scope="row">OID-004</th>
-                    <td>C00-001</td>
-                    <td>2022-07-05</td>
-                    <td>3250.00</td>
-                </tr>
-                <tr>
-                    <th scope="row">OID-005</th>
-                    <td>C00-001</td>
-                    <td>2022-07-05</td>
-                    <td>3250.00</td>
-                </tr>
+
 
                 </tbody>
             </table>
@@ -601,7 +578,7 @@
 
     <section class="row ">
         <div class="col" style="height: 277px; overflow-x: scroll">
-            <table class="table table-hover table-bordered table-striped">
+            <table class="table table-hover table-bordered table-striped" id="orderDetailsTable_Main">
                 <thead class="bg-secondary text-white">
                 <tr class="head">
                     <th scope="col">Order ID</th>
@@ -628,65 +605,7 @@
                     <td>1000.00</td>
                 </tr>
 
-                <tr>
-                    <th scope="row">OID-001</th>
-                    <td>2022-07-05</td>
-                    <td>C00-001</td>
-                    <td>Ishara</td>
-                    <td>I00-002</td>
-                    <td>Suger</td>
-                    <td>5</td>
-                    <td>0</td>
-                    <td>1000.00</td>
-                </tr>
 
-                <tr>
-                    <th scope="row">OID-002</th>
-                    <td>2022-07-05</td>
-                    <td>C00-001</td>
-                    <td>Ishara</td>
-                    <td>I00-002</td>
-                    <td>Suger</td>
-                    <td>5</td>
-                    <td>0</td>
-                    <td>1000.00</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">OID-003</th>
-                    <td>2022-07-05</td>
-                    <td>C00-001</td>
-                    <td>Ishara</td>
-                    <td>I00-002</td>
-                    <td>Suger</td>
-                    <td>5</td>
-                    <td>0</td>
-                    <td>1000.00</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">OID-004</th>
-                    <td>2022-07-05</td>
-                    <td>C00-001</td>
-                    <td>Ishara</td>
-                    <td>I00-002</td>
-                    <td>Suger</td>
-                    <td>5</td>
-                    <td>0</td>
-                    <td>1000.00</td>
-                </tr>
-
-                <tr>
-                    <th scope="row">OID-005</th>
-                    <td>2022-07-05</td>
-                    <td>C00-001</td>
-                    <td>Ishara</td>
-                    <td>I00-002</td>
-                    <td>Suger</td>
-                    <td>5</td>
-                    <td>0</td>
-                    <td>1000.00</td>
-                </tr>
 
                 </tbody>
             </table>
@@ -707,12 +626,15 @@
 <script src="controller/CustomerController.js"> </script>
 <script src="controller/ItemController.js"> </script>
 <script src="controller/OrderController.js"> </script>
+<script src="controller/OrderDetailsController.js"> </script>
 
 <!--Import model script.js files -->
 <script src="model/customer.js"> </script>
 <script src="model/item.js"> </script>
-<script src="model/order.js"> </script>
 <script src="model/cart.js"> </script>
+<script src="model/order.js"> </script>
+<script src="model/orderDetails.js"> </script>
+
 
 
 </body>
