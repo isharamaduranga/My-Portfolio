@@ -208,12 +208,12 @@ $('#cmbItemIds').change(function () {
 
 $('#btnPurchase').click(function () {
     placeOrder();
-    generateOrderID();
+  /*  generateOrderID();*/
     cart.splice(0,cart.length);
     $('#tblCart').empty();
 
     $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtAddressForOrder,#txtCash,#txtBalance,#txtDiscount").val("");
-    $("#total > span,#subTot").text("00");
+    $("#total>span,#subTot").text("00");
 
 });
 
@@ -226,29 +226,38 @@ function saveOrder() {
     }else{
         date= $("#txtOrderDate").val();
     }
-    let fullTot=$('#total').val();
+
+    let fullTot=$('#total>span').text();
 
     let NewOrder=orderModel(oid,cid,date,fullTot);
-    order.push(NewOrder);
+    let isSaved = order.push(NewOrder);
+    if (isSaved) {
+        return true;
+    }else{}
+
 }
 
 
 function placeOrder() {
-    if(saveOrder()){
-        let date;
-        if ($("#txtOrderDate").val()===""){
-            date = $("#currentDate").text();
-        }else{
-            date= $("#txtOrderDate").val();
-        }
-        let discount=$('#txtDiscount').val();
-        let cid=$('#txtCusIdForOrder').val();
-        let cname=$('#txtCusNameForOrder').val();
 
-        for (let c of cart) {
-            orderDetails.push(orderDetailsModel(c.CartOid,date,cid,cname,c.cartICode,c.cartIName,c.cartOrderQty,discount,c.cartTotal));
+    if(saveOrder()){
+        let date2;
+        if ($("#txtOrderDate").val()===""){
+            date2 = $("#currentDate").text();
+        }else{
+            date2= $("#txtOrderDate").val();
+        }
+        let discounts=$('#txtDiscount').val();
+        let cide=$('#txtCusIdForOrder').val();
+        let cnamee=$('#txtCusNameForOrder').val();
+
+        for (var c of cart) {
+            let odeetails=orderDetailsModel(c.CartOid,date2,cide,cnamee,c.cartICode,c.cartIName,c.cartOrderQty,discounts,c.cartTotal);
+            orderDetails.push(odeetails);
         }
         alert("Successfully place order..");
+    }else {
+        alert("UnSuccessfully..Something went Wrong !!!")
     }
 }
 
@@ -282,6 +291,7 @@ function clearSetDetails(param1, param2, param3, param4) {
 }
 
 
+/*
 function generateOrderID() {
     $("#txtOrderId").val("OID-0001");
     let orderId = [order.length - 1].CartOid;
@@ -298,4 +308,4 @@ function generateOrderID() {
     } else {
         $("#txtOrderId").val("OID-" + tempId);
     }
-}
+}*/
