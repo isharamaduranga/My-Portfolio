@@ -59,7 +59,7 @@ $('#btnAddToCart').click(function () {
             calculateTotal();
 
             $("#btnPurchase").attr('disabled',false);
-
+            $("#txtItemIDForOrder,#txtItemNameForOrder,#txtQTYONHand,#txtOrderQty,#txtItemPriceForOrder").val("")
 
         }
     } else {
@@ -208,10 +208,10 @@ $('#cmbItemIds').change(function () {
 
 $('#btnPurchase').click(function () {
     placeOrder();
-  /*  generateOrderID();*/
+     generateOrderID();
     cart.splice(0,cart.length);
     $('#tblCart').empty();
-
+    $("#btnPurchase").attr('disabled',true);
     $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtAddressForOrder,#txtCash,#txtBalance,#txtDiscount").val("");
     $("#total>span,#subTot").text("00");
 
@@ -263,8 +263,6 @@ function placeOrder() {
 
 
 
-
-
 function textFieldColorChange_Item() {
     let itemCode = $('#cmbItemIds').val();
 
@@ -284,28 +282,27 @@ function textFieldColorChange_Item() {
 }
 
 function clearSetDetails(param1, param2, param3, param4) {
-    param1.val("");
-    param2.val("");
-    param3.val("");
-    param4.val("");
+    param1.val("");param2.val("");param3.val("");param4.val("");
 }
 
 
-/*
+function forOrder(){
+    generateOrderID();
+    $("#btnPurchase").attr('disabled',true);
+}
+
 function generateOrderID() {
-    $("#txtOrderId").val("OID-0001");
-    let orderId = [order.length - 1].CartOid;
-    let tempId = parseInt(orderId.split("-")[1]);
-
-    tempId = tempId + 1;
-
-    if (tempId <= 9) {
-        $("#txtOrderId").val("OID-000" + tempId);
-    } else if (tempId <= 99) {
-        $("#txtOrderId").val("OID-00" + tempId);
-    } else if (tempId <= 999) {
-        $("#txtOrderId").val("OID-0" + tempId);
-    } else {
-        $("#txtOrderId").val("OID-" + tempId);
+    try {
+        let lastOId = order[order.length - 1].ordID;
+        let newOId = parseInt(lastOId.substring(1, 4)) + 1;
+        if (newOId < 10) {
+            $("#txtOrderId").val("O00" + newOId);
+        } else if (newOId < 100) {
+            $("#txtOrderId").val("O0" + newOId);
+        } else {
+            $("#txtOrderId").val("O" + newOId);
+        }
+    } catch (e) {
+        $("#txtOrderId").val("O001");
     }
-}*/
+}
