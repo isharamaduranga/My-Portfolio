@@ -63,24 +63,24 @@ $('#btnAddToCart').click(function () {
     }
 });
 
-$('#txtCash').on('keyup',function (event) {
+$('#txtCash').on('keyup', function (event) {
 
-    if(event.key=="Enter"){
+    if (event.key == "Enter") {
         event.preventDefault();
     }
 
-    let cash= parseFloat($('#txtCash').val());
+    let cash = parseFloat($('#txtCash').val());
     let tot = $('#total>span').text();
 
-    if(cash>tot){
-        let total=parseFloat($('#subTot').text());
-        let balance= cash-total;
+    if (cash > tot) {
+        let total = parseFloat($('#subTot').text());
+        let balance = cash - total;
 
         $('#txtBalance').val(balance);
 
         $('#txtCash').css("border", "1px solid #ced4da");
         $('#txtCash').parent().children('span').text("");
-    }else {
+    } else {
         $('#txtCash').css('border', '2px solid red');
         $('#txtCash').parent().children('span').text("Insufficient Credit Balance");
     }
@@ -91,15 +91,15 @@ function removeItemInCart() {
     $("#tblCart>tr").on('dblclick', function () {
         $(this).remove();
         //select the row which runs the event at the moment and then delete it
-        let totAfterRemove= $('#total>span').text();
-        let newVal= totAfterRemove - parseFloat($($(this).children(this).get(5)).text());
-            $('#total>span').text(newVal).append('.00');
+        let totAfterRemove = $('#total>span').text();
+        let newVal = totAfterRemove - parseFloat($($(this).children(this).get(5)).text());
+        $('#total>span').text(newVal).append('.00');
 
-            if($("#txtDiscount").val()===""){
-                $('#subtotal>span').text(newVal);
-            }
+        if ($("#txtDiscount").val() === "") {
+            $('#subtotal>span').text(newVal);
+        }
     });
-};
+}
 
 function addToCart() {
     let oid = $('#txtOrderId').val();
@@ -111,11 +111,11 @@ function addToCart() {
 
 
     for (let cartElement of cart) {
-        if(cartElement.cartICode==itm_code){
-            var newQty =+ cartElement.cartOrderQty+ +order_qty;
-            let newTotal= itm_price*newQty;
-            cartElement.cartOrderQty=newQty;
-            cartElement.cartTotal=newTotal;
+        if (cartElement.cartICode == itm_code) {
+            var newQty = +cartElement.cartOrderQty + +order_qty;
+            let newTotal = itm_price * newQty;
+            cartElement.cartOrderQty = newQty;
+            cartElement.cartTotal = newTotal;
             return;
         }
     }
@@ -144,11 +144,11 @@ function loadAllCart() {
 function updateQty() {
     let qtyOnHand = $('#txtQTYONHand').val();
     let order_qty = $('#txtOrderQty').val();
-    let newQty= qtyOnHand - order_qty;
+    let newQty = qtyOnHand - order_qty;
 
     for (let item of items) {
-        if($("#cmbItemIds").val()===item.code){
-            item.qty=newQty;
+        if ($("#cmbItemIds").val() === item.code) {
+            item.qty = newQty;
             $('#txtQTYONHand').val(item.qty);
 
             loadAllItem();
@@ -163,7 +163,7 @@ function calculateTotal() {
         tot = tot + parseFloat($($(this).children().get(5)).text());
         $('#total>span').text(tot).append('.00');
 
-        if($("#txtDiscount").val()===""){
+        if ($("#txtDiscount").val() === "") {
 
             $('#subtotal>span').text(tot);
         }
@@ -177,13 +177,13 @@ $('#txtDiscount').on('keyup', function () {
         $('#subtotal>span').text('0.00');
     } else {
         let tot = parseFloat(tempTot);
-        let dis = tot/100 * parseFloat($("#txtDiscount").val());
+        let dis = tot / 100 * parseFloat($("#txtDiscount").val());
 
         $('#subtotal>span').text(tot - dis);
 
         let cash = parseInt($("#txtCash").val());
         let subTot = parseInt($("#subTot").text());
-        $("#txtBalance").val(cash-subTot);
+        $("#txtBalance").val(cash - subTot);
     }
 });
 
@@ -201,10 +201,26 @@ $('#cmbItemIds').change(function () {
     textFieldColorChange_Item();
 });
 
-$("#btnPlaceOrder").click(function () {
-    generateOrderID();
 
-});
+$('#btnPurchase').click(function () {
+    placeOrder();
+    generateOrderID();
+})
+
+function saveOrder() {
+
+}
+
+
+function placeOrder() {
+    if(saveOrder()){
+
+    }
+
+}
+
+
+
 
 
 function textFieldColorChange_Item() {

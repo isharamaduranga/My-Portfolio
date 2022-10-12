@@ -96,3 +96,9 @@ $("#linkHome,#linkHome2").click(function (){
 });
 
 
+
+year = new Date().getFullYear();
+month = new Date().getMonth();
+date = new Date().getDate();
+
+$("#currentDate").text(`${year}-${month+1}-${date}`);
