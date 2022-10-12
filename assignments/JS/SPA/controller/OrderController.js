@@ -26,6 +26,7 @@ $('#cmbCustomerIDS').change(function () {
 
     }
     textFieldColorChange_customer();
+    updateQty();
 });
 
 function textFieldColorChange_customer() {
@@ -56,6 +57,9 @@ $('#btnAddToCart').click(function () {
             addToCart();
             loadAllCart();
             calculateTotal();
+
+            $("#btnPurchase").attr('disabled',false);
+
 
         }
     } else {
@@ -144,11 +148,11 @@ function loadAllCart() {
 function updateQty() {
     let qtyOnHand = $('#txtQTYONHand').val();
     let order_qty = $('#txtOrderQty').val();
-    let newQty = qtyOnHand - order_qty;
+    let newQtyValue = qtyOnHand - order_qty;
 
     for (let item of items) {
         if ($("#cmbItemIds").val() === item.code) {
-            item.qty = newQty;
+            item.qty = newQtyValue;
             $('#txtQTYONHand').val(item.qty);
 
             loadAllItem();
@@ -205,7 +209,13 @@ $('#cmbItemIds').change(function () {
 $('#btnPurchase').click(function () {
     placeOrder();
     generateOrderID();
-})
+    cart.splice(0,cart.length);
+    $('#tblCart').empty();
+
+    $("#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand,#txtOrderQty,#txtCusSalaryForOrder,#txtCusNameForOrder,#txtAddressForOrder,#txtCash,#txtBalance,#txtDiscount").val("");
+    $("#total > span,#subTot").text("00");
+
+});
 
 function saveOrder() {
     let oid=$('#txtOrderId').val();
