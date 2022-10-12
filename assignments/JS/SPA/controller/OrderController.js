@@ -26,7 +26,7 @@ $('#cmbCustomerIDS').change(function () {
 
     }
     textFieldColorChange_customer();
-    updateQty();
+
 });
 
 function textFieldColorChange_customer() {
@@ -45,6 +45,22 @@ function textFieldColorChange_customer() {
     }
 }
 
+$('#txtOrderQty').on('keyup',function (event) {
+    orderQtyColourChange();
+});
+
+function orderQtyColourChange() {
+    let qHand = parseInt($("#txtQTYONHand").val());
+    let orQty = parseInt($("#txtOrderQty").val());
+    if (qHand<orQty) {
+        $('#txtOrderQty').css("border", "1px solid red");
+        $('#txtOrderQty').parent().children('span').text("Please  Enter a Amount lower than: "+orQty+"");
+    }else {
+        $('#txtOrderQty').css("border", "1px solid #ced4da");
+        $('#txtOrderQty').parent().children('span').text("");
+    }
+}
+
 $('#btnAddToCart').click(function () {
     let qtyOnHand = parseInt($("#txtQTYONHand").val());
     let orderQty = parseInt($("#txtOrderQty").val());
@@ -58,7 +74,6 @@ $('#btnAddToCart').click(function () {
             loadAllCart();
             calculateTotal();
 
-            $("#btnPurchase").attr('disabled',false);
             $("#txtItemIDForOrder,#txtItemNameForOrder,#txtQTYONHand,#txtOrderQty,#txtItemPriceForOrder").val("")
 
         }
@@ -84,6 +99,7 @@ $('#txtCash').on('keyup', function (event) {
 
         $('#txtCash').css("border", "1px solid #ced4da");
         $('#txtCash').parent().children('span').text("");
+        $("#btnPurchase").attr('disabled',false);
     } else {
         $('#txtCash').css('border', '2px solid red');
         $('#txtCash').parent().children('span').text("Insufficient Credit Balance");
@@ -203,6 +219,7 @@ $('#cmbItemIds').change(function () {
         $('#txtQTYONHand').val(item.qty);
     }
     textFieldColorChange_Item();
+    updateQty();
 });
 
 
@@ -294,15 +311,15 @@ function forOrder(){
 function generateOrderID() {
     try {
         let lastOId = order[order.length - 1].ordID;
-        let newOId = parseInt(lastOId.substring(1, 4)) + 1;
+        let newOId = parseInt(lastOId.substring(3, 5)) + 1;
         if (newOId < 10) {
-            $("#txtOrderId").val("O00" + newOId);
+            $("#txtOrderId").val("OI00" + newOId);
         } else if (newOId < 100) {
-            $("#txtOrderId").val("O0" + newOId);
+            $("#txtOrderId").val("OI0" + newOId);
         } else {
-            $("#txtOrderId").val("O" + newOId);
+            $("#txtOrderId").val("OI" + newOId);
         }
     } catch (e) {
-        $("#txtOrderId").val("O001");
+        $("#txtOrderId").val("OID001");
     }
 }
