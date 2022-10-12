@@ -105,29 +105,34 @@ $('#txtCash').on('keyup', function (event) {
     }
 });
 
-$('#txtOrderId').keydown(function () {
 
-    searchOrderToLoadAllCart();
+
+
+$(document).ready(function(){
+
+    $('#txtOrderId').keydown(function () {
+        let oddId = $('#txtOrderId').val();
+        searchOrderToLoadAllCart(oddId);
+    });
+
+    $('#txtOrderId').keyup(function () {
+
+        let oddId = $('#txtOrderId').val();
+        searchOrderToLoadAllCart(oddId);
+    });
 });
 
-$('#txtOrderId').keyup(function () {
-    searchOrderToLoadAllCart();
-});
-
-
-function searchOrderToLoadAllCart() {
+function searchOrderToLoadAllCart(O_ID) {
 
     for (let i of tempCart) {
-        let oddId = $('#txtOrderId').val();
-          console.log(oddId);
-        if (oddId == i.CartOid) {
+        if (O_ID == i.tempOid) {
 
-            var SearchRow = `<tr><td>${i.CartOid}</td><td>${i.cartICode}</td><td>${i.cartIName}
-        </td><td>${i.cartIPrice}</td><td>${i.cartOrderQty}</td><td>${i.cartTotal}</td></tr>`;
+            var SearchRow = `<tr><td>${i.tempOid}</td><td>${i.tempICode}</td><td>${i.tempIName}
+        </td><td>${i.tempIPrice}</td><td>${i.tempOrderQty}</td><td>${i.tempTotal}</td></tr>`;
 
             $("#tblCart").append(SearchRow);
 
-            setDataForSearch(oddId);
+            setDataForSearch(O_ID);
 
 
         } else {
@@ -197,8 +202,9 @@ function addToCart() {
     }
 
     let cartOrder = cartModel(oid, itm_code, itm_name, itm_price, order_qty, total);
+    let tempOrder = cartHistoryModel(oid, itm_code, itm_name, itm_price, order_qty, total);
     cart.push(cartOrder);
-    tempCart.push(cartOrder);
+    tempCart.push(tempOrder);
     $("#txtBalance,#txtCash,#txtDiscount").val("");
 
 }
