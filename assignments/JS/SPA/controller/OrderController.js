@@ -225,9 +225,21 @@ function saveOrder() {
 
 function placeOrder() {
     if(saveOrder()){
+        let date;
+        if ($("#txtOrderDate").val()===""){
+            date = $("#currentDate").text();
+        }else{
+            date= $("#txtOrderDate").val();
+        }
+        let discount=$('#txtDiscount').val();
+        let cid=$('#txtCusIdForOrder').val();
+        let cname=$('#txtCusNameForOrder').val();
 
+        for (let c of cart) {
+            orderDetails.push(orderDetailsModel(c.CartOid,date,cid,cname,c.cartICode,c.cartIName,c.cartOrderQty,discount,c.cartTotal));
+        }
+        alert("Successfully place order..");
     }
-
 }
 
 
