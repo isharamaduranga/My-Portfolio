@@ -208,7 +208,18 @@ $('#btnPurchase').click(function () {
 })
 
 function saveOrder() {
+    let oid=$('#txtOrderId').val();
+    let cid=$('#txtCusIdForOrder').val();
+    let date;
+    if ($("#txtOrderDate").val()===""){
+        date = $("#currentDate").text();
+    }else{
+        date= $("#txtOrderDate").val();
+    }
+    let fullTot=$('#total').val();
 
+    let NewOrder=orderModel(oid,cid,date,fullTot);
+    order.push(NewOrder);
 }
 
 
