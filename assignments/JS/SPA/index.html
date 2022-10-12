@@ -11,8 +11,6 @@
     <link href="../../../assets/icons/css/all.min.css" rel="stylesheet">
 
 
-
-
 </head>
 <body>
 
@@ -37,7 +35,7 @@
                         <a aria-current="page" class="nav-link " href="#" id="linkHome">Home</a>
                     </li>
                     <li class="nav-item fs-5 pe-4">
-                        <a  class="nav-link  table-hover " href="#" id="linkCustomer">Customers</a>
+                        <a class="nav-link  table-hover " href="#" id="linkCustomer">Customers</a>
                     </li>
                     <li class="nav-item fs-5 pe-4">
                         <a class="nav-link " href="#" id="linkItem">Items</a>
@@ -46,12 +44,13 @@
                         <a class="nav-link " href="#" id="linkOrder">Orders</a>
                     </li>
                     <li class="nav-item fs-5 pe-4">
-                        <a class="nav-link " href="#" id="linkOrder_Details" onclick="loadingOrder()" >Order-Details</a>
+                        <a class="nav-link " href="#" id="linkOrder_Details" onclick="loadingOrder()">Order-Details</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item" >
-                        <a class="nav-link active" style="color: lime;font-size: 1.5em;}" id="currentDate">2022-10-11</a>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: lime;font-size: 1.5em;}"
+                           id="currentDate">2022-10-11</a>
                     </li>
                 </ul>
             </div>
@@ -61,8 +60,6 @@
 </header>
 
 <!--  **************************************************************************************  -->
-
-
 
 
 <!-- ======================= Home Slide Content Start =======================-->
@@ -210,8 +207,8 @@
                    placeholder="Search Customer..."
                    type="search">
             <button class="btn btn-outline-success  border border-success border-2 " id="btnSearchCustomer"
-                     type="button" style="width: 150px">Search
-        </button>
+                    type="button" style="width: 150px">Search
+            </button>
         </form>
     </section>
 
@@ -317,7 +314,7 @@
                     <th scope="col">Item QTY.</th>
                 </tr>
                 </thead>
-                 <tbody id="itemTable" class="table-light  ">
+                <tbody id="itemTable" class="table-light  ">
 
                 </tbody>
             </table>
@@ -329,11 +326,11 @@
 <!-- ====================== Place Order Manage Content Start ========================-->
 
 
-<section  class="bg-white" style="height: 85vh"  id="order_Slide">
+<section class="bg-white" style="height: 85vh" id="order_Slide">
     <section class="container-fluid mt-2">
         <div style="height: 8px; text-align: center">
-            <h2  class="bg-secondary border border-2 border-secondary text-light"
-                 style="border-radius: 25px; font-family: 'poppins', sans-serif"> P L A C E - O R D E R S </h2>
+            <h2 class="bg-secondary border border-2 border-secondary text-light"
+                style="border-radius: 25px; font-family: 'poppins', sans-serif"> P L A C E - O R D E R S </h2>
         </div>
     </section>
     <div class="container-fluid bg-white mt-5">
@@ -409,7 +406,7 @@
                     <section class="container">
                         <div class="row">
                             <div class="bg-success text-white text-center mb-3 p-2"
-                                 style="border-radius: 25px;" ><h5>Item Select</h5></div>
+                                 style="border-radius: 25px;"><h5>Item Select</h5></div>
 
                             <div class="col">
                                 Item:
@@ -454,14 +451,14 @@
                         </div>
                         <div class="row">
                             <div class="col button">
-                                <button class="btn btn-primary mt-5 text-center" id="btnAddToCart" >Add To Cart</button>
+                                <button class="btn btn-primary mt-5 text-center" id="btnAddToCart">Add To Cart</button>
                             </div>
                         </div>
                     </section>
 
                 </div>
 
-                <div class="col ms-2 me-2"  style="background-color: rgba(234,182,186,0.25); border-radius: 30px;">
+                <div class="col ms-2 me-2" style="background-color: rgba(234,182,186,0.25); border-radius: 30px;">
                     <div class="bg-danger text-white text-center mb-3 p-2"
                          style="border-radius: 25px;"><h5>Payment Details</h5></div>
 
@@ -496,7 +493,9 @@
 
                         <div class="row">
                             <div class="col button">
-                                <button class="btn btn-outline-success mt-4 mb-2" id="btnPurchase" type="button">Purchase-Order</button>
+                                <button class="btn btn-outline-success mt-4 mb-2" id="btnPurchase" type="button">
+                                    Purchase-Order
+                                </button>
                             </div>
                         </div>
                     </section>
@@ -517,7 +516,6 @@
                         <tbody id="tblCart" class="table-light">
 
 
-
                         </tbody>
                     </table>
                 </div>
@@ -525,8 +523,6 @@
             </div>
         </div>
     </div>
-
-
 
 
 </section>
@@ -538,8 +534,8 @@
 <section class="container-fluid mt-3" id="orderDetailsSlide">
     <section class="container-fluid mb-5">
         <div style="height:5px; text-align: center">
-            <h2  class="bg-info  text-white"
-                 style="border-radius: 25px; font-family: 'poppins', sans-serif">  O R D E R S </h2>
+            <h2 class="bg-info  text-white"
+                style="border-radius: 25px; font-family: 'poppins', sans-serif"> O R D E R S </h2>
         </div>
     </section>
     <section class="row mt-4 ">
@@ -563,8 +559,8 @@
 
     <section class="container-fluid mb-5 mt-2">
         <div style="height: 5px; text-align: center">
-            <h2  class="bg-info   text-white"
-                 style="border-radius: 25px; font-family: 'poppins', sans-serif"> O R D E R S - D E T A I L S </h2>
+            <h2 class="bg-info   text-white"
+                style="border-radius: 25px; font-family: 'poppins', sans-serif"> O R D E R S - D E T A I L S </h2>
         </div>
     </section>
 
@@ -593,27 +589,25 @@
 </section>
 
 
-
 <!--  **************************************************************************************  -->
 <!--Import js for bootstrap-->
 <script src="assests/bootstrap/js/bootstrap.min.js"></script>
 <script src="assests/JQuery/jquery-3.6.1.min.js"></script>
 <!--Import DB.js file-->
-<script src="db/DB.js"> </script>
+<script src="db/DB.js"></script>
 <!--Import Controller script.js files -->
-<script src="controller/DashBoardController.js"> </script>
-<script src="controller/CustomerController.js"> </script>
-<script src="controller/ItemController.js"> </script>
-<script src="controller/OrderController.js"> </script>
-<script src="controller/OrderDetailsController.js"> </script>
+<script src="controller/DashBoardController.js"></script>
+<script src="controller/CustomerController.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="controller/OrderController.js"></script>
+<script src="controller/OrderDetailsController.js"></script>
 
 <!--Import model script.js files -->
-<script src="model/customer.js"> </script>
-<script src="model/item.js"> </script>
-<script src="model/cart.js"> </script>
-<script src="model/order.js"> </script>
-<script src="model/orderDetails.js"> </script>
-
+<script src="model/customer.js"></script>
+<script src="model/item.js"></script>
+<script src="model/cart.js"></script>
+<script src="model/order.js"></script>
+<script src="model/orderDetails.js"></script>
 
 
 </body>

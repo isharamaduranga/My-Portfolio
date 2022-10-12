@@ -3,17 +3,18 @@ function loadingOrder() {
     loadOrderDetailsTable();
 }
 
+/** Order Table functionalities */
 function loadOrderTable() {
     $('#orderTable').empty();
 
     for (var o of order) {
 
-     let row1 = `<tr><td>${o.ordID}</td><td>${o.cusID}</td><td>${o.date}</td><td>${o.ordTotal}</td></tr>`;
+        let row1 = `<tr><td>${o.ordID}</td><td>${o.cusID}</td><td>${o.date}</td><td>${o.ordTotal}</td></tr>`;
         $('#orderTable').append(row1);
     }
 
 }
-
+/** Order Details Table functionalities */
 function loadOrderDetailsTable() {
     $('#orderDetailTable').empty();
 
