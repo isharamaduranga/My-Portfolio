@@ -45,7 +45,19 @@ function textFieldColorChange_customer() {
     }
 }
 
-$('#txtOrderQty').on('keyup', function (event) {
+/** Error css changer */
+function Span_BorderCssChange_Error(field, massage) {
+    field.css('border', '1px solid red');
+    field.parent().children('span').text(massage);
+}
+
+/** Default css changer */
+function Span_BorderCssChange_Default(field, massage) {
+    field.css('border', '1px solid #ced4da');
+    field.parent().children('span').text(massage);
+}
+
+$('#txtOrderQty').on('keyup', function () {
     orderQtyColourChange();
 });
 
@@ -53,11 +65,11 @@ function orderQtyColourChange() {
     let qHand = parseInt($("#txtQTYONHand").val());
     let orQty = parseInt($("#txtOrderQty").val());
     if (qHand < orQty) {
-        $('#txtOrderQty').css("border", "1px solid red");
-        $('#txtOrderQty').parent().children('span').text("Please  Enter a Amount lower than: " + orQty + "");
+
+        Span_BorderCssChange_Error($('#txtOrderQty') , "Please  Enter a Amount lower than: " + orQty + "");
+
     } else {
-        $('#txtOrderQty').css("border", "1px solid #ced4da");
-        $('#txtOrderQty').parent().children('span').text("");
+        Span_BorderCssChange_Default($('#txtOrderQty'),"")
     }
 }
 
@@ -96,49 +108,61 @@ $('#txtCash').on('keyup', function (event) {
 
         $('#txtBalance').val(balance);
 
-        $('#txtCash').css("border", "1px solid #ced4da");
-        $('#txtCash').parent().children('span').text("");
+        Span_BorderCssChange_Default( $('#txtCash'), "");
+
         $("#btnPurchase").attr('disabled', false);
     } else {
-        $('#txtCash').css('border', '2px solid red');
-        $('#txtCash').parent().children('span').text("Insufficient Credit Balance");
+
+        Span_BorderCssChange_Error($('#txtCash') ,"Insufficient Credit Balance" );
+
+    }
+});
+
+
+const OrderIDRegEx = /^(OID-)[0-9]{1,4}$/;
+
+
+$('#txtOrderId').on('keydown keyup ', function (event) {
+
+    if (event.keyCode==13) {
+        event.preventDefault();
+    }else{
+
+        if (checkOId(OrderIDRegEx, $('#txtOrderId'))) {
+
+            Span_BorderCssChange_Default($('#txtOrderId'), "");
+
+            let oddId = $('#txtOrderId').val();
+
+            searchOrderToLoadAllCart(oddId);
+            setDataForSearch(oddId);
+
+        } else {
+            Span_BorderCssChange_Error($('#txtOrderId'), "Order-ID Pattern is Wrong : OID-001");
+        }
     }
 });
 
 
 
 
-$(document).ready(function(){
+function checkOId(regex, field) {
+    let valueOfTextField = field.val();
+    return regex.test(valueOfTextField) ? true : false;
+}
 
-    $('#txtOrderId').keydown(function () {
-        let oddId = $('#txtOrderId').val();
-        searchOrderToLoadAllCart(oddId);
-    });
 
-    $('#txtOrderId').keyup(function () {
+function searchOrderToLoadAllCart(values) {
 
-        let oddId = $('#txtOrderId').val();
-        searchOrderToLoadAllCart(oddId);
-    });
-});
-
-function searchOrderToLoadAllCart(O_ID) {
+    $("#tblCart").empty();
 
     for (let i of tempCart) {
-        if (O_ID == i.tempOid) {
+        if (values == i.CartOid) {
 
-            var SearchRow = `<tr><td>${i.tempOid}</td><td>${i.tempICode}</td><td>${i.tempIName}
-        </td><td>${i.tempIPrice}</td><td>${i.tempOrderQty}</td><td>${i.tempTotal}</td></tr>`;
+            var SearchRow = `<tr><td>${i.CartOid}</td><td>${i.cartICode}</td><td>${i.cartIName}
+        </td><td>${i.cartIPrice}</td><td>${i.cartOrderQty}</td><td>${i.cartTotal}</td></tr>`;
 
             $("#tblCart").append(SearchRow);
-
-            setDataForSearch(O_ID);
-
-
-        } else {
-
-            clearSetDetails($('#txtCusIdForOrder'), $('#txtCusNameForOrder'), $('#txtCusSalaryForOrder'), $('#txtAddressForOrder'));
-            $("#tblCart").empty();
         }
     }
 }
@@ -146,7 +170,7 @@ function searchOrderToLoadAllCart(O_ID) {
 function setDataForSearch(schId) {
 
     for (let j of tempOrderDetail) {
-        if(schId==j.ODD_ID){
+        if (schId == j.ODD_ID) {
 
             $('#txtCusIdForOrder').val(j.CUS_ID);
             $('#txtCusNameForOrder').val(j.CUS_NAME);
@@ -200,11 +224,10 @@ function addToCart() {
             return;
         }
     }
-
     let cartOrder = cartModel(oid, itm_code, itm_name, itm_price, order_qty, total);
-    let tempOrder = cartHistoryModel(oid, itm_code, itm_name, itm_price, order_qty, total);
+
     cart.push(cartOrder);
-    tempCart.push(tempOrder);
+    tempCart.push(cartOrder);
     $("#txtBalance,#txtCash,#txtDiscount").val("");
 
 }
@@ -234,7 +257,6 @@ function updateQty() {
             $('#txtQTYONHand').val(item.qty);
 
             loadAllItem();
-
         }
     }
 }
@@ -251,7 +273,6 @@ function calculateTotal() {
         }
     });
     tempTot = tot;
-
 }
 
 $('#txtDiscount').on('keyup', function () {
@@ -313,6 +334,7 @@ function saveOrder() {
     if (isSaved) {
         return true;
     } else {
+        return false;
     }
 
 }
