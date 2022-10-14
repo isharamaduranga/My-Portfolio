@@ -45,7 +45,7 @@
 <img src="ReadMe/itm.png">
 
 ### 🌱 Order-Details Interface
-<img src="ReadMe/o_det.png.png">
+<img src="ReadMe/o_det.png">
 
 
 ## Technology /framework used
