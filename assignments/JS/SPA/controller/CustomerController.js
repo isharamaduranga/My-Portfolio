@@ -122,7 +122,7 @@ function successEvent(textField, massage) {
         //calling default text function...
         defaultText(textField, "");
     } else {
-        textField.css("border", "2px solid #049104FF");
+        textField.css("border", "3px solid #049104FF");
         textField.parent().children('span').text(massage);
     }
 }
@@ -133,14 +133,14 @@ function errorEvent(textField, error) {
         //calling default text function...
         defaultText(textField, "");
     } else {
-        textField.css('border', '2px solid red');
+        textField.css('border', '3px solid red');
         textField.parent().children('span').text(error);
     }
 }
 
 /** function of Default text */
 function defaultText(txtField, massage) {
-    txtField.css("border", "1px solid #ced4da");
+    txtField.css("border", "2px solid #ced4da");
     txtField.parent().children('span').text(massage);
 }
 

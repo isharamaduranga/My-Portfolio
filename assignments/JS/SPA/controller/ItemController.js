@@ -114,7 +114,7 @@ function successEventItem(textField, massage) {
     if (textField.val().length <= 0) {
         defaultTextItem(textField, "");
     } else {
-    textField.css("border","2px solid #049104FF");
+    textField.css("border","3px solid #049104FF");
     textField.parent().children('span').text(massage);
     }
 }
@@ -124,14 +124,14 @@ function errorEventItem(textField, error) {
     if (textField.val().length <= 0) {
         defaultTextItem(textField, "");
     } else {
-        textField.css("border","2px solid red");
+        textField.css("border","3px solid red");
         textField.parent().children('span').text(error);
     }
 }
 
 /** function of Default text */
 function defaultTextItem(textField,text) {
-    textField.css("border", "1px solid #ced4da");
+    textField.css("border", "2px solid #ced4da");
     textField.parent().children('span').text(text);
 }
 

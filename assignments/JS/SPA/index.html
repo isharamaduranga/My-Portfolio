@@ -12,7 +12,7 @@
 
 
 </head>
-<body>
+<body style="background-color: #2B2B2B">
 
 
 <header>
@@ -326,14 +326,14 @@
 <!-- ====================== Place Order Manage Content Start ========================-->
 
 
-<section class="bg-white" style="height: 85vh" id="order_Slide">
+<section  style="height: 85vh" id="order_Slide">
     <section class="container-fluid mt-2">
         <div style="height: 8px; text-align: center">
             <h2 class="bg-secondary border border-2 border-secondary text-light"
                 style="border-radius: 25px; font-family: 'poppins', sans-serif"> P L A C E - O R D E R S </h2>
         </div>
     </section>
-    <div class="container-fluid bg-white mt-5">
+    <div class="container-fluid  mt-5">
 
         <div class="mt-5">
             <div class="row ">
@@ -344,14 +344,14 @@
                                  style="border-radius: 25px;"><h5>Invoice Details</h5></div>
 
                             <div class="col">
-                                Order ID:
+                              <span class="order_form_texts">Order ID:</span>
                                 <form>
                                     <input class="form-control " id="txtOrderId">
                                     <span class="control-error_item" id="lblOrderID"></span>
                                 </form>
                             </div>
                             <div class="col">
-                                Order Date:
+                               <span class="order_form_texts">Order Date:</span>
                                 <form>
                                     <input class="form-control" id="txtOrderDate" type="date">
                                 </form>
@@ -360,14 +360,14 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                Customer:
+                                <span class="order_form_texts">Customer:</span>
                                 <select class="form-select" id="cmbCustomerIDS">
 
 
                                 </select>
                             </div>
                             <div class="col">
-                                Customer ID:
+                                <span class="order_form_texts">Customer ID:</span>
                                 <form>
                                     <input class="form-control" id="txtCusIdForOrder" type="text">
                                 </form>
@@ -376,14 +376,14 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                Name:
+                                <span class="order_form_texts">Name:</span>
                                 <form>
                                     <input class="form-control " id="txtCusNameForOrder" type="text">
                                 </form>
                             </div>
 
                             <div class="col">
-                                Salary:
+                                <span class="order_form_texts">Salary:</span>
                                 <form>
                                     <input class="form-control " id="txtCusSalaryForOrder" type="number">
                                 </form>
@@ -392,7 +392,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                Address:
+                                <span class="order_form_texts">Address:</span>
                                 <form>
                                     <input class="form-control " id="txtAddressForOrder" type="text">
                                 </form>
@@ -410,13 +410,13 @@
                                  style="border-radius: 25px;"><h5>Item Select</h5></div>
 
                             <div class="col">
-                                Item:
+                                <span class="order_form_texts">Item:</span>
                                 <select class="form-select" id="cmbItemIds">
 
                                 </select>
                             </div>
                             <div class="col">
-                                Item Code:
+                                <span class="order_form_texts">Item Code:</span>
                                 <form>
                                     <input class="form-control " id="txtItemIDForOrder" type="text">
                                 </form>
@@ -424,19 +424,19 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                Item Name:
+                                <span class="order_form_texts">Item Name:</span>
                                 <form>
                                     <input class="form-control " id="txtItemNameForOrder" type="text">
                                 </form>
                             </div>
                             <div class="col">
-                                Item Price:
+                                <span class="order_form_texts">Item Price:</span>
                                 <form>
                                     <input class="form-control " id="txtItemPriceForOrder" type="text">
                                 </form>
                             </div>
                             <div class="col">
-                                QtyOnH:
+                                <span class="order_form_texts">QtyOnH:</span>
                                 <form>
                                     <input class="form-control " id="txtQTYONHand" type="text">
                                 </form>
@@ -444,7 +444,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                Order QTY:
+                                <span class="order_form_texts">Order QTY:</span>
                                 <form>
                                     <input class="form-control " id="txtOrderQty" type="text">
                                     <span class="control-error_item" id="lblCheckQty"></span>
@@ -453,7 +453,7 @@
                         </div>
                         <div class="row">
                             <div class="col button">
-                                <button class="btn btn-primary mt-5 text-center" id="btnAddToCart">Add To Cart</button>
+                                <button class="btn btn-primary mt-5 mb-5 text-center" id="btnAddToCart">Add To Cart</button>
                             </div>
                         </div>
                     </section>
@@ -464,12 +464,12 @@
                     <div class="bg-danger text-white text-center mb-3 p-2"
                          style="border-radius: 25px;"><h5>Payment Details</h5></div>
 
-                    <h4 class="text-dark p-2" id="total">Total : <span>0.00</span></h4>
-                    <h4 class="text-danger p-2" id="subtotal">Sub Total : <span id="subTot">0.00</span></h4>
+                    <h4 style="color: #000000" id="total">Total : <span>0.00</span></h4>
+                    <h4 style="color: #ff000b" id="subtotal">Sub Total : <span id="subTot">0.00</span></h4>
                     <section class="container">
                         <div class="row">
                             <div class="col">
-                                Cash:
+                                <span class="order_form_texts">Cash:</span>
                                 <form>
                                     <input class="form-control " id="txtCash" type="number">
                                     <span class="control-error_item" id="lblCheckCash"></span>
@@ -477,7 +477,7 @@
 
                             </div>
                             <div class="col">
-                                Discount:
+                                <span class="order_form_texts">Discount:</span>
                                 <form>
                                     <input class="form-control " id="txtDiscount" type="number">
                                 </form>
@@ -486,7 +486,7 @@
 
                         <div class="row">
                             <div class="col">
-                                Balance:
+                                <span class="order_form_texts">Balance:</span>
                                 <form>
                                     <input class="form-control " id="txtBalance" type="number">
                                 </form>
@@ -495,7 +495,7 @@
 
                         <div class="row">
                             <div class="col button">
-                                <button class="btn btn-outline-success mt-4 mb-2" id="btnPurchase" type="button">
+                                <button class="btn btn-success mt-4 mb-1" id="btnPurchase" type="button">
                                     Purchase-Order
                                 </button>
                             </div>

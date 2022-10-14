@@ -34,26 +34,26 @@ function textFieldColorChange_customer() {
     if (cusId === 'Select Customer') {
 
         $("#txtCusIdForOrder,#txtCusNameForOrder,#txtCusSalaryForOrder,#txtAddressForOrder")
-            .css("border", "1px solid #ced4da");
+            .css("border", "3px solid #ced4da");
 
         //clear fields
         clearSetDetails($("#txtCusIdForOrder"), $("#txtCusNameForOrder"), $("#txtCusSalaryForOrder"), $("#txtAddressForOrder"));
 
     } else {
         $("#txtCusIdForOrder,#txtCusNameForOrder,#txtCusSalaryForOrder,#txtAddressForOrder")
-            .css("border", "2px solid limegreen");
+            .css("border", "3px solid limegreen");
     }
 }
 
 /** Error css changer */
 function Span_BorderCssChange_Error(field, massage) {
-    field.css('border', '1px solid red');
+    field.css('border', '3px solid red');
     field.parent().children('span').text(massage);
 }
 
 /** Default css changer */
 function Span_BorderCssChange_Default(field, massage) {
-    field.css('border', '1px solid #ced4da');
+    field.css('border', '3px solid #ced4da');
     field.parent().children('span').text(massage);
 }
 
@@ -370,14 +370,14 @@ function textFieldColorChange_Item() {
     if (itemCode === "Select Item") {
 
         $("#txtItemIDForOrder,#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand")
-            .css("border", "1px solid #ced4da");
+            .css("border", "3px solid #ced4da");
 
         //clear fields
         clearSetDetails($("#txtItemIDForOrder"), $("#txtItemNameForOrder"), $("#txtItemPriceForOrder"), $("#txtQTYONHand"));
 
     } else {
         $("#txtItemIDForOrder,#txtItemNameForOrder,#txtItemPriceForOrder,#txtQTYONHand")
-            .css("border", "2px solid limegreen");
+            .css("border", "3px solid limegreen");
 
     }
 }

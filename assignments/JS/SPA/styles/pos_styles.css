@@ -91,4 +91,11 @@ main{
     color: red ;
     font-size: 0.9em;
 }
-
+.form-label{
+    color: gold;
+}
+.order_form_texts{
+    color: rgb(0, 0, 0);
+    font-size: 1.02em;
+    font-weight: 600;
+}
