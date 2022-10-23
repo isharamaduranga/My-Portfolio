@@ -169,8 +169,8 @@ $('#txtItemCode').keydown(function (event) {
 
         if (item != null) {
           // Calling setTextFieldValueFromItem function
-            setTextFieldValueFromItem(item.code,item.name,item.price,item.qty);
-            alert("This customer "+item.code+" Already Exists...");
+            setTextFieldValueFromItem(item.getItemCode(),item.getItemName(),item.getItemPrice(),item.getItemQty());
+            alert("This customer "+item.getItemCode()+" Already Exists...");
 
         } else {
             alert("There is no Item available for that " + inputCode);
@@ -239,7 +239,7 @@ function saveItem() {
     let ItemQty = $('#txtItemQty').val();
 
     /**  put all of these values inside a named container  */
-    var item = ItemModel(ItemCode,ItemName,ItemPrice,ItemQty);
+    var item = new ItemModel(ItemCode,ItemName,ItemPrice,ItemQty);
     /** Add the Item object to the array */
     items.push(item);
 
@@ -263,7 +263,7 @@ function loadAllItem() {
     /** get all ITEMS records from the array */
     for (let item of items) {
         /** Using String Literals to do the define row  */
-        var row = ` <tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
+        var row = `<tr><td>${item.getItemCode()}</td><td>${item.getItemName()}</td><td>${item.getItemPrice()}</td><td>${item.getItemQty()}</td></tr>`;
 
         /** then add it to the table body of Item table */
         $('#itemTable').append(row);
@@ -282,12 +282,12 @@ function setTextFieldValueFromItem(code, name, price, qty) {
 function searchItem(event) {
     for (let item of items) {
 
-        if (item.code === $('#txtSearchItem').val() ||
-            item.name === $('#txtSearchItem').val()) {
+        if (item.getItemCode() === $('#txtSearchItem').val() ||
+            item.getItemName() === $('#txtSearchItem').val()) {
             /* Clear Table */
             $('#itemTable').empty();
             /** search result add it to the table body of customer table */
-            let row = `<tr><td>${item.code}</td><td>${item.name}</td><td>${item.price}</td><td>${item.qty}</td></tr>`;
+            let row = `<tr><td>${item.getItemCode()}</td><td>${item.getItemName()}</td><td>${item.getItemPrice()}</td><td>${item.getItemQty()}</td></tr>`;
             $('#itemTable').append(row);
         } else {
             event.preventDefault();
@@ -299,7 +299,7 @@ function searchItem(event) {
 /** SEARCH ITEM WITH INPUT TIME FUNCTION ... */
 function searchItemForInputField(code) {
     for (let item of items) {
-        if (item.code == code) {
+        if (item.getItemCode() == code) {
             return item;
         }
     }
@@ -312,10 +312,11 @@ function updateItem(itemCode) {
     let item = searchItemForInputField(itemCode);
     if (item != null) {
 
-        item.code = $('#txtItemCode').val();
-        item.name = $('#txtItemName').val();
-        item.price = $('#txtItemPrice').val();
-        item.qty = $('#txtItemQty').val();
+        item.setItemCode($('#txtItemCode').val());
+        item.setItemName($('#txtItemName').val());
+        item.setItemPrice($('#txtItemPrice').val());
+        item.setItemQty($('#txtItemQty').val());
+
         loadAllItem();
         setData_Bind_Row_Events_Item();
         clearTextFieldsItem();
