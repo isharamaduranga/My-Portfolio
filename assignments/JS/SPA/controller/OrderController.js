@@ -184,13 +184,13 @@ function searchOrderToLoadAllCart(values) {
 function setDataForSearch(schId) {
 
     for (let j of tempOrderDetail) {
-        if (schId == j.ODD_ID) {
+        if (schId == j.getODD_ID()) {
 
-            $('#txtCusIdForOrder').val(j.CUS_ID);
-            $('#txtCusNameForOrder').val(j.CUS_NAME);
-            $('#txtCusSalaryForOrder').val(j.CUS_SAL);
-            $('#txtAddressForOrder').val(j.CUS_ADD);
-            $('#txtOrderDate').val(j.CUS_DATE);
+            $('#txtCusIdForOrder').val(j.getCUS_ID());
+            $('#txtCusNameForOrder').val(j.getCUS_NAME());
+            $('#txtCusSalaryForOrder').val(j.getCUS_SAL());
+            $('#txtAddressForOrder').val(j.getCUS_ADD());
+            $('#txtOrderDate').val(j.getCUS_DATE());
         }
     }
 }
@@ -225,12 +225,12 @@ function addToCart() {
     let CUSSAL = $('#txtCusSalaryForOrder').val();
     let CUSADD = $('#txtAddressForOrder').val();
     let CUSDATE = $('#txtOrderDate').val();
-    let invoice = invoiceModel(oid, CUSID, CUSNAME, CUSSAL, CUSADD, CUSDATE);
+    let invoice = new invoiceModel(oid, CUSID, CUSNAME, CUSSAL, CUSADD, CUSDATE);
     tempOrderDetail.push(invoice);
 
     let total = itm_price * order_qty;
     for (let cartElement of cart) {
-        if (cartElement.cartICode == itm_code) {
+        if (cartElement.getItemCode() == itm_code) {
             var newQty = +cartElement.getCartOrderQty() + +order_qty;
             let newTotal = itm_price * newQty;
 
@@ -247,11 +247,7 @@ function addToCart() {
     $("#txtBalance,#txtCash,#txtDiscount").val("");
 
 }
-/**
- * var SearchRow = `<tr><td> ${i.getCartOid()} </td><td> ${i.getCartICode()} </td><td> ${i.getCartIName()}
- </td><td> ${i.getCartIPrice()} </td><td> ${i.getCartOrderQty()} </td><td> ${i.getCartTotal()} </td></tr>`;
- *
- * */
+
 function loadAllCart() {
 
     $("#tblCart").empty();
