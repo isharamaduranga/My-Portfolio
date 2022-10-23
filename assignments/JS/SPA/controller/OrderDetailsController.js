@@ -9,7 +9,7 @@ function loadOrderTable() {
 
     for (var o of order) {
 
-        let row1 = `<tr><td>${o.ordID}</td><td>${o.cusID}</td><td>${o.date}</td><td>${o.ordTotal}</td></tr>`;
+        let row1 = `<tr><td>${o.getOrdID()}</td><td>${o.getCusID()}</td><td>${o.getODate()}</td><td>${o.getOrdTotal()}</td></tr>`;
         $('#orderTable').append(row1);
     }
 
@@ -20,15 +20,15 @@ function loadOrderDetailsTable() {
 
     for (var d of orderDetails) {
         let row2 = `<tr>
-        <td>${d.orderID}</td>
-        <td>${d.date}</td>
-        <td>${d.customerId}</td>
-        <td>${d.customerName}</td>
-        <td>${d.itemCode}</td>
-        <td>${d.itemName}</td>
-        <td>${d.orderQty}</td>
-        <td>${d.discount}</td>
-        <td>${d.fullTotal}</td>
+        <td>${d.getOrderID()}</td>
+        <td>${d.getDate_Od()}</td>
+        <td>${d.getCustomerId()}</td>
+        <td>${d.getCustomerName()}</td>
+        <td>${d.getItemCode()}</td>
+        <td>${d.getItemName()}</td>
+        <td>${d.getOrderQty()}</td>
+        <td>${d.getDiscount()}</td>
+        <td>${d.getFullTotal()}</td>
         </tr>`;
 
         $('#orderDetailTable').append(row2);

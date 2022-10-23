@@ -1,48 +1,48 @@
-function cartModel(cartOID,cartItemCode,cartItemName,cartItemPrice,orderQty,cartTotal) {
+function cartModel(cartOID, cartItemCode, cartItemName, cartItemPrice, orderQty, cartTotal) {
 
-    var cartOid= cartOID;
-    var cartICode= cartItemCode;
-    var cartIName= cartItemName;
-    var cartIPrice= cartItemPrice;
-    var cartOrderQty= orderQty;
-    var cartTotal= cartTotal;
+    var cartOid = cartOID;
+    var cartICode = cartItemCode;
+    var cartIName = cartItemName;
+    var cartIPrice = cartItemPrice;
+    var cartOrderQty = orderQty;
+    var cartTotal = cartTotal;
 
-    this.getCartOid=function () {
+    this.getCartOid = function () {
         return cartOid;
     }
-    this.getCartICode=function () {
+    this.getCartICode = function () {
         return cartICode;
     }
-    this.getCartIName=function () {
+    this.getCartIName = function () {
         return cartIName;
     }
-    this.getCartIPrice=function () {
+    this.getCartIPrice = function () {
         return cartIPrice;
     }
-    this.getCartOrderQty=function () {
+    this.getCartOrderQty = function () {
         return cartOrderQty;
     }
-    this.getCartTotal=function () {
+    this.getCartTotal = function () {
         return cartTotal;
     }
 
 
-    this.setCartOid=function (newOid) {
-         cartOid=newOid;
+    this.setCartOid = function (newOid) {
+        cartOid = newOid;
     }
-    this.setCartICode=function (newICode) {
-         cartICode=newICode;
+    this.setCartICode = function (newICode) {
+        cartICode = newICode;
     }
-    this.setCartIName=function (newIName) {
-         cartIName=newIName;
+    this.setCartIName = function (newIName) {
+        cartIName = newIName;
     }
-    this.setCartIPrice=function (newIPrice) {
-         cartIPrice=newIPrice;
+    this.setCartIPrice = function (newIPrice) {
+        cartIPrice = newIPrice;
     }
-    this.setCartOrderQty=function (newOdQty) {
-         cartOrderQty=newOdQty;
+    this.setCartOrderQty = function (newOdQty) {
+        cartOrderQty = newOdQty;
     }
-    this.setCartTotal=function (newTotal) {
-         cartTotal=newTotal;
+    this.setCartTotal = function (newTotal) {
+        cartTotal = newTotal;
     }
 }

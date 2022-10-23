@@ -230,7 +230,7 @@ function addToCart() {
 
     let total = itm_price * order_qty;
     for (let cartElement of cart) {
-        if (cartElement.getItemCode() == itm_code) {
+        if (cartElement.getCartICode() == itm_code) {
             var newQty = +cartElement.getCartOrderQty() + +order_qty;
             let newTotal = itm_price * newQty;
 
@@ -330,7 +330,7 @@ function saveOrder() {
 
     let fullTot = $('#total>span').text();
 
-    let NewOrder = orderModel(oid, cid, date, fullTot);
+    let NewOrder = new orderModel(oid, cid, date, fullTot);
     let isSaved = order.push(NewOrder);
     if (isSaved) {
         return true;
@@ -355,7 +355,7 @@ function placeOrder() {
         let cnamee = $('#txtCusNameForOrder').val();
 
         for (var c of cart) {
-            let odeetails = orderDetailsModel(c.getCartOid(), date2, cide, cnamee, c.getCartICode(), c.getCartIName(), c.getCartOrderQty(), discounts, c.getCartTotal());
+            let odeetails = new orderDetailsModel(c.getCartOid(), date2, cide, cnamee, c.getCartICode(), c.getCartIName(), c.getCartOrderQty(), discounts, c.getCartTotal());
             orderDetails.push(odeetails);
         }
         alert("Successfully place order..");
@@ -399,7 +399,7 @@ function forOrder() {
 
 function generateOrderID() {
     try {
-        let lastOId = order[order.length - 1].ordID;
+        let lastOId = order[order.length - 1].getOrdID();
         let newOId = parseInt(lastOId.substring(4, 7)) + 1;
         if (newOId < 10) {
             $("#txtOrderId").val("OID-00" + newOId);
