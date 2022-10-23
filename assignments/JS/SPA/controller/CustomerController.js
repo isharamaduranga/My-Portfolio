@@ -170,7 +170,6 @@ $('#btnGetAllCustomer').click(function () {
     clearTextFields();
 });
 
-
 /** Search Customer txtCustomer id input field Key Down Function */
 $('#txtCusId').keydown(function (event) {
     if (event.key == "Enter") {
@@ -182,8 +181,8 @@ $('#txtCusId').keydown(function (event) {
         if (customer != null) {
 
             //Calling setTextFieldValueFromCustomer function
-            setTextFieldValueFromCustomer(customer.id,customer.name,customer.address,customer.salary);
-            alert("This Item "+customer.id+" Already Exists...");
+            setTextFieldValueFromCustomer(customer.getCustomerId(),customer.getCustomerName(),customer.getAddress(),customer.getSalary());
+            alert("This Item "+customer.getCustomerId()+" Already Exists...");
         } else {
             alert("There is no customer available for that " + inputId);
 
@@ -255,7 +254,7 @@ function saveCustomer() {
     let customerSalary = $('#txtCusSalary').val();
 
     /**  put all of these values inside a named container  */
-    var customer = customerModel(customerID,customerName,customerAddress,customerSalary);
+    var customer = new customerModel(customerID,customerName,customerAddress,customerSalary);
 
     /** Add the customer object to the array  */
     customers.push(customer);
@@ -285,7 +284,7 @@ function loadAllCustomers() {
         // var row ="<tr><td>"+customer.id+"</td><td>"+customer.name+"</td><td>"+customer.address+"</td><td>"+customer.salary+"</td></tr>" ;
 
         /** Using String Literals to do the same thing as above  */
-        var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+        var row = `<tr><td>${customer.getCustomerId()}</td><td>${customer.getCustomerName()}</td><td>${customer.getAddress()}</td><td>${customer.getSalary()}</td></tr>`;
 
         /** then add it to the table body of customer table */
         $('#customerTable').append(row);
@@ -303,13 +302,13 @@ function setTextFieldValueFromCustomer(id, name, address, salary) {
 /** SEARCH CUSTOMERS FUNCTION ... */
 function searchCustomer(event) {
     for (let customer of customers) {
-        if (customer.id === $('#txtSearchCustomer').val() ||
-            customer.name === $('#txtSearchCustomer').val()) {
+        if (customer.getCustomerId() === $('#txtSearchCustomer').val() ||
+            customer.getCustomerName() === $('#txtSearchCustomer').val()) {
             /* Clear Table */
             $('#customerTable').empty();
 
             /** search result add it to the table body of customer table */
-            let row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+            let row = `<tr><td>${customer.getCustomerId()}</td><td>${customer.getCustomerName()}</td><td>${customer.getAddress()}</td><td>${customer.getSalary()}</td></tr>`;
             $('#customerTable').append(row);
         } else {
             event.preventDefault();
@@ -322,7 +321,7 @@ function searchCustomer(event) {
 function searchCustomerForInputField(cusId) {
 
     for (let customer of customers) {
-        if (customer.id == cusId) {
+        if (customer.getCustomerId() == cusId) {
             return customer;
         }
     }
@@ -335,10 +334,10 @@ function updateCustomer(cusId) {
     let customer = searchCustomerForInputField(cusId);
 
     if (customer != null) {
-        customer.id = $('#txtCusId').val();
-        customer.name = $('#txtCusName').val();
-        customer.address = $('#txtCusAddress').val();
-        customer.salary = $('#txtCusSalary').val();
+        customer.setCustomerId($('#txtCusId').val());
+        customer.setCustomerName($('#txtCusName').val());
+        customer.setCustomerAddress($('#txtCusAddress').val());
+        customer.setCustomerSalary($('#txtCusSalary').val());
         loadAllCustomers();
         setData_Bind_Row_Events();
         clearTextFields();
