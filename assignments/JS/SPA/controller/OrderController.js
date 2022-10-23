@@ -29,6 +29,20 @@ $('#cmbCustomerIDS').change(function () {
 
 });
 
+$('#cmbItemIds').change(function () {
+    let code = $('#cmbItemIds').val();
+    let item = searchItemForInputField(code);
+
+    if (item != null) {
+        $('#txtItemIDForOrder').val(item.getItemCode());
+        $('#txtItemNameForOrder').val(item.getItemName());
+        $('#txtItemPriceForOrder').val(item.getItemPrice());
+        $('#txtQTYONHand').val(item.getItemQty());
+    }
+    textFieldColorChange_Item();
+    updateQty();
+});
+
 function textFieldColorChange_customer() {
     let cusId = $('#cmbCustomerIDS').val();
     if (cusId === 'Select Customer') {
@@ -157,10 +171,10 @@ function searchOrderToLoadAllCart(values) {
     $("#tblCart").empty();
 
     for (let i of tempCart) {
-        if (values == i.CartOid) {
+        if (values == i.getCartOid()) {
 
-            var SearchRow = `<tr><td>${i.CartOid}</td><td>${i.cartICode}</td><td>${i.cartIName}
-        </td><td>${i.cartIPrice}</td><td>${i.cartOrderQty}</td><td>${i.cartTotal}</td></tr>`;
+            var SearchRow = `<tr><td> ${i.getCartOid()} </td><td> ${i.getCartICode()} </td><td> ${i.getCartIName()}
+        </td><td> ${i.getCartIPrice()} </td><td> ${i.getCartOrderQty()} </td><td> ${i.getCartTotal()} </td></tr>`;
 
             $("#tblCart").append(SearchRow);
         }
@@ -217,28 +231,34 @@ function addToCart() {
     let total = itm_price * order_qty;
     for (let cartElement of cart) {
         if (cartElement.cartICode == itm_code) {
-            var newQty = +cartElement.cartOrderQty + +order_qty;
+            var newQty = +cartElement.getCartOrderQty() + +order_qty;
             let newTotal = itm_price * newQty;
-            cartElement.cartOrderQty = newQty;
-            cartElement.cartTotal = newTotal;
+
+            cartElement.setCartOrderQty(newQty);
+            cartElement.setCartTotal(newTotal) ;
             return;
         }
     }
-    let cartOrder = cartModel(oid, itm_code, itm_name, itm_price, order_qty, total);
+
+    let cartOrder = new cartModel(oid, itm_code, itm_name, itm_price, order_qty, total);
 
     cart.push(cartOrder);
     tempCart.push(cartOrder);
     $("#txtBalance,#txtCash,#txtDiscount").val("");
 
 }
-
+/**
+ * var SearchRow = `<tr><td> ${i.getCartOid()} </td><td> ${i.getCartICode()} </td><td> ${i.getCartIName()}
+ </td><td> ${i.getCartIPrice()} </td><td> ${i.getCartOrderQty()} </td><td> ${i.getCartTotal()} </td></tr>`;
+ *
+ * */
 function loadAllCart() {
 
     $("#tblCart").empty();
 
     for (let cartItem of cart) {
-        var cartRow = `<tr><td>${cartItem.CartOid}</td><td>${cartItem.cartICode}</td><td>${cartItem.cartIName}
-        </td><td>${cartItem.cartIPrice}</td><td>${cartItem.cartOrderQty}</td><td>${cartItem.cartTotal}</td></tr>`;
+        var cartRow = `<tr><td>${cartItem.getCartOid()}</td><td>${cartItem.getCartICode()}</td><td>${cartItem.getCartIName()}
+        </td><td>${cartItem.getCartIPrice()}</td><td>${cartItem.getCartOrderQty()}</td><td>${cartItem.getCartTotal()}</td></tr>`;
 
         $("#tblCart").append(cartRow);
     }
@@ -252,9 +272,9 @@ function updateQty() {
     let newQtyValue = qtyOnHand - order_qty;
 
     for (let item of items) {
-        if ($("#cmbItemIds").val() === item.code) {
-            item.qty = newQtyValue;
-            $('#txtQTYONHand').val(item.qty);
+        if ($("#cmbItemIds").val() === item.getItemCode()) {
+            item.setItemQty(newQtyValue);
+            $('#txtQTYONHand').val(item.getItemQty());
 
             loadAllItem();
         }
@@ -288,21 +308,6 @@ $('#txtDiscount').on('keyup', function () {
         let subTot = parseInt($("#subTot").text());
         $("#txtBalance").val(cash - subTot);
     }
-});
-
-
-$('#cmbItemIds').change(function () {
-    let code = $('#cmbItemIds').val();
-    let item = searchItemForInputField(code);
-
-    if (item != null) {
-        $('#txtItemIDForOrder').val(item.getItemCode());
-        $('#txtItemNameForOrder').val(item.getItemName());
-        $('#txtItemPriceForOrder').val(item.getItemPrice());
-        $('#txtQTYONHand').val(item.getItemQty());
-    }
-    textFieldColorChange_Item();
-    updateQty();
 });
 
 
@@ -354,7 +359,7 @@ function placeOrder() {
         let cnamee = $('#txtCusNameForOrder').val();
 
         for (var c of cart) {
-            let odeetails = orderDetailsModel(c.CartOid, date2, cide, cnamee, c.cartICode, c.cartIName, c.cartOrderQty, discounts, c.cartTotal);
+            let odeetails = orderDetailsModel(c.getCartOid(), date2, cide, cnamee, c.getCartICode(), c.getCartIName(), c.getCartOrderQty(), discounts, c.getCartTotal());
             orderDetails.push(odeetails);
         }
         alert("Successfully place order..");
