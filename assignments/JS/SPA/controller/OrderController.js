@@ -2,7 +2,7 @@ function loadAllCustomersForComboBox() {
     $('#cmbCustomerIDS').empty();
     $('#cmbCustomerIDS').prepend('<option>Select Customer</option>');
     for (let customer of customers) {
-        $('#cmbCustomerIDS').append(`<option>${customer.id}</option>`);
+        $('#cmbCustomerIDS').append(`<option>${customer.getCustomerId()}</option>`);
     }
 }
 
@@ -10,7 +10,7 @@ function loadAllItemsForComboBox() {
     $('#cmbItemIds').empty();
     $('#cmbItemIds').prepend('<option>Select Item</option>');
     for (let item of items) {
-        $('#cmbItemIds').append(`<option>${item.code}</option>`);
+        $('#cmbItemIds').append(`<option>${item.getItemCode()}</option>`);
     }
 }
 
@@ -19,10 +19,10 @@ $('#cmbCustomerIDS').change(function () {
     let customer = searchCustomerForInputField(cusID);
     if (customer != null) {
 
-        $('#txtCusIdForOrder').val(customer.id);
-        $('#txtCusNameForOrder').val(customer.name);
-        $('#txtCusSalaryForOrder').val(customer.salary);
-        $('#txtAddressForOrder').val(customer.address);
+        $('#txtCusIdForOrder').val(customer.getCustomerId());
+        $('#txtCusNameForOrder').val(customer.getCustomerName());
+        $('#txtCusSalaryForOrder').val(customer.getSalary());
+        $('#txtAddressForOrder').val(customer.getAddress());
 
     }
     textFieldColorChange_customer();
@@ -296,10 +296,10 @@ $('#cmbItemIds').change(function () {
     let item = searchItemForInputField(code);
 
     if (item != null) {
-        $('#txtItemIDForOrder').val(item.code);
-        $('#txtItemNameForOrder').val(item.name);
-        $('#txtItemPriceForOrder').val(item.price);
-        $('#txtQTYONHand').val(item.qty);
+        $('#txtItemIDForOrder').val(item.getItemCode());
+        $('#txtItemNameForOrder').val(item.getItemName());
+        $('#txtItemPriceForOrder').val(item.getItemPrice());
+        $('#txtQTYONHand').val(item.getItemQty());
     }
     textFieldColorChange_Item();
     updateQty();
