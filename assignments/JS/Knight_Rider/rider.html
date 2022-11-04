@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Knight Rider Light System</title>
+    <link rel="stylesheet" href="../Queue/bootstrap/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            position: absolute;
+            color: white;
+            top: 60px;
+            font-family: monospace;
+        }
+
+        #lineTop {
+            width: 900px;
+            top: 200px;
+            position: absolute;
+            border: 2px solid white;
+        }
+
+        #lineBottom {
+            width: 900px;
+            top: 400px;
+            position: absolute;
+            border: 2px solid white;
+        }
+
+        .cube {
+            position: absolute;
+            background: #ffffff;
+            height: 50px;
+            width: 100px;
+            border-radius: 10px;
+        }
+
+        button{
+            position: relative;
+            width: 130px;
+            color: white;
+            margin: 10px;
+            top: 450px;
+        }
+
+        #box1 {
+            top: 275px;
+            left: 450px;
+        }
+
+        #box2 {
+            top: 275px;
+            left: 560px;
+        }
+
+        #box3 {
+            top: 275px;
+            left: 670px;
+        }
+
+        #box4 {
+            top: 275px;
+            left: 780px;
+        }
+
+        #box5 {
+            top: 275px;
+            left: 890px;
+        }
+        #box6 {
+            top: 275px;
+            left: 1000px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<h1>Knight Rider</h1>
+<div id="lineTop"></div>
+<div id="lineBottom"></div>
+
+
+<div class="cube" id="box1"></div>
+<div class="cube" id="box2"></div>
+<div class="cube" id="box3"></div>
+<div class="cube" id="box4"></div>
+<div class="cube" id="box5"></div>
+<div class="cube" id="box6"></div>
+
+
+
+<button id="start" type="button" class="btn btn-primary">Start</button>
+<button id="stop" type="button" class="btn btn-danger">End</button>
+
+<script src="../Queue/JQuery/jquery-3.6.1.min.js"></script>
+
+<script>
+
+    let BoxId= [$('#box1'),$('#box2'),$('#box3'),$('#box4'),$('#box5'),$('#box6')];
+
+    var colors = ['red', 'rgba(219, 55, 55, 0.68)', 'rgba(222,98,98,0.8)', 'white'];
+
+    let count = 0;
+    let reverse = 0;
+    let timeRange;
+
+    $("#start").click(function () {
+
+        clearInterval(timeRange);
+        timeId = setInterval(changeColor, 100);
+
+    });
+
+
+    $("#stop").click(function () {
+        clearInterval(timeId);
+    });
+
+    function changeColor() {
+        if (count == 20) {
+            count = 0;
+            reverse=0;
+        }
+        for (let i = 0; i < BoxId.length; i++) {
+            BoxId[i].css('background-color', colors[count-i]);
+        }
+
+        if (count >= 10) {
+            for (let i = 0 , k = 5; i < BoxId.length ,k>0;  i++ ,k--) {
+                BoxId[i].css('background-color', colors[reverse - k]);
+            }
+            reverse++;
+        }
+        count++;
+    }
+</script>
+
+</body>
+</html>
