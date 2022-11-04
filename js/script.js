@@ -5,7 +5,9 @@ $(document).ready(function () {
         } else {
             $('.navbar').removeClass("sticky");
         }
-    })
+    });
+
+
 
     /* toggle menu/ navbar script */
 
@@ -46,6 +48,12 @@ $(document).ready(function () {
         loop:true
     });
 });
+
+/*// jQuery counterUp
+$('[data-toggle="counter-up"]').counterUp({
+    delay: 10,
+    time: 250
+});*/
 
 /* Displayed  default Home scripts..  */
 $("#home_nav").css({'padding-bottom':'15px','border-radius':'10px','border-bottom':'2px solid lime'});

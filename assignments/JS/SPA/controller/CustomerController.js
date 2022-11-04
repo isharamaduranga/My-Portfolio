@@ -253,6 +253,8 @@ function saveCustomer() {
     let customerAddress = $('#txtCusAddress').val();
     let customerSalary = $('#txtCusSalary').val();
 
+
+
     /**  put all of these values inside a named container  */
     var customer = new customerModel(customerID,customerName,customerAddress,customerSalary);
 

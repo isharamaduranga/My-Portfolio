@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Queue</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #434444;
+        }
+
+        #container {
+            display: flex;
+            column-gap: 10px;
+            justify-content: center;
+        }
+
+        #container > div {
+            width: 150px;
+            height: 90px;
+            border: 2px solid white;
+            border-radius: 25px;
+        }
+
+        #container > div>h3 {
+            color: rgba(0,0,0,0.68);
+            font-size:20px;
+            text-align: center;
+            padding-top: 30px;
+        }
+
+        .form-label {
+            color: gold;
+            font-size: 1.2em;
+        }
+
+        #AddToQue {
+            position: absolute;
+            width: 150px;
+            margin: auto;
+            left: 0;
+            right: 0;
+
+        }
+
+        .row {
+            position: relative;
+            width: 800px;
+            height: 300px;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!--for the form section-->
+<section class="container-fluid mt-3 ">
+    <h1 class="text-white"> Q U E U E</h1>
+    <div class="row">
+        <div class="">
+            <form class="align-content-center">
+                <div class="mb-3">
+                    <label class="form-label">Name Of Person</label>
+                    <input type="text" class="form-control" id="txtName">
+                </div>
+                <div class="mb-lg-5">
+                    <label class="form-label">Choose A Colour</label>
+                    <input type="color" class="form-control " id="txtColor">
+                </div>
+
+                <button id="AddToQue" type="button" class="btn btn-primary">Add To Que</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!--for the que process-->
+<main class="container-fluid ">
+    <hr class="text-white ">
+
+
+    <section id="container" class="mt-5">
+
+
+    </section>
+</main>
+
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="JQuery/jquery-3.6.1.min.js"></script>
+<script>
+
+    var queueData = {
+        customers: [
+            {name: 'Kasun', color: 'deeppink'},
+            {name: 'Sugath', color: 'lime'},
+            {name: 'Piyath', color: 'gold'},
+            {name: 'Amila', color: 'purple'},
+            {name: 'Perera', color: 'red'}
+        ],
+        nextCustomer: function () {
+            var lastCustomer = this.customers.pop();
+            this.customers.unshift(lastCustomer);
+        }
+    }
+
+    setInterval(setDataToQue, 800);
+
+
+    function setDataToQue() {
+        $('#container').empty();
+        for (let i = 0; i < queueData.customers.length; i++) {
+            $('#container').append(`<div style="background-color:${queueData.customers[i].color}"><h3>${queueData.customers[i].name}</h3></div>`)
+        }
+        queueData.nextCustomer();
+    }
+
+    $('#AddToQue').click(function () {
+        let newName = $('#txtName').val();
+        let newColor = $('#txtColor').val();
+
+        var customer = {name: newName, color: newColor};
+        queueData.customers.unshift(customer);
+    });
+
+</script>
+
+
+</body>
+</html>
