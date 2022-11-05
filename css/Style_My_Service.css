@@ -83,24 +83,26 @@
     transition-delay: 0s;
     transition-property: all;
     transition-duration: 1s;
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 
 
 #service_List>div>ul{
     padding-left: 25px;
+    font-size: 14px;
 }
 
 #service_List>div>ul>li{
     font-family: 'Poppins', sans-serif;
     text-align: left;
     padding-top:15px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
 }
 
 .service_title{
     padding-top: 20px;
     text-align: center;
+    font-size: 22px;
     color: #403D4E;
     font-family: 'Poppins', sans-serif;
 }
