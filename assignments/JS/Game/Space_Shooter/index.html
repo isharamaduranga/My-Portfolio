@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Shooter</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Display the fav icon in Game-->
+    <link href="fav.png" rel="icon">
+
+</head>
+<body>
+<!--  ==================  Defined game Start , Game running Canvas and Restart Elements =================  -->
+<!--=======================================================================================================-->
+<div id="parentDiv" style="
+background:  url('./img/space-planet.jpg')no-repeat center;
+background-size: 100% 100%;
+" >
+
+    <!-- Define Current Score in game -->
+    <p id="scoreContainer">
+        <span>Score : </span>
+        <span id="scoreEl">0</span>
+    </p>
+
+    <canvas>
+
+    </canvas>
+
+    <!-- ~~~~~~~~~~~~~~ Background container ~~~~~~~~~~~~~~~  -->
+    <div id="startScreen">
+        <div>
+            <h1>🪐 SPACE  ~ 🚀 ~ SHOOTER💥</h1>
+
+            <!-- Start button -->
+            <div id="startButton">
+
+                <img src="./img/button.png" alt="Start Button"/>
+
+                <span>Start</span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ~~~~~~~~  Restart screen & background container ~~~~~~~~ -->
+    <div id="restartScreen">
+        <div>
+            <h1 style=" font-size: 24px">Game Over ❗❗❗</h1>
+
+            <h1 id="finalScore">300</h1>
+
+            <p> Points </p>
+
+
+            <!-- button -->
+            <div id="restartButton">
+                <img src="./img/button.png" alt="Restart Button"/>
+
+                <span>Restart</span>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- Imported a modern audio library with support for the Web Audio API and a fallback mechanism for HTML5 Audio .-->
+
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+        integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+></script>
+
+    <!--Import All javaScript files-->
+<script src="audio.js"></script>
+<script src="js/classes/Planets.js"></script>
+<script src="js/classes/Invader_Grid.js"></script>
+<script src="js/classes/Invader.js"></script>
+<script src="js/classes/InvaderProjectile.js"></script>
+<script src="js/classes/Particle.js"></script>
+<script src="js/classes/Player.js"></script>
+<script src="js/classes/projectile.js"></script>
+<script src="index.js"></script>
+</div>
+</body>
+</html>

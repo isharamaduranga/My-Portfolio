@@ -1,0 +1,103 @@
+
+body{
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#scoreContainer{
+    position: absolute;
+    font-family: monospace;
+    font-size: 18px;
+    z-index: 10;
+    color: lime;
+    right: 10px;
+    top: 10px;
+    margin: 0;
+    display: none;
+}
+
+#parentDiv{
+    position: relative;
+}
+
+#startScreen {
+    position: absolute;
+    margin:auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../img/startScreenBackground.png');
+    z-index: 20;
+    background-size: 800px 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white
+}
+
+#startButton {
+    cursor: pointer;
+    position: relative;
+    display: inline-block
+}
+
+#startButton > span {
+    position: absolute;
+    color: white;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+#restartScreen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../img/startScreenBackground.png');
+    z-index: 20;
+    background-size: 800px 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white
+}
+
+#restartButton {
+    cursor: pointer;
+    position: relative;
+    display: inline-block
+}
+
+#restartButton>span {
+    position: absolute;
+    color: white;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+#finalScore{
+    color: white;
+    margin: 0;
+    font-size: 48px
+}
+
+#restartScreen>div>p{
+    color: whitesmoke;
+    margin-top: 0
+}
