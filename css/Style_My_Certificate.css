@@ -69,7 +69,7 @@
     position: absolute;
     display: none;
     cursor: pointer;
-    background: #191919;
+    background: rgba(255, 255, 255, 0.87);
     top: 260px;
     left: 50%;
     width: 40px;
@@ -82,8 +82,8 @@
     content: "";
     padding: 8px; /* Arrow size */
     box-shadow: 1px -1px 0 1px #0072bc inset;
-    -webkit-box-shadow: 2px -2px #0072bc inset;
-    -moz-box-shadow: 2px -2px #0072bc inset;
+    -webkit-box-shadow: 3px -3px #0072bc inset;
+    -moz-box-shadow: 3px -3px #0072bc inset;
     border: solid transparent;
     border-width: 0 0 2rem 2rem;
 }
