@@ -12,7 +12,7 @@
     margin: 24px auto 0;
 }
 .carousel__caption p {
-    font: 400 9px "Roboto", sans-serif !important;
+    font: 400 11px "Roboto", sans-serif !important;
     color: #c1c1c1 !important;
     text-align: left;
 }
@@ -23,7 +23,7 @@
 .carousel {
     position: relative;
     width: 100%;
-    height: 504px;
+    height: 600px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -53,7 +53,7 @@
 .carousel__slide img {
     display: block;
     position: relative;
-    margin: 55px auto 50px;
+    margin: 100px auto 95px;
     width: 553px;
     height: 347px;
     -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.8);
@@ -70,7 +70,7 @@
     display: none;
     cursor: pointer;
     background: #191919;
-    top: 210px;
+    top: 260px;
     left: 50%;
     width: 40px;
     height: 40px;
@@ -106,7 +106,15 @@
 #carousel__slide--2:checked ~ .carousel__arrow--2,
 #carousel__slide--3:checked ~ .carousel__arrow--3,
 #carousel__slide--4:checked ~ .carousel__arrow--4,
-#carousel__slide--5:checked ~ .carousel__arrow--5 {
+#carousel__slide--5:checked ~ .carousel__arrow--5,
+#carousel__slide--6:checked ~ .carousel__arrow--6,
+#carousel__slide--7:checked ~ .carousel__arrow--7,
+#carousel__slide--8:checked ~ .carousel__arrow--8,
+#carousel__slide--9:checked ~ .carousel__arrow--9,
+#carousel__slide--10:checked ~ .carousel__arrow--10,
+#carousel__slide--11:checked ~ .carousel__arrow--11,
+#carousel__slide--12:checked ~ .carousel__arrow--12,
+#carousel__slide--13:checked ~ .carousel__arrow--13 {
     display: block;
 }
 
@@ -115,7 +123,7 @@
     margin: 12px auto -6px;
     padding: 0;
     position: absolute;
-    top: 408px;
+    top: 480px;
     left: 0;
     right: 0;
     text-align: center;
@@ -139,7 +147,16 @@
 #carousel__slide--2:checked ~ .carousel__arrow--2 ~ .carousel__bullets li:nth-child(2) .carousel__bullets--bullet,
 #carousel__slide--3:checked ~ .carousel__arrow--3 ~ .carousel__bullets li:nth-child(3) .carousel__bullets--bullet,
 #carousel__slide--4:checked ~ .carousel__arrow--4 ~ .carousel__bullets li:nth-child(4) .carousel__bullets--bullet,
-#carousel__slide--5:checked ~ .carousel__arrow--5 ~ .carousel__bullets li:nth-child(5) .carousel__bullets--bullet {
+#carousel__slide--5:checked ~ .carousel__arrow--5 ~ .carousel__bullets li:nth-child(5) .carousel__bullets--bullet,
+#carousel__slide--6:checked ~ .carousel__arrow--6 ~ .carousel__bullets li:nth-child(6) .carousel__bullets--bullet,
+#carousel__slide--7:checked ~ .carousel__arrow--7 ~ .carousel__bullets li:nth-child(7) .carousel__bullets--bullet,
+#carousel__slide--8:checked ~ .carousel__arrow--8 ~ .carousel__bullets li:nth-child(8) .carousel__bullets--bullet,
+#carousel__slide--9:checked ~ .carousel__arrow--9 ~ .carousel__bullets li:nth-child(9) .carousel__bullets--bullet,
+#carousel__slide--10:checked ~ .carousel__arrow--10 ~ .carousel__bullets li:nth-child(10) .carousel__bullets--bullet,
+#carousel__slide--11:checked ~ .carousel__arrow--11 ~ .carousel__bullets li:nth-child(11) .carousel__bullets--bullet,
+#carousel__slide--12:checked ~ .carousel__arrow--12 ~ .carousel__bullets li:nth-child(12) .carousel__bullets--bullet,
+#carousel__slide--13:checked ~ .carousel__arrow--13 ~ .carousel__bullets li:nth-child(13) .carousel__bullets--bullet
+{
     background: #0072bc;
     box-shadow: inset 0 0 0 2px #12171b; /* Separates blue dot from border */
 }
