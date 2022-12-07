@@ -9,21 +9,21 @@
 .carousel__caption {
     width: 340px;
     max-width: 80%;
-    margin: 24px auto 0;
+    margin: 20px auto 0;
 }
 .carousel__caption p {
-    font: 400 11px "Roboto", sans-serif !important;
-    color: #c1c1c1 !important;
-    text-align: left;
+    font: 400 12px "Roboto", sans-serif !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-align: center;
 }
 .carousel__caption a {
     text-decoration: underline;
-    color: #fff;
+    color: #0fc40f;
 }
 .carousel {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 620px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -201,7 +201,7 @@
         margin-top: 0;
     }
     .carousel__arrow {
-        top: calc(50% - 70px);
+        top: calc(50% - 85px);
     }
     .carousel__arrow--prev {
         margin-left: -48%;
@@ -211,8 +211,16 @@
     }
     .carousel__bullets {
         top: auto;
-        bottom: 40px;
+        bottom: 120px;
     }
+    .carousel__caption p {
+        font: 400 10px "Roboto", sans-serif !important;
+        color: rgba(0, 0, 0, 0.87) !important;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+
 }
 /** For  the Title Styles */
 #certificate_container {
