@@ -18,7 +18,10 @@
 }
 .carousel__caption a {
     text-decoration: underline;
-    color: #0fc40f;
+    color: #02ec02;
+    font-size: 12px;
+    font: bold;
+    font-weight: 800px;
 }
 .carousel {
     position: relative;
